@@ -298,6 +298,16 @@ h3 {
   background: #1877F2;
 }
 
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hero-mascot {
+    animation: none;
+  }
+  .feature-card {
+    transition: none;
+  }
+}
+
 /* Responsive - Mobile */
 @media (max-width: 375px) {
   .hero-screenshot {
