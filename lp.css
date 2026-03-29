@@ -347,6 +347,28 @@ h3 {
   }
 }
 
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 24px 20px;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.site-footer a {
+  color: #4a90c4;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer p {
+  margin: 4px 0;
+}
+
 /* Responsive */
 @media (min-width: 768px) {
   .feature-grid {
