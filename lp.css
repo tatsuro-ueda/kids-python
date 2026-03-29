@@ -139,26 +139,12 @@ h3 {
 .problem-list li {
   padding: 12px 0;
   border-bottom: 1px solid #e8f4fc;
-  padding-left: 28px;
-  position: relative;
+  padding-left: 8px;
 }
 
 .problem-list li:last-child {
   border-bottom: none;
 }
-
-.problem-list li::before {
-  content: "\2713";
-  position: absolute;
-  left: 0;
-  color: #f5c6d0;
-  font-weight: bold;
-}
-
-.problem-list li:nth-child(1)::before { color: #7ec8e3; } /* 水色 */
-.problem-list li:nth-child(2)::before { color: #a8d8a8; } /* 緑 */
-.problem-list li:nth-child(3)::before { color: #f5c6d0; } /* ピンク */
-.problem-list li:nth-child(4)::before { color: #f5d99a; } /* 黄 */
 
 /* Features */
 .feature-grid {
