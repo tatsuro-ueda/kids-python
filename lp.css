@@ -151,6 +151,11 @@ h3 {
   font-weight: bold;
 }
 
+.problem-list li:nth-child(1)::before { color: #7ec8e3; } /* 水色 */
+.problem-list li:nth-child(2)::before { color: #a8d8a8; } /* 緑 */
+.problem-list li:nth-child(3)::before { color: #f5c6d0; } /* ピンク */
+.problem-list li:nth-child(4)::before { color: #f5d99a; } /* 黄 */
+
 /* Features */
 .feature-grid {
   display: grid;
@@ -200,6 +205,11 @@ h3 {
   margin-top: 16px;
 }
 
+.safety-list dt:nth-of-type(1) { color: #4a90c4; } /* 青: 安全 */
+.safety-list dt:nth-of-type(2) { color: #6ab06a; } /* 緑: 本物のPython */
+.safety-list dt:nth-of-type(3) { color: #d4798a; } /* ピンク: 将来も役立つ */
+.safety-list dt:nth-of-type(4) { color: #c9a84c; } /* 黄: 完全無料 */
+
 .safety-list dt:first-child {
   margin-top: 0;
 }
@@ -237,6 +247,10 @@ h3 {
   font-size: 1.1rem;
   margin-bottom: 8px;
 }
+
+.step:nth-child(1) .step-number { background: #7ec8e3; } /* 水色 */
+.step:nth-child(2) .step-number { background: #a8d8a8; } /* 緑 */
+.step:nth-child(3) .step-number { background: #f5c6d0; } /* ピンク */
 
 .step img {
   width: 100%;

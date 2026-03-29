@@ -25,12 +25,12 @@
 
 ## フェーズ2: 色分け（A1+A2+A3）
 
-- [ ] problemsリストの✓マーク色分け（A1）
-  - [ ] `.problem-list li:nth-child(n)::before` で4色（水色/緑/ピンク/黄）に
-- [ ] safetyのdt見出し色分け（A2）
-  - [ ] `.safety-list dt:nth-of-type(n)` で4色（青/緑/ピンク/黄）に
-- [ ] step-number背景色の3色化（A3）
-  - [ ] `.step:nth-child(n) .step-number` で3色（水色/緑/ピンク）に
+- [x] problemsリストの✓マーク色分け（A1）
+  - [x] `.problem-list li:nth-child(n)::before` で4色（水色/緑/ピンク/黄）に
+- [x] safetyのdt見出し色分け（A2）
+  - [x] `.safety-list dt:nth-of-type(n)` で4色（青/緑/ピンク/黄）に
+- [x] step-number背景色の3色化（A3）
+  - [x] `.step:nth-child(n) .step-number` で3色（水色/緑/ピンク）に
 
 ## フェーズ3: マーカーペン装飾（A4）
 
