@@ -20,14 +20,29 @@ const statusEl = document.getElementById("status");
 
 const editor = createEditor(editorContainer);
 
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
 function setStatus(msg) {
   if (msg) {
-    statusEl.textContent = msg;
+    statusEl.innerHTML = msg.split("").map((ch, i) =>
+      `<span style="--i:${i}">${ch}</span>`
+    ).join("");
+    statusEl.classList.add("loading");
     statusEl.hidden = false;
     runBtn.disabled = true;
   } else {
-    statusEl.hidden = true;
     runBtn.disabled = false;
+    if (reducedMotion) {
+      statusEl.hidden = true;
+      statusEl.classList.remove("loading", "fade-out");
+    } else {
+      statusEl.classList.remove("loading");
+      statusEl.classList.add("fade-out");
+      statusEl.addEventListener("animationend", () => {
+        statusEl.hidden = true;
+        statusEl.classList.remove("fade-out");
+      }, { once: true });
+    }
   }
 }
 

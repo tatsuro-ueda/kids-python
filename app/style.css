@@ -40,6 +40,61 @@ header h1 {
   margin-bottom: 8px;
   border-radius: 12px;
   font-size: 0.9rem;
+  text-align: center;
+}
+
+#status.loading {
+  background: transparent;
+  border-color: transparent;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+#status.loading span {
+  display: inline-block;
+  background: linear-gradient(90deg, #4a90c4, #f5c6d0, #7ec8e3, #4a90c4);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 2s ease-in-out infinite, bounce 1.2s ease-in-out infinite;
+  animation-delay: 0s, calc(var(--i) * 0.05s);
+}
+
+#status.fade-out {
+  animation: fadeOut 0.5s ease-out forwards;
+}
+
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #status.loading span,
+  #status.fade-out {
+    animation: none;
+  }
+  #status.loading span {
+    color: #4a90c4;
+    background: none;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+  }
+  #status.loading {
+    background: #fffbe6;
+    border-color: #ffe58f;
+  }
 }
 
 #editor {
@@ -185,10 +240,6 @@ header h1 {
 
 .share-fb {
   background: #1877F2;
-}
-
-.samples-bar {
-  margin: 8px 0;
 }
 
 #samples {
