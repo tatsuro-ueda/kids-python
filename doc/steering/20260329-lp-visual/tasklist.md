@@ -53,15 +53,15 @@
 
 ## フェーズ4: Feature Card強化（C1+C3+C4）
 
-- [ ] 絵文字アイコンを追加（C1）
-  - [ ] 各カードに `<span class="feature-icon">` を追加（🌐, ✏️, 💬, 💾）
-  - [ ] `.feature-icon` スタイル（`font-size: 2rem; display: block; margin-bottom: 8px`）
-- [ ] アクセントカラーボーダーを追加（C3）
-  - [ ] 各カードにmodifierクラスを付与（`--blue`, `--green`, `--pink`, `--yellow`）
-  - [ ] `border-top: 4px solid <color>` の4色分スタイル
-- [ ] ホバーアニメーションを追加（C4）
-  - [ ] `.feature-card` に `transition: transform 0.2s ease, box-shadow 0.2s ease`
-  - [ ] `.feature-card:hover` に `translateY(-4px)` + `box-shadow`
+- [x] 絵文字アイコンを追加（C1）
+  - [x] 各カードに `<span class="feature-icon">` を追加（🌐, ✏️, 💬, 💾）
+  - [x] `.feature-icon` スタイル（`font-size: 2rem; display: block; margin-bottom: 8px`）
+- [x] アクセントカラーボーダーを追加（C3）
+  - [x] 各カードにmodifierクラスを付与（`--blue`, `--green`, `--pink`, `--yellow`）
+  - [x] `border-top: 4px solid <color>` の4色分スタイル
+- [x] ホバーアニメーションを追加（C4）
+  - [x] `.feature-card` に `transition: transform 0.2s ease, box-shadow 0.2s ease`
+  - [x] `.feature-card:hover` に `translateY(-4px)` + `box-shadow`
 
 ## フェーズ5: アクセシビリティ + 最終調整
 

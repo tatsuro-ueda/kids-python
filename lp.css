@@ -156,6 +156,24 @@ h3 {
   border: 2px solid #b8d8e8;
   border-radius: 12px;
   padding: 20px;
+  border-top: 4px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card--blue   { border-top-color: #7ec8e3; }
+.feature-card--green  { border-top-color: #a8d8a8; }
+.feature-card--pink   { border-top-color: #f5c6d0; }
+.feature-card--yellow { border-top-color: #f5d99a; }
+
+.feature-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 8px;
 }
 
 .feature-card p {
