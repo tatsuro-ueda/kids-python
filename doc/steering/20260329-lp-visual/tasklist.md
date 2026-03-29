@@ -36,15 +36,15 @@
 
 ## フェーズ2: Heroレイアウト — スクショ+マスコット重ね（B1+A1）
 
-- [ ] Hero内のHTML構造を変更
-  - [ ] 既存の `<img class="hero-mascot">` を削除
-  - [ ] `.hero-screenshot-wrapper` div を追加（`step-run.png` + `snake.png`）
-- [ ] スクリーンショットのスタイルを追加
-  - [ ] `.hero-screenshot`: `max-width: 300px`, 角丸, 影
-- [ ] マスコット重ね表示のスタイルを追加
-  - [ ] `.hero-mascot`: `position: absolute; right: -60px; bottom: -20px; width: 120px`
-- [ ] モバイル対応
-  - [ ] 幅375px以下でマスコット/スクショのサイズ調整
+- [x] Hero内のHTML構造を変更
+  - [x] 既存の `<img class="hero-mascot">` を削除
+  - [x] `.hero-screenshot-wrapper` div を追���（`step-run.png` + `snake.png`）
+- [x] スクリーンショットのスタイルを追加
+  - [x] `.hero-screenshot`: `max-width: 300px`, 角丸, 影
+- [x] マスコット重ね表示のスタイルを追加
+  - [x] `.hero-mascot`: `position: absolute; right: -60px; bottom: -20px; width: 120px`
+- [x] モバイル対応
+  - [x] 幅375px以下でマスコット/スクショのサイズ調整
 
 ## フェーズ3: マスコットアニメーション（A3）
 

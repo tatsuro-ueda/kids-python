@@ -54,8 +54,24 @@ h3 {
   height: 60px;
 }
 
+.hero-screenshot-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.hero-screenshot {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
 .hero-mascot {
-  width: 100px;
+  position: absolute;
+  right: -60px;
+  bottom: -20px;
+  width: 120px;
   height: auto;
 }
 
@@ -256,6 +272,19 @@ h3 {
 
 .share-fb {
   background: #1877F2;
+}
+
+/* Responsive - Mobile */
+@media (max-width: 375px) {
+  .hero-screenshot {
+    max-width: 80%;
+  }
+
+  .hero-mascot {
+    right: -30px;
+    bottom: -10px;
+    width: 80px;
+  }
 }
 
 /* Responsive */
