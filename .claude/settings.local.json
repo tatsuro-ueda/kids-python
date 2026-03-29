@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git pull:*)",
+      "Bash(git clone:*)",
+      "WebFetch(domain:exe.dev)",
+      "Bash(gh auth:*)",
+      "Bash(gh repo:*)",
+      "Bash(npm init:*)",
+      "Bash(curl -fsSL https://deb.nodesource.com/setup_22.x)",
+      "Bash(sudo -E bash -)",
+      "Bash(sudo apt-get:*)",
+      "Bash(npm -v)",
+      "Bash(npm install:*)",
+      "Bash(curl -sL \"https://github.com/pyodide/pyodide/releases/download/0.27.5/pyodide-0.27.5.tar.bz2\" -o pyodide.tar.bz2)",
+      "Bash(tar xjf:*)",
+      "Bash(rm pyodide.tar.bz2)",
+      "Bash(ls *.js *.wasm)",
+      "Bash(npm run:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)",
+      "Bash(ssh:*)",
+      "WebSearch",
+      "WebFetch(domain:www.irasutoya.com)",
+      "Bash(curl -sL -o /home/exedev/online-python/assets/snake.png \"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiuUQG5ahmRsuNMu7JlXy5M93rlF6NpbpHMW2QmpryWEV-OgKiz3ifmyUmq4DMs7MLAowJn2gHxp7JxRIAmSEUASqSO8zRDxE_2VOY-P-UTd7U6YJd5lVCFbZs72GGJO92aCn-_zX41_UY/s400/hebi_blue.png\")",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}

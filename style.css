@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #333;
+  padding: 20px;
+  background-color: #e8f4fc;
+  background-image: radial-gradient(#d0e8f5 10%, transparent 10%);
+  background-size: 30px 30px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mascot {
+  width: 80px;
+  height: auto;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  color: #4a90c4;
+}
+
+#status {
+  background: #fffbe6;
+  border: 1px solid #ffe58f;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+#editor {
+  border: 2px solid #b8d8e8;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f0f8ff;
+}
+
+#editor .cm-editor {
+  height: 300px;
+  font-size: 14px;
+}
+
+#editor .cm-scroller {
+  overflow: auto;
+}
+
+#editor .cm-editor .cm-content {
+  background: #f0f8ff;
+}
+
+#editor .cm-editor .cm-gutters {
+  background: #e8f4fc;
+  border-right: 1px solid #b8d8e8;
+}
+
+.toolbar {
+  margin: 8px 0;
+  display: flex;
+  gap: 8px;
+}
+
+.toolbar button {
+  padding: 10px 28px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+
+.toolbar button:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.toolbar button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#run-btn {
+  background: #7ec8e3;
+}
+
+#clear-btn {
+  background: #f5c6d0;
+}
+
+#output {
+  background: #f0f8ff;
+  border: 2px solid #b8d8e8;
+  border-radius: 12px;
+  padding: 12px;
+  min-height: 120px;
+  font-family: monospace;
+  font-size: 14px;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+#output .error {
+  color: #ff4d4f;
+}
+
+.error-block {
+  border-top: 1px solid #b8d8e8;
+  border-bottom: 1px solid #b8d8e8;
+  padding: 8px 0;
+  margin: 4px 0;
+}
+
+.error-message {
+  color: #ff4d4f;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.error-block details {
+  margin-top: 4px;
+}
+
+.error-block summary {
+  font-size: 12px;
+  color: #999;
+  cursor: pointer;
+}
+
+.error-block .error-original {
+  font-size: 12px;
+  color: #999;
+  margin-top: 4px;
+  white-space: pre-wrap;
+}
+
+.cm-error-line {
+  background: #fde8e8;
+}
+
