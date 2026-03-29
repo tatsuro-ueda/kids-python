@@ -102,7 +102,7 @@ h3 {
 /* CTA Button */
 .cta-btn {
   display: inline-block;
-  background: #7ec8e3;
+  background: #ff8c42;
   color: #fff;
   font-weight: bold;
   font-size: 1.1rem;
@@ -112,7 +112,8 @@ h3 {
 }
 
 .cta-btn:hover {
-  opacity: 0.85;
+  background: #e67a35;
+  opacity: 1;
 }
 
 .cta-btn-large {

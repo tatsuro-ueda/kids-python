@@ -20,8 +20,8 @@
 
 ## フェーズ1: CTA色変更（A5）
 
-- [ ] `.cta-btn` の `background` を `#ff8c42` に変更
-- [ ] `.cta-btn:hover` を `background: #e67a35; opacity: 1` に変更
+- [x] `.cta-btn` の `background` を `#ff8c42` に変更
+- [x] `.cta-btn:hover` を `background: #e67a35; opacity: 1` に変更
 
 ## フェーズ2: 色分け（A1+A2+A3）
 
