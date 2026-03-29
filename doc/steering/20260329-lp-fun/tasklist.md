@@ -34,9 +34,9 @@
 
 ## フェーズ3: マーカーペン装飾（A4）
 
-- [ ] `h2` に `background-image: linear-gradient(transparent 60%, #f5d99a88 60%)` を追加
-- [ ] `h2` を `display: inline` に変更
-- [ ] problems/safetyセクション内でもh2の中央寄せが維持されることを確認
+- [x] `h2` に `background-image: linear-gradient(transparent 60%, #f5d99a88 60%)` を追加
+- [x] `h2` を `display: inline` に変更
+- [x] problems/safetyセクション内でもh2の中央寄せが維持されることを確認
 
 ## フェーズ4: 絵文字追加（B1+B2+B4）
 

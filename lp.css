@@ -17,6 +17,7 @@ section {
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 20px;
+  text-align: center;
 }
 
 h1 {
@@ -29,6 +30,8 @@ h2 {
   color: #4a90c4;
   margin-bottom: 20px;
   text-align: center;
+  background-image: linear-gradient(transparent 60%, #f5d99a88 60%);
+  display: inline;
 }
 
 h3 {
@@ -130,6 +133,7 @@ h3 {
 
 .problem-list {
   list-style: none;
+  text-align: left;
 }
 
 .problem-list li {
@@ -170,6 +174,7 @@ h3 {
   padding: 20px;
   border-top: 4px solid transparent;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
 }
 
 .feature-card:hover {
@@ -197,6 +202,10 @@ h3 {
   background: #fff;
   border-radius: 12px;
   border: 2px solid #b8d8e8;
+}
+
+.safety-list {
+  text-align: left;
 }
 
 .safety-list dt {
@@ -285,6 +294,7 @@ h3 {
 
 .story-content {
   line-height: 2;
+  text-align: left;
 }
 
 .story-content p {
