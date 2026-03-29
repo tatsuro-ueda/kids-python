@@ -286,8 +286,10 @@ h3 {
   color: #f8f8f2;
   border-radius: 8px;
   padding: 12px;
+  font-family: monospace;
   font-size: 0.85rem;
-  line-height: 1.5;
+  line-height: 1.6;
+  white-space: pre;
   overflow-x: auto;
   margin-bottom: 8px;
 }
