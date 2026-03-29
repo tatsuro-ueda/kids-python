@@ -63,32 +63,32 @@
 
 ## フェーズ6: フェードインアニメ（C1）
 
-- [ ] `lp.css` に `.fade-in` / `.fade-in.visible` スタイル追加
-  - [ ] 初期: `opacity: 0; transform: translateY(20px)`
-  - [ ] visible: `opacity: 1; transform: translateY(0)`
-  - [ ] transition: 0.6s ease
-- [ ] `index.html` の対象6セクションに `fade-in` クラスを追加
-  - [ ] `.problems`, `.features`, `.examples`, `.safety`, `.howto`, `.cta-section`
-- [ ] `index.html` 末尾にIntersection ObserverのインラインJSを追加
+- [x] `lp.css` に `.fade-in` / `.fade-in.visible` スタイル追加
+  - [x] 初期: `opacity: 0; transform: translateY(20px)`
+  - [x] visible: `opacity: 1; transform: translateY(0)`
+  - [x] transition: 0.6s ease
+- [x] `index.html` の対象6セクションに `fade-in` クラスを追加
+  - [x] `.problems`, `.features`, `.examples`, `.safety`, `.howto`, `.cta-section`
+- [x] `index.html` 末尾にIntersection ObserverのインラインJSを追加
 
 ## フェーズ7: バウンス+パルスアニメ（C2+C3）
 
-- [ ] `@keyframes bounce` を定義（scale 1→1.3→1, 0.4s）
-- [ ] `.howto.visible .step:nth-child(n) .step-number` に0.2秒間隔でbounce適用
-- [ ] `@keyframes pulse` を定義（box-shadow波紋, 2s周期）
-- [ ] `.cta-btn` にpulseアニメ適用
+- [x] `@keyframes bounce` を定義（scale 1→1.3→1, 0.4s）
+- [x] `.howto.visible .step:nth-child(n) .step-number` に0.2秒間隔でbounce適用
+- [x] `@keyframes pulse` を定義（box-shadow波紋, 2s周期）
+- [x] `.cta-btn` にpulseアニメ適用
 
 ## フェーズ8: アクセシビリティ + 最終調整
 
-- [ ] `prefers-reduced-motion` メディアクエリを更新
-  - [ ] `.fade-in` の初期非表示を解除（`opacity: 1; transform: none; transition: none`）
-  - [ ] `.cta-btn` のpulseアニメ無効化
-  - [ ] `.step-number` のbounceアニメ無効化
-- [ ] 目視確認
-  - [ ] 全セクションに2色以上のカラーがあること
-  - [ ] CTAがオレンジで目立つこと
-  - [ ] コード例セクションが正しく表示されること
-  - [ ] モバイル（375px）でレイアウト崩れなし
+- [x] `prefers-reduced-motion` メディアクエリを更新
+  - [x] `.fade-in` の初期非表示を解除（`opacity: 1; transform: none; transition: none`）
+  - [x] `.cta-btn` のpulseアニメ無効化
+  - [x] `.step-number` のbounceアニメ無効化
+- [x] 目視確認
+  - [x] 全セクションに2色以上のカラーがあること
+  - [x] CTAがオレンジで目立つこと
+  - [x] コード例セクションが正しく表示されること
+  - [x] モバイル（375px）でレイアウト崩れなし
 
 ## フェーズ9: mainマージ
 
