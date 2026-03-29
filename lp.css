@@ -17,6 +17,7 @@ section {
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 20px;
+  text-align: center;
 }
 
 h1 {
@@ -29,6 +30,8 @@ h2 {
   color: #4a90c4;
   margin-bottom: 20px;
   text-align: center;
+  background-image: linear-gradient(transparent 60%, #f5d99a88 60%);
+  display: inline;
 }
 
 h3 {
@@ -102,7 +105,7 @@ h3 {
 /* CTA Button */
 .cta-btn {
   display: inline-block;
-  background: #7ec8e3;
+  background: #ff8c42;
   color: #fff;
   font-weight: bold;
   font-size: 1.1rem;
@@ -112,7 +115,8 @@ h3 {
 }
 
 .cta-btn:hover {
-  opacity: 0.85;
+  background: #e67a35;
+  opacity: 1;
 }
 
 .cta-btn-large {
@@ -129,25 +133,17 @@ h3 {
 
 .problem-list {
   list-style: none;
+  text-align: left;
 }
 
 .problem-list li {
   padding: 12px 0;
   border-bottom: 1px solid #e8f4fc;
-  padding-left: 28px;
-  position: relative;
+  padding-left: 8px;
 }
 
 .problem-list li:last-child {
   border-bottom: none;
-}
-
-.problem-list li::before {
-  content: "\2713";
-  position: absolute;
-  left: 0;
-  color: #f5c6d0;
-  font-weight: bold;
 }
 
 /* Features */
@@ -164,6 +160,7 @@ h3 {
   padding: 20px;
   border-top: 4px solid transparent;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
 }
 
 .feature-card:hover {
@@ -186,6 +183,41 @@ h3 {
   color: #555;
 }
 
+/* Examples */
+.example-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.example-card {
+  background: #fff;
+  border: 2px solid #b8d8e8;
+  border-radius: 12px;
+  padding: 16px;
+  border-left: 4px solid #ff8c42; /* オレンジのアクセント */
+}
+
+.example-code {
+  background: #f8f8f8;
+  border-radius: 8px;
+  padding: 12px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  margin: 8px 0;
+  overflow-x: auto;
+}
+
+.example-result {
+  background: #e8f4fc;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #333;
+  border-left: 3px solid #a8d8a8; /* 緑で「結果」を示す */
+}
+
 /* Safety */
 .safety {
   background: #fff;
@@ -193,11 +225,20 @@ h3 {
   border: 2px solid #b8d8e8;
 }
 
+.safety-list {
+  text-align: left;
+}
+
 .safety-list dt {
   font-weight: bold;
   color: #4a90c4;
   margin-top: 16px;
 }
+
+.safety-list dt:nth-of-type(1) { color: #4a90c4; } /* 青: 安全 */
+.safety-list dt:nth-of-type(2) { color: #6ab06a; } /* 緑: 本物のPython */
+.safety-list dt:nth-of-type(3) { color: #d4798a; } /* ピンク: 将来も役立つ */
+.safety-list dt:nth-of-type(4) { color: #c9a84c; } /* 黄: 完全無料 */
 
 .safety-list dt:first-child {
   margin-top: 0;
@@ -237,6 +278,10 @@ h3 {
   margin-bottom: 8px;
 }
 
+.step:nth-child(1) .step-number { background: #7ec8e3; } /* 水色 */
+.step:nth-child(2) .step-number { background: #a8d8a8; } /* 緑 */
+.step:nth-child(3) .step-number { background: #f5c6d0; } /* ピンク */
+
 .step img {
   width: 100%;
   border: 2px solid #b8d8e8;
@@ -259,55 +304,6 @@ h3 {
   margin-top: 12px;
   color: #888;
   font-size: 0.9rem;
-}
-
-/* Examples */
-.example-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
-
-.example-card {
-  background: #f0f8ff;
-  border: 2px solid #b8d8e8;
-  border-radius: 12px;
-  padding: 16px;
-  text-align: left;
-}
-
-.example-card h3 {
-  text-align: center;
-  margin-bottom: 12px;
-}
-
-.example-code {
-  background: #2d2d2d;
-  color: #f8f8f2;
-  border-radius: 8px;
-  padding: 12px;
-  font-family: monospace;
-  font-size: 0.85rem;
-  line-height: 1.6;
-  white-space: pre;
-  overflow-x: auto;
-  margin-bottom: 8px;
-}
-
-.example-result {
-  background: #fff;
-  border: 1px solid #b8d8e8;
-  border-radius: 8px;
-  padding: 8px 12px;
-  font-family: monospace;
-  font-size: 0.85rem;
-  color: #333;
-}
-
-@media (min-width: 768px) {
-  .example-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 }
 
 /* Error Demo */
@@ -392,6 +388,7 @@ h3 {
 
 .story-content {
   line-height: 2;
+  text-align: left;
 }
 
 .story-content p {
@@ -446,6 +443,44 @@ h3 {
   background: #1877F2;
 }
 
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+.howto.visible .step:nth-child(1) .step-number {
+  animation: bounce 0.4s ease 0.1s;
+}
+.howto.visible .step:nth-child(2) .step-number {
+  animation: bounce 0.4s ease 0.3s;
+}
+.howto.visible .step:nth-child(3) .step-number {
+  animation: bounce 0.4s ease 0.5s;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 140, 66, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(255, 140, 66, 0); }
+}
+
+.cta-btn {
+  animation: pulse 2s ease-in-out infinite;
+}
+
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   .hero-mascot {
@@ -453,6 +488,17 @@ h3 {
   }
   .feature-card {
     transition: none;
+  }
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .cta-btn {
+    animation: none;
+  }
+  .howto.visible .step .step-number {
+    animation: none;
   }
 }
 
@@ -495,6 +541,10 @@ h3 {
 @media (min-width: 768px) {
   .feature-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .example-grid {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .steps {
