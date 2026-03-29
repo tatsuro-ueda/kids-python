@@ -261,6 +261,53 @@ h3 {
   font-size: 0.9rem;
 }
 
+/* Examples */
+.example-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.example-card {
+  background: #f0f8ff;
+  border: 2px solid #b8d8e8;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: left;
+}
+
+.example-card h3 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.example-code {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  margin-bottom: 8px;
+}
+
+.example-result {
+  background: #fff;
+  border: 1px solid #b8d8e8;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+@media (min-width: 768px) {
+  .example-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 /* Error Demo */
 .error-demo {
   text-align: center;
