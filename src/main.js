@@ -2,6 +2,7 @@ import { createEditor, highlightErrorLine, clearErrorHighlight } from "./editor.
 import { loadPyodide, runCode } from "./runner.js";
 import { translateError } from "./errors.js";
 import { detectSharedCode, setSharedCode, encodeShareURL, getShareIntentURLs } from "./storage.js";
+import { samples } from "./samples.js";
 
 // 共有URL検出（エディタ生成前に実行）
 const shared = detectSharedCode();
@@ -112,4 +113,25 @@ shareBtn.addEventListener("click", async () => {
     </div>
   `;
   outputEl.appendChild(div);
+});
+
+// おてほんサンプル
+const samplesSelect = document.getElementById("samples");
+samples.forEach((s, i) => {
+  const opt = document.createElement("option");
+  opt.value = i;
+  opt.textContent = s.title;
+  samplesSelect.appendChild(opt);
+});
+
+samplesSelect.addEventListener("change", () => {
+  const idx = samplesSelect.value;
+  if (idx === "") return;
+  const sample = samples[idx];
+  if (confirm("いまのコードがきえるよ。いい？")) {
+    editor.dispatch({
+      changes: { from: 0, to: editor.state.doc.length, insert: sample.code },
+    });
+  }
+  samplesSelect.value = "";
 });
