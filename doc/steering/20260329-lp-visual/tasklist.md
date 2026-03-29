@@ -48,8 +48,8 @@
 
 ## フェーズ3: マスコットアニメーション（A3）
 
-- [ ] `@keyframes float` アニメーションを定義（3秒周期、10px移動）
-- [ ] `.hero-mascot` に `animation: float 3s ease-in-out infinite` を適用
+- [x] `@keyframes float` アニメーションを定義（3秒周期、10px移動）
+- [x] `.hero-mascot` に `animation: float 3s ease-in-out infinite` を適用
 
 ## フェーズ4: Feature Card強化（C1+C3+C4）
 
