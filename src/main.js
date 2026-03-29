@@ -69,6 +69,17 @@ function appendError(errorText) {
 
 loadPyodide(setStatus);
 
+// ブックマーク促進バナー（初回のみ表示）
+const BOOKMARK_KEY = "bookmark-banner-dismissed";
+if (!localStorage.getItem(BOOKMARK_KEY)) {
+  const banner = document.getElementById("bookmark-banner");
+  banner.hidden = false;
+  document.getElementById("bookmark-close").addEventListener("click", () => {
+    banner.hidden = true;
+    localStorage.setItem(BOOKMARK_KEY, "1");
+  });
+}
+
 runBtn.addEventListener("click", async () => {
   outputEl.textContent = "";
   clearErrorHighlight(editor);
