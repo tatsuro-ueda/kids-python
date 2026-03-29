@@ -54,6 +54,12 @@ h3 {
   height: 60px;
 }
 
+.hero .cta-btn {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 0;
+}
+
 .hero-screenshot-wrapper {
   position: relative;
   display: inline-block;
@@ -69,9 +75,9 @@ h3 {
 
 .hero-mascot {
   position: absolute;
-  right: -60px;
-  bottom: -20px;
-  width: 120px;
+  right: -80px;
+  bottom: -30px;
+  width: 200px;
   height: auto;
   animation: float 3s ease-in-out infinite;
 }
@@ -315,9 +321,9 @@ h3 {
   }
 
   .hero-mascot {
-    right: -30px;
-    bottom: -10px;
-    width: 80px;
+    right: -40px;
+    bottom: -15px;
+    width: 120px;
   }
 }
 
