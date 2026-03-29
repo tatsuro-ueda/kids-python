@@ -1,11 +1,20 @@
 import { createEditor, highlightErrorLine, clearErrorHighlight } from "./editor.js";
 import { loadPyodide, runCode } from "./runner.js";
 import { translateError } from "./errors.js";
+import { detectSharedCode, setSharedCode, encodeShareURL } from "./storage.js";
+
+// 共有URL検出（エディタ生成前に実行）
+const shared = detectSharedCode();
+if (shared !== null) {
+  if (confirm("おともだちのコードをひらく？")) {
+    setSharedCode(shared);
+  }
+}
 
 const editorContainer = document.getElementById("editor");
 const outputEl = document.getElementById("output");
 const runBtn = document.getElementById("run-btn");
-const clearBtn = document.getElementById("clear-btn");
+const shareBtn = document.getElementById("share-btn");
 const statusEl = document.getElementById("status");
 
 const editor = createEditor(editorContainer);
@@ -79,7 +88,15 @@ runBtn.addEventListener("click", async () => {
   }
 });
 
-clearBtn.addEventListener("click", () => {
+shareBtn.addEventListener("click", async () => {
+  const code = editor.state.doc.toString();
+  const url = encodeShareURL(code);
   outputEl.textContent = "";
-  clearErrorHighlight(editor);
+  try {
+    await navigator.clipboard.writeText(url);
+    appendOutput("URLをコピーしたよ！おともだちにおしえてあげよう");
+  } catch {
+    appendOutput("このURLをコピーしてね:");
+    appendOutput(url);
+  }
 });

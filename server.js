@@ -12,10 +12,17 @@ const MIME = {
   ".mjs": "application/javascript",
   ".wasm": "application/wasm",
   ".json": "application/json",
+  ".png": "image/png",
+  ".svg": "image/svg+xml",
 };
 
 http.createServer((req, res) => {
-  let filePath = path.join(ROOT, req.url === "/" ? "index.html" : req.url);
+  let url = req.url.split("?")[0];
+
+  if (url === "/") url = "/index.html";
+  if (url === "/app" || url === "/app/") url = "/app/index.html";
+
+  const filePath = path.join(ROOT, url);
   const ext = path.extname(filePath);
   const mime = MIME[ext] || "application/octet-stream";
 

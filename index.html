@@ -3,23 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pythonれんしゅうちょう</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Pythonれんしゅうちょう — 小学生向けブラウザPython学習環境</title>
+  <meta name="description" content="インストール不要、ブラウザだけで動く小学生向けPython学習環境。ひらがなUI、日本語エラーメッセージ、自動保存。Chromebook対応。">
+  <meta property="og:title" content="Pythonれんしゅうちょう">
+  <meta property="og:description" content="ブラウザだけでPythonが動く。小学生のためのプログラミング練習帳">
+  <meta property="og:image" content="/assets/ogp.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="lp.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Pythonれんしゅうちょう",
+    "description": "小学生向けブラウザPython学習環境",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Any (Web Browser)",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
+    "audience": {
+      "@type": "EducationalAudience",
+      "educationalRole": "student",
+      "typicalAgeRange": "6-8"
+    }
+  }
+  </script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <img src="assets/snake.png" alt="ヘビ" class="mascot">
-      <h1>Pythonれんしゅうちょう</h1>
-    </header>
-    <div id="status" hidden></div>
-    <div id="editor"></div>
-    <div class="toolbar">
-      <button id="run-btn" disabled>じっこう</button>
-      <button id="clear-btn">けす</button>
+  <section class="hero">
+    <img src="assets/snake.png" alt="ヘビのマスコット" class="hero-mascot">
+    <h1>Pythonれんしゅうちょう</h1>
+    <p class="hero-catch">ブラウザだけでPythonが動く。<br>小学生のためのプログラミング練習帳</p>
+    <p class="hero-sub">インストール不要。日本語エラー。ぜんぶひらがな。</p>
+    <a href="/app/" class="cta-btn">今すぐ試す</a>
+  </section>
+
+  <section class="problems">
+    <h2>こんな経験ありませんか？</h2>
+    <ul class="problem-list">
+      <li>Pythonをインストールしようとしたけど、難しくて断念した</li>
+      <li>Chromebookだからソフトを入れられない</li>
+      <li>オンラインのPython環境は全部英語で、子どもには使えなかった</li>
+      <li>エラーメッセージが英語で、何を直せばいいか分からない</li>
+    </ul>
+  </section>
+
+  <section class="features">
+    <h2>特徴</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>インストール不要</h3>
+        <p>ブラウザを開くだけ。Chromebookでもタブレットでも使えます。</p>
+      </div>
+      <div class="feature-card">
+        <h3>ぜんぶひらがな</h3>
+        <p>ボタンもメニューもひらがな。小学1年生から使えます。</p>
+      </div>
+      <div class="feature-card">
+        <h3>日本語エラー</h3>
+        <p>英語のエラーを子どもの言葉に翻訳。直し方も教えてくれます。</p>
+      </div>
+      <div class="feature-card">
+        <h3>コードが消えない</h3>
+        <p>自動保存。ブラウザを閉じても大丈夫。</p>
+      </div>
     </div>
-    <pre id="output"></pre>
-  </div>
-  <script type="module" src="dist/bundle.js"></script>
+  </section>
+
+  <section class="safety">
+    <h2>保護者の方へ — 安心ポイント</h2>
+    <dl class="safety-list">
+      <dt>安全</dt>
+      <dd>データはお子さまのブラウザ内で処理されます。外部サーバーへの送信はありません。</dd>
+      <dt>本物のPython</dt>
+      <dd>WebAssembly技術（Pyodide）により、標準のPython 3が動きます。</dd>
+      <dt>将来も役立つ</dt>
+      <dd>標準的なPython構文をそのまま学べるため、将来本格的な環境に移行しても知識が活かせます。</dd>
+      <dt>完全無料</dt>
+      <dd>アカウント登録も不要です。</dd>
+    </dl>
+  </section>
+
+  <section class="howto">
+    <h2>使い方はかんたん3ステップ</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-number">1</span>
+        <h3>開く</h3>
+        <img src="assets/screenshots/step-open.png" alt="ブラウザでPythonれんしゅうちょうを開いた画面">
+        <p>URLにアクセスするだけ。</p>
+      </div>
+      <div class="step">
+        <span class="step-number">2</span>
+        <h3>書く</h3>
+        <img src="assets/screenshots/step-write.png" alt="エディタにPythonコードを入力している画面">
+        <p>コードを書く。</p>
+      </div>
+      <div class="step">
+        <span class="step-number">3</span>
+        <h3>実行</h3>
+        <img src="assets/screenshots/step-run.png" alt="じっこうボタンを押して結果が表示された画面">
+        <p>ボタンを押して結果を見る。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <a href="/app/" class="cta-btn cta-btn-large">今すぐ試す</a>
+    <p class="cta-note">アカウント登録不要・完全無料</p>
+  </section>
 </body>
 </html>

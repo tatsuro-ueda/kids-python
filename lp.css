@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #333;
+  background-color: #e8f4fc;
+  background-image: radial-gradient(#d0e8f5 10%, transparent 10%);
+  background-size: 30px 30px;
+  line-height: 1.7;
+}
+
+section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: #4a90c4;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: #4a90c4;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.1rem;
+  color: #4a90c4;
+  margin-bottom: 8px;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero-mascot {
+  width: 100px;
+  height: auto;
+}
+
+.hero-catch {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 16px 0 8px;
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 24px;
+}
+
+/* CTA Button */
+.cta-btn {
+  display: inline-block;
+  background: #7ec8e3;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 14px 40px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.cta-btn:hover {
+  opacity: 0.85;
+}
+
+.cta-btn-large {
+  font-size: 1.3rem;
+  padding: 18px 56px;
+}
+
+/* Problems */
+.problems {
+  background: #fff;
+  border-radius: 12px;
+  border: 2px solid #b8d8e8;
+}
+
+.problem-list {
+  list-style: none;
+}
+
+.problem-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid #e8f4fc;
+  padding-left: 28px;
+  position: relative;
+}
+
+.problem-list li:last-child {
+  border-bottom: none;
+}
+
+.problem-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: #f5c6d0;
+  font-weight: bold;
+}
+
+/* Features */
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.feature-card {
+  background: #f0f8ff;
+  border: 2px solid #b8d8e8;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.feature-card p {
+  color: #555;
+}
+
+/* Safety */
+.safety {
+  background: #fff;
+  border-radius: 12px;
+  border: 2px solid #b8d8e8;
+}
+
+.safety-list dt {
+  font-weight: bold;
+  color: #4a90c4;
+  margin-top: 16px;
+}
+
+.safety-list dt:first-child {
+  margin-top: 0;
+}
+
+.safety-list dd {
+  color: #555;
+  margin-left: 0;
+  margin-top: 4px;
+}
+
+/* How-to Steps */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.step {
+  text-align: center;
+  background: #f0f8ff;
+  border: 2px solid #b8d8e8;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.step-number {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 50%;
+  background: #7ec8e3;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.step img {
+  width: 100%;
+  border: 2px solid #b8d8e8;
+  border-radius: 8px;
+  margin: 12px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.step p {
+  color: #555;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  padding: 48px 20px;
+}
+
+.cta-note {
+  margin-top: 12px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .feature-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .steps {
+    flex-direction: row;
+  }
+
+  .step {
+    flex: 1;
+  }
+}
