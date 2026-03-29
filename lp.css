@@ -261,6 +261,79 @@ h3 {
   font-size: 0.9rem;
 }
 
+/* Error Demo */
+.error-demo {
+  text-align: center;
+}
+
+.error-demo-intro {
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.error-demo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.error-demo-item {
+  background: #fff;
+  border: 2px solid #b8d8e8;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: left;
+}
+
+.error-before, .error-after {
+  margin: 4px 0;
+}
+
+.error-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.error-before .error-label {
+  color: #cc4444;
+}
+
+.error-after .error-label {
+  color: #4a90c4;
+}
+
+.error-before code {
+  display: block;
+  color: #cc4444;
+  font-size: 0.85rem;
+  word-break: break-all;
+}
+
+.error-after code {
+  display: block;
+  color: #4a90c4;
+  font-size: 0.95rem;
+  font-weight: bold;
+  word-break: break-all;
+}
+
+.error-arrow {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+  margin: 4px 0;
+}
+
+.error-demo-note {
+  margin-top: 16px;
+  color: #888;
+  font-size: 0.85rem;
+}
+
 /* Scratch Story */
 .scratch-story {
   background: #fff;

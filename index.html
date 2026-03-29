@@ -81,6 +81,47 @@
     </div>
   </section>
 
+  <section class="error-demo">
+    <h2>もしもエラーがでたら...</h2>
+    <p class="error-demo-intro">英語のエラーメッセージを、子どもがわかる日本語に翻訳します。直し方もいっしょに教えてくれます。</p>
+    <div class="error-demo-list">
+      <div class="error-demo-item">
+        <div class="error-before">
+          <span class="error-label">英語のエラー</span>
+          <code>SyntaxError: '(' was never closed</code>
+        </div>
+        <div class="error-arrow">↓</div>
+        <div class="error-after">
+          <span class="error-label">日本語に翻訳</span>
+          <code>カッコ ( がとじられていないよ。) をつけてね</code>
+        </div>
+      </div>
+      <div class="error-demo-item">
+        <div class="error-before">
+          <span class="error-label">英語のエラー</span>
+          <code>NameError: name 'hensuu' is not defined</code>
+        </div>
+        <div class="error-arrow">↓</div>
+        <div class="error-after">
+          <span class="error-label">日本語に翻訳</span>
+          <code>hensuu ってなに？ まだつくってないか、なまえをまちがえているよ</code>
+        </div>
+      </div>
+      <div class="error-demo-item">
+        <div class="error-before">
+          <span class="error-label">英語のエラー</span>
+          <code>IndentationError: expected an indented block</code>
+        </div>
+        <div class="error-arrow">↓</div>
+        <div class="error-after">
+          <span class="error-label">日本語に翻訳</span>
+          <code>スペースがたりないよ。if や for のつぎのぎょうは スペース4つ いれてね</code>
+        </div>
+      </div>
+    </div>
+    <p class="error-demo-note">このほかにも20しゅるい以上のエラーに対応しています</p>
+  </section>
+
   <section class="scratch-story">
     <h2>Scratchの次は？</h2>
     <div class="story-content">
@@ -89,6 +130,31 @@
       <p>Pythonれんしゅうちょうなら、Scratchで学んだ「くりかえし」や「もしも」をそのままPythonで書いてみることができます。</p>
       <p>アプリの「おてほん」に、Scratchのブロックと同じことをするPythonコードが入っています。</p>
       <a href="/app/" class="cta-btn">おてほんを見てみる</a>
+    </div>
+  </section>
+
+  <section class="examples">
+    <h2>こんなことができるよ！</h2>
+    <div class="example-grid">
+      <div class="example-card">
+        <h3>🎨 もようをつくる</h3>
+        <pre class="example-code">for i in range(5):
+    print("★" * i)</pre>
+        <div class="example-result">★<br>★★<br>★★★<br>★★★★</div>
+      </div>
+      <div class="example-card">
+        <h3>🎵 うたをつくる</h3>
+        <pre class="example-code">for c in "ドレミファソラシド":
+    print(c, "♪")</pre>
+        <div class="example-result">ド ♪<br>レ ♪<br>ミ ♪<br>...</div>
+      </div>
+      <div class="example-card">
+        <h3>🚀 ロケットはっしゃ</h3>
+        <pre class="example-code">for i in [3,2,1]:
+    print(i)
+print("はっしゃ！")</pre>
+        <div class="example-result">3<br>2<br>1<br>はっしゃ！</div>
+      </div>
     </div>
   </section>
 
