@@ -261,6 +261,26 @@ h3 {
   font-size: 0.9rem;
 }
 
+/* Scratch Story */
+.scratch-story {
+  background: #fff;
+  border-radius: 12px;
+  border: 2px solid #b8d8e8;
+}
+
+.story-content {
+  line-height: 2;
+}
+
+.story-content p {
+  margin-bottom: 16px;
+  color: #555;
+}
+
+.story-content .cta-btn {
+  margin-top: 8px;
+}
+
 /* Share Section */
 .share-section {
   margin-top: 24px;
