@@ -183,6 +183,50 @@ h3 {
   color: #555;
 }
 
+/* Examples */
+.example-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.example-card {
+  background: #f0f8ff;
+  border: 2px solid #b8d8e8;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+}
+
+.example-card h3 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.example-code {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  border-radius: 8px;
+  padding: 12px;
+  font-family: monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 8px 0;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.example-result {
+  background: #fff;
+  border: 1px solid #b8d8e8;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.6;
+}
+
 /* Safety */
 .safety {
   background: #fff;
@@ -457,6 +501,10 @@ h3 {
 @media (min-width: 768px) {
   .feature-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .example-grid {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .steps {

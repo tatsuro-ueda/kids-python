@@ -51,15 +51,15 @@
 
 ## フェーズ5: コード例セクション新設（B3）
 
-- [ ] `index.html` のfeaturesとsafetyの間に `.examples` セクションを追加
-  - [ ] 3枚のexample-card（もよう/うた/ロケット）
-  - [ ] 各カードに `.example-code`（pre）と `.example-result`（div）
-- [ ] `lp.css` にスタイル追加
-  - [ ] `.example-grid`: grid, gap
-  - [ ] `.example-card`: 白背景, 角丸, オレンジの左ボーダー
-  - [ ] `.example-code`: グレー背景, monospace
-  - [ ] `.example-result`: 水色背景, 緑の左ボーダー
-  - [ ] レスポンシブ: 768px以上で3カラム
+- [x] `index.html` のfeaturesとsafetyの間に `.examples` セクションを追加
+  - [x] 3枚のexample-card（もよう/うた/ロケット）
+  - [x] 各カードに `.example-code`（pre）と `.example-result`（div）
+- [x] `lp.css` にスタイル追加
+  - [x] `.example-grid`: grid, gap
+  - [x] `.example-card`: 白背景, 角丸, オレンジの左ボーダー
+  - [x] `.example-code`: グレー背景, monospace
+  - [x] `.example-result`: 水色背景, 緑の左ボーダー
+  - [x] レスポンシブ: 768px以上で3カラム
 
 ## フェーズ6: フェードインアニメ（C1）
 
