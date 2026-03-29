@@ -27,12 +27,12 @@
 
 ## フェーズ1: Hero背景 — 波形SVG（B4）
 
-- [ ] Heroセクションの背景をグラデーションに変更
-  - [ ] `.hero` の `background` を `linear-gradient(180deg, #d0e8f5 0%, #e8f4fc 100%)` に
-  - [ ] ドットパターン（`background-image: radial-gradient`）をHero以外のセクションに限定
-- [ ] Hero直後に波形SVGを追加
-  - [ ] `index.html` の `</section>` (hero) 直後に `.hero-wave` div + インラインSVGを追加
-  - [ ] `.hero-wave svg` のスタイル（`display: block; width: 100%; height: 60px`）を追加
+- [x] Heroセクションの背景をグラデーションに変更
+  - [x] `.hero` の `background` を `linear-gradient(180deg, #d0e8f5 0%, #e8f4fc 100%)` に
+  - [x] ドットパターン（`background-image: radial-gradient`）をHero以外のセクションに限定
+- [x] Hero直後に波形SVGを追加
+  - [x] `index.html` の `</section>` (hero) 直後に `.hero-wave` div + インラインSVGを追加
+  - [x] `.hero-wave svg` のスタイル（`display: block; width: 100%; height: 60px`）を追加
 
 ## フェーズ2: Heroレイアウト — スクショ+マスコット重ね（B1+A1）
 
