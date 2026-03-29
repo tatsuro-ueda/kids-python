@@ -150,3 +150,40 @@ header h1 {
   background: #fde8e8;
 }
 
+.share-buttons {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.share-links {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.share-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.share-btn:hover {
+  opacity: 0.85;
+}
+
+.share-line {
+  background: #06C755;
+}
+
+.share-x {
+  background: #000;
+}
+
+.share-fb {
+  background: #1877F2;
+}
+

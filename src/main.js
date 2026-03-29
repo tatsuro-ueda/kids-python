@@ -1,7 +1,7 @@
 import { createEditor, highlightErrorLine, clearErrorHighlight } from "./editor.js";
 import { loadPyodide, runCode } from "./runner.js";
 import { translateError } from "./errors.js";
-import { detectSharedCode, setSharedCode, encodeShareURL } from "./storage.js";
+import { detectSharedCode, setSharedCode, encodeShareURL, getShareIntentURLs } from "./storage.js";
 
 // 共有URL検出（エディタ生成前に実行）
 const shared = detectSharedCode();
@@ -99,4 +99,17 @@ shareBtn.addEventListener("click", async () => {
     appendOutput("このURLをコピーしてね:");
     appendOutput(url);
   }
+
+  const intents = getShareIntentURLs(url);
+  const div = document.createElement("div");
+  div.className = "share-buttons";
+  div.innerHTML = `
+    SNSでもシェアできるよ
+    <div class="share-links">
+      <a class="share-btn share-line" href="${intents.line}" target="_blank" rel="noopener">LINE</a>
+      <a class="share-btn share-x" href="${intents.x}" target="_blank" rel="noopener">X</a>
+      <a class="share-btn share-fb" href="${intents.facebook}" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  `;
+  outputEl.appendChild(div);
 });

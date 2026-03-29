@@ -204,6 +204,49 @@ h3 {
   font-size: 0.9rem;
 }
 
+/* Share Section */
+.share-section {
+  margin-top: 24px;
+}
+
+.share-label {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.share-links {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.share-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.share-btn:hover {
+  opacity: 0.85;
+}
+
+.share-line {
+  background: #06C755;
+}
+
+.share-x {
+  background: #000;
+}
+
+.share-fb {
+  background: #1877F2;
+}
+
 /* Responsive */
 @media (min-width: 768px) {
   .feature-grid {
