@@ -7,7 +7,14 @@ const ROOT = path.join(__dirname, "..");
 const LOCALES_DIR = path.join(ROOT, "locales");
 const BASE_URL = "https://online-python.exe.xyz";
 const RTL_LANGUAGES = ["ar", "fa", "ur", "he"];
-const SCREENSHOT_LANGUAGES = ["ja", "en", "es", "ar", "hi"];
+// Auto-detect languages that have screenshots (assets/screenshots/{lang}/ exists)
+const SCREENSHOTS_DIR = path.join(ROOT, "assets", "screenshots");
+const SCREENSHOT_LANGUAGES = fs.existsSync(SCREENSHOTS_DIR)
+  ? fs.readdirSync(SCREENSHOTS_DIR).filter(f =>
+      fs.statSync(path.join(SCREENSHOTS_DIR, f)).isDirectory() &&
+      fs.existsSync(path.join(SCREENSHOTS_DIR, f, "step-run.png"))
+    )
+  : ["en"];
 
 // Load templates
 const lpTemplate = fs.readFileSync(path.join(ROOT, "index.html.tpl"), "utf-8");
