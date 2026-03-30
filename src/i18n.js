@@ -67,7 +67,7 @@ export async function initI18n() {
     .use(HttpBackend)
     .use(LanguageDetector)
     .init({
-      fallbackLng: "ja",
+      fallbackLng: "en",
       supportedLngs: LANGUAGES.map(l => l.code),
       ns: ["translation", "samples"],
       defaultNS: "translation",

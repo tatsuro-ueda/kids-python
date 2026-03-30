@@ -72,10 +72,10 @@
 
 ## フェーズ4: アプリのフォールバック言語変更
 
-- [ ] src/i18n.js の fallbackLng を "ja" → "en" に変更
-- [ ] npm run build
-- [ ] ローカル動作確認（対応外言語で /app/ にアクセスし英語UIが出るか）
-- [ ] コミット
+- [x] src/i18n.js の fallbackLng を "ja" → "en" に変更
+- [x] npm run build
+- [x] ローカル動作確認（対応外言語で /app/ にアクセスし英語UIが出るか）
+- [x] コミット
 
 ## フェーズ5: 総合テスト
 
