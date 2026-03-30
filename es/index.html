@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuaderno de Python — Python en el navegador para niños</title>
+  <meta name="description" content="Sin instalar nada. Un entorno de aprendizaje de Python en el navegador para niños. Interfaz en español, mensajes de error amigables, guardado automático. Funciona en Chromebook.">
+  <link rel="canonical" href="https://online-python.exe.xyz/es/">
+  <meta property="og:title" content="Cuaderno de Python">
+  <meta property="og:description" content="Python funciona en tu navegador. Un cuaderno de programación para niños">
+  <meta property="og:image" content="https://online-python.exe.xyz/assets/ogp-es.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" hreflang="x-default" href="https://online-python.exe.xyz/">
+  <link rel="alternate" hreflang="am" href="https://online-python.exe.xyz/am/">
+  <link rel="alternate" hreflang="ar" href="https://online-python.exe.xyz/ar/">
+  <link rel="alternate" hreflang="az" href="https://online-python.exe.xyz/az/">
+  <link rel="alternate" hreflang="bn" href="https://online-python.exe.xyz/bn/">
+  <link rel="alternate" hreflang="cs" href="https://online-python.exe.xyz/cs/">
+  <link rel="alternate" hreflang="da" href="https://online-python.exe.xyz/da/">
+  <link rel="alternate" hreflang="de" href="https://online-python.exe.xyz/de/">
+  <link rel="alternate" hreflang="el" href="https://online-python.exe.xyz/el/">
+  <link rel="alternate" hreflang="en" href="https://online-python.exe.xyz/en/">
+  <link rel="alternate" hreflang="es" href="https://online-python.exe.xyz/es/">
+  <link rel="alternate" hreflang="fa" href="https://online-python.exe.xyz/fa/">
+  <link rel="alternate" hreflang="fi" href="https://online-python.exe.xyz/fi/">
+  <link rel="alternate" hreflang="fr" href="https://online-python.exe.xyz/fr/">
+  <link rel="alternate" hreflang="gu" href="https://online-python.exe.xyz/gu/">
+  <link rel="alternate" hreflang="he" href="https://online-python.exe.xyz/he/">
+  <link rel="alternate" hreflang="hi" href="https://online-python.exe.xyz/hi/">
+  <link rel="alternate" hreflang="hr" href="https://online-python.exe.xyz/hr/">
+  <link rel="alternate" hreflang="hu" href="https://online-python.exe.xyz/hu/">
+  <link rel="alternate" hreflang="id" href="https://online-python.exe.xyz/id/">
+  <link rel="alternate" hreflang="it" href="https://online-python.exe.xyz/it/">
+  <link rel="alternate" hreflang="ja" href="https://online-python.exe.xyz/">
+  <link rel="alternate" hreflang="ka" href="https://online-python.exe.xyz/ka/">
+  <link rel="alternate" hreflang="kk" href="https://online-python.exe.xyz/kk/">
+  <link rel="alternate" hreflang="km" href="https://online-python.exe.xyz/km/">
+  <link rel="alternate" hreflang="ko" href="https://online-python.exe.xyz/ko/">
+  <link rel="alternate" hreflang="mr" href="https://online-python.exe.xyz/mr/">
+  <link rel="alternate" hreflang="ms" href="https://online-python.exe.xyz/ms/">
+  <link rel="alternate" hreflang="my" href="https://online-python.exe.xyz/my/">
+  <link rel="alternate" hreflang="ne" href="https://online-python.exe.xyz/ne/">
+  <link rel="alternate" hreflang="nl" href="https://online-python.exe.xyz/nl/">
+  <link rel="alternate" hreflang="no" href="https://online-python.exe.xyz/no/">
+  <link rel="alternate" hreflang="pl" href="https://online-python.exe.xyz/pl/">
+  <link rel="alternate" hreflang="pt" href="https://online-python.exe.xyz/pt/">
+  <link rel="alternate" hreflang="ro" href="https://online-python.exe.xyz/ro/">
+  <link rel="alternate" hreflang="ru" href="https://online-python.exe.xyz/ru/">
+  <link rel="alternate" hreflang="si" href="https://online-python.exe.xyz/si/">
+  <link rel="alternate" hreflang="sr" href="https://online-python.exe.xyz/sr/">
+  <link rel="alternate" hreflang="sv" href="https://online-python.exe.xyz/sv/">
+  <link rel="alternate" hreflang="sw" href="https://online-python.exe.xyz/sw/">
+  <link rel="alternate" hreflang="ta" href="https://online-python.exe.xyz/ta/">
+  <link rel="alternate" hreflang="te" href="https://online-python.exe.xyz/te/">
+  <link rel="alternate" hreflang="th" href="https://online-python.exe.xyz/th/">
+  <link rel="alternate" hreflang="tl" href="https://online-python.exe.xyz/tl/">
+  <link rel="alternate" hreflang="tr" href="https://online-python.exe.xyz/tr/">
+  <link rel="alternate" hreflang="uk" href="https://online-python.exe.xyz/uk/">
+  <link rel="alternate" hreflang="ur" href="https://online-python.exe.xyz/ur/">
+  <link rel="alternate" hreflang="uz" href="https://online-python.exe.xyz/uz/">
+  <link rel="alternate" hreflang="vi" href="https://online-python.exe.xyz/vi/">
+  <link rel="alternate" hreflang="zh-CN" href="https://online-python.exe.xyz/zh-CN/">
+  <link rel="alternate" hreflang="zh-TW" href="https://online-python.exe.xyz/zh-TW/">
+  <link rel="stylesheet" href="../lp.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Cuaderno de Python",
+    "description": "Sin instalar nada. Un entorno de aprendizaje de Python en el navegador para niños. Interfaz en español, mensajes de error amigables, guardado automático. Funciona en Chromebook.",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Any (Web Browser)",
+    "inLanguage": "es",
+    "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+    },
+    "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student",
+        "typicalAgeRange": "6-12"
+    }
+}
+  </script>
+  <script>
+  (function() {
+    var browserLang = (navigator.language || "").replace("_", "-");
+    if (!browserLang) return;
+    var pathMatch = location.pathname.match(/^\/([a-z]{2}(?:-[A-Z]{2})?)\//);
+    var currentLang = pathMatch ? pathMatch[1] : "ja";
+    var supported = {};
+    document.querySelectorAll('link[hreflang]').forEach(function(el) {
+      var hl = el.getAttribute("hreflang");
+      if (hl && hl !== "x-default") {
+        var href = el.getAttribute("href");
+        var p = href.replace(/https?:\/\/[^/]+/, "");
+        supported[hl] = p;
+      }
+    });
+    function findMatch(lang) {
+      if (supported[lang]) return supported[lang];
+      var base = lang.split("-")[0];
+      if (base === "zh") base = "zh-CN";
+      if (supported[base]) return supported[base];
+      return supported["en"] || "/en/";
+    }
+    var target = findMatch(browserLang);
+    var targetLang = target.replace(/^\/|\/$/g, "") || "ja";
+    if (targetLang !== currentLang) {
+      location.replace(target);
+    }
+  })();
+  </script>
+</head>
+<body>
+    <div id="lp-lang-selector">
+    <button id="lp-lang-btn" aria-label="Language">🌐</button>
+    <ul id="lp-lang-list" hidden></ul>
+  </div>
+  <section class="hero">
+    <h1>Cuaderno de Python</h1>
+    <p class="hero-catch">Python funciona en tu navegador.<br>Un cuaderno de programación para niños</p>
+    <p class="hero-sub">Sin instalar nada. Errores en español. Fácil para niños.</p>
+    <a href="/app/?lang=es" class="cta-btn">Pruébalo ahora</a>
+    <div class="hero-screenshot-wrapper">
+      <img src="../assets/screenshots/es/step-run.png" alt="Pantalla mostrando los resultados del código" class="hero-screenshot">
+      <img src="../assets/snake.png" alt="Mascota serpiente" class="hero-mascot">
+    </div>
+  </section>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#e8f4fc"/>
+    </svg>
+  </div>
+
+  <section class="problems fade-in">
+    <h2>¿Te suena familiar?</h2>
+    <ul class="problem-list">
+      <li>😢 Intenté instalar Python, pero era muy difícil y me rendí</li>
+      <li>💻 No se puede instalar software en un Chromebook</li>
+      <li>🌍 Las herramientas de Python en línea están en inglés — muy difícil para niños</li>
+      <li>❓ Los mensajes de error están en inglés — no sé qué corregir</li>
+    </ul>
+  </section>
+
+  <section class="features fade-in">
+    <h2>Características</h2>
+    <div class="feature-grid">
+      <div class="feature-card feature-card--blue">
+        <span class="feature-icon">🌐</span>
+        <h3>Sin instalación</h3>
+        <p>Solo abre tu navegador. Funciona en Chromebooks y tablets también.</p>
+      </div>
+      <div class="feature-card feature-card--green">
+        <span class="feature-icon">✏️</span>
+        <h3>En español</h3>
+        <p>Botones y menús en español. Fácil para los más pequeños.</p>
+      </div>
+      <div class="feature-card feature-card--pink">
+        <span class="feature-icon">💬</span>
+        <h3>Errores amigables</h3>
+        <p>Los errores en inglés se traducen a palabras que los niños entienden. También muestra cómo corregirlos.</p>
+      </div>
+      <div class="feature-card feature-card--yellow">
+        <span class="feature-icon">💾</span>
+        <h3>Tu código no se pierde</h3>
+        <p>Guardado automático. Cierra el navegador y tu código sigue ahí.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="error-demo">
+    <h2>¿Y si hay un error?</h2>
+    <p class="error-demo-intro">Los mensajes de error en inglés se traducen a palabras que los niños pueden entender. También muestra cómo corregirlos.</p>
+    <div class="error-demo-list">
+      <div class="error-demo-item">
+        <div class="error-before">
+          <span class="error-label">Error en inglés</span>
+          <code>SyntaxError: '(' was never closed</code>
+        </div>
+        <div class="error-arrow">↓</div>
+        <div class="error-after">
+          <span class="error-label">Traducido</span>
+          <code>El paréntesis ( no se cerró. Agrega ) para cerrarlo</code>
+        </div>
+      </div>
+      <div class="error-demo-item">
+        <div class="error-before">
+          <span class="error-label">Error en inglés</span>
+          <code>NameError: name 'hensuu' is not defined</code>
+        </div>
+        <div class="error-arrow">↓</div>
+        <div class="error-after">
+          <span class="error-label">Traducido</span>
+          <code>¿Qué es hensuu? Aún no lo has creado, o revisa el nombre</code>
+        </div>
+      </div>
+      <div class="error-demo-item">
+        <div class="error-before">
+          <span class="error-label">Error en inglés</span>
+          <code>IndentationError: expected an indented block</code>
+        </div>
+        <div class="error-arrow">↓</div>
+        <div class="error-after">
+          <span class="error-label">Traducido</span>
+          <code>Faltan espacios. Agrega 4 espacios después de if o for</code>
+        </div>
+      </div>
+    </div>
+    <p class="error-demo-note">Soporta más de 20 tipos de errores diferentes</p>
+  </section>
+
+  <section class="scratch-story">
+    <h2>¿Qué viene después de Scratch?</h2>
+    <div class="story-content">
+      <p>Aprendiste a hacer programas juntando bloques en Scratch. ¡Increíble!</p>
+      <p>Pero si quieres escribir programas con texto, el siguiente paso es Python.</p>
+      <p>Con el Cuaderno de Python, puedes escribir los mismos bloques de "repetir" y "si" de Scratch — pero en Python.</p>
+      <p>La sección de "Ejemplos" tiene código Python que hace lo mismo que los bloques de Scratch.</p>
+      <a href="/app/?lang=es" class="cta-btn">Ver los ejemplos</a>
+    </div>
+  </section>
+
+  <section class="examples fade-in">
+    <h2>¡Mira lo que puedes hacer!</h2>
+    <div class="example-grid">
+      <div class="example-card">
+        <h3>🎨 Haz un patrón</h3>
+        <pre class="example-code" dir="ltr">for i in range(5):
+    print("★" * i)</pre>
+        <div class="example-result" dir="ltr">★
+★★
+★★★
+★★★★</div>
+      </div>
+      <div class="example-card">
+        <h3>🎵 Haz música</h3>
+        <pre class="example-code" dir="ltr">for nota in ["Do","Re","Mi","Fa","Sol"]:
+    print(nota, "♪")</pre>
+        <div class="example-result" dir="ltr">Do ♪
+Re ♪
+Mi ♪
+...</div>
+      </div>
+      <div class="example-card">
+        <h3>🚀 Lanza un cohete</h3>
+        <pre class="example-code" dir="ltr">for i in [3,2,1]:
+    print(i)
+print("¡Despegue!")</pre>
+        <div class="example-result" dir="ltr">3
+2
+1
+¡Despegue!</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="safety fade-in">
+    <h2>Para padres — Tranquilidad</h2>
+    <dl class="safety-list">
+      <dt>🔒 Seguro</dt>
+      <dd>Todos los datos se procesan en el navegador de tu hijo. No se envía nada a servidores externos.</dd>
+      <dt>🐍 Python real</dt>
+      <dd>Usa WebAssembly (Pyodide) para ejecutar Python 3 estándar.</dd>
+      <dt>📈 Preparado para el futuro</dt>
+      <dd>Aprende sintaxis estándar de Python, así el conocimiento sirve al pasar a un entorno completo.</dd>
+      <dt>🆓 Completamente gratis</dt>
+      <dd>No necesitas crear una cuenta.</dd>
+    </dl>
+  </section>
+
+  <section class="howto fade-in">
+    <h2>Fácil como 1-2-3</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-number">1</span>
+        <h3>Abrir</h3>
+        <img src="../assets/screenshots/es/step-open.png" alt="Pantalla mostrando la app abierta en el navegador">
+        <p>Solo visita la URL.</p>
+      </div>
+      <div class="step">
+        <span class="step-number">2</span>
+        <h3>Escribir</h3>
+        <img src="../assets/screenshots/es/step-write.png" alt="Pantalla mostrando código Python siendo escrito">
+        <p>Escribe tu código.</p>
+      </div>
+      <div class="step">
+        <span class="step-number">3</span>
+        <h3>Ejecutar</h3>
+        <img src="../assets/screenshots/es/step-run.png" alt="Pantalla mostrando los resultados del código">
+        <p>Presiona el botón y mira el resultado.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section fade-in">
+    <a href="/app/?lang=es" class="cta-btn cta-btn-large">Pruébalo ahora</a>
+    <p class="cta-note">Sin cuenta — completamente gratis</p>
+    <div class="share-section">
+      <p class="share-label">Cuéntale a un amigo</p>
+      <div class="share-links" id="lp-share-links"></div>
+    </div>
+    <div class="community-section">
+      <p class="community-label">Únete a la comunidad</p>
+      <a href="https://discord.gg/sZCdKvT5Df" class="community-btn" target="_blank" rel="noopener">Unirse a Discord</a>
+    </div>
+  </section>
+  <script>
+    var SHARE_TEXT = "Python funciona en tu navegador! Un cuaderno de programación para niños";
+    var url = encodeURIComponent(location.href.split("#")[0]);
+    var text = encodeURIComponent(SHARE_TEXT);
+    document.getElementById("lp-share-links").innerHTML =
+      '<a class="share-btn share-line" href="https://social-plugins.line.me/lineit/share?url=' + url + '" target="_blank" rel="noopener">LINE</a>' +
+      '<a class="share-btn share-x" href="https://twitter.com/intent/tweet?url=' + url + '&text=' + text + '" target="_blank" rel="noopener">X</a>' +
+      '<a class="share-btn share-fb" href="https://www.facebook.com/sharer/sharer.php?u=' + url + '" target="_blank" rel="noopener">Facebook</a>';
+  </script>
+  <script>
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+  <footer class="site-footer">
+    <p>Por: <a href="https://feel-physics.jp" target="_blank" rel="noopener">Feel Physics</a></p>
+    <p><a href="mailto:tatsuro.ueda@feel-physics.jp">Contacto</a> ｜ <a href="/es/privacy.html">Política de privacidad</a> ｜ <a href="https://discord.gg/sZCdKvT5Df" target="_blank" rel="noopener">Comunidad (Discord)</a></p>
+    <p>&copy; 2026 Feel Physics</p>
+  </footer>
+</body>
+</html>

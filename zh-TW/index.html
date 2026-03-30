@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-TW" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python 練習本 — 給小朋友的瀏覽器 Python</title>
+  <meta name="description" content="免安裝。給小朋友的瀏覽器 Python 學習環境。中文介面、易懂的錯誤訊息、自動存檔。支援 Chromebook。">
+  <link rel="canonical" href="https://online-python.exe.xyz/zh-TW/">
+  <meta property="og:title" content="Python 練習本">
+  <meta property="og:description" content="在瀏覽器就能跑 Python！給小朋友的程式練習本">
+  <meta property="og:image" content="https://online-python.exe.xyz/assets/ogp-zh-TW.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" hreflang="x-default" href="https://online-python.exe.xyz/">
+  <link rel="alternate" hreflang="am" href="https://online-python.exe.xyz/am/">
+  <link rel="alternate" hreflang="ar" href="https://online-python.exe.xyz/ar/">
+  <link rel="alternate" hreflang="az" href="https://online-python.exe.xyz/az/">
+  <link rel="alternate" hreflang="bn" href="https://online-python.exe.xyz/bn/">
+  <link rel="alternate" hreflang="cs" href="https://online-python.exe.xyz/cs/">
+  <link rel="alternate" hreflang="da" href="https://online-python.exe.xyz/da/">
+  <link rel="alternate" hreflang="de" href="https://online-python.exe.xyz/de/">
+  <link rel="alternate" hreflang="el" href="https://online-python.exe.xyz/el/">
+  <link rel="alternate" hreflang="en" href="https://online-python.exe.xyz/en/">
+  <link rel="alternate" hreflang="es" href="https://online-python.exe.xyz/es/">
+  <link rel="alternate" hreflang="fa" href="https://online-python.exe.xyz/fa/">
+  <link rel="alternate" hreflang="fi" href="https://online-python.exe.xyz/fi/">
+  <link rel="alternate" hreflang="fr" href="https://online-python.exe.xyz/fr/">
+  <link rel="alternate" hreflang="gu" href="https://online-python.exe.xyz/gu/">
+  <link rel="alternate" hreflang="he" href="https://online-python.exe.xyz/he/">
+  <link rel="alternate" hreflang="hi" href="https://online-python.exe.xyz/hi/">
+  <link rel="alternate" hreflang="hr" href="https://online-python.exe.xyz/hr/">
+  <link rel="alternate" hreflang="hu" href="https://online-python.exe.xyz/hu/">
+  <link rel="alternate" hreflang="id" href="https://online-python.exe.xyz/id/">
+  <link rel="alternate" hreflang="it" href="https://online-python.exe.xyz/it/">
+  <link rel="alternate" hreflang="ja" href="https://online-python.exe.xyz/">
+  <link rel="alternate" hreflang="ka" href="https://online-python.exe.xyz/ka/">
+  <link rel="alternate" hreflang="kk" href="https://online-python.exe.xyz/kk/">
+  <link rel="alternate" hreflang="km" href="https://online-python.exe.xyz/km/">
+  <link rel="alternate" hreflang="ko" href="https://online-python.exe.xyz/ko/">
+  <link rel="alternate" hreflang="mr" href="https://online-python.exe.xyz/mr/">
+  <link rel="alternate" hreflang="ms" href="https://online-python.exe.xyz/ms/">
+  <link rel="alternate" hreflang="my" href="https://online-python.exe.xyz/my/">
+  <link rel="alternate" hreflang="ne" href="https://online-python.exe.xyz/ne/">
+  <link rel="alternate" hreflang="nl" href="https://online-python.exe.xyz/nl/">
+  <link rel="alternate" hreflang="no" href="https://online-python.exe.xyz/no/">
+  <link rel="alternate" hreflang="pl" href="https://online-python.exe.xyz/pl/">
+  <link rel="alternate" hreflang="pt" href="https://online-python.exe.xyz/pt/">
+  <link rel="alternate" hreflang="ro" href="https://online-python.exe.xyz/ro/">
+  <link rel="alternate" hreflang="ru" href="https://online-python.exe.xyz/ru/">
+  <link rel="alternate" hreflang="si" href="https://online-python.exe.xyz/si/">
+  <link rel="alternate" hreflang="sr" href="https://online-python.exe.xyz/sr/">
+  <link rel="alternate" hreflang="sv" href="https://online-python.exe.xyz/sv/">
+  <link rel="alternate" hreflang="sw" href="https://online-python.exe.xyz/sw/">
+  <link rel="alternate" hreflang="ta" href="https://online-python.exe.xyz/ta/">
+  <link rel="alternate" hreflang="te" href="https://online-python.exe.xyz/te/">
+  <link rel="alternate" hreflang="th" href="https://online-python.exe.xyz/th/">
+  <link rel="alternate" hreflang="tl" href="https://online-python.exe.xyz/tl/">
+  <link rel="alternate" hreflang="tr" href="https://online-python.exe.xyz/tr/">
+  <link rel="alternate" hreflang="uk" href="https://online-python.exe.xyz/uk/">
+  <link rel="alternate" hreflang="ur" href="https://online-python.exe.xyz/ur/">
+  <link rel="alternate" hreflang="uz" href="https://online-python.exe.xyz/uz/">
+  <link rel="alternate" hreflang="vi" href="https://online-python.exe.xyz/vi/">
+  <link rel="alternate" hreflang="zh-CN" href="https://online-python.exe.xyz/zh-CN/">
+  <link rel="alternate" hreflang="zh-TW" href="https://online-python.exe.xyz/zh-TW/">
+  <link rel="stylesheet" href="../lp.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Python 練習本",
+    "description": "免安裝。給小朋友的瀏覽器 Python 學習環境。中文介面、易懂的錯誤訊息、自動存檔。支援 Chromebook。",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Any (Web Browser)",
+    "inLanguage": "zh-TW",
+    "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+    },
+    "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student",
+        "typicalAgeRange": "6-12"
+    }
+}
+  </script>
+  <script>
+  (function() {
+    var browserLang = (navigator.language || "").replace("_", "-");
+    if (!browserLang) return;
+    var pathMatch = location.pathname.match(/^\/([a-z]{2}(?:-[A-Z]{2})?)\//);
+    var currentLang = pathMatch ? pathMatch[1] : "ja";
+    var supported = {};
+    document.querySelectorAll('link[hreflang]').forEach(function(el) {
+      var hl = el.getAttribute("hreflang");
+      if (hl && hl !== "x-default") {
+        var href = el.getAttribute("href");
+        var p = href.replace(/https?:\/\/[^/]+/, "");
+        supported[hl] = p;
+      }
+    });
+    function findMatch(lang) {
+      if (supported[lang]) return supported[lang];
+      var base = lang.split("-")[0];
+      if (base === "zh") base = "zh-CN";
+      if (supported[base]) return supported[base];
+      return supported["en"] || "/en/";
+    }
+    var target = findMatch(browserLang);
+    var targetLang = target.replace(/^\/|\/$/g, "") || "ja";
+    if (targetLang !== currentLang) {
+      location.replace(target);
+    }
+  })();
+  </script>
+</head>
+<body>
+    <div id="lp-lang-selector">
+    <button id="lp-lang-btn" aria-label="Language">🌐</button>
+    <ul id="lp-lang-list" hidden></ul>
+  </div>
+  <section class="hero">
+    <h1>Python 練習本</h1>
+    <p class="hero-catch">在瀏覽器就能跑 Python！<br>給小朋友的程式練習本</p>
+    <p class="hero-sub">免安裝。中文錯誤訊息。小朋友也看得懂。</p>
+    <a href="/app/?lang=zh-TW" class="cta-btn">馬上試試</a>
+    <div class="hero-screenshot-wrapper">
+      <img src="../assets/screenshots/zh-TW/step-run.png" alt="顯示程式碼執行結果的畫面" class="hero-screenshot">
+      <img src="../assets/snake.png" alt="小蛇吉祥物" class="hero-mascot">
+    </div>
+  </section>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#e8f4fc"/>
+    </svg>
+  </div>
+
+  <section class="problems fade-in">
+    <h2>你也遇過嗎？</h2>
+    <ul class="problem-list">
+      <li>😢 想安裝 Python，但太難了所以放棄了</li>
+      <li>💻 Chromebook 沒辦法安裝軟體</li>
+      <li>🌍 線上 Python 工具全都是英文 — 小朋友太難了</li>
+      <li>❓ 錯誤訊息是英文 — 不知道要改什麼</li>
+    </ul>
+  </section>
+
+  <section class="features fade-in">
+    <h2>功能特色</h2>
+    <div class="feature-grid">
+      <div class="feature-card feature-card--blue">
+        <span class="feature-icon">🌐</span>
+        <h3>免安裝</h3>
+        <p>打開瀏覽器就好。Chromebook 和平板也能用。</p>
+      </div>
+      <div class="feature-card feature-card--green">
+        <span class="feature-icon">✏️</span>
+        <h3>中文介面</h3>
+        <p>按鈕和選單都是中文。小朋友也容易使用。</p>
+      </div>
+      <div class="feature-card feature-card--pink">
+        <span class="feature-icon">💬</span>
+        <h3>易懂的錯誤訊息</h3>
+        <p>把英文錯誤翻成小朋友看得懂的中文。也會告訴你怎麼修改喔。</p>
+      </div>
+      <div class="feature-card feature-card--yellow">
+        <span class="feature-icon">💾</span>
+        <h3>程式碼不會不見</h3>
+        <p>自動存檔。關掉瀏覽器程式碼還是在的。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="error-demo">
+    <h2>如果出錯了怎麼辦？</h2>
+    <p class="error-demo-intro">英文錯誤訊息會被翻成小朋友看得懂的中文。也會告訴你怎麼修改。</p>
+    <div class="error-demo-list">
+      <div class="error-demo-item">
+        <div class="error-before">
+          <span class="error-label">英文錯誤</span>
+          <code>SyntaxError: '(' was never closed</code>
+        </div>
+        <div class="error-arrow">↓</div>
+        <div class="error-after">
+          <span class="error-label">翻譯後</span>
+          <code>括號 ( 還沒關起來喔，加上 ) 吧</code>
+        </div>
+      </div>
+      <div class="error-demo-item">
+        <div class="error-before">
+          <span class="error-label">英文錯誤</span>
+          <code>NameError: name 'hensuu' is not defined</code>
+        </div>
+        <div class="error-arrow">↓</div>
+        <div class="error-after">
+          <span class="error-label">翻譯後</span>
+          <code>hensuu 是什麼？還沒建立，或是名字打錯了喔</code>
+        </div>
+      </div>
+      <div class="error-demo-item">
+        <div class="error-before">
+          <span class="error-label">英文錯誤</span>
+          <code>IndentationError: expected an indented block</code>
+        </div>
+        <div class="error-arrow">↓</div>
+        <div class="error-after">
+          <span class="error-label">翻譯後</span>
+          <code>空格不夠喔，if 或 for 的下一行要空 4 格</code>
+        </div>
+      </div>
+    </div>
+    <p class="error-demo-note">支援超過 20 種錯誤類型</p>
+  </section>
+
+  <section class="scratch-story">
+    <h2>Scratch 之後呢？</h2>
+    <div class="story-content">
+      <p>你已經學會在 Scratch 裡用積木拼出程式了。好厲害！</p>
+      <p>如果想用文字寫程式，下一步就是 Python 喔。</p>
+      <p>用 Python 練習本，你可以把 Scratch 的「重複」和「如果」積木用 Python 寫出來。</p>
+      <p>App 的「範例」裡有跟 Scratch 積木做一樣事情的 Python 程式碼。</p>
+      <a href="/app/?lang=zh-TW" class="cta-btn">看看範例</a>
+    </div>
+  </section>
+
+  <section class="examples fade-in">
+    <h2>看看你能做什麼！</h2>
+    <div class="example-grid">
+      <div class="example-card">
+        <h3>🎨 做個圖案</h3>
+        <pre class="example-code" dir="ltr">for i in range(5):
+    print("★" * i)</pre>
+        <div class="example-result" dir="ltr">★
+★★
+★★★
+★★★★</div>
+      </div>
+      <div class="example-card">
+        <h3>🎵 做音樂</h3>
+        <pre class="example-code" dir="ltr">for yin in ["Do","Re","Mi","Fa","Sol"]:
+    print(yin, "♪")</pre>
+        <div class="example-result" dir="ltr">Do ♪
+Re ♪
+Mi ♪
+...</div>
+      </div>
+      <div class="example-card">
+        <h3>🚀 火箭發射</h3>
+        <pre class="example-code" dir="ltr">for i in [3,2,1]:
+    print(i)
+print("發射！")</pre>
+        <div class="example-result" dir="ltr">3
+2
+1
+發射！</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="safety fade-in">
+    <h2>給家長 — 請放心</h2>
+    <dl class="safety-list">
+      <dt>🔒 安全</dt>
+      <dd>所有資料都在孩子的瀏覽器中處理。不會傳送到外部伺服器。</dd>
+      <dt>🐍 真正的 Python</dt>
+      <dd>使用 WebAssembly（Pyodide）執行標準 Python 3。</dd>
+      <dt>📈 為未來做準備</dt>
+      <dd>學的是標準 Python 語法，將來換到完整環境也能用。</dd>
+      <dt>🆓 完全免費</dt>
+      <dd>不需要註冊帳號。</dd>
+    </dl>
+  </section>
+
+  <section class="howto fade-in">
+    <h2>簡單 3 步驟</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-number">1</span>
+        <h3>打開</h3>
+        <img src="../assets/screenshots/zh-TW/step-open.png" alt="瀏覽器中打開應用程式的畫面">
+        <p>直接打開網址就好。</p>
+      </div>
+      <div class="step">
+        <span class="step-number">2</span>
+        <h3>寫</h3>
+        <img src="../assets/screenshots/zh-TW/step-write.png" alt="正在輸入 Python 程式碼的畫面">
+        <p>寫你的程式碼。</p>
+      </div>
+      <div class="step">
+        <span class="step-number">3</span>
+        <h3>執行</h3>
+        <img src="../assets/screenshots/zh-TW/step-run.png" alt="顯示程式碼執行結果的畫面">
+        <p>按下按鈕看結果。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section fade-in">
+    <a href="/app/?lang=zh-TW" class="cta-btn cta-btn-large">馬上試試</a>
+    <p class="cta-note">不用帳號 — 完全免費</p>
+    <div class="share-section">
+      <p class="share-label">告訴朋友</p>
+      <div class="share-links" id="lp-share-links"></div>
+    </div>
+    <div class="community-section">
+      <p class="community-label">加入社群</p>
+      <a href="https://discord.gg/sZCdKvT5Df" class="community-btn" target="_blank" rel="noopener">加入 Discord</a>
+    </div>
+  </section>
+  <script>
+    var SHARE_TEXT = "在瀏覽器就能跑 Python！給小朋友的程式練習本";
+    var url = encodeURIComponent(location.href.split("#")[0]);
+    var text = encodeURIComponent(SHARE_TEXT);
+    document.getElementById("lp-share-links").innerHTML =
+      '<a class="share-btn share-line" href="https://social-plugins.line.me/lineit/share?url=' + url + '" target="_blank" rel="noopener">LINE</a>' +
+      '<a class="share-btn share-x" href="https://twitter.com/intent/tweet?url=' + url + '&text=' + text + '" target="_blank" rel="noopener">X</a>' +
+      '<a class="share-btn share-fb" href="https://www.facebook.com/sharer/sharer.php?u=' + url + '" target="_blank" rel="noopener">Facebook</a>';
+  </script>
+  <script>
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+  <footer class="site-footer">
+    <p>營運： <a href="https://feel-physics.jp" target="_blank" rel="noopener">Feel Physics</a></p>
+    <p><a href="mailto:tatsuro.ueda@feel-physics.jp">聯絡我們</a> ｜ <a href="/zh-TW/privacy.html">隱私權政策</a> ｜ <a href="https://discord.gg/sZCdKvT5Df" target="_blank" rel="noopener">社群（Discord）</a></p>
+    <p>&copy; 2026 Feel Physics</p>
+  </footer>
+</body>
+</html>

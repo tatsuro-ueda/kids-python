@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тетрадка Python — Python в браузере для детей</title>
+  <meta name="description" content="Без установки. Среда обучения Python в браузере для детей. Интерфейс на русском, понятные сообщения об ошибках, автосохранение. Работает на Chromebook.">
+  <link rel="canonical" href="https://online-python.exe.xyz/ru/">
+  <meta property="og:title" content="Тетрадка Python">
+  <meta property="og:description" content="Python работает прямо в браузере. Тетрадка по программированию для детей">
+  <meta property="og:image" content="https://online-python.exe.xyz/assets/ogp-ru.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" hreflang="x-default" href="https://online-python.exe.xyz/">
+  <link rel="alternate" hreflang="am" href="https://online-python.exe.xyz/am/">
+  <link rel="alternate" hreflang="ar" href="https://online-python.exe.xyz/ar/">
+  <link rel="alternate" hreflang="az" href="https://online-python.exe.xyz/az/">
+  <link rel="alternate" hreflang="bn" href="https://online-python.exe.xyz/bn/">
+  <link rel="alternate" hreflang="cs" href="https://online-python.exe.xyz/cs/">
+  <link rel="alternate" hreflang="da" href="https://online-python.exe.xyz/da/">
+  <link rel="alternate" hreflang="de" href="https://online-python.exe.xyz/de/">
+  <link rel="alternate" hreflang="el" href="https://online-python.exe.xyz/el/">
+  <link rel="alternate" hreflang="en" href="https://online-python.exe.xyz/en/">
+  <link rel="alternate" hreflang="es" href="https://online-python.exe.xyz/es/">
+  <link rel="alternate" hreflang="fa" href="https://online-python.exe.xyz/fa/">
+  <link rel="alternate" hreflang="fi" href="https://online-python.exe.xyz/fi/">
+  <link rel="alternate" hreflang="fr" href="https://online-python.exe.xyz/fr/">
+  <link rel="alternate" hreflang="gu" href="https://online-python.exe.xyz/gu/">
+  <link rel="alternate" hreflang="he" href="https://online-python.exe.xyz/he/">
+  <link rel="alternate" hreflang="hi" href="https://online-python.exe.xyz/hi/">
+  <link rel="alternate" hreflang="hr" href="https://online-python.exe.xyz/hr/">
+  <link rel="alternate" hreflang="hu" href="https://online-python.exe.xyz/hu/">
+  <link rel="alternate" hreflang="id" href="https://online-python.exe.xyz/id/">
+  <link rel="alternate" hreflang="it" href="https://online-python.exe.xyz/it/">
+  <link rel="alternate" hreflang="ja" href="https://online-python.exe.xyz/">
+  <link rel="alternate" hreflang="ka" href="https://online-python.exe.xyz/ka/">
+  <link rel="alternate" hreflang="kk" href="https://online-python.exe.xyz/kk/">
+  <link rel="alternate" hreflang="km" href="https://online-python.exe.xyz/km/">
+  <link rel="alternate" hreflang="ko" href="https://online-python.exe.xyz/ko/">
+  <link rel="alternate" hreflang="mr" href="https://online-python.exe.xyz/mr/">
+  <link rel="alternate" hreflang="ms" href="https://online-python.exe.xyz/ms/">
+  <link rel="alternate" hreflang="my" href="https://online-python.exe.xyz/my/">
+  <link rel="alternate" hreflang="ne" href="https://online-python.exe.xyz/ne/">
+  <link rel="alternate" hreflang="nl" href="https://online-python.exe.xyz/nl/">
+  <link rel="alternate" hreflang="no" href="https://online-python.exe.xyz/no/">
+  <link rel="alternate" hreflang="pl" href="https://online-python.exe.xyz/pl/">
+  <link rel="alternate" hreflang="pt" href="https://online-python.exe.xyz/pt/">
+  <link rel="alternate" hreflang="ro" href="https://online-python.exe.xyz/ro/">
+  <link rel="alternate" hreflang="ru" href="https://online-python.exe.xyz/ru/">
+  <link rel="alternate" hreflang="si" href="https://online-python.exe.xyz/si/">
+  <link rel="alternate" hreflang="sr" href="https://online-python.exe.xyz/sr/">
+  <link rel="alternate" hreflang="sv" href="https://online-python.exe.xyz/sv/">
+  <link rel="alternate" hreflang="sw" href="https://online-python.exe.xyz/sw/">
+  <link rel="alternate" hreflang="ta" href="https://online-python.exe.xyz/ta/">
+  <link rel="alternate" hreflang="te" href="https://online-python.exe.xyz/te/">
+  <link rel="alternate" hreflang="th" href="https://online-python.exe.xyz/th/">
+  <link rel="alternate" hreflang="tl" href="https://online-python.exe.xyz/tl/">
+  <link rel="alternate" hreflang="tr" href="https://online-python.exe.xyz/tr/">
+  <link rel="alternate" hreflang="uk" href="https://online-python.exe.xyz/uk/">
+  <link rel="alternate" hreflang="ur" href="https://online-python.exe.xyz/ur/">
+  <link rel="alternate" hreflang="uz" href="https://online-python.exe.xyz/uz/">
+  <link rel="alternate" hreflang="vi" href="https://online-python.exe.xyz/vi/">
+  <link rel="alternate" hreflang="zh-CN" href="https://online-python.exe.xyz/zh-CN/">
+  <link rel="alternate" hreflang="zh-TW" href="https://online-python.exe.xyz/zh-TW/">
+  <link rel="stylesheet" href="../lp.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Тетрадка Python",
+    "description": "Без установки. Среда обучения Python в браузере для детей. Интерфейс на русском, понятные сообщения об ошибках, автосохранение. Работает на Chromebook.",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Any (Web Browser)",
+    "inLanguage": "ru",
+    "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+    },
+    "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student",
+        "typicalAgeRange": "6-12"
+    }
+}
+  </script>
+  <script>
+  (function() {
+    var browserLang = (navigator.language || "").replace("_", "-");
+    if (!browserLang) return;
+    var pathMatch = location.pathname.match(/^\/([a-z]{2}(?:-[A-Z]{2})?)\//);
+    var currentLang = pathMatch ? pathMatch[1] : "ja";
+    var supported = {};
+    document.querySelectorAll('link[hreflang]').forEach(function(el) {
+      var hl = el.getAttribute("hreflang");
+      if (hl && hl !== "x-default") {
+        var href = el.getAttribute("href");
+        var p = href.replace(/https?:\/\/[^/]+/, "");
+        supported[hl] = p;
+      }
+    });
+    function findMatch(lang) {
+      if (supported[lang]) return supported[lang];
+      var base = lang.split("-")[0];
+      if (base === "zh") base = "zh-CN";
+      if (supported[base]) return supported[base];
+      return supported["en"] || "/en/";
+    }
+    var target = findMatch(browserLang);
+    var targetLang = target.replace(/^\/|\/$/g, "") || "ja";
+    if (targetLang !== currentLang) {
+      location.replace(target);
+    }
+  })();
+  </script>
+</head>
+<body>
+    <div id="lp-lang-selector">
+    <button id="lp-lang-btn" aria-label="Language">🌐</button>
+    <ul id="lp-lang-list" hidden></ul>
+  </div>
+  <section class="hero">
+    <h1>Тетрадка Python</h1>
+    <p class="hero-catch">Python работает прямо в браузере.<br>Тетрадка по программированию для детей</p>
+    <p class="hero-sub">Без установки. Ошибки на русском. Понятно даже детям.</p>
+    <a href="/app/?lang=ru" class="cta-btn">Попробуй сейчас</a>
+    <div class="hero-screenshot-wrapper">
+      <img src="../assets/screenshots/ru/step-run.png" alt="Экран с результатами выполнения кода" class="hero-screenshot">
+      <img src="../assets/snake.png" alt="Змейка-талисман" class="hero-mascot">
+    </div>
+  </section>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#e8f4fc"/>
+    </svg>
+  </div>
+
+  <section class="problems fade-in">
+    <h2>Знакомо?</h2>
+    <ul class="problem-list">
+      <li>😢 Пытался установить Python, но слишком сложно — бросил</li>
+      <li>💻 На Chromebook нельзя устанавливать программы</li>
+      <li>🌍 Онлайн-инструменты Python все на английском — детям слишком сложно</li>
+      <li>❓ Сообщения об ошибках на английском — непонятно, что исправлять</li>
+    </ul>
+  </section>
+
+  <section class="features fade-in">
+    <h2>Возможности</h2>
+    <div class="feature-grid">
+      <div class="feature-card feature-card--blue">
+        <span class="feature-icon">🌐</span>
+        <h3>Без установки</h3>
+        <p>Просто открой браузер. Работает на Chromebook и планшетах тоже.</p>
+      </div>
+      <div class="feature-card feature-card--green">
+        <span class="feature-icon">✏️</span>
+        <h3>На русском</h3>
+        <p>Кнопки и меню на русском. Легко для маленьких учеников.</p>
+      </div>
+      <div class="feature-card feature-card--pink">
+        <span class="feature-icon">💬</span>
+        <h3>Понятные ошибки</h3>
+        <p>Английские ошибки переводятся на понятный детям язык. Показывает, как исправить.</p>
+      </div>
+      <div class="feature-card feature-card--yellow">
+        <span class="feature-icon">💾</span>
+        <h3>Код не пропадёт</h3>
+        <p>Автосохранение. Закрой браузер — код останется.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="error-demo">
+    <h2>А если ошибка?</h2>
+    <p class="error-demo-intro">Английские сообщения об ошибках переводятся на понятный детям русский. Показывает, как исправить.</p>
+    <div class="error-demo-list">
+      <div class="error-demo-item">
+        <div class="error-before">
+          <span class="error-label">Ошибка на английском</span>
+          <code>SyntaxError: '(' was never closed</code>
+        </div>
+        <div class="error-arrow">↓</div>
+        <div class="error-after">
+          <span class="error-label">Перевод</span>
+          <code>Скобка ( не закрыта. Добавь )</code>
+        </div>
+      </div>
+      <div class="error-demo-item">
+        <div class="error-before">
+          <span class="error-label">Ошибка на английском</span>
+          <code>NameError: name 'hensuu' is not defined</code>
+        </div>
+        <div class="error-arrow">↓</div>
+        <div class="error-after">
+          <span class="error-label">Перевод</span>
+          <code>Что такое hensuu? Ты ещё не создал это, или проверь название</code>
+        </div>
+      </div>
+      <div class="error-demo-item">
+        <div class="error-before">
+          <span class="error-label">Ошибка на английском</span>
+          <code>IndentationError: expected an indented block</code>
+        </div>
+        <div class="error-arrow">↓</div>
+        <div class="error-after">
+          <span class="error-label">Перевод</span>
+          <code>Мало пробелов. После if или for нужно 4 пробела</code>
+        </div>
+      </div>
+    </div>
+    <p class="error-demo-note">Поддерживает более 20 типов ошибок</p>
+  </section>
+
+  <section class="scratch-story">
+    <h2>Что после Scratch?</h2>
+    <div class="story-content">
+      <p>Ты научился создавать программы, собирая блоки в Scratch. Молодец!</p>
+      <p>Если хочешь писать программы текстом, следующий шаг — Python.</p>
+      <p>В Тетрадке Python ты можешь писать те же блоки «повтори» и «если» из Scratch — но на Python.</p>
+      <p>В разделе «Примеры» есть код Python, который делает то же, что блоки Scratch.</p>
+      <a href="/app/?lang=ru" class="cta-btn">Посмотри примеры</a>
+    </div>
+  </section>
+
+  <section class="examples fade-in">
+    <h2>Смотри, что можно сделать!</h2>
+    <div class="example-grid">
+      <div class="example-card">
+        <h3>🎨 Создай узор</h3>
+        <pre class="example-code" dir="ltr">for i in range(5):
+    print("★" * i)</pre>
+        <div class="example-result" dir="ltr">★
+★★
+★★★
+★★★★</div>
+      </div>
+      <div class="example-card">
+        <h3>🎵 Создай музыку</h3>
+        <pre class="example-code" dir="ltr">for nota in ["До","Ре","Ми","Фа","Соль"]:
+    print(nota, "♪")</pre>
+        <div class="example-result" dir="ltr">До ♪
+Ре ♪
+Ми ♪
+...</div>
+      </div>
+      <div class="example-card">
+        <h3>🚀 Запуск ракеты</h3>
+        <pre class="example-code" dir="ltr">for i in [3,2,1]:
+    print(i)
+print("Поехали!")</pre>
+        <div class="example-result" dir="ltr">3
+2
+1
+Поехали!</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="safety fade-in">
+    <h2>Для родителей — Будьте спокойны</h2>
+    <dl class="safety-list">
+      <dt>🔒 Безопасно</dt>
+      <dd>Все данные обрабатываются в браузере вашего ребёнка. Ничего не отправляется на внешние серверы.</dd>
+      <dt>🐍 Настоящий Python</dt>
+      <dd>Использует WebAssembly (Pyodide) для запуска стандартного Python 3.</dd>
+      <dt>📈 Пригодится в будущем</dt>
+      <dd>Изучает стандартный синтаксис Python, знания пригодятся при переходе к полноценной среде.</dd>
+      <dt>🆓 Полностью бесплатно</dt>
+      <dd>Регистрация не нужна.</dd>
+    </dl>
+  </section>
+
+  <section class="howto fade-in">
+    <h2>Просто как 1-2-3</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-number">1</span>
+        <h3>Открой</h3>
+        <img src="../assets/screenshots/ru/step-open.png" alt="Экран с приложением, открытым в браузере">
+        <p>Просто зайди по ссылке.</p>
+      </div>
+      <div class="step">
+        <span class="step-number">2</span>
+        <h3>Напиши</h3>
+        <img src="../assets/screenshots/ru/step-write.png" alt="Экран с вводом кода Python">
+        <p>Напиши свой код.</p>
+      </div>
+      <div class="step">
+        <span class="step-number">3</span>
+        <h3>Запусти</h3>
+        <img src="../assets/screenshots/ru/step-run.png" alt="Экран с результатами выполнения кода">
+        <p>Нажми кнопку и посмотри результат.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section fade-in">
+    <a href="/app/?lang=ru" class="cta-btn cta-btn-large">Попробуй сейчас</a>
+    <p class="cta-note">Без регистрации — полностью бесплатно</p>
+    <div class="share-section">
+      <p class="share-label">Расскажи другу</p>
+      <div class="share-links" id="lp-share-links"></div>
+    </div>
+    <div class="community-section">
+      <p class="community-label">Присоединяйтесь к сообществу</p>
+      <a href="https://discord.gg/sZCdKvT5Df" class="community-btn" target="_blank" rel="noopener">Войти в Discord</a>
+    </div>
+  </section>
+  <script>
+    var SHARE_TEXT = "Python работает прямо в браузере! Тетрадка по программированию для детей";
+    var url = encodeURIComponent(location.href.split("#")[0]);
+    var text = encodeURIComponent(SHARE_TEXT);
+    document.getElementById("lp-share-links").innerHTML =
+      '<a class="share-btn share-line" href="https://social-plugins.line.me/lineit/share?url=' + url + '" target="_blank" rel="noopener">LINE</a>' +
+      '<a class="share-btn share-x" href="https://twitter.com/intent/tweet?url=' + url + '&text=' + text + '" target="_blank" rel="noopener">X</a>' +
+      '<a class="share-btn share-fb" href="https://www.facebook.com/sharer/sharer.php?u=' + url + '" target="_blank" rel="noopener">Facebook</a>';
+  </script>
+  <script>
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+  <footer class="site-footer">
+    <p>Автор: <a href="https://feel-physics.jp" target="_blank" rel="noopener">Feel Physics</a></p>
+    <p><a href="mailto:tatsuro.ueda@feel-physics.jp">Связаться</a> ｜ <a href="/ru/privacy.html">Политика конфиденциальности</a> ｜ <a href="https://discord.gg/sZCdKvT5Df" target="_blank" rel="noopener">Сообщество (Discord)</a></p>
+    <p>&copy; 2026 Feel Physics</p>
+  </footer>
+</body>
+</html>

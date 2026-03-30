@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="tl" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuwaderno sa Python — Python sa browser para sa mga bata</title>
+  <meta name="description" content="Walang kailangang i-install. Python learning environment sa browser para sa mga bata. Filipino na interface, child-friendly na error messages, auto-save. Gumagana sa Chromebook.">
+  <link rel="canonical" href="https://online-python.exe.xyz/tl/">
+  <meta property="og:title" content="Kuwaderno sa Python">
+  <meta property="og:description" content="Gumagana ang Python sa browser! Kuwaderno sa programming para sa mga bata">
+  <meta property="og:image" content="https://online-python.exe.xyz/assets/ogp-tl.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" hreflang="x-default" href="https://online-python.exe.xyz/">
+  <link rel="alternate" hreflang="am" href="https://online-python.exe.xyz/am/">
+  <link rel="alternate" hreflang="ar" href="https://online-python.exe.xyz/ar/">
+  <link rel="alternate" hreflang="az" href="https://online-python.exe.xyz/az/">
+  <link rel="alternate" hreflang="bn" href="https://online-python.exe.xyz/bn/">
+  <link rel="alternate" hreflang="cs" href="https://online-python.exe.xyz/cs/">
+  <link rel="alternate" hreflang="da" href="https://online-python.exe.xyz/da/">
+  <link rel="alternate" hreflang="de" href="https://online-python.exe.xyz/de/">
+  <link rel="alternate" hreflang="el" href="https://online-python.exe.xyz/el/">
+  <link rel="alternate" hreflang="en" href="https://online-python.exe.xyz/en/">
+  <link rel="alternate" hreflang="es" href="https://online-python.exe.xyz/es/">
+  <link rel="alternate" hreflang="fa" href="https://online-python.exe.xyz/fa/">
+  <link rel="alternate" hreflang="fi" href="https://online-python.exe.xyz/fi/">
+  <link rel="alternate" hreflang="fr" href="https://online-python.exe.xyz/fr/">
+  <link rel="alternate" hreflang="gu" href="https://online-python.exe.xyz/gu/">
+  <link rel="alternate" hreflang="he" href="https://online-python.exe.xyz/he/">
+  <link rel="alternate" hreflang="hi" href="https://online-python.exe.xyz/hi/">
+  <link rel="alternate" hreflang="hr" href="https://online-python.exe.xyz/hr/">
+  <link rel="alternate" hreflang="hu" href="https://online-python.exe.xyz/hu/">
+  <link rel="alternate" hreflang="id" href="https://online-python.exe.xyz/id/">
+  <link rel="alternate" hreflang="it" href="https://online-python.exe.xyz/it/">
+  <link rel="alternate" hreflang="ja" href="https://online-python.exe.xyz/">
+  <link rel="alternate" hreflang="ka" href="https://online-python.exe.xyz/ka/">
+  <link rel="alternate" hreflang="kk" href="https://online-python.exe.xyz/kk/">
+  <link rel="alternate" hreflang="km" href="https://online-python.exe.xyz/km/">
+  <link rel="alternate" hreflang="ko" href="https://online-python.exe.xyz/ko/">
+  <link rel="alternate" hreflang="mr" href="https://online-python.exe.xyz/mr/">
+  <link rel="alternate" hreflang="ms" href="https://online-python.exe.xyz/ms/">
+  <link rel="alternate" hreflang="my" href="https://online-python.exe.xyz/my/">
+  <link rel="alternate" hreflang="ne" href="https://online-python.exe.xyz/ne/">
+  <link rel="alternate" hreflang="nl" href="https://online-python.exe.xyz/nl/">
+  <link rel="alternate" hreflang="no" href="https://online-python.exe.xyz/no/">
+  <link rel="alternate" hreflang="pl" href="https://online-python.exe.xyz/pl/">
+  <link rel="alternate" hreflang="pt" href="https://online-python.exe.xyz/pt/">
+  <link rel="alternate" hreflang="ro" href="https://online-python.exe.xyz/ro/">
+  <link rel="alternate" hreflang="ru" href="https://online-python.exe.xyz/ru/">
+  <link rel="alternate" hreflang="si" href="https://online-python.exe.xyz/si/">
+  <link rel="alternate" hreflang="sr" href="https://online-python.exe.xyz/sr/">
+  <link rel="alternate" hreflang="sv" href="https://online-python.exe.xyz/sv/">
+  <link rel="alternate" hreflang="sw" href="https://online-python.exe.xyz/sw/">
+  <link rel="alternate" hreflang="ta" href="https://online-python.exe.xyz/ta/">
+  <link rel="alternate" hreflang="te" href="https://online-python.exe.xyz/te/">
+  <link rel="alternate" hreflang="th" href="https://online-python.exe.xyz/th/">
+  <link rel="alternate" hreflang="tl" href="https://online-python.exe.xyz/tl/">
+  <link rel="alternate" hreflang="tr" href="https://online-python.exe.xyz/tr/">
+  <link rel="alternate" hreflang="uk" href="https://online-python.exe.xyz/uk/">
+  <link rel="alternate" hreflang="ur" href="https://online-python.exe.xyz/ur/">
+  <link rel="alternate" hreflang="uz" href="https://online-python.exe.xyz/uz/">
+  <link rel="alternate" hreflang="vi" href="https://online-python.exe.xyz/vi/">
+  <link rel="alternate" hreflang="zh-CN" href="https://online-python.exe.xyz/zh-CN/">
+  <link rel="alternate" hreflang="zh-TW" href="https://online-python.exe.xyz/zh-TW/">
+  <link rel="stylesheet" href="../lp.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Kuwaderno sa Python",
+    "description": "Walang kailangang i-install. Python learning environment sa browser para sa mga bata. Filipino na interface, child-friendly na error messages, auto-save. Gumagana sa Chromebook.",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Any (Web Browser)",
+    "inLanguage": "tl",
+    "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+    },
+    "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student",
+        "typicalAgeRange": "6-12"
+    }
+}
+  </script>
+  <script>
+  (function() {
+    var browserLang = (navigator.language || "").replace("_", "-");
+    if (!browserLang) return;
+    var pathMatch = location.pathname.match(/^\/([a-z]{2}(?:-[A-Z]{2})?)\//);
+    var currentLang = pathMatch ? pathMatch[1] : "ja";
+    var supported = {};
+    document.querySelectorAll('link[hreflang]').forEach(function(el) {
+      var hl = el.getAttribute("hreflang");
+      if (hl && hl !== "x-default") {
+        var href = el.getAttribute("href");
+        var p = href.replace(/https?:\/\/[^/]+/, "");
+        supported[hl] = p;
+      }
+    });
+    function findMatch(lang) {
+      if (supported[lang]) return supported[lang];
+      var base = lang.split("-")[0];
+      if (base === "zh") base = "zh-CN";
+      if (supported[base]) return supported[base];
+      return supported["en"] || "/en/";
+    }
+    var target = findMatch(browserLang);
+    var targetLang = target.replace(/^\/|\/$/g, "") || "ja";
+    if (targetLang !== currentLang) {
+      location.replace(target);
+    }
+  })();
+  </script>
+</head>
+<body>
+    <div id="lp-lang-selector">
+    <button id="lp-lang-btn" aria-label="Language">🌐</button>
+    <ul id="lp-lang-list" hidden></ul>
+  </div>
+  <section class="hero">
+    <h1>Kuwaderno sa Python</h1>
+    <p class="hero-catch">Gumagana ang Python sa browser!<br>Kuwaderno sa programming para sa mga bata</p>
+    <p class="hero-sub">Walang install. Mga error sa Filipino. Madali para sa mga bata.</p>
+    <a href="/app/?lang=tl" class="cta-btn">Subukan ngayon</a>
+    <div class="hero-screenshot-wrapper">
+      <img src="../assets/screenshots/tl/step-run.png" alt="Screen na nagpapakita ng resulta ng code" class="hero-screenshot">
+      <img src="../assets/snake.png" alt="Ahas na maskot" class="hero-mascot">
+    </div>
+  </section>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#e8f4fc"/>
+    </svg>
+  </div>
+
+  <section class="problems fade-in">
+    <h2>Pamilyar ba?</h2>
+    <ul class="problem-list">
+      <li>😢 Sinubukan ko mag-install ng Python, pero napakahirap at sumuko na</li>
+      <li>💻 Hindi makapag-install ng software sa Chromebook</li>
+      <li>🌍 Mga Python tool online puro English — napakahirap para sa mga bata</li>
+      <li>❓ Mga error message puro English — hindi ko alam kung ano ang aayusin</li>
+    </ul>
+  </section>
+
+  <section class="features fade-in">
+    <h2>Mga Feature</h2>
+    <div class="feature-grid">
+      <div class="feature-card feature-card--blue">
+        <span class="feature-icon">🌐</span>
+        <h3>Walang install</h3>
+        <p>Buksan lang ang browser. Gumagana rin sa Chromebook at tablet.</p>
+      </div>
+      <div class="feature-card feature-card--green">
+        <span class="feature-icon">✏️</span>
+        <h3>Lahat sa Filipino</h3>
+        <p>Mga button at menu sa Filipino. Madali para sa mga batang mag-aaral.</p>
+      </div>
+      <div class="feature-card feature-card--pink">
+        <span class="feature-icon">💬</span>
+        <h3>Child-friendly na errors</h3>
+        <p>Mga English error na isinalin sa mga salitang naiintindihan ng mga bata. Ipinapakita rin kung paano ayusin.</p>
+      </div>
+      <div class="feature-card feature-card--yellow">
+        <span class="feature-icon">💾</span>
+        <h3>Hindi mawawala ang code</h3>
+        <p>Auto-save. Isara ang browser at nandoon pa rin ang code mo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="error-demo">
+    <h2>Paano kung may error?</h2>
+    <p class="error-demo-intro">Mga English error message na isinalin sa mga salitang naiintindihan ng mga bata. Ipinapakita rin kung paano ayusin.</p>
+    <div class="error-demo-list">
+      <div class="error-demo-item">
+        <div class="error-before">
+          <span class="error-label">English na error</span>
+          <code>SyntaxError: '(' was never closed</code>
+        </div>
+        <div class="error-arrow">↓</div>
+        <div class="error-after">
+          <span class="error-label">Isinalin</span>
+          <code>Hindi pa nasara ang panaklong (. Lagyan ng ) para isara</code>
+        </div>
+      </div>
+      <div class="error-demo-item">
+        <div class="error-before">
+          <span class="error-label">English na error</span>
+          <code>NameError: name 'hensuu' is not defined</code>
+        </div>
+        <div class="error-arrow">↓</div>
+        <div class="error-after">
+          <span class="error-label">Isinalin</span>
+          <code>Ano ang hensuu? Hindi pa ito nagawa, o tingnan ang spelling</code>
+        </div>
+      </div>
+      <div class="error-demo-item">
+        <div class="error-before">
+          <span class="error-label">English na error</span>
+          <code>IndentationError: expected an indented block</code>
+        </div>
+        <div class="error-arrow">↓</div>
+        <div class="error-after">
+          <span class="error-label">Isinalin</span>
+          <code>Kulang ang spaces. Maglagay ng 4 na spaces pagkatapos ng if o for</code>
+        </div>
+      </div>
+    </div>
+    <p class="error-demo-note">Sumusuporta sa higit 20 iba't ibang uri ng error</p>
+  </section>
+
+  <section class="scratch-story">
+    <h2>Ano ang susunod pagkatapos ng Scratch?</h2>
+    <div class="story-content">
+      <p>Natuto kang gumawa ng programs sa pamamagitan ng pagsasama-sama ng blocks sa Scratch. Ang galing!</p>
+      <p>Pero kung gusto mong sumulat ng programs gamit ang text, ang susunod na hakbang ay Python.</p>
+      <p>Sa Kuwaderno sa Python, pwede mong isulat ang parehong "ulitin" at "kung" blocks mula sa Scratch — pero sa Python.</p>
+      <p>Ang "Mga Halimbawa" na seksyon ay may Python code na gumagawa ng parehong bagay tulad ng Scratch blocks.</p>
+      <a href="/app/?lang=tl" class="cta-btn">Tingnan ang mga halimbawa</a>
+    </div>
+  </section>
+
+  <section class="examples fade-in">
+    <h2>Tingnan ang kaya mong gawin!</h2>
+    <div class="example-grid">
+      <div class="example-card">
+        <h3>🎨 Gumawa ng pattern</h3>
+        <pre class="example-code" dir="ltr">for i in range(5):
+    print("★" * i)</pre>
+        <div class="example-result" dir="ltr">★
+★★
+★★★
+★★★★</div>
+      </div>
+      <div class="example-card">
+        <h3>🎵 Gumawa ng musika</h3>
+        <pre class="example-code" dir="ltr">for nota in ["Do","Re","Mi","Fa","Sol"]:
+    print(nota, "♪")</pre>
+        <div class="example-result" dir="ltr">Do ♪
+Re ♪
+Mi ♪
+...</div>
+      </div>
+      <div class="example-card">
+        <h3>🚀 Paglulunsad ng rocket</h3>
+        <pre class="example-code" dir="ltr">for i in [3,2,1]:
+    print(i)
+print("Lunsad!")</pre>
+        <div class="example-result" dir="ltr">3
+2
+1
+Lunsad!</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="safety fade-in">
+    <h2>Para sa mga Magulang — Katahimikan ng Isip</h2>
+    <dl class="safety-list">
+      <dt>🔒 Ligtas</dt>
+      <dd>Lahat ng data ay napoproseso sa browser ng iyong anak. Walang ipinapadala sa mga external server.</dd>
+      <dt>🐍 Totoong Python</dt>
+      <dd>Gumagamit ng WebAssembly (Pyodide) para patakbuhin ang standard na Python 3.</dd>
+      <dt>📈 Handa sa hinaharap</dt>
+      <dd>Natututo ng standard na Python syntax, kaya ang kaalaman ay madaling mailipat sa full na environment.</dd>
+      <dt>🆓 Libre lahat</dt>
+      <dd>Hindi kailangan mag-register ng account.</dd>
+    </dl>
+  </section>
+
+  <section class="howto fade-in">
+    <h2>Madali lang — 1-2-3</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-number">1</span>
+        <h3>Buksan</h3>
+        <img src="../assets/screenshots/tl/step-open.png" alt="Screen na nagpapakita ng app na binuksan sa browser">
+        <p>Bisitahin lang ang URL.</p>
+      </div>
+      <div class="step">
+        <span class="step-number">2</span>
+        <h3>Sumulat</h3>
+        <img src="../assets/screenshots/tl/step-write.png" alt="Screen na nagpapakita ng Python code na sinusulat">
+        <p>Isulat ang code mo.</p>
+      </div>
+      <div class="step">
+        <span class="step-number">3</span>
+        <h3>Patakbuhin</h3>
+        <img src="../assets/screenshots/tl/step-run.png" alt="Screen na nagpapakita ng resulta ng code">
+        <p>Pindutin ang button at tingnan ang resulta.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section fade-in">
+    <a href="/app/?lang=tl" class="cta-btn cta-btn-large">Subukan ngayon</a>
+    <p class="cta-note">Walang account kailangan — libre lahat</p>
+    <div class="share-section">
+      <p class="share-label">Sabihin sa kaibigan</p>
+      <div class="share-links" id="lp-share-links"></div>
+    </div>
+    <div class="community-section">
+      <p class="community-label">Sumali sa komunidad</p>
+      <a href="https://discord.gg/sZCdKvT5Df" class="community-btn" target="_blank" rel="noopener">Sumali sa Discord</a>
+    </div>
+  </section>
+  <script>
+    var SHARE_TEXT = "Gumagana ang Python sa browser! Kuwaderno sa programming para sa mga bata";
+    var url = encodeURIComponent(location.href.split("#")[0]);
+    var text = encodeURIComponent(SHARE_TEXT);
+    document.getElementById("lp-share-links").innerHTML =
+      '<a class="share-btn share-line" href="https://social-plugins.line.me/lineit/share?url=' + url + '" target="_blank" rel="noopener">LINE</a>' +
+      '<a class="share-btn share-x" href="https://twitter.com/intent/tweet?url=' + url + '&text=' + text + '" target="_blank" rel="noopener">X</a>' +
+      '<a class="share-btn share-fb" href="https://www.facebook.com/sharer/sharer.php?u=' + url + '" target="_blank" rel="noopener">Facebook</a>';
+  </script>
+  <script>
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+  <footer class="site-footer">
+    <p>Gawa ng: <a href="https://feel-physics.jp" target="_blank" rel="noopener">Feel Physics</a></p>
+    <p><a href="mailto:tatsuro.ueda@feel-physics.jp">Makipag-ugnayan</a> ｜ <a href="/tl/privacy.html">Patakaran sa Privacy</a> ｜ <a href="https://discord.gg/sZCdKvT5Df" target="_blank" rel="noopener">Komunidad (Discord)</a></p>
+    <p>&copy; 2026 Feel Physics</p>
+  </footer>
+</body>
+</html>
