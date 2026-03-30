@@ -10,6 +10,7 @@ const ROOT = path.join(__dirname, "..");
 
 const REDIRECT_SCRIPT = `  <script>
   (function() {
+    if (location.search.indexOf("lang=") !== -1) return;
     var browserLang = (navigator.language || "").replace("_", "-");
     if (!browserLang) return;
     var pathMatch = location.pathname.match(/^\\/([a-z]{2}(?:-[A-Z]{2})?)\\//);
@@ -67,7 +68,7 @@ const LANG_SELECTOR_SCRIPT = `  <script>
         if (code === "ja") href = "/";
         var li = document.createElement("li");
         li.textContent = LANG_NAMES[code] || code;
-        li.onclick = function() { location.href = href; };
+        li.onclick = function() { location.href = href + "?lang=1"; };
         list.appendChild(li);
       });
       btn.onclick = function(e) {
@@ -111,9 +112,8 @@ for (const dir of dirs) {
   }
 
   // Insert language selector script before </body>
-  if (!html.includes("lp-lang-btn")) {
-    // Find the last </script> before </body> and insert after it
-    html = html.replace("</footer>\n</body>", "</footer>\n" + LANG_SELECTOR_SCRIPT + "\n</body>");
+  if (!html.includes("LANG_NAMES")) {
+    html = html.replace(/(<\/footer>\s*\n)(\s*<\/body>)/, "$1" + LANG_SELECTOR_SCRIPT + "\n$2");
   }
 
   fs.writeFileSync(filePath, html, "utf8");

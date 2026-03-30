@@ -86,6 +86,7 @@
   </script>
   <script>
   (function() {
+    if (location.search.indexOf("lang=") !== -1) return;
     var browserLang = (navigator.language || "").replace("_", "-");
     if (!browserLang) return;
     var pathMatch = location.pathname.match(/^\/([a-z]{2}(?:-[A-Z]{2})?)\//);
@@ -115,7 +116,7 @@
   </script>
 </head>
 <body>
-    <div id="lp-lang-selector">
+        <div id="lp-lang-selector">
     <button id="lp-lang-btn" aria-label="Language">🌐</button>
     <ul id="lp-lang-list" hidden></ul>
   </div>
@@ -330,5 +331,39 @@ Start!</div>
     <p><a href="mailto:tatsuro.ueda@feel-physics.jp">Kontakt</a> ｜ <a href="/de/privacy.html">Datenschutz</a> ｜ <a href="https://discord.gg/sZCdKvT5Df" target="_blank" rel="noopener">Community (Discord)</a></p>
     <p>&copy; 2026 Feel Physics</p>
   </footer>
+  <script>
+    (function() {
+      var LANG_NAMES = {
+        ja:"にほんご",en:"English",hi:"हिन्दी",es:"Español",ar:"العربية",
+        pt:"Português",id:"Bahasa Indonesia",vi:"Tiếng Việt",tr:"Türkçe",
+        bn:"বাংলা",ko:"한국어","zh-TW":"繁體中文",fa:"فارسی",th:"ภาษาไทย",
+        fr:"Français",ur:"اردو",ru:"Русский",de:"Deutsch",it:"Italiano",
+        nl:"Nederlands",pl:"Polski",uk:"Українська",ro:"Română",el:"Ελληνικά",
+        hu:"Magyar",cs:"Čeština",sv:"Svenska",da:"Dansk",fi:"Suomi",no:"Norsk",
+        "zh-CN":"简体中文",ms:"Bahasa Melayu",tl:"Filipino",sw:"Kiswahili",
+        am:"አማርኛ",ta:"தமிழ்",te:"తెలుగు",mr:"मराठी",gu:"ગુજરાતી",
+        ne:"नेपाली",si:"සිංහල",km:"ភាសាខ្មែរ",my:"မြန်မာ",ka:"ქართული",
+        he:"עברית",uz:"Oʻzbek",kk:"Қазақ",az:"Azərbaycan",sr:"Srpski",hr:"Hrvatski"
+      };
+      var btn = document.getElementById("lp-lang-btn");
+      var list = document.getElementById("lp-lang-list");
+      if (!btn || !list) return;
+      document.querySelectorAll('link[hreflang]').forEach(function(el) {
+        var code = el.getAttribute("hreflang");
+        if (!code || code === "x-default") return;
+        var href = el.getAttribute("href").replace(/https?:\/\/[^/]+/, "");
+        if (code === "ja") href = "/";
+        var li = document.createElement("li");
+        li.textContent = LANG_NAMES[code] || code;
+        li.onclick = function() { location.href = href + "?lang=1"; };
+        list.appendChild(li);
+      });
+      btn.onclick = function(e) {
+        e.stopPropagation();
+        list.hidden = !list.hidden;
+      };
+      document.addEventListener("click", function() { list.hidden = true; });
+    })();
+  </script>
 </body>
 </html>

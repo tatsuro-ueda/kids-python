@@ -86,6 +86,9 @@
   </script>
   <script>
   (function() {
+    // Skip redirect if user explicitly chose this language (?lang= present)
+    if (location.search.indexOf("lang=") !== -1) return;
+
     var browserLang = (navigator.language || "").replace("_", "-");
     if (!browserLang) return;
 
@@ -359,7 +362,7 @@ print("はっしゃ！")</pre>
         if (code === "ja") href = "/";
         var li = document.createElement("li");
         li.textContent = LANG_NAMES[code] || code;
-        li.onclick = function() { location.href = href; };
+        li.onclick = function() { location.href = href + "?lang=1"; };
         list.appendChild(li);
       });
 
