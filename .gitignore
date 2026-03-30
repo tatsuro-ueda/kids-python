@@ -1,6 +1,7 @@
 node_modules/
 dist/
 vendor/pyodide/
+logs/
 
 # LP generated files (built by scripts/build-lp.js)
 /index.html
