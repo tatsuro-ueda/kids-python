@@ -17,31 +17,31 @@
 
 ## フェーズ0: ブランチ準備
 
-- [ ] mainに未マージのfeatureブランチがないか確認
-- [ ] 作業用ブランチを作成（`feature/20260330-lp-screenshots-i18n`）
+- [x] mainに未マージのfeatureブランチがないか確認
+- [x] 作業用ブランチを作成（`feature/20260330-lp-screenshots-i18n`）
 
 ## フェーズ1: screenshots.js を多言語対応に拡張
 
-- [ ] 言語別コード例マッピングを定義
+- [x] 言語別コード例マッピングを定義
   - ja: `print("こんにちは！")` → `こんにちは！`
   - en: `print("Hello!")` → `Hello!`
   - es: `print("¡Hola!")` → `¡Hola!`
   - ar: `print("مرحبا!")` → `مرحبا!`
   - hi: `print("नमस्ते!")` → `नमस्ते!`
 
-- [ ] screenshots.js を書き換え: SCREENSHOT_LANGUAGES ループで各言語のスクリーンショットを生成
-  - [ ] `assets/screenshots/{lang}/` ディレクトリを自動作成
-  - [ ] `/app/?lang={lang}` でアプリを開く
-  - [ ] Pyodide ロード完了を待機（run-btn が enabled になるまで）
-  - [ ] step-open を撮影
-  - [ ] 言語別コード例を入力して step-write を撮影
-  - [ ] 実行して期待テキストを待機し step-run を撮影
+- [x] screenshots.js を書き換え: SCREENSHOT_LANGUAGES ループで各言語のスクリーンショットを生成
+  - [x] `assets/screenshots/{lang}/` ディレクトリを自動作成
+  - [x] `/app/?lang={lang}` でアプリを開く
+  - [x] Pyodide ロード完了を待機（run-btn が enabled になるまで）
+  - [x] step-open を撮影
+  - [x] 言語別コード例を入力して step-write を撮影
+  - [x] 実行して期待テキストを待機し step-run を撮影
 
-- [ ] OGP 画像も言語別に生成
-  - [ ] 各言語の翻訳JSON（lp.ogTitle, lp.ogDescription）を読み込む
-  - [ ] OGP 画像を `assets/ogp-{lang}.png` に出力
+- [x] OGP 画像も言語別に生成
+  - [x] 各言語の翻訳JSON（lp.ogTitle, lp.ogDescription）を読み込む
+  - [x] OGP 画像を `assets/ogp-{lang}.png` に出力
 
-- [ ] コミット
+- [x] コミット
 
 ## フェーズ2: スクリーンショット生成を実行
 
