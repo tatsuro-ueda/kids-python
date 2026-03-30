@@ -123,7 +123,10 @@
     "shareText": "Python functioneaza direct in browser! Un caiet de programare pentru copii",
     "footerOperator": "Operator:",
     "footerContact": "Contact",
-    "footerPrivacy": "Politica de confidentialitate"
+    "footerPrivacy": "Politica de confidentialitate",
+    "communityLabel": "Alătură-te comunității",
+    "communityButton": "Intră pe Discord",
+    "footerDiscord": "Comunitate (Discord)"
   },
   "privacy": {
     "title": "Politica de confidentialitate — Caietul Python",

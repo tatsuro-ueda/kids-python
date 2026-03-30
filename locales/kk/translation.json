@@ -123,7 +123,10 @@
     "shareText": "Python браузерде жұмыс істейді! Балаларға арналған бағдарламалау дәптері",
     "footerOperator": "Басқарушы:",
     "footerContact": "Байланыс",
-    "footerPrivacy": "Құпиялылық саясаты"
+    "footerPrivacy": "Құпиялылық саясаты",
+    "communityLabel": "Қоғамдастыққа қосылыңыз",
+    "communityButton": "Discord-қа қосылу",
+    "footerDiscord": "Қоғамдастық (Discord)"
   },
   "privacy": {
     "title": "Құпиялылық саясаты — Python жаттығу дәптері",

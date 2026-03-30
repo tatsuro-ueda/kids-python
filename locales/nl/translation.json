@@ -123,7 +123,10 @@
     "shareText": "Python werkt direct in je browser! Een programmeer-schrift voor kinderen",
     "footerOperator": "Beheerder:",
     "footerContact": "Contact",
-    "footerPrivacy": "Privacybeleid"
+    "footerPrivacy": "Privacybeleid",
+    "communityLabel": "Word lid van de community",
+    "communityButton": "Discord joinen",
+    "footerDiscord": "Community (Discord)"
   },
   "privacy": {
     "title": "Privacybeleid — Python-schrift",

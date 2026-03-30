@@ -97,7 +97,10 @@
     "shareText": "ブラウザだけでPythonが動く！小学生向けプログラミング練習帳",
     "footerOperator": "運営:",
     "footerContact": "お問い合わせ",
-    "footerPrivacy": "プライバシーポリシー"
+    "footerPrivacy": "プライバシーポリシー",
+    "communityLabel": "コミュニティに参加しよう",
+    "communityButton": "Discordに参加する",
+    "footerDiscord": "コミュニティ（Discord）"
   },
   "privacy": {
     "title": "プライバシーポリシー — Pythonれんしゅうちょう",

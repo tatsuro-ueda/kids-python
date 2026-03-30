@@ -123,7 +123,10 @@
     "shareText": "Python tarayıcında çalışıyor! Çocuklar için programlama defteri",
     "footerOperator": "Yapımcı:",
     "footerContact": "İletişim",
-    "footerPrivacy": "Gizlilik politikası"
+    "footerPrivacy": "Gizlilik politikası",
+    "communityLabel": "Topluluğa katıl",
+    "communityButton": "Discord'a Katıl",
+    "footerDiscord": "Topluluk (Discord)"
   },
   "privacy": {
     "title": "Gizlilik politikası — Python Alıştırma Defteri",

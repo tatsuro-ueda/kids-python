@@ -123,7 +123,10 @@
     "shareText": "Python በብራውዘር ውስጥ ይሰራል! ለልጆች የፕሮግራሚንግ ልምምድ ደብተር",
     "footerOperator": "በ:",
     "footerContact": "ያግኙን",
-    "footerPrivacy": "የግላዊነት ፖሊሲ"
+    "footerPrivacy": "የግላዊነት ፖሊሲ",
+    "communityLabel": "ማህበረሰቡን ይቀላቀሉ",
+    "communityButton": "Discord ይቀላቀሉ",
+    "footerDiscord": "ማህበረሰብ (Discord)"
   },
   "privacy": {
     "title": "የግላዊነት ፖሊሲ — የPython ልምምድ ደብተር",

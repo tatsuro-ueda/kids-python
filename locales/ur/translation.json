@@ -123,7 +123,10 @@
     "shareText": "براؤزر میں Python چلاؤ! بچوں کے لیے پروگرامنگ مشق نامہ",
     "footerOperator": "آپریٹر:",
     "footerContact": "رابطہ کریں",
-    "footerPrivacy": "رازداری کی پالیسی"
+    "footerPrivacy": "رازداری کی پالیسی",
+    "communityLabel": "کمیونٹی میں شامل ہوں",
+    "communityButton": "Discord میں شامل ہوں",
+    "footerDiscord": "کمیونٹی (Discord)"
   },
   "privacy": {
     "title": "رازداری کی پالیسی — Python مشق نامہ",

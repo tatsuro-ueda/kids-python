@@ -123,7 +123,10 @@
     "shareText": "બ્રાઉઝરમાં જ Python ચાલે છે! બાળકો માટે પ્રોગ્રામિંગ અભ્યાસ ચોપડી",
     "footerOperator": "સંચાલક:",
     "footerContact": "સંપર્ક",
-    "footerPrivacy": "ગોપનીયતા નીતિ"
+    "footerPrivacy": "ગોપનીયતા નીતિ",
+    "communityLabel": "સમુદાયમાં જોડાઓ",
+    "communityButton": "Discord માં જોડાઓ",
+    "footerDiscord": "સમુદાય (Discord)"
   },
   "privacy": {
     "title": "ગોપનીયતા નીતિ — Python અભ્યાસ ચોપડી",

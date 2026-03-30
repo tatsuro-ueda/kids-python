@@ -123,7 +123,10 @@
     "shareText": "ब्राउजरमै Python चल्छ! बालबालिकाका लागि प्रोग्रामिङ अभ्यास कापी",
     "footerOperator": "सञ्चालक:",
     "footerContact": "सम्पर्क",
-    "footerPrivacy": "गोपनीयता नीति"
+    "footerPrivacy": "गोपनीयता नीति",
+    "communityLabel": "समुदायमा सामेल हुनुहोस्",
+    "communityButton": "Discord मा सामेल हुनुहोस्",
+    "footerDiscord": "समुदाय (Discord)"
   },
   "privacy": {
     "title": "गोपनीयता नीति — Python अभ्यास कापी",

@@ -123,7 +123,10 @@
     "shareText": "Browser එකේම Python වැඩ කරනවා! ළමුන් සඳහා programming පුහුණු පොත",
     "footerOperator": "පවත්වන්නේ:",
     "footerContact": "අමතන්න",
-    "footerPrivacy": "පෞද්ගලිකත්ව ප්‍රතිපත්තිය"
+    "footerPrivacy": "පෞද්ගලිකත්ව ප්‍රතිපත්තිය",
+    "communityLabel": "ප්‍රජාවට එක්වන්න",
+    "communityButton": "Discord වෙත එක්වන්න",
+    "footerDiscord": "ප්‍රජාව (Discord)"
   },
   "privacy": {
     "title": "පෞද්ගලිකත්ව ප්‍රතිපත්තිය — Python පුහුණු පොත",

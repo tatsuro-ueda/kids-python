@@ -123,7 +123,10 @@
     "shareText": "Python يعمل في المتصفح! دفتر تمارين برمجة للأطفال",
     "footerOperator": "بواسطة:",
     "footerContact": "اتصل بنا",
-    "footerPrivacy": "سياسة الخصوصية"
+    "footerPrivacy": "سياسة الخصوصية",
+    "communityLabel": "انضم إلى المجتمع",
+    "communityButton": "انضم إلى Discord",
+    "footerDiscord": "المجتمع (Discord)"
   },
   "privacy": {
     "title": "سياسة الخصوصية — دفتر تمارين Python",

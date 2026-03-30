@@ -123,7 +123,10 @@
     "shareText": "Python funziona direttamente nel browser! Un quaderno di programmazione per bambini",
     "footerOperator": "Gestito da:",
     "footerContact": "Contatti",
-    "footerPrivacy": "Privacy"
+    "footerPrivacy": "Privacy",
+    "communityLabel": "Unisciti alla comunità",
+    "communityButton": "Entra su Discord",
+    "footerDiscord": "Comunità (Discord)"
   },
   "privacy": {
     "title": "Privacy — Quaderno Python",

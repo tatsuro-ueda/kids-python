@@ -123,7 +123,10 @@
     "shareText": "Python kjorer rett i nettleseren! En programmeringsbok for barn",
     "footerOperator": "Drevet av:",
     "footerContact": "Kontakt",
-    "footerPrivacy": "Personvern"
+    "footerPrivacy": "Personvern",
+    "communityLabel": "Bli med i fellesskapet",
+    "communityButton": "Bli med på Discord",
+    "footerDiscord": "Fellesskap (Discord)"
   },
   "privacy": {
     "title": "Personvern — Python-skrivebok",

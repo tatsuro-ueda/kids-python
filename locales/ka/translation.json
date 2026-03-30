@@ -123,7 +123,10 @@
     "shareText": "Python ბრაუზერშივე მუშაობს! პროგრამირების რვეული ბავშვებისთვის",
     "footerOperator": "ოპერატორი:",
     "footerContact": "კონტაქტი",
-    "footerPrivacy": "კონფიდენციალურობის პოლიტიკა"
+    "footerPrivacy": "კონფიდენციალურობის პოლიტიკა",
+    "communityLabel": "შეუერთდით საზოგადოებას",
+    "communityButton": "შეუერთდით Discord-ს",
+    "footerDiscord": "საზოგადოება (Discord)"
   },
   "privacy": {
     "title": "კონფიდენციალურობის პოლიტიკა — Python-ის სავარჯიშო რვეული",

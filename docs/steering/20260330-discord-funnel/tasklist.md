@@ -23,11 +23,11 @@
 
 ## フェーズ2: 翻訳JSONに3キー追加（50言語）
 
-- [ ] 全50言語の translation.json に以下の3キーを追加
+- [x] 全50言語の translation.json に以下の3キーを追加
   - `lp.communityLabel` — 「コミュニティに参加しよう」
   - `lp.communityButton` — 「Discordに参加する」
   - `lp.footerDiscord` — 「コミュニティ（Discord）」
-- [ ] コミット
+- [x] コミット
 
 ## フェーズ3: LPテンプレート + CSS修正
 

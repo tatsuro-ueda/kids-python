@@ -123,7 +123,10 @@
     "shareText": "Python inafanya kazi kwenye kivinjari! Daftari la programu kwa watoto",
     "footerOperator": "Na:",
     "footerContact": "Wasiliana Nasi",
-    "footerPrivacy": "Sera ya Faragha"
+    "footerPrivacy": "Sera ya Faragha",
+    "communityLabel": "Jiunge na jamii",
+    "communityButton": "Jiunge na Discord",
+    "footerDiscord": "Jamii (Discord)"
   },
   "privacy": {
     "title": "Sera ya Faragha — Daftari la Python",

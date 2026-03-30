@@ -123,7 +123,10 @@
     "shareText": "Python ដំណើរការក្នុងកម្មវិធីរុករកតែម្តង! សៀវភៅសរសេរកូដសម្រាប់កុមារ",
     "footerOperator": "ដំណើរការដោយ:",
     "footerContact": "ទំនាក់ទំនង",
-    "footerPrivacy": "គោលការណ៍ឯកជន"
+    "footerPrivacy": "គោលការណ៍ឯកជន",
+    "communityLabel": "ចូលរួមសហគមន៍",
+    "communityButton": "ចូលរួម Discord",
+    "footerDiscord": "សហគមន៍ (Discord)"
   },
   "privacy": {
     "title": "គោលការណ៍ឯកជន — សៀវភៅហាត់ Python",

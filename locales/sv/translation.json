@@ -123,7 +123,10 @@
     "shareText": "Python kor direkt i webblasaren! Ett programmeringshafte for barn",
     "footerOperator": "Drivas av:",
     "footerContact": "Kontakt",
-    "footerPrivacy": "Integritetspolicy"
+    "footerPrivacy": "Integritetspolicy",
+    "communityLabel": "Gå med i gemenskapen",
+    "communityButton": "Gå med i Discord",
+    "footerDiscord": "Gemenskap (Discord)"
   },
   "privacy": {
     "title": "Integritetspolicy — Python-hafte",

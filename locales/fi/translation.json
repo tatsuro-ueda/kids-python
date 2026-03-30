@@ -123,7 +123,10 @@
     "shareText": "Python toimii suoraan selaimessa! Ohjelmointivihko lapsille",
     "footerOperator": "Yllapitaja:",
     "footerContact": "Ota yhteytta",
-    "footerPrivacy": "Tietosuojakaytanto"
+    "footerPrivacy": "Tietosuojakaytanto",
+    "communityLabel": "Liity yhteisöön",
+    "communityButton": "Liity Discordiin",
+    "footerDiscord": "Yhteisö (Discord)"
   },
   "privacy": {
     "title": "Tietosuojakaytanto — Python-harjoitusvihko",

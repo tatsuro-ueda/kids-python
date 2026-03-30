@@ -123,7 +123,10 @@
     "shareText": "ব্রাউজারেই Python চলে! ছোটদের জন্য প্রোগ্রামিং অভ্যাস খাতা",
     "footerOperator": "পরিচালনা:",
     "footerContact": "যোগাযোগ",
-    "footerPrivacy": "গোপনীয়তা নীতি"
+    "footerPrivacy": "গোপনীয়তা নীতি",
+    "communityLabel": "কমিউনিটিতে যোগ দিন",
+    "communityButton": "Discord-এ যোগ দিন",
+    "footerDiscord": "কমিউনিটি (Discord)"
   },
   "privacy": {
     "title": "গোপনীয়তা নীতি — Python অভ্যাস খাতা",

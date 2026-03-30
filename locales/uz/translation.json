@@ -123,7 +123,10 @@
     "shareText": "Python brauzerda ishlaydi! Bolalar uchun dasturlash daftari",
     "footerOperator": "Boshqaruvchi:",
     "footerContact": "Aloqa",
-    "footerPrivacy": "Maxfiylik siyosati"
+    "footerPrivacy": "Maxfiylik siyosati",
+    "communityLabel": "Hamjamiyatga qo'shiling",
+    "communityButton": "Discordga qo'shiling",
+    "footerDiscord": "Hamjamiyat (Discord)"
   },
   "privacy": {
     "title": "Maxfiylik siyosati — Python mashq daftari",

@@ -123,7 +123,10 @@
     "shareText": "Python funciona en tu navegador! Un cuaderno de programación para niños",
     "footerOperator": "Por:",
     "footerContact": "Contacto",
-    "footerPrivacy": "Política de privacidad"
+    "footerPrivacy": "Política de privacidad",
+    "communityLabel": "Únete a la comunidad",
+    "communityButton": "Unirse a Discord",
+    "footerDiscord": "Comunidad (Discord)"
   },
   "privacy": {
     "title": "Política de privacidad — Cuaderno de Python",

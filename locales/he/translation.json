@@ -123,7 +123,10 @@
     "shareText": "Python רץ ישר בדפדפן! מחברת תכנות לילדים",
     "footerOperator": "מופעל על ידי:",
     "footerContact": "צור קשר",
-    "footerPrivacy": "מדיניות פרטיות"
+    "footerPrivacy": "מדיניות פרטיות",
+    "communityLabel": "הצטרפו לקהילה",
+    "communityButton": "הצטרפו ל-Discord",
+    "footerDiscord": "קהילה (Discord)"
   },
   "privacy": {
     "title": "מדיניות פרטיות — מחברת Python",

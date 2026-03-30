@@ -123,7 +123,10 @@
     "shareText": "Python berjalan di browsermu! Buku latihan pemrograman untuk anak-anak",
     "footerOperator": "Oleh:",
     "footerContact": "Hubungi kami",
-    "footerPrivacy": "Kebijakan privasi"
+    "footerPrivacy": "Kebijakan privasi",
+    "communityLabel": "Bergabung dengan komunitas",
+    "communityButton": "Gabung Discord",
+    "footerDiscord": "Komunitas (Discord)"
   },
   "privacy": {
     "title": "Kebijakan privasi — Buku Latihan Python",

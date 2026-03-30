@@ -123,7 +123,10 @@
     "shareText": "Python dziala w przegladarce! Zeszyt programowania dla dzieci",
     "footerOperator": "Operator:",
     "footerContact": "Kontakt",
-    "footerPrivacy": "Polityka prywatnosci"
+    "footerPrivacy": "Polityka prywatnosci",
+    "communityLabel": "Dołącz do społeczności",
+    "communityButton": "Dołącz do Discorda",
+    "footerDiscord": "Społeczność (Discord)"
   },
   "privacy": {
     "title": "Polityka prywatnosci — Zeszyt Pythona",

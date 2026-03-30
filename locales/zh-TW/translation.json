@@ -123,7 +123,10 @@
     "shareText": "在瀏覽器就能跑 Python！給小朋友的程式練習本",
     "footerOperator": "營運：",
     "footerContact": "聯絡我們",
-    "footerPrivacy": "隱私權政策"
+    "footerPrivacy": "隱私權政策",
+    "communityLabel": "加入社群",
+    "communityButton": "加入 Discord",
+    "footerDiscord": "社群（Discord）"
   },
   "privacy": {
     "title": "隱私權政策 — Python 練習本",

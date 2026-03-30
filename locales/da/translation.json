@@ -123,7 +123,10 @@
     "shareText": "Python koerer direkte i browseren! Et programmeringshaefe for boern",
     "footerOperator": "Drevet af:",
     "footerContact": "Kontakt",
-    "footerPrivacy": "Privatlivspolitik"
+    "footerPrivacy": "Privatlivspolitik",
+    "communityLabel": "Bliv en del af fællesskabet",
+    "communityButton": "Deltag i Discord",
+    "footerDiscord": "Fællesskab (Discord)"
   },
   "privacy": {
     "title": "Privatlivspolitik — Python-haefte",

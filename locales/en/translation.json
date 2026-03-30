@@ -123,7 +123,10 @@
     "shareText": "Python runs right in your browser! A programming notebook for kids",
     "footerOperator": "By:",
     "footerContact": "Contact",
-    "footerPrivacy": "Privacy Policy"
+    "footerPrivacy": "Privacy Policy",
+    "communityLabel": "Join the community",
+    "communityButton": "Join Discord",
+    "footerDiscord": "Community (Discord)"
   },
   "privacy": {
     "title": "Privacy Policy — Python Notebook",

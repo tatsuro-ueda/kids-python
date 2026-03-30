@@ -123,7 +123,10 @@
     "shareText": "Python работает прямо в браузере! Тетрадка по программированию для детей",
     "footerOperator": "Автор:",
     "footerContact": "Связаться",
-    "footerPrivacy": "Политика конфиденциальности"
+    "footerPrivacy": "Политика конфиденциальности",
+    "communityLabel": "Присоединяйтесь к сообществу",
+    "communityButton": "Войти в Discord",
+    "footerDiscord": "Сообщество (Discord)"
   },
   "privacy": {
     "title": "Политика конфиденциальности — Тетрадка Python",

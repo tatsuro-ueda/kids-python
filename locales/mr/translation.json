@@ -123,7 +123,10 @@
     "shareText": "ब्राउझरमध्येच Python चालतो! मुलांसाठी प्रोग्रॅमिंग सराव वही",
     "footerOperator": "चालक:",
     "footerContact": "संपर्क",
-    "footerPrivacy": "गोपनीयता धोरण"
+    "footerPrivacy": "गोपनीयता धोरण",
+    "communityLabel": "समुदायात सामील व्हा",
+    "communityButton": "Discord मध्ये सामील व्हा",
+    "footerDiscord": "समुदाय (Discord)"
   },
   "privacy": {
     "title": "गोपनीयता धोरण — Python सराव वही",

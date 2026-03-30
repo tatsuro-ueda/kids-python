@@ -123,7 +123,10 @@
     "shareText": "Python radi izravno u pregledniku! Programerska bilježnica za djecu",
     "footerOperator": "Operater:",
     "footerContact": "Kontakt",
-    "footerPrivacy": "Pravila privatnosti"
+    "footerPrivacy": "Pravila privatnosti",
+    "communityLabel": "Pridružite se zajednici",
+    "communityButton": "Pridružite se Discordu",
+    "footerDiscord": "Zajednica (Discord)"
   },
   "privacy": {
     "title": "Pravila privatnosti — Python bilježnica",

@@ -123,7 +123,10 @@
     "shareText": "Python birbaşa brauzerdə işləyir! Uşaqlar üçün proqramlaşdırma dəftəri",
     "footerOperator": "İdarəçi:",
     "footerContact": "Əlaqə",
-    "footerPrivacy": "Məxfilik siyasəti"
+    "footerPrivacy": "Məxfilik siyasəti",
+    "communityLabel": "İcmaya qoşulun",
+    "communityButton": "Discord-a qoşulun",
+    "footerDiscord": "İcma (Discord)"
   },
   "privacy": {
     "title": "Məxfilik siyasəti — Python mashq daftari",

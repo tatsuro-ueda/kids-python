@@ -123,7 +123,10 @@
     "shareText": "Python ради право у претраживачу! Програмерска свеска за децу",
     "footerOperator": "Оператер:",
     "footerContact": "Контакт",
-    "footerPrivacy": "Политика приватности"
+    "footerPrivacy": "Политика приватности",
+    "communityLabel": "Придружите се заједници",
+    "communityButton": "Придружите се Discord-у",
+    "footerDiscord": "Заједница (Discord)"
   },
   "privacy": {
     "title": "Политика приватности — Python вежбанка",

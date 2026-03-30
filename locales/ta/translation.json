@@ -123,7 +123,10 @@
     "shareText": "உலாவியிலேயே Python இயங்கும்! குழந்தைகளுக்கான நிரலாக்கப் பயிற்சிப் புத்தகம்",
     "footerOperator": "நடத்துபவர்:",
     "footerContact": "தொடர்பு கொள்ளுங்கள்",
-    "footerPrivacy": "தனியுரிமைக் கொள்கை"
+    "footerPrivacy": "தனியுரிமைக் கொள்கை",
+    "communityLabel": "சமூகத்தில் சேரவும்",
+    "communityButton": "Discord-ல் சேரவும்",
+    "footerDiscord": "சமூகம் (Discord)"
   },
   "privacy": {
     "title": "தனியுரிமைக் கொள்கை — Python பயிற்சிப் புத்தகம்",

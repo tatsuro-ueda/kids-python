@@ -123,7 +123,10 @@
     "shareText": "Python fonctionne dans ton navigateur ! Un cahier de programmation pour les enfants",
     "footerOperator": "Par :",
     "footerContact": "Contact",
-    "footerPrivacy": "Politique de confidentialité"
+    "footerPrivacy": "Politique de confidentialité",
+    "communityLabel": "Rejoignez la communauté",
+    "communityButton": "Rejoindre Discord",
+    "footerDiscord": "Communauté (Discord)"
   },
   "privacy": {
     "title": "Politique de confidentialité — Cahier Python",

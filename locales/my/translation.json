@@ -123,7 +123,10 @@
     "shareText": "ဘရောက်ဆာထဲမှာ Python အလုပ်လုပ်တယ်! ကလေးတွေအတွက် ပရိုဂရမ်းမင်းစာအုပ်",
     "footerOperator": "လုပ်ဆောင်သူ:",
     "footerContact": "ဆက်သွယ်ရန်",
-    "footerPrivacy": "ကိုယ်ရေးကိုယ်တာမူဝါဒ"
+    "footerPrivacy": "ကိုယ်ရေးကိုယ်တာမူဝါဒ",
+    "communityLabel": "အသိုင်းအဝိုင်းသို့ ပါဝင်ပါ",
+    "communityButton": "Discord သို့ ပါဝင်ပါ",
+    "footerDiscord": "အသိုင်းအဝိုင်း (Discord)"
   },
   "privacy": {
     "title": "ကိုယ်ရေးကိုယ်တာမူဝါဒ — Python လေ့ကျင့်စာအုပ်",

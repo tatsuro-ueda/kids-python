@@ -123,7 +123,10 @@
     "shareText": "Python bezi primo v prohlizeci! Programovaci sesit pro deti",
     "footerOperator": "Provozovatel:",
     "footerContact": "Kontakt",
-    "footerPrivacy": "Zasady ochrany soukromi"
+    "footerPrivacy": "Zasady ochrany soukromi",
+    "communityLabel": "Připoj se ke komunitě",
+    "communityButton": "Připojit se na Discord",
+    "footerDiscord": "Komunita (Discord)"
   },
   "privacy": {
     "title": "Zasady ochrany soukromi — Sesit Pythonu",

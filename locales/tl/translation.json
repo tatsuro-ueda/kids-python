@@ -123,7 +123,10 @@
     "shareText": "Gumagana ang Python sa browser! Kuwaderno sa programming para sa mga bata",
     "footerOperator": "Gawa ng:",
     "footerContact": "Makipag-ugnayan",
-    "footerPrivacy": "Patakaran sa Privacy"
+    "footerPrivacy": "Patakaran sa Privacy",
+    "communityLabel": "Sumali sa komunidad",
+    "communityButton": "Sumali sa Discord",
+    "footerDiscord": "Komunidad (Discord)"
   },
   "privacy": {
     "title": "Patakaran sa Privacy — Kuwaderno sa Python",

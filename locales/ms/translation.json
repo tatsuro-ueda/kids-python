@@ -123,7 +123,10 @@
     "shareText": "Python boleh jalan dalam pelayar! Buku latihan pengaturcaraan untuk kanak-kanak",
     "footerOperator": "Oleh:",
     "footerContact": "Hubungi Kami",
-    "footerPrivacy": "Dasar Privasi"
+    "footerPrivacy": "Dasar Privasi",
+    "communityLabel": "Sertai komuniti",
+    "communityButton": "Sertai Discord",
+    "footerDiscord": "Komuniti (Discord)"
   },
   "privacy": {
     "title": "Dasar Privasi — Buku Latihan Python",

@@ -123,7 +123,10 @@
     "shareText": "Python chạy ngay trên trình duyệt! Sổ tay lập trình cho các bạn nhỏ",
     "footerOperator": "Bởi:",
     "footerContact": "Liên hệ",
-    "footerPrivacy": "Chính sách bảo mật"
+    "footerPrivacy": "Chính sách bảo mật",
+    "communityLabel": "Tham gia cộng đồng",
+    "communityButton": "Tham gia Discord",
+    "footerDiscord": "Cộng đồng (Discord)"
   },
   "privacy": {
     "title": "Chính sách bảo mật — Sổ tay Python",

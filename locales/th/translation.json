@@ -123,7 +123,10 @@
     "shareText": "เขียน Python บนเบราว์เซอร์ได้เลย! สมุดฝึกหัดเขียนโปรแกรมสำหรับเด็กๆ",
     "footerOperator": "ดำเนินการโดย:",
     "footerContact": "ติดต่อเรา",
-    "footerPrivacy": "นโยบายความเป็นส่วนตัว"
+    "footerPrivacy": "นโยบายความเป็นส่วนตัว",
+    "communityLabel": "เข้าร่วมชุมชน",
+    "communityButton": "เข้าร่วม Discord",
+    "footerDiscord": "ชุมชน (Discord)"
   },
   "privacy": {
     "title": "นโยบายความเป็นส่วนตัว — สมุดฝึกหัด Python",

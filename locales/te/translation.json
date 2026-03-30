@@ -123,7 +123,10 @@
     "shareText": "బ్రౌజర్‌లోనే Python పని చేస్తుంది! పిల్లల కోసం ప్రోగ్రామింగ్ అభ్యాస పుస్తకం",
     "footerOperator": "నిర్వహణ:",
     "footerContact": "సంప్రదించండి",
-    "footerPrivacy": "గోప్యతా విధానం"
+    "footerPrivacy": "గోప్యతా విధానం",
+    "communityLabel": "సమాజంలో చేరండి",
+    "communityButton": "Discord లో చేరండి",
+    "footerDiscord": "సమాజం (Discord)"
   },
   "privacy": {
     "title": "గోప్యతా విధానం — Python అభ్యాస పుస్తకం",

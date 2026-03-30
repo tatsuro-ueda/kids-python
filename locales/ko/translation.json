@@ -123,7 +123,10 @@
     "shareText": "브라우저에서 바로 Python을 실행! 어린이를 위한 프로그래밍 연습장",
     "footerOperator": "운영:",
     "footerContact": "문의하기",
-    "footerPrivacy": "개인정보처리방침"
+    "footerPrivacy": "개인정보처리방침",
+    "communityLabel": "커뮤니티에 참여하세요",
+    "communityButton": "Discord 참여",
+    "footerDiscord": "커뮤니티 (Discord)"
   },
   "privacy": {
     "title": "개인정보처리방침 — Python 연습장",

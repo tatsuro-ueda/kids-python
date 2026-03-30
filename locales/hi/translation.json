@@ -123,7 +123,10 @@
     "shareText": "ब्राउज़र में ही Python चलाओ! बच्चों के लिए प्रोग्रामिंग अभ्यास पुस्तिका",
     "footerOperator": "संचालक:",
     "footerContact": "संपर्क करें",
-    "footerPrivacy": "गोपनीयता नीति"
+    "footerPrivacy": "गोपनीयता नीति",
+    "communityLabel": "समुदाय से जुड़ें",
+    "communityButton": "Discord में शामिल हों",
+    "footerDiscord": "समुदाय (Discord)"
   },
   "privacy": {
     "title": "गोपनीयता नीति — Python अभ्यास पुस्तिका",

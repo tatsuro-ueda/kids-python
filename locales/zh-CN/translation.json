@@ -123,7 +123,10 @@
     "shareText": "在浏览器里就能运行Python！给小朋友的编程练习本",
     "footerOperator": "运营：",
     "footerContact": "联系我们",
-    "footerPrivacy": "隐私政策"
+    "footerPrivacy": "隐私政策",
+    "communityLabel": "加入社区",
+    "communityButton": "加入 Discord",
+    "footerDiscord": "社区（Discord）"
   },
   "privacy": {
     "title": "隐私政策 — Python练习本",
