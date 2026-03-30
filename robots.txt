@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /app/
+Disallow: /vendor/
+Disallow: /dist/
+Disallow: /scripts/
+Disallow: /node_modules/
+Disallow: /docs/
+
+Sitemap: https://online-python.exe.xyz/sitemap.xml
