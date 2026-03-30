@@ -45,15 +45,15 @@
 
 ## フェーズ2: スクリーンショット生成を実行
 
-- [ ] サーバーを再起動（server.js 変更がなくても、最新のアプリで撮影するため）
-- [ ] `npm run screenshots` を実行
-- [ ] 生成結果を確認
-  - [ ] `ls assets/screenshots/{ja,en,es,ar,hi}/step-*.png` → 15ファイル
-  - [ ] `ls assets/ogp-{ja,en,es,ar,hi}.png` → 5ファイル
-  - [ ] `find assets/screenshots -name "*.png" -empty` → 結果なし
-  - [ ] ar の step-open.png を目視確認 → UIがRTLレイアウトになっている
-- [ ] 旧スクリーンショット（`assets/screenshots/step-*.png`、`assets/ogp.png`）を削除
-- [ ] コミット
+- [x] サーバーを再起動（server.js 変更がなくても、最新のアプリで撮影するため）
+- [x] `npm run screenshots` を実行
+- [x] 生成結果を確認
+  - [x] `ls assets/screenshots/{ja,en,es,ar,hi}/step-*.png` → 15ファイル
+  - [x] `ls assets/ogp-{ja,en,es,ar,hi}.png` → 5ファイル
+  - [x] `find assets/screenshots -name "*.png" -empty` → 結果なし
+  - [x] ar の step-open.png を目視確認 → UIがRTLレイアウトになっている
+- [x] 旧スクリーンショット（`assets/screenshots/step-*.png`、`assets/ogp.png`）を削除
+- [x] コミット
 
 ## フェーズ3: build-lp.js と index.html.tpl を修正
 
