@@ -21,7 +21,8 @@
     "footerOperator": "Drevet af:",
     "footerContact": "Kontakt",
     "footerPrivacy": "Privatlivspolitik",
-    "helpTranslate": "Hjaelp med at oversaette"
+    "helpTranslate": "Hjaelp med at oversaette",
+    "privacyUrl": "/da/privacy.html"
   },
   "error": {
     "parenOpen": "Parentesen `(` blev aldrig lukket. Tilfoej `)`",

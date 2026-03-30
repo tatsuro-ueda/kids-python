@@ -21,7 +21,8 @@
     "footerOperator": "Оператор:",
     "footerContact": "Контакти",
     "footerPrivacy": "Політика конфіденційності",
-    "helpTranslate": "Допоможи з перекладом"
+    "helpTranslate": "Допоможи з перекладом",
+    "privacyUrl": "/uk/privacy.html"
   },
   "error": {
     "parenOpen": "Дужка `(` не була закрита. Додай `)`",

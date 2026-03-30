@@ -21,7 +21,8 @@
     "footerOperator": "Na:",
     "footerContact": "Wasiliana Nasi",
     "footerPrivacy": "Sera ya Faragha",
-    "helpTranslate": "Saidia kutafsiri / Help translate"
+    "helpTranslate": "Saidia kutafsiri / Help translate",
+    "privacyUrl": "/sw/privacy.html"
   },
   "error": {
     "parenOpen": "Mabano `(` hayajafungwa. Ongeza `)` tafadhali",

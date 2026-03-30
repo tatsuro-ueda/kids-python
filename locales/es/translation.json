@@ -21,7 +21,8 @@
     "footerOperator": "Por:",
     "footerContact": "Contacto",
     "footerPrivacy": "Politica de privacidad",
-    "helpTranslate": "Ayuda a traducir / Help translate"
+    "helpTranslate": "Ayuda a traducir / Help translate",
+    "privacyUrl": "/es/privacy.html"
   },
   "error": {
     "parenOpen": "El parentesis `(` no se cerro. Agrega `)` para cerrarlo",

@@ -21,7 +21,8 @@
     "footerOperator": "Betreiber:",
     "footerContact": "Kontakt",
     "footerPrivacy": "Datenschutz",
-    "helpTranslate": "Beim Uebersetzen helfen"
+    "helpTranslate": "Beim Uebersetzen helfen",
+    "privacyUrl": "/de/privacy.html"
   },
   "error": {
     "parenOpen": "Die Klammer `(` wurde nie geschlossen. Fuege `)` hinzu",

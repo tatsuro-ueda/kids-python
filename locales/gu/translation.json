@@ -21,7 +21,8 @@
     "footerOperator": "સંચાલક:",
     "footerContact": "સંપર્ક",
     "footerPrivacy": "ગોપનીયતા નીતિ",
-    "helpTranslate": "ભાષાંતરમાં મદદ કરો / Help translate"
+    "helpTranslate": "ભાષાંતરમાં મદદ કરો / Help translate",
+    "privacyUrl": "/gu/privacy.html"
   },
   "error": {
     "parenOpen": "કૌંસ `(` બંધ નથી થયું. `)` ઉમેરો",

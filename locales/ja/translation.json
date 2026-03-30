@@ -21,7 +21,8 @@
     "footerOperator": "運営:",
     "footerContact": "お問い合わせ",
     "footerPrivacy": "プライバシーポリシー",
-    "helpTranslate": "翻訳を手伝う / Help translate"
+    "helpTranslate": "翻訳を手伝う / Help translate",
+    "privacyUrl": "/privacy.html"
   },
   "lp": {
     "title": "Pythonれんしゅうちょう — 小学生向けブラウザPython学習環境",

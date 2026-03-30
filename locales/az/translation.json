@@ -21,7 +21,8 @@
     "footerOperator": "İdarəçi:",
     "footerContact": "Əlaqə",
     "footerPrivacy": "Məxfilik siyasəti",
-    "helpTranslate": "Tərcüməyə kömək et"
+    "helpTranslate": "Tərcüməyə kömək et",
+    "privacyUrl": "/az/privacy.html"
   },
   "error": {
     "parenOpen": "Mötərizə `(` bağlanmayıb. `)` əlavə edib bağla",

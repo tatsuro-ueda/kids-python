@@ -21,7 +21,8 @@
     "footerOperator": "Oleh:",
     "footerContact": "Hubungi kami",
     "footerPrivacy": "Kebijakan privasi",
-    "helpTranslate": "Bantu menerjemahkan / Help translate"
+    "helpTranslate": "Bantu menerjemahkan / Help translate",
+    "privacyUrl": "/id/privacy.html"
   },
   "error": {
     "parenOpen": "Tanda kurung `(` belum ditutup. Tambahkan `)` untuk menutupnya",

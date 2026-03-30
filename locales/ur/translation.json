@@ -21,7 +21,8 @@
     "footerOperator": "آپریٹر:",
     "footerContact": "رابطہ کریں",
     "footerPrivacy": "رازداری کی پالیسی",
-    "helpTranslate": "ترجمے میں مدد کریں / Help translate"
+    "helpTranslate": "ترجمے میں مدد کریں / Help translate",
+    "privacyUrl": "/ur/privacy.html"
   },
   "error": {
     "parenOpen": "قوسین `(` بند نہیں ہوا۔ `)` لگاؤ",

@@ -21,7 +21,8 @@
     "footerOperator": "Oleh:",
     "footerContact": "Hubungi Kami",
     "footerPrivacy": "Dasar Privasi",
-    "helpTranslate": "Bantu terjemah / Help translate"
+    "helpTranslate": "Bantu terjemah / Help translate",
+    "privacyUrl": "/ms/privacy.html"
   },
   "error": {
     "parenOpen": "Kurungan `(` belum ditutup. Tambah `)` ya",

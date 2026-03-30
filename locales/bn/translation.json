@@ -21,7 +21,8 @@
     "footerOperator": "পরিচালনা:",
     "footerContact": "যোগাযোগ",
     "footerPrivacy": "গোপনীয়তা নীতি",
-    "helpTranslate": "অনুবাদে সাহায্য করো / Help translate"
+    "helpTranslate": "অনুবাদে সাহায্য করো / Help translate",
+    "privacyUrl": "/bn/privacy.html"
   },
   "error": {
     "parenOpen": "বন্ধনী `(` বন্ধ হয়নি। `)` দিয়ে বন্ধ করো",

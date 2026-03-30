@@ -21,7 +21,8 @@
     "footerOperator": "Yapimci:",
     "footerContact": "Iletisim",
     "footerPrivacy": "Gizlilik politikasi",
-    "helpTranslate": "Ceviri yapmaya yardim et / Help translate"
+    "helpTranslate": "Ceviri yapmaya yardim et / Help translate",
+    "privacyUrl": "/tr/privacy.html"
   },
   "error": {
     "parenOpen": "Parantez `(` kapatilmamis. `)` ekleyerek kapat",

@@ -21,7 +21,8 @@
     "footerOperator": "संचालक:",
     "footerContact": "संपर्क करें",
     "footerPrivacy": "गोपनीयता नीति",
-    "helpTranslate": "अनुवाद में मदद करें / Help translate"
+    "helpTranslate": "अनुवाद में मदद करें / Help translate",
+    "privacyUrl": "/hi/privacy.html"
   },
   "error": {
     "parenOpen": "कोष्ठक `(` बंद नहीं हुआ। `)` लगाओ",

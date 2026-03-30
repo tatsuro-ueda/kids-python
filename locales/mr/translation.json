@@ -21,7 +21,8 @@
     "footerOperator": "चालक:",
     "footerContact": "संपर्क",
     "footerPrivacy": "गोपनीयता धोरण",
-    "helpTranslate": "भाषांतरात मदत करा / Help translate"
+    "helpTranslate": "भाषांतरात मदत करा / Help translate",
+    "privacyUrl": "/mr/privacy.html"
   },
   "error": {
     "parenOpen": "कंस `(` बंद केला नाही. `)` लावा",

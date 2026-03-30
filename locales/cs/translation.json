@@ -21,7 +21,8 @@
     "footerOperator": "Provozovatel:",
     "footerContact": "Kontakt",
     "footerPrivacy": "Zasady ochrany soukromi",
-    "helpTranslate": "Pomoz s prekladem"
+    "helpTranslate": "Pomoz s prekladem",
+    "privacyUrl": "/cs/privacy.html"
   },
   "error": {
     "parenOpen": "Zavorka `(` nebyla nikdy zavrena. Pridej `)`",

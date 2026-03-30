@@ -21,7 +21,8 @@
     "footerOperator": "运营：",
     "footerContact": "联系我们",
     "footerPrivacy": "隐私政策",
-    "helpTranslate": "帮忙翻译 / Help translate"
+    "helpTranslate": "帮忙翻译 / Help translate",
+    "privacyUrl": "/zh-CN/privacy.html"
   },
   "error": {
     "parenOpen": "括号 `(` 没有关上哦，加上 `)` 吧",

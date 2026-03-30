@@ -21,7 +21,8 @@
     "footerOperator": "Басқарушы:",
     "footerContact": "Байланыс",
     "footerPrivacy": "Құпиялылық саясаты",
-    "helpTranslate": "Аудармаға көмектесу"
+    "helpTranslate": "Аудармаға көмектесу",
+    "privacyUrl": "/kk/privacy.html"
   },
   "error": {
     "parenOpen": "Жақша `(` жабылмаған. `)` қосып жап",

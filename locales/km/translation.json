@@ -21,7 +21,8 @@
     "footerOperator": "ដំណើរការដោយ:",
     "footerContact": "ទំនាក់ទំនង",
     "footerPrivacy": "គោលការណ៍ឯកជន",
-    "helpTranslate": "ជួយបកប្រែ"
+    "helpTranslate": "ជួយបកប្រែ",
+    "privacyUrl": "/km/privacy.html"
   },
   "error": {
     "parenOpen": "វង់ក្រចក `(` មិនទាន់បិទ។ បន្ថែម `)` ដើម្បីបិទវា",

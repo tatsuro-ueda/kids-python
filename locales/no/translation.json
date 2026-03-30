@@ -21,7 +21,8 @@
     "footerOperator": "Drevet av:",
     "footerContact": "Kontakt",
     "footerPrivacy": "Personvern",
-    "helpTranslate": "Hjelp til a oversette"
+    "helpTranslate": "Hjelp til a oversette",
+    "privacyUrl": "/no/privacy.html"
   },
   "error": {
     "parenOpen": "Parentesen `(` ble aldri lukket. Legg til `)` for a lukke den",

@@ -21,7 +21,8 @@
     "footerOperator": "Beheerder:",
     "footerContact": "Contact",
     "footerPrivacy": "Privacybeleid",
-    "helpTranslate": "Help met vertalen"
+    "helpTranslate": "Help met vertalen",
+    "privacyUrl": "/nl/privacy.html"
   },
   "error": {
     "parenOpen": "Het haakje `(` is nooit gesloten. Voeg `)` toe",

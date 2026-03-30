@@ -99,6 +99,9 @@ function applyDOM() {
   document.querySelectorAll("[data-i18n-alt]").forEach(el => {
     el.alt = i18next.t(el.dataset.i18nAlt);
   });
+  document.querySelectorAll("[data-i18n-href]").forEach(el => {
+    el.href = i18next.t(el.dataset.i18nHref);
+  });
 }
 
 export const t = (...args) => i18next.t(...args);

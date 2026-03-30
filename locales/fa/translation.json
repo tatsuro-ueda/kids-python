@@ -21,7 +21,8 @@
     "footerOperator": "مدیریت:",
     "footerContact": "تماس با ما",
     "footerPrivacy": "سیاست حفظ حریم خصوصی",
-    "helpTranslate": "در ترجمه کمک کنید / Help translate"
+    "helpTranslate": "در ترجمه کمک کنید / Help translate",
+    "privacyUrl": "/fa/privacy.html"
   },
   "error": {
     "parenOpen": "پرانتز `(` بسته نشده. `)` رو اضافه کن",

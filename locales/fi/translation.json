@@ -21,7 +21,8 @@
     "footerOperator": "Yllapitaja:",
     "footerContact": "Ota yhteytta",
     "footerPrivacy": "Tietosuojakaytanto",
-    "helpTranslate": "Auta kaantamisessa"
+    "helpTranslate": "Auta kaantamisessa",
+    "privacyUrl": "/fi/privacy.html"
   },
   "error": {
     "parenOpen": "Sulku `(` jaatiin sulkematta. Lisaa `)` loppuun",

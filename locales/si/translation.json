@@ -21,7 +21,8 @@
     "footerOperator": "පවත්වන්නේ:",
     "footerContact": "අමතන්න",
     "footerPrivacy": "පෞද්ගලිකත්ව ප්‍රතිපත්තිය",
-    "helpTranslate": "පරිවර්තනයට උදව් කරන්න / Help translate"
+    "helpTranslate": "පරිවර්තනයට උදව් කරන්න / Help translate",
+    "privacyUrl": "/si/privacy.html"
   },
   "error": {
     "parenOpen": "වරහන `(` වැසී නැහැ. `)` එකතු කරන්න",

@@ -21,7 +21,8 @@
     "footerOperator": "Оператер:",
     "footerContact": "Контакт",
     "footerPrivacy": "Политика приватности",
-    "helpTranslate": "Помози у преводу"
+    "helpTranslate": "Помози у преводу",
+    "privacyUrl": "/sr/privacy.html"
   },
   "error": {
     "parenOpen": "Заграда `(` није затворена. Додај `)` да је затвориш",

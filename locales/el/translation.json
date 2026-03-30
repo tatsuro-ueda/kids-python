@@ -21,7 +21,8 @@
     "footerOperator": "Διαχειριστής:",
     "footerContact": "Επικοινωνία",
     "footerPrivacy": "Πολιτική απορρήτου",
-    "helpTranslate": "Βοήθησε στη μετάφραση"
+    "helpTranslate": "Βοήθησε στη μετάφραση",
+    "privacyUrl": "/el/privacy.html"
   },
   "error": {
     "parenOpen": "Η παρένθεση `(` δεν έκλεισε ποτέ. Πρόσθεσε `)`",

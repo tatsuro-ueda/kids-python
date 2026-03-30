@@ -21,7 +21,8 @@
     "footerOperator": "လုပ်ဆောင်သူ:",
     "footerContact": "ဆက်သွယ်ရန်",
     "footerPrivacy": "ကိုယ်ရေးကိုယ်တာမူဝါဒ",
-    "helpTranslate": "ဘာသာပြန်ကူညီပါ"
+    "helpTranslate": "ဘာသာပြန်ကူညီပါ",
+    "privacyUrl": "/my/privacy.html"
   },
   "error": {
     "parenOpen": "ကွင်းစ `(` ကို မပိတ်ရသေးဘူး။ `)` ထည့်ပေးပါ",

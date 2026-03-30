@@ -21,7 +21,8 @@
     "footerOperator": "Operator:",
     "footerContact": "Kontakt",
     "footerPrivacy": "Polityka prywatnosci",
-    "helpTranslate": "Pomoz z tlumaczeniem"
+    "helpTranslate": "Pomoz z tlumaczeniem",
+    "privacyUrl": "/pl/privacy.html"
   },
   "error": {
     "parenOpen": "Nawias `(` nie zostal zamkniety. Dodaj `)`",

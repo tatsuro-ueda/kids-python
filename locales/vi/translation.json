@@ -21,7 +21,8 @@
     "footerOperator": "Boi:",
     "footerContact": "Lien he",
     "footerPrivacy": "Chinh sach bao mat",
-    "helpTranslate": "Giup dich / Help translate"
+    "helpTranslate": "Giup dich / Help translate",
+    "privacyUrl": "/vi/privacy.html"
   },
   "error": {
     "parenOpen": "Dau ngoac `(` chua duoc dong. Them `)` de dong lai nhe",

@@ -21,7 +21,8 @@
     "footerOperator": "నిర్వహణ:",
     "footerContact": "సంప్రదించండి",
     "footerPrivacy": "గోప్యతా విధానం",
-    "helpTranslate": "అనువాదంలో సహాయం చేయండి / Help translate"
+    "helpTranslate": "అనువాదంలో సహాయం చేయండి / Help translate",
+    "privacyUrl": "/te/privacy.html"
   },
   "error": {
     "parenOpen": "బ్రాకెట్ `(` మూసివేయలేదు. `)` జోడించు",

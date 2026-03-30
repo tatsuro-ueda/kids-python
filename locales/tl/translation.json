@@ -21,7 +21,8 @@
     "footerOperator": "Gawa ng:",
     "footerContact": "Makipag-ugnayan",
     "footerPrivacy": "Patakaran sa Privacy",
-    "helpTranslate": "Tumulong sa pagsasalin / Help translate"
+    "helpTranslate": "Tumulong sa pagsasalin / Help translate",
+    "privacyUrl": "/tl/privacy.html"
   },
   "error": {
     "parenOpen": "Hindi pa nasara ang panaklong na `(`. Lagyan ng `)` ha",

@@ -21,7 +21,8 @@
     "footerOperator": "Gestito da:",
     "footerContact": "Contatti",
     "footerPrivacy": "Privacy",
-    "helpTranslate": "Aiuta a tradurre"
+    "helpTranslate": "Aiuta a tradurre",
+    "privacyUrl": "/it/privacy.html"
   },
   "error": {
     "parenOpen": "La parentesi `(` non e mai stata chiusa. Aggiungi `)`",

@@ -21,7 +21,8 @@
     "footerOperator": "Uzemelteto:",
     "footerContact": "Kapcsolat",
     "footerPrivacy": "Adatvedelmi szabalyzat",
-    "helpTranslate": "Segits a forditasban"
+    "helpTranslate": "Segits a forditasban",
+    "privacyUrl": "/hu/privacy.html"
   },
   "error": {
     "parenOpen": "A zarojel `(` soha nem lett bezarva. Tedd hozza a `)`-t",

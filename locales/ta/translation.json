@@ -21,7 +21,8 @@
     "footerOperator": "நடத்துபவர்:",
     "footerContact": "தொடர்பு கொள்ளுங்கள்",
     "footerPrivacy": "தனியுரிமைக் கொள்கை",
-    "helpTranslate": "மொழிபெயர்க்க உதவுங்கள் / Help translate"
+    "helpTranslate": "மொழிபெயர்க்க உதவுங்கள் / Help translate",
+    "privacyUrl": "/ta/privacy.html"
   },
   "error": {
     "parenOpen": "அடைப்புக்குறி `(` மூடப்படவில்லை. `)` சேர்",

@@ -21,7 +21,8 @@
     "footerOperator": "Boshqaruvchi:",
     "footerContact": "Aloqa",
     "footerPrivacy": "Maxfiylik siyosati",
-    "helpTranslate": "Tarjimaga yordam bering"
+    "helpTranslate": "Tarjimaga yordam bering",
+    "privacyUrl": "/uz/privacy.html"
   },
   "error": {
     "parenOpen": "Qavs `(` yopilmagan. `)` qoʻshib yop",

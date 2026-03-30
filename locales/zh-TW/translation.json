@@ -21,7 +21,8 @@
     "footerOperator": "營運：",
     "footerContact": "聯絡我們",
     "footerPrivacy": "隱私權政策",
-    "helpTranslate": "幫忙翻譯 / Help translate"
+    "helpTranslate": "幫忙翻譯 / Help translate",
+    "privacyUrl": "/zh-TW/privacy.html"
   },
   "error": {
     "parenOpen": "括號 `(` 還沒關起來喔，加上 `)` 吧",

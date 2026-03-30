@@ -21,7 +21,8 @@
     "footerOperator": "Drivas av:",
     "footerContact": "Kontakt",
     "footerPrivacy": "Integritetspolicy",
-    "helpTranslate": "Hjalp till att oversatta"
+    "helpTranslate": "Hjalp till att oversatta",
+    "privacyUrl": "/sv/privacy.html"
   },
   "error": {
     "parenOpen": "Parentesen `(` stangdes aldrig. Lagg till `)`",

@@ -21,7 +21,8 @@
     "footerOperator": "ოპერატორი:",
     "footerContact": "კონტაქტი",
     "footerPrivacy": "კონფიდენციალურობის პოლიტიკა",
-    "helpTranslate": "დაეხმარე თარგმანს"
+    "helpTranslate": "დაეხმარე თარგმანს",
+    "privacyUrl": "/ka/privacy.html"
   },
   "error": {
     "parenOpen": "ფრჩხილი `(` არ დაიხურა. დაამატე `)`",

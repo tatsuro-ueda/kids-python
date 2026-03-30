@@ -21,7 +21,8 @@
     "footerOperator": "ดำเนินการโดย:",
     "footerContact": "ติดต่อเรา",
     "footerPrivacy": "นโยบายความเป็นส่วนตัว",
-    "helpTranslate": "ช่วยแปล / Help translate"
+    "helpTranslate": "ช่วยแปล / Help translate",
+    "privacyUrl": "/th/privacy.html"
   },
   "error": {
     "parenOpen": "วงเล็บ `(` ยังไม่ได้ปิดนะ ใส่ `)` ด้วย",

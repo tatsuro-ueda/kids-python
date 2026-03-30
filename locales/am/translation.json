@@ -21,7 +21,8 @@
     "footerOperator": "በ:",
     "footerContact": "ያግኙን",
     "footerPrivacy": "የግላዊነት ፖሊሲ",
-    "helpTranslate": "ለመተርጎም እርዱ / Help translate"
+    "helpTranslate": "ለመተርጎም እርዱ / Help translate",
+    "privacyUrl": "/am/privacy.html"
   },
   "error": {
     "parenOpen": "ቅንፍ `(` አልተዘጋም። `)` ጨምር",

@@ -21,7 +21,8 @@
     "footerOperator": "بواسطة:",
     "footerContact": "اتصل بنا",
     "footerPrivacy": "سياسة الخصوصية",
-    "helpTranslate": "ساعد في الترجمة / Help translate"
+    "helpTranslate": "ساعد في الترجمة / Help translate",
+    "privacyUrl": "/ar/privacy.html"
   },
   "error": {
     "parenOpen": "القوس `(` لم يُغلق. أضف `)` لإغلاقه",

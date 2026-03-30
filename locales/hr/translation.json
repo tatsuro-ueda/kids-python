@@ -21,7 +21,8 @@
     "footerOperator": "Operater:",
     "footerContact": "Kontakt",
     "footerPrivacy": "Pravila privatnosti",
-    "helpTranslate": "Pomozi s prijevodom"
+    "helpTranslate": "Pomozi s prijevodom",
+    "privacyUrl": "/hr/privacy.html"
   },
   "error": {
     "parenOpen": "Zagrada `(` nije zatvorena. Dodaj `)` da je zatvoriš",

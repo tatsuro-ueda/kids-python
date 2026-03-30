@@ -21,7 +21,8 @@
     "footerOperator": "Автор:",
     "footerContact": "Связаться",
     "footerPrivacy": "Политика конфиденциальности",
-    "helpTranslate": "Помоги с переводом / Help translate"
+    "helpTranslate": "Помоги с переводом / Help translate",
+    "privacyUrl": "/ru/privacy.html"
   },
   "error": {
     "parenOpen": "Скобка `(` не закрыта. Добавь `)`",

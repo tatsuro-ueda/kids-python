@@ -21,7 +21,8 @@
     "footerOperator": "מופעל על ידי:",
     "footerContact": "צור קשר",
     "footerPrivacy": "מדיניות פרטיות",
-    "helpTranslate": "עזור בתרגום"
+    "helpTranslate": "עזור בתרגום",
+    "privacyUrl": "/he/privacy.html"
   },
   "error": {
     "parenOpen": "הסוגריים `(` לא נסגרו. הוסף `)` כדי לסגור",

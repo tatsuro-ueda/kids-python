@@ -21,7 +21,8 @@
     "footerOperator": "Operator:",
     "footerContact": "Contact",
     "footerPrivacy": "Politica de confidentialitate",
-    "helpTranslate": "Ajuta la traducere"
+    "helpTranslate": "Ajuta la traducere",
+    "privacyUrl": "/ro/privacy.html"
   },
   "error": {
     "parenOpen": "Paranteza `(` nu a fost inchisa. Adauga `)`",
