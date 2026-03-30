@@ -104,7 +104,7 @@
 - [x] marketing-problems.md の P1 ステータスを更新（Claude担当）
   - [x] 「Google Search Consoleへの登録・インデックス確認がまだ」→ 完了表記に更新
 
-- [ ] featureブランチをmainにマージ
+- [x] featureブランチをmainにマージ
 - [ ] 実装後の振り返り（このファイルの下部に記録）
 
 ---
