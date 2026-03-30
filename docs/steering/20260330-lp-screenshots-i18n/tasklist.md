@@ -72,52 +72,54 @@
 
 ## フェーズ4: LP を再生成してテスト
 
-- [ ] `npm run build-lp` を実行
-- [ ] ビルド結果を確認
-  - [ ] `grep "screenshots/ja" index.html` → マッチあり（日本語LP）
-  - [ ] `grep "screenshots/en" en/index.html` → マッチあり（英語LP）
-  - [ ] `grep "screenshots/ar" ar/index.html` → マッチあり（アラビア語LP）
-  - [ ] `grep "screenshots/en" vi/index.html` → マッチあり（ベトナム語 → 英語フォールバック）
-  - [ ] `grep "ogp-ja" index.html` → マッチあり
-  - [ ] `grep "ogp-en" en/index.html` → マッチあり
-- [ ] サーバーを再起動
-- [ ] ブラウザで目視確認（ユーザー操作）
-  - [ ] `https://online-python.exe.xyz/` → 日本語スクリーンショット
-  - [ ] `https://online-python.exe.xyz/en/` → 英語スクリーンショット
-  - [ ] `https://online-python.exe.xyz/ar/` → アラビア語スクリーンショット（RTL）
-  - [ ] `https://online-python.exe.xyz/vi/` → 英語スクリーンショット（フォールバック）
-- [ ] コミット
+- [x] `npm run build-lp` を実行（50言語、100ファイル、警告0）
+- [x] ビルド結果を確認
+  - [x] `grep "screenshots/ja" index.html` → マッチあり（日本語LP）
+  - [x] `grep "screenshots/en" en/index.html` → マッチあり（英語LP）
+  - [x] `grep "screenshots/ar" ar/index.html` → マッチあり（アラビア語LP）
+  - [x] `grep "screenshots/en" vi/index.html` → マッチあり（ベトナム語 → 英語フォールバック）
+  - [x] `grep "ogp-ja" index.html` → マッチあり
+  - [x] `grep "ogp-en" en/index.html` → マッチあり
+- [x] サーバーを再起動
+- [x] ブラウザで目視確認（ユーザー操作）— 完璧とのこと
+  - [x] `https://online-python.exe.xyz/` → 日本語スクリーンショット
+  - [x] `https://online-python.exe.xyz/en/` → 英語スクリーンショット
+  - [x] `https://online-python.exe.xyz/ar/` → アラビア語スクリーンショット（RTL）
+  - [x] `https://online-python.exe.xyz/vi/` → 英語スクリーンショット（フォールバック）
+- [x] コミット
 
 ## フェーズ5: mainマージとドキュメント更新
 
-- [ ] featureブランチをmainにマージ
-- [ ] 実装後の振り返り（このファイルの下部に記録）
+- [x] featureブランチをmainにマージ
+- [x] 実装後の振り返り（このファイルの下部に記録）
 
 ---
 
 ## 実装後の振り返り
 
 ### 実装完了日
-{YYYY-MM-DD}
+2026-03-30
 
 ### 計画と実績の差分
 
 **計画と異なった点**:
--
+- 特になし。計画通りに完了
 
 **新たに必要になったタスク**:
--
+- なし
 
-**技術的理由でスキップしたタスク**（該当する場合のみ）:
--
+**技術的理由でスキップしたタスク**:
+- なし（全タスク完了）
 
 ### 学んだこと
 
 **技術的な学び**:
--
+- build-lp.js に `screenshotLang` が既に計算されていたため、接続は1行の修正で済んだ。事前のコードリーディングが設計判断の精度を上げた
+- Playwright の `?lang=xx` でアプリの言語切替がそのまま動く。i18n実装が堅牢だった証拠
+- アラビア語のRTLスクリーンショットも特別な対応なく撮影できた（アプリ側のRTL対応が機能していた）
 
 **プロセス上の改善点**:
--
+- requirements → design（ブレインストーミング）→ tasklist の順で進めたことで、実装時に迷いがなかった
 
 ### 次回への改善提案
--
+- SCREENSHOT_LANGUAGES を増やす際は screenshots.js の LANG_CONFIG も同時更新が必要。コメントに明記済みだが、CIでの整合性チェックも検討
