@@ -133,13 +133,13 @@ h3 {
 
 .problem-list {
   list-style: none;
-  text-align: left;
+  text-align: start;
 }
 
 .problem-list li {
   padding: 12px 0;
   border-bottom: 1px solid #e8f4fc;
-  padding-left: 8px;
+  padding-inline-start: 8px;
 }
 
 .problem-list li:last-child {
@@ -160,7 +160,7 @@ h3 {
   padding: 20px;
   border-top: 4px solid transparent;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-align: left;
+  text-align: start;
 }
 
 .feature-card:hover {
@@ -195,7 +195,7 @@ h3 {
   border: 2px solid #b8d8e8;
   border-radius: 12px;
   padding: 16px;
-  border-left: 4px solid #ff8c42; /* オレンジのアクセント */
+  border-inline-start: 4px solid #ff8c42;
 }
 
 .example-code {
@@ -215,7 +215,7 @@ h3 {
   font-family: monospace;
   font-size: 0.9rem;
   color: #333;
-  border-left: 3px solid #a8d8a8; /* 緑で「結果」を示す */
+  border-inline-start: 3px solid #a8d8a8;
 }
 
 /* Safety */
@@ -226,7 +226,7 @@ h3 {
 }
 
 .safety-list {
-  text-align: left;
+  text-align: start;
 }
 
 .safety-list dt {
@@ -246,7 +246,7 @@ h3 {
 
 .safety-list dd {
   color: #555;
-  margin-left: 0;
+  margin-inline-start: 0;
   margin-top: 4px;
 }
 
@@ -329,7 +329,7 @@ h3 {
   border: 2px solid #b8d8e8;
   border-radius: 12px;
   padding: 16px;
-  text-align: left;
+  text-align: start;
 }
 
 .error-before, .error-after {
@@ -388,7 +388,7 @@ h3 {
 
 .story-content {
   line-height: 2;
-  text-align: left;
+  text-align: start;
 }
 
 .story-content p {

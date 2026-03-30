@@ -9,6 +9,7 @@
   "scripts": {
     "build": "esbuild src/main.js --bundle --outfile=app/dist/bundle.js --format=esm --external:/vendor/*",
     "screenshots": "node scripts/screenshots.js",
+    "build:lp": "node scripts/build-lp.js",
     "validate:i18n": "node scripts/validate-i18n.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

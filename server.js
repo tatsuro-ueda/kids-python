@@ -24,6 +24,10 @@ http.createServer((req, res) => {
   if (url === "/") url = "/index.html";
   if (url === "/app" || url === "/app/") url = "/app/index.html";
 
+  // Language-specific LP: /en/ → /en/index.html
+  const langMatch = url.match(/^\/([a-z]{2}(?:-[A-Z]{2})?)\/$/);
+  if (langMatch) url = `/${langMatch[1]}/index.html`;
+
   const filePath = path.join(ROOT, url);
   const ext = path.extname(filePath);
   const mime = MIME[ext] || "application/octet-stream";
