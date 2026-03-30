@@ -21,6 +21,7 @@ body {
 header {
   text-align: center;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .mascot {
@@ -119,7 +120,7 @@ header h1 {
 
 #editor .cm-editor .cm-gutters {
   background: #e8f4fc;
-  border-right: 1px solid #b8d8e8;
+  border-inline-end: 1px solid #b8d8e8;
 }
 
 .toolbar {
@@ -304,5 +305,53 @@ header h1 {
 
 .site-footer p {
   margin: 4px 0;
+}
+
+/* Language selector */
+#lang-selector {
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
+}
+
+#lang-btn {
+  background: transparent;
+  border: 2px solid #b8d8e8;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+
+#lang-btn:hover {
+  background: #f0f8ff;
+}
+
+#lang-list {
+  position: absolute;
+  inset-inline-end: 0;
+  top: 40px;
+  background: white;
+  border: 2px solid #b8d8e8;
+  border-radius: 12px;
+  padding: 8px 0;
+  margin: 0;
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 100;
+  min-width: 160px;
+}
+
+#lang-list li {
+  padding: 6px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+#lang-list li:hover {
+  background: #e8f4fc;
 }
 

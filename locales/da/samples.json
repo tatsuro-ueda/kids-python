@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Hej!",
+      "code": "# Scratch: ligesom blokken \"sig Hej!\"\nprint(\"Hej!\")\n"
+    },
+    {
+      "title": "Spoerg om dit navn",
+      "code": "# Scratch: ligesom blokken \"spoerg og vent\"\nnavn = input(\"Hvad hedder du? \")\nprint(\"Hej, \" + navn + \"!\")\n"
+    },
+    {
+      "title": "Lommeregner",
+      "code": "# Scratch: ligesom blokken \"+ operator\"\na = int(input(\"Foerste tal: \"))\nb = int(input(\"Andet tal: \"))\nprint(\"Addition: \" + str(a + b))\nprint(\"Subtraktion: \" + str(a - b))\nprint(\"Multiplikation: \" + str(a * b))\n"
+    },
+    {
+      "title": "Hvis...saa",
+      "code": "# Scratch: ligesom blokken \"hvis saa\"\nvejr = input(\"Hvordan er vejret? (solskin/regn): \")\nif vejr == \"solskin\":\n    print(\"Lad os lege udenfor!\")\nelse:\n    print(\"Lad os programmere!\")\n"
+    },
+    {
+      "title": "Forskellige hilsener",
+      "code": "# Scratch: ligesom blokken \"hvis saa ellers hvis saa\"\ntime = int(input(\"Hvad er klokken? (0-23): \"))\nif time < 10:\n    print(\"Godmorgen!\")\nelif time < 17:\n    print(\"Goddag!\")\nelse:\n    print(\"Godaften!\")\n"
+    },
+    {
+      "title": "Gentag",
+      "code": "# Scratch: ligesom blokken \"gentag\"\nfor taeller in range(5):\n    print(str(taeller + 1) + \" gang(e): Hej!\")\n"
+    },
+    {
+      "title": "Nedtaelling",
+      "code": "# Scratch: ligesom blokken \"aendr med\" + \"gentag indtil\"\ntal = 10\nwhile tal > 0:\n    print(tal)\n    tal = tal - 1\nprint(\"Affyring! \\U0001f680\")\n"
+    },
+    {
+      "title": "Hvilken frugt?",
+      "code": "# Scratch: ligesom blokken \"element i listen\"\nfrugter = [\"aeble\", \"appelsin\", \"drue\", \"jordbaer\", \"fersken\"]\nprint(\"Frugtliste: \" + str(frugter))\nnummer = int(input(\"Hvilken vil du se? (1-5): \"))\nprint(str(nummer) + \". er \" + frugter[nummer - 1] + \"!\")\n"
+    },
+    {
+      "title": "Tael bogstaver",
+      "code": "# Scratch: ligesom blokken \"laengden af\"\nord = input(\"Skriv dit yndlingsord: \")\nprint(\"\\\"\" + ord + \"\\\" har \" + str(len(ord)) + \" bogstaver!\")\nfor bogstav in ord:\n    print(\"-> \" + bogstav)\n"
+    },
+    {
+      "title": "Lykkehjul",
+      "code": "# Scratch: ligesom blokken \"tilfaeldigt tal fra til\"\nimport random\nresultat = random.choice([\"Super held!\", \"Meget held!\", \"Lidt held\", \"Held\", \"Proev igen\"])\nprint(\"Din lykke er... \" + resultat + \"!\")\n"
+    },
+    {
+      "title": "Gaet tallet",
+      "code": "# Et spil der kombinerer mange blokke!\nimport random\nsvar = random.randint(1, 10)\nprint(\"Gaet et tal fra 1 til 10!\")\n\nforsoeg = 0\nwhile True:\n    gaet = int(input(\"Skriv et tal: \"))\n    forsoeg = forsoeg + 1\n    if gaet == svar:\n        print(\"Rigtigt! \\U0001f389 Du klarede det paa \" + str(forsoeg) + \" forsoeg!\")\n        break\n    elif gaet < svar:\n        print(\"Hoejere!\")\n    else:\n        print(\"Lavere!\")\n"
+    }
+  ]
+}

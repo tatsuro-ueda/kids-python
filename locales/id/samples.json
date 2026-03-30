@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Halo!",
+      "code": "# Scratch: sama seperti blok \"katakan Halo!\"\nprint(\"Halo!\")\n"
+    },
+    {
+      "title": "Tanya namamu",
+      "code": "# Scratch: sama seperti blok \"tanya dan tunggu\"\nnama = input(\"Siapa namamu? \")\nprint(\"Halo, \" + nama + \"!\")\n"
+    },
+    {
+      "title": "Kalkulator",
+      "code": "# Scratch: sama seperti blok \"operator +\"\na = int(input(\"Angka pertama: \"))\nb = int(input(\"Angka kedua: \"))\nprint(\"Penjumlahan: \" + str(a + b))\nprint(\"Pengurangan: \" + str(a - b))\nprint(\"Perkalian: \" + str(a * b))\n"
+    },
+    {
+      "title": "Kalau...maka",
+      "code": "# Scratch: sama seperti blok \"jika maka\"\ncuaca = input(\"Bagaimana cuaca hari ini? (cerah/hujan): \")\nif cuaca == \"cerah\":\n    print(\"Ayo main di luar!\")\nelse:\n    print(\"Ayo belajar programming!\")\n"
+    },
+    {
+      "title": "Sapaan berbeda",
+      "code": "# Scratch: sama seperti blok \"jika maka, kalau tidak jika maka\"\njam = int(input(\"Jam berapa sekarang? (0-23): \"))\nif jam < 10:\n    print(\"Selamat pagi!\")\nelif jam < 17:\n    print(\"Selamat siang!\")\nelse:\n    print(\"Selamat malam!\")\n"
+    },
+    {
+      "title": "Ulangi",
+      "code": "# Scratch: sama seperti blok \"ulangi\"\nfor hitungan in range(5):\n    print(str(hitungan + 1) + \" kali: Halo!\")\n"
+    },
+    {
+      "title": "Hitung mundur",
+      "code": "# Scratch: sama seperti blok \"ubah sebanyak\" + \"ulangi sampai\"\nangka = 10\nwhile angka > 0:\n    print(angka)\n    angka = angka - 1\nprint(\"Meluncur! \\U0001f680\")\n"
+    },
+    {
+      "title": "Yang mana?",
+      "code": "# Scratch: sama seperti blok \"item dari daftar\"\nbuah = [\"apel\", \"jeruk\", \"anggur\", \"stroberi\", \"mangga\"]\nprint(\"Daftar buah: \" + str(buah))\nnomor = int(input(\"Mau lihat yang ke berapa? (1-5): \"))\nprint(\"Nomor \" + str(nomor) + \" adalah \" + buah[nomor - 1] + \"!\")\n"
+    },
+    {
+      "title": "Hitung huruf",
+      "code": "# Scratch: sama seperti blok \"panjang dari\"\nkata = input(\"Ketik kata favoritmu: \")\nprint(\"\\\"\" + kata + \"\\\" punya \" + str(len(kata)) + \" huruf!\")\nfor huruf in kata:\n    print(\"-> \" + huruf)\n"
+    },
+    {
+      "title": "Ramalan hari ini",
+      "code": "# Scratch: sama seperti blok \"pilih acak\"\nimport random\nhasil = random.choice([\"Sangat beruntung!\", \"Beruntung!\", \"Cukup beruntung\", \"Biasa saja\", \"Coba lagi\"])\nprint(\"Keberuntunganmu hari ini... \" + hasil + \"!\")\n"
+    },
+    {
+      "title": "Tebak angka",
+      "code": "# Permainan yang menggabungkan banyak blok!\nimport random\njawaban = random.randint(1, 10)\nprint(\"Tebak angka dari 1 sampai 10!\")\n\npercobaan = 0\nwhile True:\n    tebakan = int(input(\"Masukkan angka: \"))\n    percobaan = percobaan + 1\n    if tebakan == jawaban:\n        print(\"Benar! \\U0001f389 Kamu berhasil dalam \" + str(percobaan) + \" kali!\")\n        break\n    elif tebakan < jawaban:\n        print(\"Lebih besar!\")\n    else:\n        print(\"Lebih kecil!\")\n"
+    }
+  ]
+}

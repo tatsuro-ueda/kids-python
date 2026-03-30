@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "שלום!",
+      "code": "# Scratch: אותו דבר כמו הבלוק \"אמור שלום!\"\nprint(\"שלום!\")\n"
+    },
+    {
+      "title": "שאל את השם שלך",
+      "code": "# Scratch: אותו דבר כמו הבלוק \"שאל וחכה\"\nshem = input(\"מה השם שלך? \")\nprint(\"שלום, \" + shem + \"!\")\n"
+    },
+    {
+      "title": "מחשבון",
+      "code": "# Scratch: אותו דבר כמו הבלוק \"+ חישוב\"\na = int(input(\"מספר ראשון: \"))\nb = int(input(\"מספר שני: \"))\nprint(\"חיבור: \" + str(a + b))\nprint(\"חיסור: \" + str(a - b))\nprint(\"כפל: \" + str(a * b))\n"
+    },
+    {
+      "title": "אם...אז",
+      "code": "# Scratch: אותו דבר כמו הבלוק \"אם אז\"\nmezeg_avir = input(\"איך מזג האוויר? (שמש/גשם): \")\nif mezeg_avir == \"שמש\":\n    print(\"בואו נשחק בחוץ!\")\nelse:\n    print(\"בואו נתכנת!\")\n"
+    },
+    {
+      "title": "ברכות שונות",
+      "code": "# Scratch: אותו דבר כמו הבלוק \"אם אז אחרת אם אז\"\nshaa = int(input(\"מה השעה? (0-23): \"))\nif shaa < 10:\n    print(\"בוקר טוב!\")\nelif shaa < 17:\n    print(\"צהריים טובים!\")\nelse:\n    print(\"ערב טוב!\")\n"
+    },
+    {
+      "title": "חזור",
+      "code": "# Scratch: אותו דבר כמו הבלוק \"חזור\"\nfor paam in range(5):\n    print(str(paam + 1) + \" פעם: שלום!\")\n"
+    },
+    {
+      "title": "ספירה לאחור",
+      "code": "# Scratch: אותו דבר כמו הבלוקים \"שנה ב\" + \"חזור עד\"\nmispar = 10\nwhile mispar > 0:\n    print(mispar)\n    mispar = mispar - 1\nprint(\"שיגור! \\U0001f680\")\n"
+    },
+    {
+      "title": "איזה אחד?",
+      "code": "# Scratch: אותו דבר כמו הבלוק \"פריט ברשימה\"\nperot = [\"תפוח\", \"תפוז\", \"ענב\", \"תות\", \"אפרסק\"]\nprint(\"רשימת פירות: \" + str(perot))\nmispar = int(input(\"את/ה רוצה לראות מספר כמה? (1-5): \"))\nprint(str(mispar) + \" זה \" + perot[mispar - 1] + \"!\")\n"
+    },
+    {
+      "title": "ספור אותיות",
+      "code": "# Scratch: אותו דבר כמו הבלוק \"אורך של\"\nmila = input(\"כתוב מילה שאתה אוהב: \")\nprint(\"\\\"\" + mila + \"\\\" מכילה \" + str(len(mila)) + \" אותיות!\")\nfor ot in mila:\n    print(\"-> \" + ot)\n"
+    },
+    {
+      "title": "גורל",
+      "code": "# Scratch: אותו דבר כמו הבלוק \"בחר באקראי\"\nimport random\ntotza = random.choice([\"מזל גדול!\", \"מזל טוב!\", \"קצת מזל\", \"מזל!\", \"נסה שוב\"])\nprint(\"הגורל שלך הוא... \" + totza + \"!\")\n"
+    },
+    {
+      "title": "משחק ניחוש מספרים",
+      "code": "# משחק שמשלב בלוקים רבים!\nimport random\ntshuva = random.randint(1, 10)\nprint(\"נחש מספר בין 1 ל-10!\")\n\nnisyonot = 0\nwhile True:\n    nichush = int(input(\"הכנס מספר: \"))\n    nisyonot = nisyonot + 1\n    if nichush == tshuva:\n        print(\"נכון! \\U0001f389 ניחשת ב-\" + str(nisyonot) + \" ניסיונות!\")\n        break\n    elif nichush < tshuva:\n        print(\"גבוה יותר!\")\n    else:\n        print(\"נמוך יותר!\")\n"
+    }
+  ]
+}

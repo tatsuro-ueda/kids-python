@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Salom!",
+      "code": "# Scratch: \"Salom de!\" bloki bilan bir xil\nprint(\"Salom!\")\n"
+    },
+    {
+      "title": "Ismingni so'ra",
+      "code": "# Scratch: \"so'ra va kut\" bloki bilan bir xil\nism = input(\"Ismingiz nima? \")\nprint(\"Salom, \" + ism + \"!\")\n"
+    },
+    {
+      "title": "Kalkulyator",
+      "code": "# Scratch: \"+ amal\" bloki bilan bir xil\na = int(input(\"Birinchi son: \"))\nb = int(input(\"Ikkinchi son: \"))\nprint(\"Qo'shish: \" + str(a + b))\nprint(\"Ayirish: \" + str(a - b))\nprint(\"Ko'paytirish: \" + str(a * b))\n"
+    },
+    {
+      "title": "Agar...bo'lsa",
+      "code": "# Scratch: \"agar bo'lsa\" bloki bilan bir xil\nob_havo = input(\"Ob-havo qanday? (quyoshli/yomg'irli): \")\nif ob_havo == \"quyoshli\":\n    print(\"Tashqarida o'ynaymiz!\")\nelse:\n    print(\"Dasturlash qilamiz!\")\n"
+    },
+    {
+      "title": "Turli salomlashishlar",
+      "code": "# Scratch: \"agar bo'lsa aks holda agar bo'lsa\" bloki bilan bir xil\nsoat = int(input(\"Hozir soat nechchi? (0-23): \"))\nif soat < 10:\n    print(\"Xayrli tong!\")\nelif soat < 17:\n    print(\"Xayrli kun!\")\nelse:\n    print(\"Xayrli kech!\")\n"
+    },
+    {
+      "title": "Takrorlash",
+      "code": "# Scratch: \"takrorla\" bloki bilan bir xil\nfor marta in range(5):\n    print(str(marta + 1) + \"-marta: Salom!\")\n"
+    },
+    {
+      "title": "Teskari sanash",
+      "code": "# Scratch: \"o'zgartir\" + \"takrorla...gacha\" bloklari bilan bir xil\nson = 10\nwhile son > 0:\n    print(son)\n    son = son - 1\nprint(\"Uchirish! \\U0001f680\")\n"
+    },
+    {
+      "title": "Qaysi biri?",
+      "code": "# Scratch: \"ro'yxatdagi element\" bloki bilan bir xil\nmevalar = [\"olma\", \"apelsin\", \"uzum\", \"qulupnay\", \"shaftoli\"]\nprint(\"Mevalar ro'yxati: \" + str(mevalar))\nraqam = int(input(\"Qaysi birini ko'rmoqchisan? (1-5): \"))\nprint(str(raqam) + \"-chi bu \" + mevalar[raqam - 1] + \"!\")\n"
+    },
+    {
+      "title": "Harflarni sana",
+      "code": "# Scratch: \"uzunlik\" bloki bilan bir xil\nsoz = input(\"Sevimli so'zingni yoz: \")\nprint(\"\\\"\" + soz + \"\\\" da \" + str(len(soz)) + \" ta harf bor!\")\nfor harf in soz:\n    print(\"-> \" + harf)\n"
+    },
+    {
+      "title": "Fol ochish",
+      "code": "# Scratch: \"tasodifiy tanlash\" bloki bilan bir xil\nimport random\nnatija = random.choice([\"Juda omadli!\", \"Ancha omadli!\", \"Biroz omadli\", \"Omadli!\", \"Qayta urinib ko'r\"])\nprint(\"Bugungi folingiz... \" + natija + \"!\")\n"
+    },
+    {
+      "title": "Sonni topish o'yini",
+      "code": "# Ko'p bloklarni birlashtirgan o'yin!\nimport random\njavob = random.randint(1, 10)\nprint(\"1 dan 10 gacha sonni top!\")\n\nurinishlar = 0\nwhile True:\n    taxmin = int(input(\"Son kiriting: \"))\n    urinishlar = urinishlar + 1\n    if taxmin == javob:\n        print(\"To'g'ri! \\U0001f389 \" + str(urinishlar) + \" ta urinishda topdingiz!\")\n        break\n    elif taxmin < javob:\n        print(\"Kattaroq!\")\n    else:\n        print(\"Kichikroq!\")\n"
+    }
+  ]
+}

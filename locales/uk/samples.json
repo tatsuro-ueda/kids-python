@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Привіт!",
+      "code": "# Scratch: як блок \"скажи Привіт!\"\nprint(\"Привіт!\")\n"
+    },
+    {
+      "title": "Запитай ім'я",
+      "code": "# Scratch: як блок \"запитай і чекай\"\nimya = input(\"Як тебе звати? \")\nprint(\"Привіт, \" + imya + \"!\")\n"
+    },
+    {
+      "title": "Калькулятор",
+      "code": "# Scratch: як блок \"оператор +\"\na = int(input(\"Перше число: \"))\nb = int(input(\"Друге число: \"))\nprint(\"Додавання: \" + str(a + b))\nprint(\"Віднімання: \" + str(a - b))\nprint(\"Множення: \" + str(a * b))\n"
+    },
+    {
+      "title": "Якщо...тоді",
+      "code": "# Scratch: як блок \"якщо тоді\"\npogoda = input(\"Яка погода? (сонячно/дощ): \")\nif pogoda == \"сонячно\":\n    print(\"Ходімо гратися надворі!\")\nelse:\n    print(\"Давай програмувати!\")\n"
+    },
+    {
+      "title": "Різні привітання",
+      "code": "# Scratch: як блок \"якщо тоді інакше якщо тоді\"\ngodyna = int(input(\"Котра година? (0-23): \"))\nif godyna < 10:\n    print(\"Доброго ранку!\")\nelif godyna < 17:\n    print(\"Добрий день!\")\nelse:\n    print(\"Добрий вечір!\")\n"
+    },
+    {
+      "title": "Повторюй",
+      "code": "# Scratch: як блок \"повтори\"\nfor lichylnyk in range(5):\n    print(str(lichylnyk + 1) + \" раз(ів): Привіт!\")\n"
+    },
+    {
+      "title": "Зворотний відлік",
+      "code": "# Scratch: як блок \"змінити на\" + \"повторювати поки\"\nchyslo = 10\nwhile chyslo > 0:\n    print(chyslo)\n    chyslo = chyslo - 1\nprint(\"Старт! \\U0001f680\")\n"
+    },
+    {
+      "title": "Який фрукт?",
+      "code": "# Scratch: як блок \"елемент списку\"\nfrukty = [\"яблуко\", \"апельсин\", \"виноград\", \"полуниця\", \"персик\"]\nprint(\"Список фруктів: \" + str(frukty))\nnomer = int(input(\"Який хочеш побачити? (1-5): \"))\nprint(str(nomer) + \"-й це \" + frukty[nomer - 1] + \"!\")\n"
+    },
+    {
+      "title": "Порахуй літери",
+      "code": "# Scratch: як блок \"довжина\"\nslovo = input(\"Напиши своє улюблене слово: \")\nprint(\"\\\"\" + slovo + \"\\\" має \" + str(len(slovo)) + \" літер!\")\nfor litera in slovo:\n    print(\"-> \" + litera)\n"
+    },
+    {
+      "title": "Ворожіння",
+      "code": "# Scratch: як блок \"випадкове число від до\"\nimport random\nresultat = random.choice([\"Супер щастя!\", \"Багато щастя!\", \"Трохи щастя\", \"Щастя\", \"Спробуй ще\"])\nprint(\"Твоя доля... \" + resultat + \"!\")\n"
+    },
+    {
+      "title": "Вгадай число",
+      "code": "# Гра, що поєднує багато блоків!\nimport random\nvidpovid = random.randint(1, 10)\nprint(\"Вгадай число від 1 до 10!\")\n\nsproby = 0\nwhile True:\n    zdogad = int(input(\"Введи число: \"))\n    sproby = sproby + 1\n    if zdogad == vidpovid:\n        print(\"Правильно! \\U0001f389 Ти вгадав за \" + str(sproby) + \" спроб!\")\n        break\n    elif zdogad < vidpovid:\n        print(\"Більше!\")\n    else:\n        print(\"Менше!\")\n"
+    }
+  ]
+}

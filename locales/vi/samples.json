@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Xin chao!",
+      "code": "# Scratch: giong nhu khoi \"noi Xin chao!\"\nprint(\"Xin chao!\")\n"
+    },
+    {
+      "title": "Hoi ten ban",
+      "code": "# Scratch: giong nhu khoi \"hoi va doi\"\nten = input(\"Ban ten gi? \")\nprint(\"Xin chao, \" + ten + \"!\")\n"
+    },
+    {
+      "title": "May tinh",
+      "code": "# Scratch: giong nhu khoi \"phep +\"\na = int(input(\"So thu nhat: \"))\nb = int(input(\"So thu hai: \"))\nprint(\"Cong: \" + str(a + b))\nprint(\"Tru: \" + str(a - b))\nprint(\"Nhan: \" + str(a * b))\n"
+    },
+    {
+      "title": "Neu...thi",
+      "code": "# Scratch: giong nhu khoi \"neu thi\"\nthoi_tiet = input(\"Thoi tiet hom nay the nao? (nang/mua): \")\nif thoi_tiet == \"nang\":\n    print(\"Ra ngoai choi nao!\")\nelse:\n    print(\"O nha lap trinh nao!\")\n"
+    },
+    {
+      "title": "Loi chao khac nhau",
+      "code": "# Scratch: giong nhu khoi \"neu thi, con khong neu thi\"\ngio = int(input(\"Bay gio la may gio? (0-23): \"))\nif gio < 10:\n    print(\"Chao buoi sang!\")\nelif gio < 17:\n    print(\"Chao buoi chieu!\")\nelse:\n    print(\"Chao buoi toi!\")\n"
+    },
+    {
+      "title": "Lap lai",
+      "code": "# Scratch: giong nhu khoi \"lap lai\"\nfor dem in range(5):\n    print(str(dem + 1) + \" lan: Xin chao!\")\n"
+    },
+    {
+      "title": "Dem nguoc",
+      "code": "# Scratch: giong nhu khoi \"thay doi\" + \"lap lai cho den khi\"\nso = 10\nwhile so > 0:\n    print(so)\n    so = so - 1\nprint(\"Phong! \\U0001f680\")\n"
+    },
+    {
+      "title": "Cai nao?",
+      "code": "# Scratch: giong nhu khoi \"phan tu cua danh sach\"\ntrai_cay = [\"tao\", \"cam\", \"nho\", \"dau\", \"dao\"]\nprint(\"Danh sach trai cay: \" + str(trai_cay))\nso_thu_tu = int(input(\"Ban muon xem cai thu may? (1-5): \"))\nprint(\"Thu \" + str(so_thu_tu) + \" la \" + trai_cay[so_thu_tu - 1] + \"!\")\n"
+    },
+    {
+      "title": "Dem chu cai",
+      "code": "# Scratch: giong nhu khoi \"do dai cua\"\ntu = input(\"Nhap tu yeu thich cua ban: \")\nprint(\"\\\"\" + tu + \"\\\" co \" + str(len(tu)) + \" chu cai!\")\nfor chu in tu:\n    print(\"-> \" + chu)\n"
+    },
+    {
+      "title": "Boi que",
+      "code": "# Scratch: giong nhu khoi \"chon ngau nhien\"\nimport random\nket_qua = random.choice([\"Rat may man!\", \"May man!\", \"Kha may\", \"Binh thuong\", \"Thu lai nhe\"])\nprint(\"Van may hom nay cua ban... \" + ket_qua + \"!\")\n"
+    },
+    {
+      "title": "Tro choi doan so",
+      "code": "# Tro choi ket hop nhieu khoi!\nimport random\ndap_an = random.randint(1, 10)\nprint(\"Doan mot so tu 1 den 10!\")\n\nlan_thu = 0\nwhile True:\n    du_doan = int(input(\"Nhap mot so: \"))\n    lan_thu = lan_thu + 1\n    if du_doan == dap_an:\n        print(\"Dung roi! \\U0001f389 Ban doan dung sau \" + str(lan_thu) + \" lan!\")\n        break\n    elif du_doan < dap_an:\n        print(\"Lon hon!\")\n    else:\n        print(\"Nho hon!\")\n"
+    }
+  ]
+}

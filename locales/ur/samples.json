@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "السلام علیکم!",
+      "code": "# Scratch: \"سلام کہو!\" بلاک جیسا ہے\nprint(\"السلام علیکم!\")\n"
+    },
+    {
+      "title": "نام پوچھو",
+      "code": "# Scratch: \"پوچھو اور انتظار کرو\" بلاک جیسا ہے\nnaam = input(\"تمہارا نام کیا ہے؟ \")\nprint(naam + \"، سلام!\")\n"
+    },
+    {
+      "title": "جمع کا کیلکولیٹر",
+      "code": "# Scratch: \"+ آپریٹر\" بلاک جیسا ہے\nadad1 = int(input(\"پہلا نمبر: \"))\nadad2 = int(input(\"دوسرا نمبر: \"))\nprint(\"جمع: \" + str(adad1 + adad2))\nprint(\"تفریق: \" + str(adad1 - adad2))\nprint(\"ضرب: \" + str(adad1 * adad2))\n"
+    },
+    {
+      "title": "اگر...تو",
+      "code": "# Scratch: \"اگر تو\" بلاک جیسا ہے\nmausam = input(\"آج موسم کیسا ہے؟ (دھوپ/بارش): \")\nif mausam == \"دھوپ\":\n    print(\"باہر کھیلنے چلو!\")\nelse:\n    print(\"گھر میں پروگرامنگ کرتے ہیں!\")\n"
+    },
+    {
+      "title": "مختلف سلام",
+      "code": "# Scratch: \"اگر تو ورنہ اگر تو\" بلاک جیسا ہے\nghanta = int(input(\"ابھی کتنے بجے ہیں؟ (0-23): \"))\nif ghanta < 10:\n    print(\"صبح بخیر!\")\nelif ghanta < 17:\n    print(\"السلام علیکم!\")\nelse:\n    print(\"شب بخیر!\")\n"
+    },
+    {
+      "title": "دہراؤ",
+      "code": "# Scratch: \"دہراؤ\" بلاک جیسا ہے\nfor martaba in range(5):\n    print(str(martaba + 1) + \" بار: سلام!\")\n"
+    },
+    {
+      "title": "الٹی گنتی",
+      "code": "# Scratch: \"بدلو\" + \"تک دہراؤ\" بلاک جیسا ہے\nadad = 10\nwhile adad > 0:\n    print(adad)\n    adad = adad - 1\nprint(\"لانچ! 🚀\")\n"
+    },
+    {
+      "title": "کون سا نمبر؟",
+      "code": "# Scratch: لسٹ کا \"نمبر\" بلاک جیسا ہے\nphal = [\"سیب\", \"مالٹا\", \"انگور\", \"اسٹرابیری\", \"آڑو\"]\nprint(\"پھلوں کی فہرست: \" + str(phal))\nnumber = int(input(\"کون سا دیکھنا ہے؟ (1-5): \"))\nprint(str(number) + \" نمبر \" + phal[number - 1] + \" ہے!\")\n"
+    },
+    {
+      "title": "حروف گنو",
+      "code": "# Scratch: \"لمبائی\" بلاک جیسا ہے\nlafz = input(\"اپنا پسندیدہ لفظ لکھو: \")\nprint(\"'\" + lafz + \"' میں \" + str(len(lafz)) + \" حروف ہیں!\")\nfor harf in lafz:\n    print(\"← \" + harf)\n"
+    },
+    {
+      "title": "قسمت آزمائی",
+      "code": "# Scratch: \"بے ترتیب نمبر\" بلاک جیسا ہے\nimport random\nnatija = random.choice([\"بہت اچھی قسمت!\", \"اچھی قسمت!\", \"تھوڑی اچھی قسمت\", \"ٹھیک ٹھاک\", \"دوبارہ کوشش کرو\"])\nprint(\"آج کی قسمت... \" + natija + \"!\")\n"
+    },
+    {
+      "title": "نمبر بتاؤ گیم",
+      "code": "# بہت سارے بلاکس کو ملا کر بنایا گیا گیم!\nimport random\njawab = random.randint(1, 10)\nprint(\"1 سے 10 تک نمبر بتاؤ!\")\n\nmartaba = 0\nwhile True:\n    andaza = int(input(\"نمبر ڈالو: \"))\n    martaba = martaba + 1\n    if andaza == jawab:\n        print(\"صحیح! 🎉 \" + str(martaba) + \" بار میں بتا لیا!\")\n        break\n    elif andaza < jawab:\n        print(\"اور بڑا!\")\n    else:\n        print(\"اور چھوٹا!\")\n"
+    }
+  ]
+}

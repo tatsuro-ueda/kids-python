@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Hei!",
+      "code": "# Scratch: sama kuin \"sano Hei!\" -palikka\nprint(\"Hei!\")\n"
+    },
+    {
+      "title": "Kysy nimesi",
+      "code": "# Scratch: sama kuin \"kysy ja odota\" -palikka\nnimi = input(\"Mika sinun nimesi on? \")\nprint(\"Hei, \" + nimi + \"!\")\n"
+    },
+    {
+      "title": "Laskin",
+      "code": "# Scratch: sama kuin \"+ laskutoimitus\" -palikka\na = int(input(\"Ensimmainen luku: \"))\nb = int(input(\"Toinen luku: \"))\nprint(\"Yhteenlasku: \" + str(a + b))\nprint(\"Vahennyslasku: \" + str(a - b))\nprint(\"Kertolasku: \" + str(a * b))\n"
+    },
+    {
+      "title": "Jos...niin",
+      "code": "# Scratch: sama kuin \"jos niin\" -palikka\nsaa = input(\"Millainen saa on? (aurinkoinen/sateinen): \")\nif saa == \"aurinkoinen\":\n    print(\"Mennaan ulos leikkimaan!\")\nelse:\n    print(\"Ohjelmoidaan!\")\n"
+    },
+    {
+      "title": "Eri tervehdykset",
+      "code": "# Scratch: sama kuin \"jos niin muuten jos niin\" -palikka\ntunti = int(input(\"Mita kello on? (0-23): \"))\nif tunti < 10:\n    print(\"Huomenta!\")\nelif tunti < 17:\n    print(\"Paivaa!\")\nelse:\n    print(\"Iltaa!\")\n"
+    },
+    {
+      "title": "Toista",
+      "code": "# Scratch: sama kuin \"toista\" -palikka\nfor kerta in range(5):\n    print(str(kerta + 1) + \". kerta: Hei!\")\n"
+    },
+    {
+      "title": "Lahtolaskenta",
+      "code": "# Scratch: sama kuin \"muuta arvolla\" + \"toista kunnes\" -palikat\nluku = 10\nwhile luku > 0:\n    print(luku)\n    luku = luku - 1\nprint(\"Laukaise! \\U0001f680\")\n"
+    },
+    {
+      "title": "Monesko?",
+      "code": "# Scratch: sama kuin \"kohde listassa\" -palikka\nhedelmat = [\"omena\", \"appelsiini\", \"viinirypale\", \"mansikka\", \"persikka\"]\nprint(\"Hedelmalista: \" + str(hedelmat))\nnumero = int(input(\"Monesko? (1-5): \"))\nprint(str(numero) + \". on \" + hedelmat[numero - 1] + \"!\")\n"
+    },
+    {
+      "title": "Laske kirjaimet",
+      "code": "# Scratch: sama kuin \"pituus\" -palikka\nsana = input(\"Kirjoita lempisanasi: \")\nprint(\"\\\"\" + sana + \"\\\" sisaltaa \" + str(len(sana)) + \" kirjainta!\")\nfor kirjain in sana:\n    print(\"-> \" + kirjain)\n"
+    },
+    {
+      "title": "Onnenpelit",
+      "code": "# Scratch: sama kuin \"valitse satunnainen\" -palikka\nimport random\ntulos = random.choice([\"Erinomainen onni!\", \"Hyva onni!\", \"Pieni onni\", \"Onnea!\", \"Yrita uudelleen\"])\nprint(\"Onnesi on... \" + tulos + \"!\")\n"
+    },
+    {
+      "title": "Lukujen arvauspeli",
+      "code": "# Peli jossa kayttaat monia palikoita!\nimport random\nvastaus = random.randint(1, 10)\nprint(\"Arvaa luku 1:sta 10:een!\")\n\nyritykset = 0\nwhile True:\n    arvaus = int(input(\"Syota luku: \"))\n    yritykset = yritykset + 1\n    if arvaus == vastaus:\n        print(\"Oikein! \\U0001f389 Sait sen \" + str(yritykset) + \" yrityksella!\")\n        break\n    elif arvaus < vastaus:\n        print(\"Isompi!\")\n    else:\n        print(\"Pienempi!\")\n"
+    }
+  ]
+}

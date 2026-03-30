@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Szia!",
+      "code": "# Scratch: ugyanaz, mint a \"mondd Szia!\" blokk\nprint(\"Szia!\")\n"
+    },
+    {
+      "title": "Kerdd el a neved",
+      "code": "# Scratch: ugyanaz, mint a \"kerdezz es varj\" blokk\nnev = input(\"Hogy hivnak? \")\nprint(\"Szia, \" + nev + \"!\")\n"
+    },
+    {
+      "title": "Szamologep",
+      "code": "# Scratch: ugyanaz, mint a \"+ operator\" blokk\na = int(input(\"Elso szam: \"))\nb = int(input(\"Masodik szam: \"))\nprint(\"Osszeadas: \" + str(a + b))\nprint(\"Kivonas: \" + str(a - b))\nprint(\"Szorzas: \" + str(a * b))\n"
+    },
+    {
+      "title": "Ha...akkor",
+      "code": "# Scratch: ugyanaz, mint a \"ha akkor\" blokk\nidojaras = input(\"Milyen az idojaras? (napos/esos): \")\nif idojaras == \"napos\":\n    print(\"Menjunk jatszani!\")\nelse:\n    print(\"Programozzunk!\")\n"
+    },
+    {
+      "title": "Kulonbozo udvozlesek",
+      "code": "# Scratch: ugyanaz, mint a \"ha akkor kulonben ha akkor\" blokk\nora = int(input(\"Hany ora van? (0-23): \"))\nif ora < 10:\n    print(\"Jo reggelt!\")\nelif ora < 17:\n    print(\"Jo napot!\")\nelse:\n    print(\"Jo estet!\")\n"
+    },
+    {
+      "title": "Ismeteld",
+      "code": "# Scratch: ugyanaz, mint az \"ismeteld\" blokk\nfor szamlalo in range(5):\n    print(str(szamlalo + 1) + \". alkalommal: Szia!\")\n"
+    },
+    {
+      "title": "Visszaszamlalas",
+      "code": "# Scratch: ugyanaz, mint a \"valtoztasd\" + \"ismeteld amig\" blokk\nszam = 10\nwhile szam > 0:\n    print(szam)\n    szam = szam - 1\nprint(\"Start! \\U0001f680\")\n"
+    },
+    {
+      "title": "Melyik gyumolcs?",
+      "code": "# Scratch: ugyanaz, mint a \"lista eleme\" blokk\ngyumolcsok = [\"alma\", \"narancs\", \"szolo\", \"eper\", \"barack\"]\nprint(\"Gyumolcslista: \" + str(gyumolcsok))\nszam = int(input(\"Melyiket nezed meg? (1-5): \"))\nprint(str(szam) + \". az \" + gyumolcsok[szam - 1] + \"!\")\n"
+    },
+    {
+      "title": "Betuk szamlalasa",
+      "code": "# Scratch: ugyanaz, mint a \"hossza\" blokk\nszo = input(\"Ird be a kedvenc szavad: \")\nprint(\"\\\"\" + szo + \"\\\" \" + str(len(szo)) + \" betukbol all!\")\nfor betu in szo:\n    print(\"-> \" + betu)\n"
+    },
+    {
+      "title": "Szerencsekerek",
+      "code": "# Scratch: ugyanaz, mint a \"veletlen szam\" blokk\nimport random\neredmeny = random.choice([\"Szuper szerencse!\", \"Nagy szerencse!\", \"Kis szerencse\", \"Szerencse\", \"Probald ujra\"])\nprint(\"A szerencsed... \" + eredmeny + \"!\")\n"
+    },
+    {
+      "title": "Szamkitalalo jatek",
+      "code": "# Egy jatek, ami sok blokkot kombinal!\nimport random\nvalasz = random.randint(1, 10)\nprint(\"Talalj ki egy szamot 1 es 10 kozott!\")\n\nprobalkozasok = 0\nwhile True:\n    tipp = int(input(\"Irj be egy szamot: \"))\n    probalkozasok = probalkozasok + 1\n    if tipp == valasz:\n        print(\"Helyes! \\U0001f389 \" + str(probalkozasok) + \" probalkozasbol sikerult!\")\n        break\n    elif tipp < valasz:\n        print(\"Nagyobb!\")\n    else:\n        print(\"Kisebb!\")\n"
+    }
+  ]
+}

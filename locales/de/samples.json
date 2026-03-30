@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Hallo!",
+      "code": "# Scratch: wie der \"sage Hallo!\" Block\nprint(\"Hallo!\")\n"
+    },
+    {
+      "title": "Frag nach deinem Namen",
+      "code": "# Scratch: wie der \"frage und warte\" Block\nname = input(\"Wie heisst du? \")\nprint(\"Hallo, \" + name + \"!\")\n"
+    },
+    {
+      "title": "Taschenrechner",
+      "code": "# Scratch: wie der \"+ Operator\" Block\na = int(input(\"Erste Zahl: \"))\nb = int(input(\"Zweite Zahl: \"))\nprint(\"Addition: \" + str(a + b))\nprint(\"Subtraktion: \" + str(a - b))\nprint(\"Multiplikation: \" + str(a * b))\n"
+    },
+    {
+      "title": "Wenn...dann",
+      "code": "# Scratch: wie der \"falls dann\" Block\nwetter = input(\"Wie ist das Wetter? (sonnig/regnerisch): \")\nif wetter == \"sonnig\":\n    print(\"Lass uns draussen spielen!\")\nelse:\n    print(\"Lass uns programmieren!\")\n"
+    },
+    {
+      "title": "Verschiedene Gruesse",
+      "code": "# Scratch: wie der \"falls dann sonst falls dann\" Block\nstunde = int(input(\"Wie spaet ist es? (0-23): \"))\nif stunde < 10:\n    print(\"Guten Morgen!\")\nelif stunde < 17:\n    print(\"Guten Tag!\")\nelse:\n    print(\"Guten Abend!\")\n"
+    },
+    {
+      "title": "Wiederholen",
+      "code": "# Scratch: wie der \"wiederhole\" Block\nfor zaehler in range(5):\n    print(str(zaehler + 1) + \" Mal: Hallo!\")\n"
+    },
+    {
+      "title": "Countdown",
+      "code": "# Scratch: wie der \"aendere um\" + \"wiederhole bis\" Block\nzahl = 10\nwhile zahl > 0:\n    print(zahl)\n    zahl = zahl - 1\nprint(\"Start! \\U0001f680\")\n"
+    },
+    {
+      "title": "Welches ist es?",
+      "code": "# Scratch: wie der \"Element von Liste\" Block\nfruechte = [\"Apfel\", \"Orange\", \"Traube\", \"Erdbeere\", \"Pfirsich\"]\nprint(\"Fruechtelist: \" + str(fruechte))\nnummer = int(input(\"Welches anschauen? (1-5): \"))\nprint(str(nummer) + \". ist \" + fruechte[nummer - 1] + \"!\")\n"
+    },
+    {
+      "title": "Buchstaben zaehlen",
+      "code": "# Scratch: wie der \"Laenge von\" Block\nwort = input(\"Tippe dein Lieblingswort: \")\nprint(\"\\\"\" + wort + \"\\\" hat \" + str(len(wort)) + \" Buchstaben!\")\nfor buchstabe in wort:\n    print(\"-> \" + buchstabe)\n"
+    },
+    {
+      "title": "Gluecksrad",
+      "code": "# Scratch: wie der \"Zufallszahl von bis\" Block\nimport random\nergebnis = random.choice([\"Super Glueck!\", \"Viel Glueck!\", \"Ein bisschen Glueck\", \"Glueck\", \"Nochmal versuchen\"])\nprint(\"Dein Glueck ist... \" + ergebnis + \"!\")\n"
+    },
+    {
+      "title": "Zahlenratespiel",
+      "code": "# Ein Spiel, das viele Bloecke kombiniert!\nimport random\nantwort = random.randint(1, 10)\nprint(\"Rate eine Zahl von 1 bis 10!\")\n\nversuche = 0\nwhile True:\n    tipp = int(input(\"Gib eine Zahl ein: \"))\n    versuche = versuche + 1\n    if tipp == antwort:\n        print(\"Richtig! \\U0001f389 Du hast es in \" + str(versuche) + \" Versuchen geschafft!\")\n        break\n    elif tipp < antwort:\n        print(\"Hoeher!\")\n    else:\n        print(\"Niedriger!\")\n"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "ሰላም!",
+      "code": "# Scratch: \"ሰላም! በል\" ብሎክ ጋር ተመሳሳይ\nprint(\"ሰላም!\")\n"
+    },
+    {
+      "title": "ስምህን ጠይቅ",
+      "code": "# Scratch: \"ጠይቅ እና ጠብቅ\" ብሎክ ጋር ተመሳሳይ\nsem = input(\"ስምህ ማን ነው? \")\nprint(\"ሰላም, \" + sem + \"!\")\n"
+    },
+    {
+      "title": "ካልኩሌተር",
+      "code": "# Scratch: \"+ ኦፕሬተር\" ብሎክ ጋር ተመሳሳይ\na = int(input(\"የመጀመሪያ ቁጥር: \"))\nb = int(input(\"ሁለተኛ ቁጥር: \"))\nprint(\"መደመር: \" + str(a + b))\nprint(\"መቀነስ: \" + str(a - b))\nprint(\"ማባዛት: \" + str(a * b))\n"
+    },
+    {
+      "title": "ከሆነ...ታዲያ",
+      "code": "# Scratch: \"ከሆነ ታዲያ\" ብሎክ ጋር ተመሳሳይ\nyeayer_hunieta = input(\"የአየር ሁኔታ እንዴት ነው? (ፀሐያማ/ዝናባማ): \")\nif yeayer_hunieta == \"ፀሐያማ\":\n    print(\"ውጭ እንጫወት!\")\nelse:\n    print(\"ፕሮግራሚንግ እንስራ!\")\n"
+    },
+    {
+      "title": "የተለያዩ ሰላምታዎች",
+      "code": "# Scratch: \"ከሆነ ታዲያ አለበለዚያ ከሆነ ታዲያ\" ብሎክ ጋር ተመሳሳይ\nseat = int(input(\"አሁን ስንት ሰዓት ነው? (0-23): \"))\nif seat < 10:\n    print(\"እንደምን አደርክ!\")\nelif seat < 17:\n    print(\"እንደምን ዋልክ!\")\nelse:\n    print(\"እንደምን አመሸህ!\")\n"
+    },
+    {
+      "title": "ድገም",
+      "code": "# Scratch: \"ድገም\" ብሎክ ጋር ተመሳሳይ\nfor gize in range(5):\n    print(str(gize + 1) + \" ጊዜ: ሰላም!\")\n"
+    },
+    {
+      "title": "ቆጠራ ወደ ታች",
+      "code": "# Scratch: \"ቀይር በ\" + \"ድገም እስከ\" ብሎኮች ጋር ተመሳሳይ\nqutr = 10\nwhile qutr > 0:\n    print(qutr)\n    qutr = qutr - 1\nprint(\"ተነሳ! \\U0001f680\")\n"
+    },
+    {
+      "title": "የትኛው?",
+      "code": "# Scratch: \"የዝርዝር ንጥል\" ብሎክ ጋር ተመሳሳይ\nfruta = [\"ፖም\", \"ብርቱካን\", \"ወይን\", \"እንጆሪ\", \"ማንጎ\"]\nprint(\"ፍራፍሬ ዝርዝር: \" + str(fruta))\nqutr = int(input(\"የትኛውን ልታይ? (1-5): \"))\nprint(str(qutr) + \"ኛ \" + fruta[qutr - 1] + \" ነው!\")\n"
+    },
+    {
+      "title": "ፊደላት ቁጠር",
+      "code": "# Scratch: \"ርዝመት\" ብሎክ ጋር ተመሳሳይ\nqal = input(\"የምትወደውን ቃል ጻፍ: \")\nprint(\"\\\"\" + qal + \"\\\" \" + str(len(qal)) + \" ፊደላት አሉት!\")\nfor fidel in qal:\n    print(\"-> \" + fidel)\n"
+    },
+    {
+      "title": "እድል ሞካሪ",
+      "code": "# Scratch: \"በዘፈቀደ ምረጥ\" ብሎክ ጋር ተመሳሳይ\nimport random\nwutet = random.choice([\"በጣም እድለኛ!\", \"እድለኛ!\", \"ትንሽ እድለኛ\", \"መካከለኛ\", \"እንደገና ሞክር\"])\nprint(\"የዛሬ እድልህ... \" + wutet + \"!\")\n"
+    },
+    {
+      "title": "ቁጥር ገምት ጨዋታ",
+      "code": "# ብዙ ብሎኮችን ያዋሃደ ጨዋታ!\nimport random\nmels = random.randint(1, 10)\nprint(\"ከ1 እስከ 10 ቁጥር ገምት!\")\n\nshimochu = 0\nwhile True:\n    gimash = int(input(\"ቁጥር አስገባ: \"))\n    shimochu = shimochu + 1\n    if gimash == mels:\n        print(\"ትክክል! \\U0001f389 በ\" + str(shimochu) + \" ሙከራ አገኘህ!\")\n        break\n    elif gimash < mels:\n        print(\"ከፍ አድርግ!\")\n    else:\n        print(\"ዝቅ አድርግ!\")\n"
+    }
+  ]
+}

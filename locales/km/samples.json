@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "សួស្តី!",
+      "code": "# Scratch: ដូចគ្នានឹងប្លុក \"និយាយថា សួស្តី!\"\nprint(\"សួស្តី!\")\n"
+    },
+    {
+      "title": "សួរឈ្មោះ",
+      "code": "# Scratch: ដូចគ្នានឹងប្លុក \"សួរហើយរង់ចាំ\"\nchhmoh = input(\"តើអ្នកឈ្មោះអ្វី? \")\nprint(\"សួស្តី, \" + chhmoh + \"!\")\n"
+    },
+    {
+      "title": "ម៉ាស៊ីនគិតលេខ",
+      "code": "# Scratch: ដូចគ្នានឹងប្លុក \"+ ប្រមាណវិធី\"\na = int(input(\"លេខទីមួយ: \"))\nb = int(input(\"លេខទីពីរ: \"))\nprint(\"បូក: \" + str(a + b))\nprint(\"ដក: \" + str(a - b))\nprint(\"គុណ: \" + str(a * b))\n"
+    },
+    {
+      "title": "បើ...នោះ",
+      "code": "# Scratch: ដូចគ្នានឹងប្លុក \"បើ នោះ\"\nakastheat = input(\"អាកាសធាតុយ៉ាងម៉េច? (ថ្ងៃរាំង/ភ្លៀង): \")\nif akastheat == \"ថ្ងៃរាំង\":\n    print(\"ទៅលេងក្រៅ!\")\nelse:\n    print(\"សរសេរកូដកុំព្យូទ័រ!\")\n"
+    },
+    {
+      "title": "ពាក្យស្វាគមន៍ផ្សេងៗ",
+      "code": "# Scratch: ដូចគ្នានឹងប្លុក \"បើ នោះ បើមិនទេ បើ នោះ\"\nmoang = int(input(\"ឥឡូវម៉ោងប៉ុន្មាន? (0-23): \"))\nif moang < 10:\n    print(\"អរុណសួស្តី!\")\nelif moang < 17:\n    print(\"ទិវាសួស្តី!\")\nelse:\n    print(\"សាយ័ណ្ហសួស្តី!\")\n"
+    },
+    {
+      "title": "ធ្វើម្តងទៀត",
+      "code": "# Scratch: ដូចគ្នានឹងប្លុក \"ធ្វើម្តងទៀត\"\nfor daeng in range(5):\n    print(str(daeng + 1) + \" ដង: សួស្តី!\")\n"
+    },
+    {
+      "title": "រាប់ថយក្រោយ",
+      "code": "# Scratch: ដូចគ្នានឹងប្លុក \"ផ្លាស់ប្តូរដោយ\" + \"ធ្វើម្តងទៀតរហូត\"\nlek = 10\nwhile lek > 0:\n    print(lek)\n    lek = lek - 1\nprint(\"បាញ់ចេញ! \\U0001f680\")\n"
+    },
+    {
+      "title": "មួយណា?",
+      "code": "# Scratch: ដូចគ្នានឹងប្លុក \"ធាតុក្នុងបញ្ជី\"\nphle = [\"ប៉ោម\", \"ក្រូច\", \"ទំពាំងបាយជូរ\", \"ផ្លែស្ត្រប៊េរី\", \"ពោធិ៍សាត់\"]\nprint(\"បញ្ជីផ្លែឈើ: \" + str(phle))\nlek = int(input(\"មើលមួយណា? (1-5): \"))\nprint(str(lek) + \" គឺ \" + phle[lek - 1] + \"!\")\n"
+    },
+    {
+      "title": "រាប់អក្សរ",
+      "code": "# Scratch: ដូចគ្នានឹងប្លុក \"ប្រវែង\"\npeak = input(\"វាយពាក្យដែលអ្នកចូលចិត្ត: \")\nprint(\"\\\"\" + peak + \"\\\" មាន \" + str(len(peak)) + \" អក្សរ!\")\nfor aksara in peak:\n    print(\"-> \" + aksara)\n"
+    },
+    {
+      "title": "ស្នាមជោគវាសនា",
+      "code": "# Scratch: ដូចគ្នានឹងប្លុក \"ជ្រើសចៃដន្យ\"\nimport random\nphol = random.choice([\"សំណាងខ្លាំង!\", \"សំណាងល្អ!\", \"សំណាងបន្តិច\", \"សំណាង!\", \"សាកម្តងទៀត\"])\nprint(\"វាសនារបស់អ្នក... \" + phol + \"!\")\n"
+    },
+    {
+      "title": "ហ្គេមទាយលេខ",
+      "code": "# ហ្គេមដែលប្រើប្លុកជាច្រើន!\nimport random\nchamloeuy = random.randint(1, 10)\nprint(\"ទាយលេខពី 1 ដល់ 10!\")\n\ndarab = 0\nwhile True:\n    teay = int(input(\"វាយលេខមួយ: \"))\n    darab = darab + 1\n    if teay == chamloeuy:\n        print(\"ត្រូវហើយ! \\U0001f389 អ្នកទាយបាន \" + str(darab) + \" ដង!\")\n        break\n    elif teay < chamloeuy:\n        print(\"ខ្ពស់ជាង!\")\n    else:\n        print(\"ទាបជាង!\")\n"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "你好！",
+      "code": "# Scratch: 和\"说 你好！\"积木一样\nprint(\"你好！\")\n"
+    },
+    {
+      "title": "问问你的名字",
+      "code": "# Scratch: 和\"询问并等待\"积木一样\n名字 = input(\"你叫什么名字？\")\nprint(名字 + \"，你好！\")\n"
+    },
+    {
+      "title": "计算器",
+      "code": "# Scratch: 和\"+运算\"积木一样\n甲 = int(input(\"第一个数字：\"))\n乙 = int(input(\"第二个数字：\"))\nprint(\"加法：\" + str(甲 + 乙))\nprint(\"减法：\" + str(甲 - 乙))\nprint(\"乘法：\" + str(甲 * 乙))\n"
+    },
+    {
+      "title": "如果...那么",
+      "code": "# Scratch: 和\"如果那么\"积木一样\n天气 = input(\"今天天气怎么样？(晴天/下雨)：\")\nif 天气 == \"晴天\":\n    print(\"出去玩吧！\")\nelse:\n    print(\"在家写程序吧！\")\n"
+    },
+    {
+      "title": "不同的问候",
+      "code": "# Scratch: 和\"如果那么 否则如果那么\"积木一样\n小时 = int(input(\"现在几点？(0-23)：\"))\nif 小时 < 10:\n    print(\"早上好！\")\nelif 小时 < 17:\n    print(\"下午好！\")\nelse:\n    print(\"晚上好！\")\n"
+    },
+    {
+      "title": "重复",
+      "code": "# Scratch: 和\"重复\"积木一样\nfor 次数 in range(5):\n    print(str(次数 + 1) + \"次：你好！\")\n"
+    },
+    {
+      "title": "倒计时",
+      "code": "# Scratch: 和\"变量增加\"+\"重复直到\"积木一样\n数字 = 10\nwhile 数字 > 0:\n    print(数字)\n    数字 = 数字 - 1\nprint(\"发射！\\U0001f680\")\n"
+    },
+    {
+      "title": "第几个？",
+      "code": "# Scratch: 和列表的\"第几项\"积木一样\n水果 = [\"苹果\", \"橘子\", \"葡萄\", \"草莓\", \"桃子\"]\nprint(\"水果列表：\" + str(水果))\n编号 = int(input(\"看第几个？(1-5)：\"))\nprint(\"第\" + str(编号) + \"个是 \" + 水果[编号 - 1] + \"！\")\n"
+    },
+    {
+      "title": "数一数字数",
+      "code": "# Scratch: 和\"长度\"积木一样\n词语 = input(\"输入你喜欢的词语：\")\nprint(\"\\\"\" + 词语 + \"\\\"有 \" + str(len(词语)) + \" 个字！\")\nfor 字 in 词语:\n    print(\"-> \" + 字)\n"
+    },
+    {
+      "title": "抽签",
+      "code": "# Scratch: 和\"随机取数\"积木一样\nimport random\n结果 = random.choice([\"上上签\", \"上签\", \"中签\", \"下签\", \"再试一次\"])\nprint(\"你的运势是...\" + 结果 + \"！\")\n"
+    },
+    {
+      "title": "猜数字游戏",
+      "code": "# 组合了很多积木的游戏！\nimport random\n答案 = random.randint(1, 10)\nprint(\"猜一个1到10的数字！\")\n\n次数 = 0\nwhile True:\n    猜测 = int(input(\"输入一个数字：\"))\n    次数 = 次数 + 1\n    if 猜测 == 答案:\n        print(\"答对了！\\U0001f389 你用了 \" + str(次数) + \" 次！\")\n        break\n    elif 猜测 < 答案:\n        print(\"再大一点！\")\n    else:\n        print(\"再小一点！\")\n"
+    }
+  ]
+}

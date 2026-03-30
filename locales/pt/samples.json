@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Ola!",
+      "code": "# Scratch: igual ao bloco \"diga Ola!\"\nprint(\"Ola!\")\n"
+    },
+    {
+      "title": "Pergunte seu nome",
+      "code": "# Scratch: igual ao bloco \"pergunte e espere\"\nnome = input(\"Qual e o seu nome? \")\nprint(\"Ola, \" + nome + \"!\")\n"
+    },
+    {
+      "title": "Calculadora",
+      "code": "# Scratch: igual ao bloco \"operador +\"\na = int(input(\"Primeiro numero: \"))\nb = int(input(\"Segundo numero: \"))\nprint(\"Soma: \" + str(a + b))\nprint(\"Subtracao: \" + str(a - b))\nprint(\"Multiplicacao: \" + str(a * b))\n"
+    },
+    {
+      "title": "Se...entao",
+      "code": "# Scratch: igual ao bloco \"se entao\"\nclima = input(\"Como esta o tempo? (sol/chuva): \")\nif clima == \"sol\":\n    print(\"Vamos brincar la fora!\")\nelse:\n    print(\"Vamos programar!\")\n"
+    },
+    {
+      "title": "Saudacoes diferentes",
+      "code": "# Scratch: igual ao bloco \"se entao, senao se entao\"\nhora = int(input(\"Que horas sao? (0-23): \"))\nif hora < 10:\n    print(\"Bom dia!\")\nelif hora < 17:\n    print(\"Boa tarde!\")\nelse:\n    print(\"Boa noite!\")\n"
+    },
+    {
+      "title": "Repetir",
+      "code": "# Scratch: igual ao bloco \"repetir\"\nfor conta in range(5):\n    print(str(conta + 1) + \" vez(es): Ola!\")\n"
+    },
+    {
+      "title": "Contagem regressiva",
+      "code": "# Scratch: igual aos blocos \"mude por\" + \"repita ate\"\nnumero = 10\nwhile numero > 0:\n    print(numero)\n    numero = numero - 1\nprint(\"Decolar! \\U0001f680\")\n"
+    },
+    {
+      "title": "Qual e?",
+      "code": "# Scratch: igual ao bloco \"item da lista\"\nfrutas = [\"maca\", \"laranja\", \"uva\", \"morango\", \"pessego\"]\nprint(\"Lista de frutas: \" + str(frutas))\nnumero = int(input(\"Qual quer ver? (1-5): \"))\nprint(\"O numero \" + str(numero) + \" e \" + frutas[numero - 1] + \"!\")\n"
+    },
+    {
+      "title": "Conte as letras",
+      "code": "# Scratch: igual ao bloco \"comprimento de\"\npalavra = input(\"Escreva sua palavra favorita: \")\nprint(\"\\\"\" + palavra + \"\\\" tem \" + str(len(palavra)) + \" letras!\")\nfor letra in palavra:\n    print(\"-> \" + letra)\n"
+    },
+    {
+      "title": "Biscoito da sorte",
+      "code": "# Scratch: igual ao bloco \"numero aleatorio\"\nimport random\nresultado = random.choice([\"Muita sorte!\", \"Boa sorte!\", \"Um pouco de sorte\", \"Sorte normal\", \"Tente de novo\"])\nprint(\"Sua sorte de hoje e... \" + resultado + \"!\")\n"
+    },
+    {
+      "title": "Adivinhe o numero",
+      "code": "# Um jogo que combina muitos blocos!\nimport random\nresposta = random.randint(1, 10)\nprint(\"Adivinhe um numero de 1 a 10!\")\n\ntentativas = 0\nwhile True:\n    palpite = int(input(\"Digite um numero: \"))\n    tentativas = tentativas + 1\n    if palpite == resposta:\n        print(\"Certo! \\U0001f389 Voce acertou em \" + str(tentativas) + \" tentativas!\")\n        break\n    elif palpite < resposta:\n        print(\"Mais alto!\")\n    else:\n        print(\"Mais baixo!\")\n"
+    }
+  ]
+}

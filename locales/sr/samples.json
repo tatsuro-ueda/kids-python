@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Здраво!",
+      "code": "# Scratch: исто као блок \"реци Здраво!\"\nprint(\"Здраво!\")\n"
+    },
+    {
+      "title": "Питај за име",
+      "code": "# Scratch: исто као блок \"питај и чекај\"\nime = input(\"Како се зовеш? \")\nprint(\"Здраво, \" + ime + \"!\")\n"
+    },
+    {
+      "title": "Калкулатор",
+      "code": "# Scratch: исто као блок \"+ операција\"\na = int(input(\"Први број: \"))\nb = int(input(\"Други број: \"))\nprint(\"Сабирање: \" + str(a + b))\nprint(\"Одузимање: \" + str(a - b))\nprint(\"Множење: \" + str(a * b))\n"
+    },
+    {
+      "title": "Ако...онда",
+      "code": "# Scratch: исто као блок \"ако онда\"\nvreme = input(\"Какво је време? (сунчано/кишовито): \")\nif vreme == \"сунчано\":\n    print(\"Хајде напоље да се играмо!\")\nelse:\n    print(\"Хајде да програмирамо!\")\n"
+    },
+    {
+      "title": "Различити поздрави",
+      "code": "# Scratch: исто као блок \"ако онда иначе ако онда\"\nsat = int(input(\"Колико је сати? (0-23): \"))\nif sat < 10:\n    print(\"Добро јутро!\")\nelif sat < 17:\n    print(\"Добар дан!\")\nelse:\n    print(\"Добро вече!\")\n"
+    },
+    {
+      "title": "Понови",
+      "code": "# Scratch: исто као блок \"понови\"\nfor put in range(5):\n    print(str(put + 1) + \". пут: Здраво!\")\n"
+    },
+    {
+      "title": "Одбројавање",
+      "code": "# Scratch: исто као блокови \"промени за\" + \"понављај док\"\nbroj = 10\nwhile broj > 0:\n    print(broj)\n    broj = broj - 1\nprint(\"Лансирање! \\U0001f680\")\n"
+    },
+    {
+      "title": "Који?",
+      "code": "# Scratch: исто као блок \"елемент листе\"\nvoce = [\"јабука\", \"поморанџа\", \"грожђе\", \"јагода\", \"бресква\"]\nprint(\"Листа воћа: \" + str(voce))\nredni = int(input(\"Који хоћеш да видиш? (1-5): \"))\nprint(str(redni) + \". је \" + voce[redni - 1] + \"!\")\n"
+    },
+    {
+      "title": "Пребројај слова",
+      "code": "# Scratch: исто као блок \"дужина\"\nrec = input(\"Напиши омиљену реч: \")\nprint(\"\\\"\" + rec + \"\\\" има \" + str(len(rec)) + \" слова!\")\nfor slovo in rec:\n    print(\"-> \" + slovo)\n"
+    },
+    {
+      "title": "Гатање",
+      "code": "# Scratch: исто као блок \"насумични избор\"\nimport random\nrezultat = random.choice([\"Велика срећа!\", \"Добра срећа!\", \"Мало среће\", \"Срећа!\", \"Покушај поново\"])\nprint(\"Твоја судбина је... \" + rezultat + \"!\")\n"
+    },
+    {
+      "title": "Игра погађања бројева",
+      "code": "# Игра која комбинује много блокова!\nimport random\nodgovor = random.randint(1, 10)\nprint(\"Погоди број од 1 до 10!\")\n\npokusaji = 0\nwhile True:\n    pogodak = int(input(\"Унеси број: \"))\n    pokusaji = pokusaji + 1\n    if pogodak == odgovor:\n        print(\"Тачно! \\U0001f389 Погодио си за \" + str(pokusaji) + \" покушаја!\")\n        break\n    elif pogodak < odgovor:\n        print(\"Веће!\")\n    else:\n        print(\"Мање!\")\n"
+    }
+  ]
+}

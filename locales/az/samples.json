@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Salam!",
+      "code": "# Scratch: \"Salam de!\" bloku ile eyni\nprint(\"Salam!\")\n"
+    },
+    {
+      "title": "Adini sor",
+      "code": "# Scratch: \"sor ve gozle\" bloku ile eyni\nad = input(\"Seni nece cagirirlar? \")\nprint(\"Salam, \" + ad + \"!\")\n"
+    },
+    {
+      "title": "Kalkulyator",
+      "code": "# Scratch: \"+ emeliyyat\" bloku ile eyni\na = int(input(\"Birinci reqem: \"))\nb = int(input(\"Ikinci reqem: \"))\nprint(\"Toplama: \" + str(a + b))\nprint(\"Cixma: \" + str(a - b))\nprint(\"Vurma: \" + str(a * b))\n"
+    },
+    {
+      "title": "Eger...onda",
+      "code": "# Scratch: \"eger onda\" bloku ile eyni\nhava = input(\"Hava necedir? (guneshli/yagishli): \")\nif hava == \"guneshli\":\n    print(\"Bayirda oynayaq!\")\nelse:\n    print(\"Proqramlasdirma edek!\")\n"
+    },
+    {
+      "title": "Muxtelif salamlashma",
+      "code": "# Scratch: \"eger onda eks halda eger onda\" bloku ile eyni\nsaat = int(input(\"Saat necedir? (0-23): \"))\nif saat < 10:\n    print(\"Sabahiniiz xeyir!\")\nelif saat < 17:\n    print(\"Gunortaniiz xeyir!\")\nelse:\n    print(\"Axshaminiz xeyir!\")\n"
+    },
+    {
+      "title": "Tekrarla",
+      "code": "# Scratch: \"tekrarla\" bloku ile eyni\nfor defe in range(5):\n    print(str(defe + 1) + \"-ci defe: Salam!\")\n"
+    },
+    {
+      "title": "Geriye sayma",
+      "code": "# Scratch: \"deyish\" + \"...olana qeder tekrarla\" bloklari ile eyni\nreqem = 10\nwhile reqem > 0:\n    print(reqem)\n    reqem = reqem - 1\nprint(\"Ucurildi! \\U0001f680\")\n"
+    },
+    {
+      "title": "Hansi biri?",
+      "code": "# Scratch: \"siyahidaki element\" bloku ile eyni\nmeyveler = [\"alma\", \"portaqal\", \"uzum\", \"cilek\", \"shaftali\"]\nprint(\"Meyve siyahisi: \" + str(meyveler))\nnomre = int(input(\"Hansini gormek isteyirsen? (1-5): \"))\nprint(str(nomre) + \"-ci: \" + meyveler[nomre - 1] + \"!\")\n"
+    },
+    {
+      "title": "Herfleri say",
+      "code": "# Scratch: \"uzunluq\" bloku ile eyni\nsoz = input(\"Sevdiyin sozu yaz: \")\nprint(\"\\\"\" + soz + \"\\\" de \" + str(len(soz)) + \" herf var!\")\nfor herf in soz:\n    print(\"-> \" + herf)\n"
+    },
+    {
+      "title": "Fal baxdirma",
+      "code": "# Scratch: \"tesadufi sec\" bloku ile eyni\nimport random\nnetice = random.choice([\"Cox sanslisan!\", \"Xoshbextsen!\", \"Bir az sansli\", \"Sansli!\", \"Yeniden sina\"])\nprint(\"Bugunku falin... \" + netice + \"!\")\n"
+    },
+    {
+      "title": "Reqem tapma oyunu",
+      "code": "# Cox bloku birlesdiren oyun!\nimport random\ncavab = random.randint(1, 10)\nprint(\"1-den 10-a qeder reqem tap!\")\n\ncehd = 0\nwhile True:\n    texmin = int(input(\"Reqem daxil et: \"))\n    cehd = cehd + 1\n    if texmin == cavab:\n        print(\"Dogru! \\U0001f389 \" + str(cehd) + \" cehdde tapdin!\")\n        break\n    elif texmin < cavab:\n        print(\"Daha boyuk!\")\n    else:\n        print(\"Daha kicik!\")\n"
+    }
+  ]
+}
