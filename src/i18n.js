@@ -109,6 +109,7 @@ export const getLocale = () => i18next.language;
 
 export async function setLocale(code) {
   await i18next.changeLanguage(code);
+  await i18next.loadNamespaces(["translation", "samples"]);
   localStorage.setItem("preferred-lang", code);
   document.documentElement.lang = code;
   document.documentElement.dir = RTL_LANGUAGES.includes(code) ? "rtl" : "ltr";
