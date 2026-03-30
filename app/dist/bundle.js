@@ -1861,7 +1861,7 @@ var parseFormatStr = (formatStr) => {
   };
 };
 var createCachedFormatter = (fn) => {
-  const cache2 = {};
+  const cache3 = {};
   return (v, l, o) => {
     let optForCache = o;
     if (o && o.interpolationkey && o.formatParams && o.formatParams[o.interpolationkey] && o[o.interpolationkey]) {
@@ -1871,10 +1871,10 @@ var createCachedFormatter = (fn) => {
       };
     }
     const key = l + JSON.stringify(optForCache);
-    let frm = cache2[key];
+    let frm = cache3[key];
     if (!frm) {
       frm = fn(getCleanedCode(l), o);
-      cache2[key] = frm;
+      cache3[key] = frm;
     }
     return frm(v);
   };
@@ -3751,9 +3751,9 @@ function applyDOM() {
   });
 }
 var t2 = (...args) => instance.t(...args);
+var getLocale = () => instance.language;
 async function setLocale(code) {
   await instance.changeLanguage(code);
-  await instance.loadNamespaces(["translation", "samples"]);
   localStorage.setItem("preferred-lang", code);
   document.documentElement.lang = code;
   document.documentElement.dir = RTL_LANGUAGES.includes(code) ? "rtl" : "ltr";
@@ -9458,8 +9458,8 @@ var OpenWrapper = class {
   }
 };
 var TileBuilder = class {
-  constructor(cache2, root, blockWrappers2) {
-    this.cache = cache2;
+  constructor(cache3, root, blockWrappers2) {
+    this.cache = cache3;
     this.root = root;
     this.blockWrappers = blockWrappers2;
     this.curLine = null;
@@ -15532,12 +15532,12 @@ var CachedOrder = class _CachedOrder {
     this.fresh = fresh;
     this.order = order2;
   }
-  static update(cache2, changes) {
-    if (changes.empty && !cache2.some((c) => c.fresh))
-      return cache2;
-    let result = [], lastDir = cache2.length ? cache2[cache2.length - 1].dir : Direction.LTR;
-    for (let i = Math.max(0, cache2.length - 10); i < cache2.length; i++) {
-      let entry = cache2[i];
+  static update(cache3, changes) {
+    if (changes.empty && !cache3.some((c) => c.fresh))
+      return cache3;
+    let result = [], lastDir = cache3.length ? cache3[cache3.length - 1].dir : Direction.LTR;
+    for (let i = Math.max(0, cache3.length - 10); i < cache3.length; i++) {
+      let entry = cache3[i];
       if (entry.dir == lastDir && !changes.touchesRange(entry.from, entry.to))
         result.push(new _CachedOrder(changes.mapPos(entry.from, 1), changes.mapPos(entry.to, -1), entry.dir, entry.isolates, false, entry.order));
     }
@@ -19102,10 +19102,10 @@ var TreeCursor = class {
   get node() {
     if (!this.buffer)
       return this._tree;
-    let cache2 = this.bufferNode, result = null, depth = 0;
-    if (cache2 && cache2.context == this.buffer) {
+    let cache3 = this.bufferNode, result = null, depth = 0;
+    if (cache3 && cache3.context == this.buffer) {
       scan: for (let index = this.index, d = this.stack.length; d >= 0; ) {
-        for (let c = cache2; c; c = c._parent)
+        for (let c = cache3; c; c = c._parent)
           if (c.index == index) {
             if (index == this.index)
               return c;
@@ -29211,8 +29211,18 @@ function translateError(errorText) {
 }
 
 // src/samples.js
-function getSamples() {
-  return instance.t("list", { ns: "samples", returnObjects: true }) || [];
+var cache2 = {};
+async function getSamples() {
+  const lang = getLocale();
+  if (cache2[lang]) return cache2[lang];
+  try {
+    const res = await fetch(`/locales/${lang}/samples.json`);
+    const data = await res.json();
+    cache2[lang] = data.list || [];
+    return cache2[lang];
+  } catch {
+    return [];
+  }
 }
 
 // src/main.js
@@ -29337,18 +29347,23 @@ async function main() {
     outputEl.appendChild(div);
   });
   const samplesSelect = document.getElementById("samples");
-  const samples = getSamples();
-  samples.forEach((s, i) => {
-    const opt = document.createElement("option");
-    opt.value = i;
-    opt.textContent = s.title;
-    samplesSelect.appendChild(opt);
-  });
+  let currentSamples = [];
+  async function refreshSamples() {
+    currentSamples = await getSamples();
+    while (samplesSelect.options.length > 1) samplesSelect.remove(1);
+    currentSamples.forEach((s, i) => {
+      const opt = document.createElement("option");
+      opt.value = i;
+      opt.textContent = s.title;
+      samplesSelect.appendChild(opt);
+    });
+  }
+  samplesSelect.addEventListener("focus", refreshSamples);
   samplesSelect.addEventListener("change", () => {
     const idx = samplesSelect.value;
     if (idx === "") return;
-    const sample = samples[idx];
-    if (confirm(t2("app.confirmReplace"))) {
+    const sample = currentSamples[idx];
+    if (sample && confirm(t2("app.confirmReplace"))) {
       editor.dispatch({
         changes: { from: 0, to: editor.state.doc.length, insert: sample.code }
       });
@@ -29365,16 +29380,6 @@ async function main() {
       li.addEventListener("click", async () => {
         await setLocale(lang.code);
         langList.hidden = true;
-        while (samplesSelect.options.length > 1) {
-          samplesSelect.remove(1);
-        }
-        const newSamples = getSamples();
-        newSamples.forEach((s, i) => {
-          const opt = document.createElement("option");
-          opt.value = i;
-          opt.textContent = s.title;
-          samplesSelect.appendChild(opt);
-        });
       });
       langList.appendChild(li);
     });

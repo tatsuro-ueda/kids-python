@@ -148,19 +148,26 @@ async function main() {
 
   // おてほんサンプル
   const samplesSelect = document.getElementById("samples");
-  const samples = getSamples();
-  samples.forEach((s, i) => {
-    const opt = document.createElement("option");
-    opt.value = i;
-    opt.textContent = s.title;
-    samplesSelect.appendChild(opt);
-  });
+  let currentSamples = [];
+
+  async function refreshSamples() {
+    currentSamples = await getSamples();
+    while (samplesSelect.options.length > 1) samplesSelect.remove(1);
+    currentSamples.forEach((s, i) => {
+      const opt = document.createElement("option");
+      opt.value = i;
+      opt.textContent = s.title;
+      samplesSelect.appendChild(opt);
+    });
+  }
+
+  samplesSelect.addEventListener("focus", refreshSamples);
 
   samplesSelect.addEventListener("change", () => {
     const idx = samplesSelect.value;
     if (idx === "") return;
-    const sample = samples[idx];
-    if (confirm(t("app.confirmReplace"))) {
+    const sample = currentSamples[idx];
+    if (sample && confirm(t("app.confirmReplace"))) {
       editor.dispatch({
         changes: { from: 0, to: editor.state.doc.length, insert: sample.code },
       });
@@ -180,17 +187,6 @@ async function main() {
       li.addEventListener("click", async () => {
         await setLocale(lang.code);
         langList.hidden = true;
-        // サンプルセレクタを再構築
-        while (samplesSelect.options.length > 1) {
-          samplesSelect.remove(1);
-        }
-        const newSamples = getSamples();
-        newSamples.forEach((s, i) => {
-          const opt = document.createElement("option");
-          opt.value = i;
-          opt.textContent = s.title;
-          samplesSelect.appendChild(opt);
-        });
       });
       langList.appendChild(li);
     });
