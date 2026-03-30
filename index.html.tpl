@@ -8,7 +8,7 @@
   <link rel="canonical" href="{{canonicalUrl}}">
   <meta property="og:title" content="{{lp.ogTitle}}">
   <meta property="og:description" content="{{lp.ogDescription}}">
-  <meta property="og:image" content="/assets/ogp.png">
+  <meta property="og:image" content="{{ogpImageUrl}}">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   {{hreflangLinks}}

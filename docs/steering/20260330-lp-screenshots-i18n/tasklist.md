@@ -57,18 +57,18 @@
 
 ## フェーズ3: build-lp.js と index.html.tpl を修正
 
-- [ ] build-lp.js: `screenshotPath` に `screenshotLang` を反映
+- [x] build-lp.js: `screenshotPath` に `screenshotLang` を反映
   - 変更前: `const screenshotPath = \`${assetsPath}/screenshots\`;`
   - 変更後: `const screenshotPath = \`${assetsPath}/screenshots/${screenshotLang}\`;`
 
-- [ ] build-lp.js: `ogpImageUrl` 変数を追加して vars に渡す
+- [x] build-lp.js: `ogpImageUrl` 変数を追加して vars に渡す
   - `ogpImageUrl: \`${BASE_URL}/assets/ogp-${screenshotLang}.png\``
 
-- [ ] index.html.tpl: OGP 画像パスを変数化
+- [x] index.html.tpl: OGP 画像パスを変数化
   - 変更前: `<meta property="og:image" content="/assets/ogp.png">`
   - 変更後: `<meta property="og:image" content="{{ogpImageUrl}}">`
 
-- [ ] コミット
+- [x] コミット
 
 ## フェーズ4: LP を再生成してテスト
 

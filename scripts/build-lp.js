@@ -106,7 +106,7 @@ for (const lang of langs) {
   // Compute paths (relative for ja at root, relative for others in subdir)
   const cssPath = isJa ? "lp.css" : "../lp.css";
   const assetsPath = isJa ? "assets" : "../assets";
-  const screenshotPath = `${assetsPath}/screenshots`;
+  const screenshotPath = `${assetsPath}/screenshots/${screenshotLang}`;
 
   const vars = {
     ...flat,
@@ -122,6 +122,7 @@ for (const lang of langs) {
     cssPath,
     assetsPath,
     screenshotPath,
+    ogpImageUrl: `${BASE_URL}/assets/ogp-${screenshotLang}.png`,
   };
 
   // Render LP
