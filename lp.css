@@ -581,3 +581,55 @@ h3 {
     flex: 1;
   }
 }
+
+/* Language Selector */
+#lp-lang-selector {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 200;
+}
+
+#lp-lang-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #b8d8e8;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#lp-lang-btn:hover {
+  background: #f0f8ff;
+}
+
+#lp-lang-list {
+  position: absolute;
+  right: 0;
+  top: 46px;
+  background: white;
+  border: 2px solid #b8d8e8;
+  border-radius: 12px;
+  padding: 8px 0;
+  margin: 0;
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 200;
+  min-width: 160px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#lp-lang-list li {
+  padding: 6px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+#lp-lang-list li:hover {
+  background: #e8f4fc;
+}

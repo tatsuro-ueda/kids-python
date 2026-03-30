@@ -123,6 +123,10 @@
   </script>
 </head>
 <body>
+  <div id="lp-lang-selector">
+    <button id="lp-lang-btn" aria-label="Language">🌐</button>
+    <ul id="lp-lang-list" hidden></ul>
+  </div>
   <section class="hero">
     <h1>Pythonれんしゅうちょう</h1>
     <p class="hero-catch">ブラウザだけでPythonが動く。<br>小学生のためのプログラミング練習帳</p>
@@ -328,6 +332,43 @@ print("はっしゃ！")</pre>
       { threshold: 0.1 }
     );
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+  <script>
+    (function() {
+      var LANG_NAMES = {
+        ja:"にほんご",en:"English",hi:"हिन्दी",es:"Español",ar:"العربية",
+        pt:"Português",id:"Bahasa Indonesia",vi:"Tiếng Việt",tr:"Türkçe",
+        bn:"বাংলা",ko:"한국어","zh-TW":"繁體中文",fa:"فارسی",th:"ภาษาไทย",
+        fr:"Français",ur:"اردو",ru:"Русский",de:"Deutsch",it:"Italiano",
+        nl:"Nederlands",pl:"Polski",uk:"Українська",ro:"Română",el:"Ελληνικά",
+        hu:"Magyar",cs:"Čeština",sv:"Svenska",da:"Dansk",fi:"Suomi",no:"Norsk",
+        "zh-CN":"简体中文",ms:"Bahasa Melayu",tl:"Filipino",sw:"Kiswahili",
+        am:"አማርኛ",ta:"தமிழ்",te:"తెలుగు",mr:"मराठी",gu:"ગુજરાતી",
+        ne:"नेपाली",si:"සිංහල",km:"ភាសាខ្មែរ",my:"မြန်မာ",ka:"ქართული",
+        he:"עברית",uz:"Oʻzbek",kk:"Қазақ",az:"Azərbaycan",sr:"Srpski",hr:"Hrvatski"
+      };
+      var btn = document.getElementById("lp-lang-btn");
+      var list = document.getElementById("lp-lang-list");
+      if (!btn || !list) return;
+
+      // Build list from hreflang tags
+      document.querySelectorAll('link[hreflang]').forEach(function(el) {
+        var code = el.getAttribute("hreflang");
+        if (!code || code === "x-default") return;
+        var href = el.getAttribute("href").replace(/https?:\/\/[^/]+/, "");
+        if (code === "ja") href = "/";
+        var li = document.createElement("li");
+        li.textContent = LANG_NAMES[code] || code;
+        li.onclick = function() { location.href = href; };
+        list.appendChild(li);
+      });
+
+      btn.onclick = function(e) {
+        e.stopPropagation();
+        list.hidden = !list.hidden;
+      };
+      document.addEventListener("click", function() { list.hidden = true; });
+    })();
   </script>
   <footer class="site-footer">
     <p>運営: <a href="https://feel-physics.jp" target="_blank" rel="noopener">Feel Physics</a></p>
