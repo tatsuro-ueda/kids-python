@@ -38,49 +38,51 @@
 
 ## フェーズ4: LP再生成 + テスト
 
-- [ ] `npm run build-lp` を実行
-- [ ] ビルド結果を確認
-  - [ ] `grep "discord.gg" index.html` → CTAセクション+フッターの2箇所
-  - [ ] `grep "discord.gg" en/index.html` → 2箇所
-  - [ ] `grep "TODO" app/index.html` → マッチなし
-- [ ] サーバーを再起動
-- [ ] ブラウザで目視確認（ユーザー操作）
-  - [ ] `https://online-python.exe.xyz/` → フッターとCTAにDiscordリンク
-  - [ ] `https://online-python.exe.xyz/en/` → 英語テキストでDiscordリンク
-  - [ ] `https://online-python.exe.xyz/app/` → フッターのリンクがDiscordに遷移
-- [ ] コミット
+- [x] `npm run build-lp` を実行（50言語、100ファイル、警告0）
+- [x] ビルド結果を確認
+  - [x] `grep "discord.gg" index.html` → CTAセクション+フッターの2箇所
+  - [x] `grep "discord.gg" en/index.html` → 2箇所
+  - [x] `grep "TODO" app/index.html` → マッチなし
+- [x] サーバーを再起動
+- [x] ブラウザで目視確認（ユーザー操作）— 良い感じとのこと
+  - [x] `https://online-python.exe.xyz/` → フッターとCTAにDiscordリンク
+  - [x] `https://online-python.exe.xyz/en/` → 英語テキストでDiscordリンク
+  - [x] `https://online-python.exe.xyz/app/` → フッターのリンクがDiscordに遷移
+- [x] コミット
 
 ## フェーズ5: mainマージ
 
-- [ ] featureブランチをmainにマージ
-- [ ] push
-- [ ] 実装後の振り返り（このファイルの下部に記録）
+- [x] featureブランチをmainにマージ
+- [x] push
+- [x] 実装後の振り返り（このファイルの下部に記録）
 
 ---
 
 ## 実装後の振り返り
 
 ### 実装完了日
-{YYYY-MM-DD}
+2026-03-30
 
 ### 計画と実績の差分
 
 **計画と異なった点**:
--
+- アプリのプライバシーポリシーリンクが全言語で日本語版固定だった問題を発見・修正。i18n.jsにdata-i18n-href属性サポートを追加
 
 **新たに必要になったタスク**:
--
+- data-i18n-href の仕組み追加（i18n.js）
+- 50言語のtranslation.jsonにapp.privacyUrlキー追加
 
-**技術的理由でスキップしたタスク**（該当する場合のみ）:
--
+**技術的理由でスキップしたタスク**:
+- なし（全タスク完了）
 
 ### 学んだこと
 
 **技術的な学び**:
--
+- data-i18n-href パターンは汎用的。今後href属性を動的に切り替えたい箇所（言語別リンク）に再利用できる
+- 50言語のJSON一括更新はNode.jsスクリプトで安全かつ高速にできる
 
 **プロセス上の改善点**:
--
+- ユーザーの目視確認中に関連する問題（プライバシーリンク）を発見できた。ブラウザ確認フェーズの価値が高い
 
 ### 次回への改善提案
--
+- app/index.html内の他のハードコードURLも言語依存でないか確認する習慣をつける
