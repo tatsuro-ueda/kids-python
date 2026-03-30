@@ -188,6 +188,10 @@
       <p class="share-label">{{lp.shareLabel}}</p>
       <div class="share-links" id="lp-share-links"></div>
     </div>
+    <div class="community-section">
+      <p class="community-label">{{lp.communityLabel}}</p>
+      <a href="https://discord.gg/sZCdKvT5Df" class="community-btn" target="_blank" rel="noopener">{{lp.communityButton}}</a>
+    </div>
   </section>
   <script>
     var SHARE_TEXT = "{{lp.shareText}}";
@@ -209,7 +213,7 @@
   </script>
   <footer class="site-footer">
     <p>{{lp.footerOperator}} <a href="https://feel-physics.jp" target="_blank" rel="noopener">Feel Physics</a></p>
-    <p><a href="mailto:tatsuro.ueda@feel-physics.jp">{{lp.footerContact}}</a> ｜ <a href="{{privacyUrl}}">{{lp.footerPrivacy}}</a></p>
+    <p><a href="mailto:tatsuro.ueda@feel-physics.jp">{{lp.footerContact}}</a> ｜ <a href="{{privacyUrl}}">{{lp.footerPrivacy}}</a> ｜ <a href="https://discord.gg/sZCdKvT5Df" target="_blank" rel="noopener">{{lp.footerDiscord}}</a></p>
     <p>&copy; 2026 Feel Physics</p>
   </footer>
 </body>

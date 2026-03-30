@@ -443,6 +443,32 @@ h3 {
   background: #1877F2;
 }
 
+/* Community (Discord) Section */
+.community-section {
+  margin-top: 20px;
+}
+
+.community-label {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.community-btn {
+  display: inline-block;
+  background: #5865F2;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.community-btn:hover {
+  background: #4752C4;
+}
+
 /* Fade-in Animation */
 .fade-in {
   opacity: 0;

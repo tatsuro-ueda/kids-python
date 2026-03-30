@@ -31,10 +31,10 @@
 
 ## フェーズ3: LPテンプレート + CSS修正
 
-- [ ] index.html.tpl: CTAセクションの共有ボタン後にDiscord導線を追加
-- [ ] index.html.tpl: フッターにDiscordリンクを追加
-- [ ] lp.css: community-section スタイルを追加（Discordブランドカラー #5865F2）
-- [ ] コミット
+- [x] index.html.tpl: CTAセクションの共有ボタン後にDiscord導線を追加
+- [x] index.html.tpl: フッターにDiscordリンクを追加
+- [x] lp.css: community-section スタイルを追加（Discordブランドカラー #5865F2）
+- [x] コミット
 
 ## フェーズ4: LP再生成 + テスト
 
