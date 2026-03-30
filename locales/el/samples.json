@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Γεια!",
+      "code": "# Scratch: όπως το μπλοκ \"πες Γεια!\"\nprint(\"Γεια!\")\n"
+    },
+    {
+      "title": "Ρώτα το όνομά σου",
+      "code": "# Scratch: όπως το μπλοκ \"ρώτα και περίμενε\"\nonoma = input(\"Πώς σε λένε; \")\nprint(\"Γεια, \" + onoma + \"!\")\n"
+    },
+    {
+      "title": "Αριθμομηχανή",
+      "code": "# Scratch: όπως το μπλοκ \"τελεστής +\"\na = int(input(\"Πρώτος αριθμός: \"))\nb = int(input(\"Δεύτερος αριθμός: \"))\nprint(\"Πρόσθεση: \" + str(a + b))\nprint(\"Αφαίρεση: \" + str(a - b))\nprint(\"Πολλαπλασιασμός: \" + str(a * b))\n"
+    },
+    {
+      "title": "Αν...τότε",
+      "code": "# Scratch: όπως το μπλοκ \"αν τότε\"\nkairos = input(\"Πώς είναι ο καιρός; (ηλιόλουστα/βροχή): \")\nif kairos == \"ηλιόλουστα\":\n    print(\"Πάμε να παίξουμε έξω!\")\nelse:\n    print(\"Πάμε να προγραμματίσουμε!\")\n"
+    },
+    {
+      "title": "Διαφορετικοί χαιρετισμοί",
+      "code": "# Scratch: όπως το μπλοκ \"αν τότε αλλιώς αν τότε\"\nora = int(input(\"Τι ώρα είναι; (0-23): \"))\nif ora < 10:\n    print(\"Καλημέρα!\")\nelif ora < 17:\n    print(\"Καλημέρα!\")\nelse:\n    print(\"Καλησπέρα!\")\n"
+    },
+    {
+      "title": "Επανάλαβε",
+      "code": "# Scratch: όπως το μπλοκ \"επανάλαβε\"\nfor metritis in range(5):\n    print(str(metritis + 1) + \" φορά/ές: Γεια!\")\n"
+    },
+    {
+      "title": "Αντίστροφη μέτρηση",
+      "code": "# Scratch: όπως το μπλοκ \"άλλαξε κατά\" + \"επανάλαβε μέχρι\"\narithmos = 10\nwhile arithmos > 0:\n    print(arithmos)\n    arithmos = arithmos - 1\nprint(\"Εκτόξευση! \\U0001f680\")\n"
+    },
+    {
+      "title": "Ποιο φρούτο;",
+      "code": "# Scratch: όπως το μπλοκ \"στοιχείο της λίστας\"\nfrouta = [\"μήλο\", \"πορτοκάλι\", \"σταφύλι\", \"φράουλα\", \"ροδάκινο\"]\nprint(\"Λίστα φρούτων: \" + str(frouta))\narithmos = int(input(\"Ποιο θέλεις να δεις; (1-5): \"))\nprint(str(arithmos) + \"ο είναι \" + frouta[arithmos - 1] + \"!\")\n"
+    },
+    {
+      "title": "Μέτρα τα γράμματα",
+      "code": "# Scratch: όπως το μπλοκ \"μήκος του\"\nlexi = input(\"Γράψε την αγαπημένη σου λέξη: \")\nprint(\"\\\"\" + lexi + \"\\\" έχει \" + str(len(lexi)) + \" γράμματα!\")\nfor gramma in lexi:\n    print(\"-> \" + gramma)\n"
+    },
+    {
+      "title": "Ρόδα της τύχης",
+      "code": "# Scratch: όπως το μπλοκ \"τυχαίος αριθμός από μέχρι\"\nimport random\napotelesma = random.choice([\"Σούπερ τυχερός!\", \"Πολύ τυχερός!\", \"Λίγο τυχερός\", \"Τυχερός\", \"Δοκίμασε ξανά\"])\nprint(\"Η τύχη σου είναι... \" + apotelesma + \"!\")\n"
+    },
+    {
+      "title": "Μάντεψε τον αριθμό",
+      "code": "# Ένα παιχνίδι που συνδυάζει πολλά μπλοκ!\nimport random\napantisi = random.randint(1, 10)\nprint(\"Μάντεψε έναν αριθμό από 1 μέχρι 10!\")\n\nprospatheies = 0\nwhile True:\n    mantepsia = int(input(\"Γράψε έναν αριθμό: \"))\n    prospatheies = prospatheies + 1\n    if mantepsia == apantisi:\n        print(\"Σωστά! \\U0001f389 Τα κατάφερες σε \" + str(prospatheies) + \" προσπάθειες!\")\n        break\n    elif mantepsia < apantisi:\n        print(\"Πιο πάνω!\")\n    else:\n        print(\"Πιο κάτω!\")\n"
+    }
+  ]
+}

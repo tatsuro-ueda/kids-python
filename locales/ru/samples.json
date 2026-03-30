@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Привет!",
+      "code": "# Scratch: как блок «сказать Привет!»\nprint(\"Привет!\")\n"
+    },
+    {
+      "title": "Спроси имя",
+      "code": "# Scratch: как блок «спросить и ждать»\nimya = input(\"Как тебя зовут? \")\nprint(\"Привет, \" + imya + \"!\")\n"
+    },
+    {
+      "title": "Калькулятор",
+      "code": "# Scratch: как блок «оператор +»\na = int(input(\"Первое число: \"))\nb = int(input(\"Второе число: \"))\nprint(\"Сложение: \" + str(a + b))\nprint(\"Вычитание: \" + str(a - b))\nprint(\"Умножение: \" + str(a * b))\n"
+    },
+    {
+      "title": "Если...тогда",
+      "code": "# Scratch: как блок «если тогда»\npogoda = input(\"Какая сегодня погода? (солнце/дождь): \")\nif pogoda == \"солнце\":\n    print(\"Пойдём гулять!\")\nelse:\n    print(\"Давай программировать дома!\")\n"
+    },
+    {
+      "title": "Разные приветствия",
+      "code": "# Scratch: как блок «если тогда иначе если тогда»\nchas = int(input(\"Который час? (0-23): \"))\nif chas < 10:\n    print(\"Доброе утро!\")\nelif chas < 17:\n    print(\"Добрый день!\")\nelse:\n    print(\"Добрый вечер!\")\n"
+    },
+    {
+      "title": "Повторяй",
+      "code": "# Scratch: как блок «повторить»\nfor raz in range(5):\n    print(str(raz + 1) + \" раз: Привет!\")\n"
+    },
+    {
+      "title": "Обратный отсчёт",
+      "code": "# Scratch: как блоки «изменить на» + «повторять пока не»\nchislo = 10\nwhile chislo > 0:\n    print(chislo)\n    chislo = chislo - 1\nprint(\"Поехали! 🚀\")\n"
+    },
+    {
+      "title": "Какой по счёту?",
+      "code": "# Scratch: как блок «элемент списка»\nfrukty = [\"яблоко\", \"апельсин\", \"виноград\", \"клубника\", \"персик\"]\nprint(\"Список фруктов: \" + str(frukty))\nnomer = int(input(\"Какой посмотреть? (1-5): \"))\nprint(str(nomer) + \"-й это \" + frukty[nomer - 1] + \"!\")\n"
+    },
+    {
+      "title": "Считаем буквы",
+      "code": "# Scratch: как блок «длина»\nslovo = input(\"Напиши любимое слово: \")\nprint(\"\\\"\" + slovo + \"\\\" — это \" + str(len(slovo)) + \" букв!\")\nfor bukva in slovo:\n    print(\"→ \" + bukva)\n"
+    },
+    {
+      "title": "Гадание",
+      "code": "# Scratch: как блок «случайное число»\nimport random\nresultat = random.choice([\"Супер удача!\", \"Хорошая удача!\", \"Немного удачи\", \"Обычная удача\", \"Попробуй ещё раз\"])\nprint(\"Твоя удача на сегодня... \" + resultat + \"!\")\n"
+    },
+    {
+      "title": "Угадай число",
+      "code": "# Игра из разных блоков!\nimport random\notvet = random.randint(1, 10)\nprint(\"Угадай число от 1 до 10!\")\n\npopytki = 0\nwhile True:\n    otgadka = int(input(\"Введи число: \"))\n    popytki = popytki + 1\n    if otgadka == otvet:\n        print(\"Правильно! 🎉 Угадал за \" + str(popytki) + \" попыток!\")\n        break\n    elif otgadka < otvet:\n        print(\"Больше!\")\n    else:\n        print(\"Меньше!\")\n"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Сәлем!",
+      "code": "# Scratch: \"Сәлем де!\" блогымен бірдей\nprint(\"Сәлем!\")\n"
+    },
+    {
+      "title": "Атыңды сұра",
+      "code": "# Scratch: \"сұра және күт\" блогымен бірдей\naty = input(\"Атың кім? \")\nprint(\"Сәлем, \" + aty + \"!\")\n"
+    },
+    {
+      "title": "Калькулятор",
+      "code": "# Scratch: \"+ амал\" блогымен бірдей\na = int(input(\"Бірінші сан: \"))\nb = int(input(\"Екінші сан: \"))\nprint(\"Қосу: \" + str(a + b))\nprint(\"Азайту: \" + str(a - b))\nprint(\"Көбейту: \" + str(a * b))\n"
+    },
+    {
+      "title": "Егер...онда",
+      "code": "# Scratch: \"егер онда\" блогымен бірдей\nauarai = input(\"Ауа райы қандай? (күн/жаңбыр): \")\nif auarai == \"күн\":\n    print(\"Сыртта ойнайық!\")\nelse:\n    print(\"Бағдарламалау жасайық!\")\n"
+    },
+    {
+      "title": "Әр түрлі сәлемдесу",
+      "code": "# Scratch: \"егер онда әйтпесе егер онда\" блогымен бірдей\nsagat = int(input(\"Қазір сағат неше? (0-23): \"))\nif sagat < 10:\n    print(\"Қайырлы таң!\")\nelif sagat < 17:\n    print(\"Қайырлы күн!\")\nelse:\n    print(\"Қайырлы кеш!\")\n"
+    },
+    {
+      "title": "Қайтала",
+      "code": "# Scratch: \"қайтала\" блогымен бірдей\nfor ret in range(5):\n    print(str(ret + 1) + \"-рет: Сәлем!\")\n"
+    },
+    {
+      "title": "Кері санау",
+      "code": "# Scratch: \"өзгерт\" + \"...болғанша қайтала\" блоктарымен бірдей\nsan = 10\nwhile san > 0:\n    print(san)\n    san = san - 1\nprint(\"Ұшыр! \\U0001f680\")\n"
+    },
+    {
+      "title": "Қайсысы?",
+      "code": "# Scratch: \"тізімдегі элемент\" блогымен бірдей\nzhemister = [\"алма\", \"апельсин\", \"жүзім\", \"құлпынай\", \"шабдалы\"]\nprint(\"Жеміс тізімі: \" + str(zhemister))\nnomer = int(input(\"Қайсысын көргің келеді? (1-5): \"))\nprint(str(nomer) + \"-ші: \" + zhemister[nomer - 1] + \"!\")\n"
+    },
+    {
+      "title": "Әріптерді сана",
+      "code": "# Scratch: \"ұзындық\" блогымен бірдей\nsoz = input(\"Ұнайтын сөзіңді жаз: \")\nprint(\"\\\"\" + soz + \"\\\" сөзінде \" + str(len(soz)) + \" әріп бар!\")\nfor arip in soz:\n    print(\"-> \" + arip)\n"
+    },
+    {
+      "title": "Тағдыр сынау",
+      "code": "# Scratch: \"кездейсоқ таңдау\" блогымен бірдей\nimport random\nnatije = random.choice([\"Өте бақытты!\", \"Бақытты!\", \"Аздап бақытты\", \"Жақсы!\", \"Қайта сына\"])\nprint(\"Бүгінгі тағдырың... \" + natije + \"!\")\n"
+    },
+    {
+      "title": "Санды тап ойыны",
+      "code": "# Көп блоктарды біріктірген ойын!\nimport random\nzhauap = random.randint(1, 10)\nprint(\"1-ден 10-ға дейін санды тап!\")\n\ntaldanystar = 0\nwhile True:\n    bolzham = int(input(\"Сан енгіз: \"))\n    taldanystar = taldanystar + 1\n    if bolzham == zhauap:\n        print(\"Дұрыс! \\U0001f389 \" + str(taldanystar) + \" рет сынап таптың!\")\n        break\n    elif bolzham < zhauap:\n        print(\"Көбірек!\")\n    else:\n        print(\"Азырақ!\")\n"
+    }
+  ]
+}

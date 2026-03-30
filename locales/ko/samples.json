@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "안녕하세요!",
+      "code": "# Scratch: \"안녕!이라고 말하기\" 블록과 같아요\nprint(\"안녕하세요!\")\n"
+    },
+    {
+      "title": "이름 물어보기",
+      "code": "# Scratch: \"묻고 기다리기\" 블록과 같아요\n이름 = input(\"이름을 알려줘: \")\nprint(이름 + \"아, 안녕!\")\n"
+    },
+    {
+      "title": "덧셈 계산기",
+      "code": "# Scratch: \"+ 연산\" 블록과 같아요\n가 = int(input(\"첫 번째 숫자: \"))\n나 = int(input(\"두 번째 숫자: \"))\nprint(\"덧셈: \" + str(가 + 나))\nprint(\"뺄셈: \" + str(가 - 나))\nprint(\"곱셈: \" + str(가 * 나))\n"
+    },
+    {
+      "title": "만약...이라면",
+      "code": "# Scratch: \"만약~이라면\" 블록과 같아요\n날씨 = input(\"오늘 날씨는? (맑음/비): \")\nif 날씨 == \"맑음\":\n    print(\"밖에서 놀자!\")\nelse:\n    print(\"집에서 프로그래밍하자!\")\n"
+    },
+    {
+      "title": "다양한 인사",
+      "code": "# Scratch: \"만약~이라면, 아니면 만약~이라면\" 블록과 같아요\n시간 = int(input(\"지금 몇 시야? (0~23): \"))\nif 시간 < 10:\n    print(\"좋은 아침!\")\nelif 시간 < 17:\n    print(\"안녕하세요!\")\nelse:\n    print(\"좋은 저녁!\")\n"
+    },
+    {
+      "title": "반복하기",
+      "code": "# Scratch: \"반복하기\" 블록과 같아요\nfor 횟수 in range(5):\n    print(str(횟수 + 1) + \"번째: 안녕!\")\n"
+    },
+    {
+      "title": "카운트다운",
+      "code": "# Scratch: \"바꾸기\" + \"까지 반복하기\" 블록과 같아요\n숫자 = 10\nwhile 숫자 > 0:\n    print(숫자)\n    숫자 = 숫자 - 1\nprint(\"발사! 🚀\")\n"
+    },
+    {
+      "title": "몇 번째?",
+      "code": "# Scratch: 리스트의 \"몇 번째\" 블록과 같아요\n과일 = [\"사과\", \"귤\", \"포도\", \"딸기\", \"복숭아\"]\nprint(\"과일 목록: \" + str(과일))\n번호 = int(input(\"몇 번째를 볼까? (1~5): \"))\nprint(str(번호) + \"번째는 \" + 과일[번호 - 1] + \"이야!\")\n"
+    },
+    {
+      "title": "글자 세기",
+      "code": "# Scratch: \"길이\" 블록과 같아요\n단어 = input(\"좋아하는 단어를 입력해: \")\nprint(\"'\" + 단어 + \"'은(는) \" + str(len(단어)) + \"글자야!\")\nfor 글자 in 단어:\n    print(\"→ \" + 글자)\n"
+    },
+    {
+      "title": "운세 뽑기",
+      "code": "# Scratch: \"무작위 수\" 블록과 같아요\nimport random\n결과 = random.choice([\"대길\", \"중길\", \"소길\", \"길\", \"다시 뽑기\"])\nprint(\"오늘의 운세는... \" + 결과 + \"!\")\n"
+    },
+    {
+      "title": "숫자 맞히기 게임",
+      "code": "# 여러 블록을 합친 게임이야!\nimport random\n정답 = random.randint(1, 10)\nprint(\"1부터 10까지 숫자를 맞혀봐!\")\n\n횟수 = 0\nwhile True:\n    추측 = int(input(\"숫자를 입력해: \"))\n    횟수 = 횟수 + 1\n    if 추측 == 정답:\n        print(\"정답! 🎉 \" + str(횟수) + \"번 만에 맞혔어!\")\n        break\n    elif 추측 < 정답:\n        print(\"더 큰 숫자야!\")\n    else:\n        print(\"더 작은 숫자야!\")\n"
+    }
+  ]
+}

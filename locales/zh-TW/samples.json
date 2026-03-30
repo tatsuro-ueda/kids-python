@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "你好！",
+      "code": "# Scratch：跟「說 你好！」積木一樣喔\nprint(\"你好！\")\n"
+    },
+    {
+      "title": "問名字",
+      "code": "# Scratch：跟「詢問並等待」積木一樣喔\n名字 = input(\"你叫什麼名字？\")\nprint(名字 + \"，你好！\")\n"
+    },
+    {
+      "title": "加法計算機",
+      "code": "# Scratch：跟「+ 運算」積木一樣喔\n甲 = int(input(\"第一個數字：\"))\n乙 = int(input(\"第二個數字：\"))\nprint(\"加法：\" + str(甲 + 乙))\nprint(\"減法：\" + str(甲 - 乙))\nprint(\"乘法：\" + str(甲 * 乙))\n"
+    },
+    {
+      "title": "如果...那麼",
+      "code": "# Scratch：跟「如果那麼」積木一樣喔\n天氣 = input(\"今天天氣如何？（晴天/下雨）：\")\nif 天氣 == \"晴天\":\n    print(\"去外面玩吧！\")\nelse:\n    print(\"在家寫程式吧！\")\n"
+    },
+    {
+      "title": "各種打招呼",
+      "code": "# Scratch：跟「如果那麼否則如果那麼」積木一樣喔\n小時 = int(input(\"現在幾點？（0～23）：\"))\nif 小時 < 10:\n    print(\"早安！\")\nelif 小時 < 17:\n    print(\"午安！\")\nelse:\n    print(\"晚安！\")\n"
+    },
+    {
+      "title": "重複做",
+      "code": "# Scratch：跟「重複」積木一樣喔\nfor 次數 in range(5):\n    print(str(次數 + 1) + \" 次：你好！\")\n"
+    },
+    {
+      "title": "倒數計時",
+      "code": "# Scratch：跟「改變」+「重複直到」積木一樣喔\n數字 = 10\nwhile 數字 > 0:\n    print(數字)\n    數字 = 數字 - 1\nprint(\"發射！🚀\")\n"
+    },
+    {
+      "title": "第幾個？",
+      "code": "# Scratch：跟清單的「第幾項」積木一樣喔\n水果 = [\"蘋果\", \"橘子\", \"葡萄\", \"草莓\", \"水蜜桃\"]\nprint(\"水果清單：\" + str(水果))\n編號 = int(input(\"要看第幾個？（1～5）：\"))\nprint(\"第 \" + str(編號) + \" 個是 \" + 水果[編號 - 1] + \"！\")\n"
+    },
+    {
+      "title": "數字數",
+      "code": "# Scratch：跟「長度」積木一樣喔\n詞 = input(\"輸入你喜歡的詞：\")\nprint(\"「\" + 詞 + \"」有 \" + str(len(詞)) + \" 個字！\")\nfor 字 in 詞:\n    print(\"→ \" + 字)\n"
+    },
+    {
+      "title": "抽籤",
+      "code": "# Scratch：跟「隨機取數」積木一樣喔\nimport random\n結果 = random.choice([\"大吉\", \"中吉\", \"小吉\", \"吉\", \"再抽一次\"])\nprint(\"今天的運勢是... \" + 結果 + \"！\")\n"
+    },
+    {
+      "title": "猜數字遊戲",
+      "code": "# 結合很多積木的遊戲！\nimport random\n答案 = random.randint(1, 10)\nprint(\"猜猜 1 到 10 的數字！\")\n\n次數 = 0\nwhile True:\n    猜測 = int(input(\"輸入數字：\"))\n    次數 = 次數 + 1\n    if 猜測 == 答案:\n        print(\"答對了！🎉 你猜了 \" + str(次數) + \" 次！\")\n        break\n    elif 猜測 < 答案:\n        print(\"再大一點！\")\n    else:\n        print(\"再小一點！\")\n"
+    }
+  ]
+}

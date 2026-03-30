@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Ciao!",
+      "code": "# Scratch: come il blocco \"dire Ciao!\"\nprint(\"Ciao!\")\n"
+    },
+    {
+      "title": "Chiedi il tuo nome",
+      "code": "# Scratch: come il blocco \"chiedi e aspetta\"\nnome = input(\"Come ti chiami? \")\nprint(\"Ciao, \" + nome + \"!\")\n"
+    },
+    {
+      "title": "Calcolatrice",
+      "code": "# Scratch: come il blocco \"operatore +\"\na = int(input(\"Primo numero: \"))\nb = int(input(\"Secondo numero: \"))\nprint(\"Addizione: \" + str(a + b))\nprint(\"Sottrazione: \" + str(a - b))\nprint(\"Moltiplicazione: \" + str(a * b))\n"
+    },
+    {
+      "title": "Se...allora",
+      "code": "# Scratch: come il blocco \"se allora\"\ntempo = input(\"Com'e il tempo? (sole/pioggia): \")\nif tempo == \"sole\":\n    print(\"Andiamo a giocare fuori!\")\nelse:\n    print(\"Facciamo un po' di programmazione!\")\n"
+    },
+    {
+      "title": "Saluti diversi",
+      "code": "# Scratch: come il blocco \"se allora altrimenti se allora\"\nora = int(input(\"Che ore sono? (0-23): \"))\nif ora < 10:\n    print(\"Buongiorno!\")\nelif ora < 17:\n    print(\"Buon pomeriggio!\")\nelse:\n    print(\"Buonasera!\")\n"
+    },
+    {
+      "title": "Ripeti",
+      "code": "# Scratch: come il blocco \"ripeti\"\nfor contatore in range(5):\n    print(str(contatore + 1) + \" volta/e: Ciao!\")\n"
+    },
+    {
+      "title": "Conto alla rovescia",
+      "code": "# Scratch: come il blocco \"cambia di\" + \"ripeti fino a\"\nnumero = 10\nwhile numero > 0:\n    print(numero)\n    numero = numero - 1\nprint(\"Via! \\U0001f680\")\n"
+    },
+    {
+      "title": "Quale sara?",
+      "code": "# Scratch: come il blocco \"elemento della lista\"\nfrutti = [\"mela\", \"arancia\", \"uva\", \"fragola\", \"pesca\"]\nprint(\"Lista dei frutti: \" + str(frutti))\nnumero = int(input(\"Quale vuoi vedere? (1-5): \"))\nprint(str(numero) + \". e \" + frutti[numero - 1] + \"!\")\n"
+    },
+    {
+      "title": "Conta le lettere",
+      "code": "# Scratch: come il blocco \"lunghezza di\"\nparola = input(\"Scrivi la tua parola preferita: \")\nprint(\"\\\"\" + parola + \"\\\" ha \" + str(len(parola)) + \" lettere!\")\nfor lettera in parola:\n    print(\"-> \" + lettera)\n"
+    },
+    {
+      "title": "La ruota della fortuna",
+      "code": "# Scratch: come il blocco \"numero a caso da a\"\nimport random\nrisultato = random.choice([\"Fantastico!\", \"Molto bene!\", \"Abbastanza bene\", \"Bene\", \"Riprova\"])\nprint(\"La tua fortuna e... \" + risultato + \"!\")\n"
+    },
+    {
+      "title": "Indovina il numero",
+      "code": "# Un gioco che combina tanti blocchi!\nimport random\nrisposta = random.randint(1, 10)\nprint(\"Indovina un numero da 1 a 10!\")\n\ntentativi = 0\nwhile True:\n    ipotesi = int(input(\"Inserisci un numero: \"))\n    tentativi = tentativi + 1\n    if ipotesi == risposta:\n        print(\"Giusto! \\U0001f389 Ce l'hai fatta in \" + str(tentativi) + \" tentativi!\")\n        break\n    elif ipotesi < risposta:\n        print(\"Piu alto!\")\n    else:\n        print(\"Piu basso!\")\n"
+    }
+  ]
+}

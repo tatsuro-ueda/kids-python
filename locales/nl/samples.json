@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Hallo!",
+      "code": "# Scratch: hetzelfde als het \"zeg Hallo!\" blok\nprint(\"Hallo!\")\n"
+    },
+    {
+      "title": "Vraag je naam",
+      "code": "# Scratch: hetzelfde als het \"vraag en wacht\" blok\nnaam = input(\"Hoe heet je? \")\nprint(\"Hallo, \" + naam + \"!\")\n"
+    },
+    {
+      "title": "Rekenmachine",
+      "code": "# Scratch: hetzelfde als het \"+ operator\" blok\na = int(input(\"Eerste getal: \"))\nb = int(input(\"Tweede getal: \"))\nprint(\"Optellen: \" + str(a + b))\nprint(\"Aftrekken: \" + str(a - b))\nprint(\"Vermenigvuldigen: \" + str(a * b))\n"
+    },
+    {
+      "title": "Als...dan",
+      "code": "# Scratch: hetzelfde als het \"als dan\" blok\nweer = input(\"Hoe is het weer? (zonnig/regenachtig): \")\nif weer == \"zonnig\":\n    print(\"Laten we buiten spelen!\")\nelse:\n    print(\"Laten we programmeren!\")\n"
+    },
+    {
+      "title": "Verschillende begroetingen",
+      "code": "# Scratch: hetzelfde als het \"als dan anders als dan\" blok\nuur = int(input(\"Hoe laat is het? (0-23): \"))\nif uur < 10:\n    print(\"Goedemorgen!\")\nelif uur < 17:\n    print(\"Goedemiddag!\")\nelse:\n    print(\"Goedenavond!\")\n"
+    },
+    {
+      "title": "Herhalen",
+      "code": "# Scratch: hetzelfde als het \"herhaal\" blok\nfor teller in range(5):\n    print(str(teller + 1) + \" keer: Hallo!\")\n"
+    },
+    {
+      "title": "Aftellen",
+      "code": "# Scratch: hetzelfde als het \"verander met\" + \"herhaal tot\" blok\ngetal = 10\nwhile getal > 0:\n    print(getal)\n    getal = getal - 1\nprint(\"Start! \\U0001f680\")\n"
+    },
+    {
+      "title": "Welk fruit?",
+      "code": "# Scratch: hetzelfde als het \"item van lijst\" blok\nfruit = [\"appel\", \"sinaasappel\", \"druif\", \"aardbei\", \"perzik\"]\nprint(\"Fruitlijst: \" + str(fruit))\nnummer = int(input(\"Welke wil je zien? (1-5): \"))\nprint(str(nummer) + \"e is \" + fruit[nummer - 1] + \"!\")\n"
+    },
+    {
+      "title": "Letters tellen",
+      "code": "# Scratch: hetzelfde als het \"lengte van\" blok\nwoord = input(\"Typ je favoriete woord: \")\nprint(\"\\\"\" + woord + \"\\\" heeft \" + str(len(woord)) + \" letters!\")\nfor letter in woord:\n    print(\"-> \" + letter)\n"
+    },
+    {
+      "title": "Rad van fortuin",
+      "code": "# Scratch: hetzelfde als het \"willekeurig getal\" blok\nimport random\nresultaat = random.choice([\"Super geluk!\", \"Veel geluk!\", \"Een beetje geluk\", \"Geluk\", \"Probeer opnieuw\"])\nprint(\"Je geluk is... \" + resultaat + \"!\")\n"
+    },
+    {
+      "title": "Raad het getal",
+      "code": "# Een spel dat veel blokken combineert!\nimport random\nantwoord = random.randint(1, 10)\nprint(\"Raad een getal van 1 tot 10!\")\n\npogingen = 0\nwhile True:\n    gok = int(input(\"Voer een getal in: \"))\n    pogingen = pogingen + 1\n    if gok == antwoord:\n        print(\"Goed geraden! \\U0001f389 Je deed het in \" + str(pogingen) + \" pogingen!\")\n        break\n    elif gok < antwoord:\n        print(\"Hoger!\")\n    else:\n        print(\"Lager!\")\n"
+    }
+  ]
+}

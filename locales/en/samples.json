@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Hello!",
+      "code": "# Scratch: same as the \"say Hello!\" block\nprint(\"Hello!\")\n"
+    },
+    {
+      "title": "Ask your name",
+      "code": "# Scratch: same as the \"ask and wait\" block\nname = input(\"What is your name? \")\nprint(\"Hello, \" + name + \"!\")\n"
+    },
+    {
+      "title": "Calculator",
+      "code": "# Scratch: same as the \"+ operator\" block\na = int(input(\"First number: \"))\nb = int(input(\"Second number: \"))\nprint(\"Addition: \" + str(a + b))\nprint(\"Subtraction: \" + str(a - b))\nprint(\"Multiplication: \" + str(a * b))\n"
+    },
+    {
+      "title": "If...then",
+      "code": "# Scratch: same as the \"if then\" block\nweather = input(\"How is the weather? (sunny/rainy): \")\nif weather == \"sunny\":\n    print(\"Let's play outside!\")\nelse:\n    print(\"Let's do some programming!\")\n"
+    },
+    {
+      "title": "Different greetings",
+      "code": "# Scratch: same as the \"if then else if then\" block\nhour = int(input(\"What time is it? (0-23): \"))\nif hour < 10:\n    print(\"Good morning!\")\nelif hour < 17:\n    print(\"Good afternoon!\")\nelse:\n    print(\"Good evening!\")\n"
+    },
+    {
+      "title": "Repeat",
+      "code": "# Scratch: same as the \"repeat\" block\nfor count in range(5):\n    print(str(count + 1) + \" time(s): Hello!\")\n"
+    },
+    {
+      "title": "Countdown",
+      "code": "# Scratch: same as the \"change by\" + \"repeat until\" blocks\nnumber = 10\nwhile number > 0:\n    print(number)\n    number = number - 1\nprint(\"Blast off! \\U0001f680\")\n"
+    },
+    {
+      "title": "Which one?",
+      "code": "# Scratch: same as the \"item of list\" block\nfruits = [\"apple\", \"orange\", \"grape\", \"strawberry\", \"peach\"]\nprint(\"Fruit list: \" + str(fruits))\nnumber = int(input(\"Which one to see? (1-5): \"))\nprint(str(number) + \"th is \" + fruits[number - 1] + \"!\")\n"
+    },
+    {
+      "title": "Count letters",
+      "code": "# Scratch: same as the \"length of\" block\nword = input(\"Type your favorite word: \")\nprint(\"\\\"\" + word + \"\\\" has \" + str(len(word)) + \" letters!\")\nfor letter in word:\n    print(\"-> \" + letter)\n"
+    },
+    {
+      "title": "Fortune teller",
+      "code": "# Scratch: same as the \"pick random\" block\nimport random\nresult = random.choice([\"Super lucky!\", \"Pretty lucky!\", \"A little lucky\", \"Lucky\", \"Try again\"])\nprint(\"Your fortune is... \" + result + \"!\")\n"
+    },
+    {
+      "title": "Number guessing game",
+      "code": "# A game that combines many blocks!\nimport random\nanswer = random.randint(1, 10)\nprint(\"Guess a number from 1 to 10!\")\n\ntries = 0\nwhile True:\n    guess = int(input(\"Enter a number: \"))\n    tries = tries + 1\n    if guess == answer:\n        print(\"Correct! \\U0001f389 You got it in \" + str(tries) + \" tries!\")\n        break\n    elif guess < answer:\n        print(\"Go higher!\")\n    else:\n        print(\"Go lower!\")\n"
+    }
+  ]
+}

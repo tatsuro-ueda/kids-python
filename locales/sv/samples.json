@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Hej!",
+      "code": "# Scratch: samma som blocket \"sag Hej!\"\nprint(\"Hej!\")\n"
+    },
+    {
+      "title": "Fraga ditt namn",
+      "code": "# Scratch: samma som blocket \"fraga och vanta\"\nnamn = input(\"Vad heter du? \")\nprint(\"Hej, \" + namn + \"!\")\n"
+    },
+    {
+      "title": "Minirakare",
+      "code": "# Scratch: samma som blocket \"+ operator\"\na = int(input(\"Forsta talet: \"))\nb = int(input(\"Andra talet: \"))\nprint(\"Addition: \" + str(a + b))\nprint(\"Subtraktion: \" + str(a - b))\nprint(\"Multiplikation: \" + str(a * b))\n"
+    },
+    {
+      "title": "Om...da",
+      "code": "# Scratch: samma som blocket \"om da\"\nvader = input(\"Hur ar vadret? (soligt/regnigt): \")\nif vader == \"soligt\":\n    print(\"Vi gar ut och leker!\")\nelse:\n    print(\"Vi programmerar!\")\n"
+    },
+    {
+      "title": "Olika halsningar",
+      "code": "# Scratch: samma som blocket \"om da annars om da\"\ntimme = int(input(\"Vilken tid ar det? (0-23): \"))\nif timme < 10:\n    print(\"God morgon!\")\nelif timme < 17:\n    print(\"God dag!\")\nelse:\n    print(\"God kvall!\")\n"
+    },
+    {
+      "title": "Upprepa",
+      "code": "# Scratch: samma som blocket \"upprepa\"\nfor raknare in range(5):\n    print(str(raknare + 1) + \" gang(er): Hej!\")\n"
+    },
+    {
+      "title": "Nednrakning",
+      "code": "# Scratch: samma som blocket \"andra med\" + \"upprepa tills\"\ntal = 10\nwhile tal > 0:\n    print(tal)\n    tal = tal - 1\nprint(\"Avfyra! \\U0001f680\")\n"
+    },
+    {
+      "title": "Vilken frukt?",
+      "code": "# Scratch: samma som blocket \"objekt i listan\"\nfrukter = [\"apple\", \"apelsin\", \"druva\", \"jordgubbe\", \"persika\"]\nprint(\"Fruktlista: \" + str(frukter))\nnummer = int(input(\"Vilken vill du se? (1-5): \"))\nprint(str(nummer) + \":a ar \" + frukter[nummer - 1] + \"!\")\n"
+    },
+    {
+      "title": "Rakna bokstaver",
+      "code": "# Scratch: samma som blocket \"langden av\"\nord = input(\"Skriv ditt favoritord: \")\nprint(\"\\\"\" + ord + \"\\\" har \" + str(len(ord)) + \" bokstaver!\")\nfor bokstav in ord:\n    print(\"-> \" + bokstav)\n"
+    },
+    {
+      "title": "Lyckohjul",
+      "code": "# Scratch: samma som blocket \"slumptal fran till\"\nimport random\nresultat = random.choice([\"Superlycka!\", \"Mycket lycka!\", \"Lite lycka\", \"Lycka\", \"Forsok igen\"])\nprint(\"Din lycka ar... \" + resultat + \"!\")\n"
+    },
+    {
+      "title": "Gissa talet",
+      "code": "# Ett spel som kombinerar manga block!\nimport random\nsvar = random.randint(1, 10)\nprint(\"Gissa ett tal fran 1 till 10!\")\n\nforsok = 0\nwhile True:\n    gissning = int(input(\"Skriv ett tal: \"))\n    forsok = forsok + 1\n    if gissning == svar:\n        print(\"Ratt! \\U0001f389 Du klarade det pa \" + str(forsok) + \" forsok!\")\n        break\n    elif gissning < svar:\n        print(\"Hogre!\")\n    else:\n        print(\"Lagre!\")\n"
+    }
+  ]
+}

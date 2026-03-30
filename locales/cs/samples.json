@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Ahoj!",
+      "code": "# Scratch: stejne jako blok \"rekni Ahoj!\"\nprint(\"Ahoj!\")\n"
+    },
+    {
+      "title": "Zeptej se na jmeno",
+      "code": "# Scratch: stejne jako blok \"zeptej se a cekej\"\njmeno = input(\"Jak se jmenujes? \")\nprint(\"Ahoj, \" + jmeno + \"!\")\n"
+    },
+    {
+      "title": "Kalkulacka",
+      "code": "# Scratch: stejne jako blok \"operator +\"\na = int(input(\"Prvni cislo: \"))\nb = int(input(\"Druhe cislo: \"))\nprint(\"Scitani: \" + str(a + b))\nprint(\"Odcitani: \" + str(a - b))\nprint(\"Nasobeni: \" + str(a * b))\n"
+    },
+    {
+      "title": "Kdyz...tak",
+      "code": "# Scratch: stejne jako blok \"kdyz tak\"\npocasi = input(\"Jake je pocasi? (slunecno/dest): \")\nif pocasi == \"slunecno\":\n    print(\"Pojdme si hrat ven!\")\nelse:\n    print(\"Pojdme programovat!\")\n"
+    },
+    {
+      "title": "Ruzne pozdravy",
+      "code": "# Scratch: stejne jako blok \"kdyz tak jinak kdyz tak\"\nhodina = int(input(\"Kolik je hodin? (0-23): \"))\nif hodina < 10:\n    print(\"Dobre rano!\")\nelif hodina < 17:\n    print(\"Dobry den!\")\nelse:\n    print(\"Dobry vecer!\")\n"
+    },
+    {
+      "title": "Opakuj",
+      "code": "# Scratch: stejne jako blok \"opakuj\"\nfor pocitadlo in range(5):\n    print(str(pocitadlo + 1) + \". krat: Ahoj!\")\n"
+    },
+    {
+      "title": "Odpocitavani",
+      "code": "# Scratch: stejne jako blok \"zmen o\" + \"opakuj dokud\"\ncislo = 10\nwhile cislo > 0:\n    print(cislo)\n    cislo = cislo - 1\nprint(\"Start! \\U0001f680\")\n"
+    },
+    {
+      "title": "Ktere ovoce?",
+      "code": "# Scratch: stejne jako blok \"prvek seznamu\"\novoce = [\"jablko\", \"pomeranc\", \"hrozno\", \"jahoda\", \"broskev\"]\nprint(\"Seznam ovoce: \" + str(ovoce))\ncislo = int(input(\"Ktere chces videt? (1-5): \"))\nprint(str(cislo) + \". je \" + ovoce[cislo - 1] + \"!\")\n"
+    },
+    {
+      "title": "Pocitej pismena",
+      "code": "# Scratch: stejne jako blok \"delka\"\nslovo = input(\"Napis sve oblibene slovo: \")\nprint(\"\\\"\" + slovo + \"\\\" ma \" + str(len(slovo)) + \" pismen!\")\nfor pismeno in slovo:\n    print(\"-> \" + pismeno)\n"
+    },
+    {
+      "title": "Vesticka",
+      "code": "# Scratch: stejne jako blok \"nahodne cislo od do\"\nimport random\nvysledek = random.choice([\"Super stesti!\", \"Hodne stesti!\", \"Trochu stesti\", \"Stesti\", \"Zkus to znovu\"])\nprint(\"Tvuj osud je... \" + vysledek + \"!\")\n"
+    },
+    {
+      "title": "Hadej cislo",
+      "code": "# Hra, ktera kombinuje hodne bloku!\nimport random\nodpoved = random.randint(1, 10)\nprint(\"Hadej cislo od 1 do 10!\")\n\npokusy = 0\nwhile True:\n    tip = int(input(\"Zadej cislo: \"))\n    pokusy = pokusy + 1\n    if tip == odpoved:\n        print(\"Spravne! \\U0001f389 Zvladl/a jsi to za \" + str(pokusy) + \" pokusu!\")\n        break\n    elif tip < odpoved:\n        print(\"Vic!\")\n    else:\n        print(\"Min!\")\n"
+    }
+  ]
+}

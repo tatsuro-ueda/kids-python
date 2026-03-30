@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "سلام!",
+      "code": "# Scratch: مثل بلوک «بگو سلام!» هست\nprint(\"سلام!\")\n"
+    },
+    {
+      "title": "اسمت رو بپرس",
+      "code": "# Scratch: مثل بلوک «بپرس و صبر کن» هست\nesm = input(\"اسمت چیه؟ \")\nprint(esm + \" جان، سلام!\")\n"
+    },
+    {
+      "title": "ماشین حساب",
+      "code": "# Scratch: مثل بلوک «عملگر +» هست\nadad1 = int(input(\"عدد اول: \"))\nadad2 = int(input(\"عدد دوم: \"))\nprint(\"جمع: \" + str(adad1 + adad2))\nprint(\"تفریق: \" + str(adad1 - adad2))\nprint(\"ضرب: \" + str(adad1 * adad2))\n"
+    },
+    {
+      "title": "اگر...آنگاه",
+      "code": "# Scratch: مثل بلوک «اگر آنگاه» هست\nhava = input(\"هوا چطوره؟ (آفتابی/بارونی): \")\nif hava == \"آفتابی\":\n    print(\"بریم بیرون بازی کنیم!\")\nelse:\n    print(\"بریم توی خونه برنامه‌نویسی کنیم!\")\n"
+    },
+    {
+      "title": "سلام‌های مختلف",
+      "code": "# Scratch: مثل بلوک «اگر آنگاه وگرنه اگر آنگاه» هست\nsaat = int(input(\"ساعت چنده؟ (0 تا 23): \"))\nif saat < 10:\n    print(\"صبح بخیر!\")\nelif saat < 17:\n    print(\"روز بخیر!\")\nelse:\n    print(\"شب بخیر!\")\n"
+    },
+    {
+      "title": "تکرار کن",
+      "code": "# Scratch: مثل بلوک «تکرار کن» هست\nfor dafe in range(5):\n    print(str(dafe + 1) + \" بار: سلام!\")\n"
+    },
+    {
+      "title": "شمارش معکوس",
+      "code": "# Scratch: مثل بلوک‌های «تغییر بده» + «تکرار تا» هست\nadad = 10\nwhile adad > 0:\n    print(adad)\n    adad = adad - 1\nprint(\"پرتاب! 🚀\")\n"
+    },
+    {
+      "title": "چندمی؟",
+      "code": "# Scratch: مثل بلوک «آیتم لیست» هست\nmiveh = [\"سیب\", \"پرتقال\", \"انگور\", \"توت‌فرنگی\", \"هلو\"]\nprint(\"لیست میوه‌ها: \" + str(miveh))\nshomare = int(input(\"چندمی رو ببینیم؟ (1 تا 5): \"))\nprint(str(shomare) + \"می \" + miveh[shomare - 1] + \" هست!\")\n"
+    },
+    {
+      "title": "حروف رو بشمار",
+      "code": "# Scratch: مثل بلوک «طول» هست\nkalame = input(\"یه کلمه که دوست داری بنویس: \")\nprint(\"«\" + kalame + \"» \" + str(len(kalame)) + \" حرف داره!\")\nfor harf in kalame:\n    print(\"← \" + harf)\n"
+    },
+    {
+      "title": "فال‌گیری",
+      "code": "# Scratch: مثل بلوک «عدد تصادفی» هست\nimport random\nnatije = random.choice([\"خیلی خوش‌شانسی!\", \"شانست خوبه!\", \"یه کم خوش‌شانسی\", \"معمولیه\", \"دوباره امتحان کن\"])\nprint(\"فال امروزت... \" + natije + \"!\")\n"
+    },
+    {
+      "title": "بازی حدس عدد",
+      "code": "# بازی‌ای که از بلوک‌های مختلف ساخته شده!\nimport random\njavab = random.randint(1, 10)\nprint(\"یه عدد بین 1 تا 10 حدس بزن!\")\n\ndafe = 0\nwhile True:\n    hads = int(input(\"عدد رو وارد کن: \"))\n    dafe = dafe + 1\n    if hads == javab:\n        print(\"آفرین! 🎉 توی \" + str(dafe) + \" بار حدس زدی!\")\n        break\n    elif hads < javab:\n        print(\"بزرگ‌تره!\")\n    else:\n        print(\"کوچک‌تره!\")\n"
+    }
+  ]
+}

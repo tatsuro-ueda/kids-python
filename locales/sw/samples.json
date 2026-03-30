@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Habari!",
+      "code": "# Scratch: sawa na block ya \"say Habari!\"\nprint(\"Habari!\")\n"
+    },
+    {
+      "title": "Uliza jina lako",
+      "code": "# Scratch: sawa na block ya \"ask and wait\"\njina = input(\"Jina lako ni nani? \")\nprint(\"Habari, \" + jina + \"!\")\n"
+    },
+    {
+      "title": "Kikokotoo",
+      "code": "# Scratch: sawa na block ya \"+ operator\"\na = int(input(\"Nambari ya kwanza: \"))\nb = int(input(\"Nambari ya pili: \"))\nprint(\"Kujumlisha: \" + str(a + b))\nprint(\"Kutoa: \" + str(a - b))\nprint(\"Kuzidisha: \" + str(a * b))\n"
+    },
+    {
+      "title": "Kama...basi",
+      "code": "# Scratch: sawa na block ya \"if then\"\nhali_ya_hewa = input(\"Hali ya hewa ikoje? (jua/mvua): \")\nif hali_ya_hewa == \"jua\":\n    print(\"Twende tucheze nje!\")\nelse:\n    print(\"Tufanye programu!\")\n"
+    },
+    {
+      "title": "Salamu tofauti",
+      "code": "# Scratch: sawa na block ya \"if then else if then\"\nsaa = int(input(\"Saa ngapi sasa? (0-23): \"))\nif saa < 10:\n    print(\"Habari za asubuhi!\")\nelif saa < 17:\n    print(\"Habari za mchana!\")\nelse:\n    print(\"Habari za jioni!\")\n"
+    },
+    {
+      "title": "Rudia",
+      "code": "# Scratch: sawa na block ya \"repeat\"\nfor mara in range(5):\n    print(str(mara + 1) + \" mara: Habari!\")\n"
+    },
+    {
+      "title": "Kuhesabu chini",
+      "code": "# Scratch: sawa na block ya \"change by\" + \"repeat until\"\nnambari = 10\nwhile nambari > 0:\n    print(nambari)\n    nambari = nambari - 1\nprint(\"Ruka! \\U0001f680\")\n"
+    },
+    {
+      "title": "Ni ipi?",
+      "code": "# Scratch: sawa na block ya \"item of list\"\nmatunda = [\"tofaa\", \"chungwa\", \"zabibu\", \"jordgubbar\", \"embe\"]\nprint(\"Orodha ya matunda: \" + str(matunda))\nnambari = int(input(\"Unataka kuona ipi? (1-5): \"))\nprint(\"Nambari \" + str(nambari) + \" ni \" + matunda[nambari - 1] + \"!\")\n"
+    },
+    {
+      "title": "Hesabu herufi",
+      "code": "# Scratch: sawa na block ya \"length of\"\nneno = input(\"Andika neno lako unalolipenda: \")\nprint(\"\\\"\" + neno + \"\\\" lina herufi \" + str(len(neno)) + \"!\")\nfor herufi in neno:\n    print(\"-> \" + herufi)\n"
+    },
+    {
+      "title": "Bahati yako",
+      "code": "# Scratch: sawa na block ya \"pick random\"\nimport random\njibu = random.choice([\"Bahati nzuri sana!\", \"Bahati nzuri!\", \"Bahati kidogo\", \"Kawaida\", \"Jaribu tena\"])\nprint(\"Bahati yako ni... \" + jibu + \"!\")\n"
+    },
+    {
+      "title": "Mchezo wa kutabiri nambari",
+      "code": "# Mchezo unaounganisha block nyingi!\nimport random\njibu = random.randint(1, 10)\nprint(\"Tabiri nambari kutoka 1 hadi 10!\")\n\nmajaribio = 0\nwhile True:\n    dhana = int(input(\"Ingiza nambari: \"))\n    majaribio = majaribio + 1\n    if dhana == jibu:\n        print(\"Sawa! \\U0001f389 Umepata kwa majaribio \" + str(majaribio) + \"!\")\n        break\n    elif dhana < jibu:\n        print(\"Juu zaidi!\")\n    else:\n        print(\"Chini zaidi!\")\n"
+    }
+  ]
+}

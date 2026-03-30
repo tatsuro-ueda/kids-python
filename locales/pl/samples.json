@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Czesc!",
+      "code": "# Scratch: tak jak blok \"powiedz Czesc!\"\nprint(\"Czesc!\")\n"
+    },
+    {
+      "title": "Zapytaj o imie",
+      "code": "# Scratch: tak jak blok \"zapytaj i czekaj\"\nimie = input(\"Jak masz na imie? \")\nprint(\"Czesc, \" + imie + \"!\")\n"
+    },
+    {
+      "title": "Kalkulator",
+      "code": "# Scratch: tak jak blok \"operator +\"\na = int(input(\"Pierwsza liczba: \"))\nb = int(input(\"Druga liczba: \"))\nprint(\"Dodawanie: \" + str(a + b))\nprint(\"Odejmowanie: \" + str(a - b))\nprint(\"Mnozenie: \" + str(a * b))\n"
+    },
+    {
+      "title": "Jezeli...to",
+      "code": "# Scratch: tak jak blok \"jezeli to\"\npogoda = input(\"Jaka jest pogoda? (slonecznie/deszczowo): \")\nif pogoda == \"slonecznie\":\n    print(\"Chodz sie bawic na dworze!\")\nelse:\n    print(\"Programujmy!\")\n"
+    },
+    {
+      "title": "Rozne powitania",
+      "code": "# Scratch: tak jak blok \"jezeli to w przeciwnym razie jezeli to\"\ngodzina = int(input(\"Ktora jest godzina? (0-23): \"))\nif godzina < 10:\n    print(\"Dzien dobry!\")\nelif godzina < 17:\n    print(\"Czesc!\")\nelse:\n    print(\"Dobry wieczor!\")\n"
+    },
+    {
+      "title": "Powtarzaj",
+      "code": "# Scratch: tak jak blok \"powtorz\"\nfor licznik in range(5):\n    print(str(licznik + 1) + \" raz(y): Czesc!\")\n"
+    },
+    {
+      "title": "Odliczanie",
+      "code": "# Scratch: tak jak blok \"zmien o\" + \"powtarzaj az\" \nliczba = 10\nwhile liczba > 0:\n    print(liczba)\n    liczba = liczba - 1\nprint(\"Start! \\U0001f680\")\n"
+    },
+    {
+      "title": "Ktory to?",
+      "code": "# Scratch: tak jak blok \"element listy\"\nowoce = [\"jablko\", \"pomarancza\", \"winogrono\", \"truskawka\", \"brzoskwinia\"]\nprint(\"Lista owocow: \" + str(owoce))\nnumer = int(input(\"Ktory chcesz zobaczyc? (1-5): \"))\nprint(str(numer) + \". to \" + owoce[numer - 1] + \"!\")\n"
+    },
+    {
+      "title": "Licz litery",
+      "code": "# Scratch: tak jak blok \"dlugosc\"\nslowo = input(\"Wpisz swoje ulubione slowo: \")\nprint(\"\\\"\" + slowo + \"\\\" ma \" + str(len(slowo)) + \" liter!\")\nfor litera in slowo:\n    print(\"-> \" + litera)\n"
+    },
+    {
+      "title": "Wrozba",
+      "code": "# Scratch: tak jak blok \"losowa liczba od do\"\nimport random\nwynik = random.choice([\"Super szczescie!\", \"Duzo szczescia!\", \"Troche szczescia\", \"Szczescie\", \"Sprobuj ponownie\"])\nprint(\"Twoja wrozba to... \" + wynik + \"!\")\n"
+    },
+    {
+      "title": "Zgadnij liczbe",
+      "code": "# Gra, ktora laczy wiele blokow!\nimport random\nodpowiedz = random.randint(1, 10)\nprint(\"Zgadnij liczbe od 1 do 10!\")\n\nproby = 0\nwhile True:\n    strzal = int(input(\"Wpisz liczbe: \"))\n    proby = proby + 1\n    if strzal == odpowiedz:\n        print(\"Dobrze! \\U0001f389 Udalo ci sie w \" + str(proby) + \" probach!\")\n        break\n    elif strzal < odpowiedz:\n        print(\"Wyzej!\")\n    else:\n        print(\"Nizej!\")\n"
+    }
+  ]
+}

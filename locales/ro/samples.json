@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Salut!",
+      "code": "# Scratch: ca blocul \"spune Salut!\"\nprint(\"Salut!\")\n"
+    },
+    {
+      "title": "Intreaba-ti numele",
+      "code": "# Scratch: ca blocul \"intreaba si asteapta\"\nnume = input(\"Cum te cheama? \")\nprint(\"Salut, \" + nume + \"!\")\n"
+    },
+    {
+      "title": "Calculator",
+      "code": "# Scratch: ca blocul \"operator +\"\na = int(input(\"Primul numar: \"))\nb = int(input(\"Al doilea numar: \"))\nprint(\"Adunare: \" + str(a + b))\nprint(\"Scadere: \" + str(a - b))\nprint(\"Inmultire: \" + str(a * b))\n"
+    },
+    {
+      "title": "Daca...atunci",
+      "code": "# Scratch: ca blocul \"daca atunci\"\nvreme = input(\"Cum e vremea? (soare/ploaie): \")\nif vreme == \"soare\":\n    print(\"Hai sa ne jucam afara!\")\nelse:\n    print(\"Hai sa programam!\")\n"
+    },
+    {
+      "title": "Salutari diferite",
+      "code": "# Scratch: ca blocul \"daca atunci altfel daca atunci\"\nora = int(input(\"Cat e ceasul? (0-23): \"))\nif ora < 10:\n    print(\"Buna dimineata!\")\nelif ora < 17:\n    print(\"Buna ziua!\")\nelse:\n    print(\"Buna seara!\")\n"
+    },
+    {
+      "title": "Repeta",
+      "code": "# Scratch: ca blocul \"repeta\"\nfor contor in range(5):\n    print(str(contor + 1) + \" data/ori: Salut!\")\n"
+    },
+    {
+      "title": "Numaratoare inversa",
+      "code": "# Scratch: ca blocul \"schimba cu\" + \"repeta pana cand\"\nnumar = 10\nwhile numar > 0:\n    print(numar)\n    numar = numar - 1\nprint(\"Start! \\U0001f680\")\n"
+    },
+    {
+      "title": "Care fruct?",
+      "code": "# Scratch: ca blocul \"elementul din lista\"\nfructe = [\"mar\", \"portocala\", \"strugure\", \"capsuna\", \"piersica\"]\nprint(\"Lista de fructe: \" + str(fructe))\nnumar = int(input(\"Pe care vrei sa-l vezi? (1-5): \"))\nprint(str(numar) + \". este \" + fructe[numar - 1] + \"!\")\n"
+    },
+    {
+      "title": "Numara literele",
+      "code": "# Scratch: ca blocul \"lungimea lui\"\ncuvant = input(\"Scrie cuvantul tau preferat: \")\nprint(\"\\\"\" + cuvant + \"\\\" are \" + str(len(cuvant)) + \" litere!\")\nfor litera in cuvant:\n    print(\"-> \" + litera)\n"
+    },
+    {
+      "title": "Ghiceste norocul",
+      "code": "# Scratch: ca blocul \"numar aleator de la la\"\nimport random\nrezultat = random.choice([\"Super noroc!\", \"Mult noroc!\", \"Putin noroc\", \"Noroc\", \"Incearca din nou\"])\nprint(\"Norocul tau este... \" + rezultat + \"!\")\n"
+    },
+    {
+      "title": "Ghiceste numarul",
+      "code": "# Un joc care combina multe blocuri!\nimport random\nraspuns = random.randint(1, 10)\nprint(\"Ghiceste un numar de la 1 la 10!\")\n\nincercari = 0\nwhile True:\n    ghicire = int(input(\"Scrie un numar: \"))\n    incercari = incercari + 1\n    if ghicire == raspuns:\n        print(\"Corect! \\U0001f389 Ai reusit in \" + str(incercari) + \" incercari!\")\n        break\n    elif ghicire < raspuns:\n        print(\"Mai mare!\")\n    else:\n        print(\"Mai mic!\")\n"
+    }
+  ]
+}

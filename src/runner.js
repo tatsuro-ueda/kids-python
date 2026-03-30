@@ -1,3 +1,5 @@
+import { t } from "./i18n.js";
+
 let pyodide = null;
 
 const INPUT_PATCH = `
@@ -14,7 +16,7 @@ builtins.input = _custom_input
 `;
 
 export async function loadPyodide(onStatus) {
-  onStatus("Python環境を読み込み中...");
+  onStatus(t("app.loading"));
   const mod = await import("/vendor/pyodide/pyodide.mjs");
   pyodide = await mod.loadPyodide({
     indexURL: "/vendor/pyodide/",

@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Kamusta!",
+      "code": "# Scratch: kapareho ng \"say Kamusta!\" block\nprint(\"Kamusta!\")\n"
+    },
+    {
+      "title": "Itanong ang pangalan",
+      "code": "# Scratch: kapareho ng \"ask and wait\" block\npangalan = input(\"Ano ang pangalan mo? \")\nprint(\"Kamusta, \" + pangalan + \"!\")\n"
+    },
+    {
+      "title": "Calculator",
+      "code": "# Scratch: kapareho ng \"+ operator\" block\na = int(input(\"Unang numero: \"))\nb = int(input(\"Pangalawang numero: \"))\nprint(\"Dagdag: \" + str(a + b))\nprint(\"Bawas: \" + str(a - b))\nprint(\"Pag-multiply: \" + str(a * b))\n"
+    },
+    {
+      "title": "Kung...saka",
+      "code": "# Scratch: kapareho ng \"if then\" block\npanahon = input(\"Kumusta ang panahon? (maaraw/maulan): \")\nif panahon == \"maaraw\":\n    print(\"Maglaro tayo sa labas!\")\nelse:\n    print(\"Mag-programming tayo!\")\n"
+    },
+    {
+      "title": "Iba-ibang bati",
+      "code": "# Scratch: kapareho ng \"if then else if then\" block\noras = int(input(\"Anong oras na? (0-23): \"))\nif oras < 10:\n    print(\"Magandang umaga!\")\nelif oras < 17:\n    print(\"Magandang tanghali!\")\nelse:\n    print(\"Magandang gabi!\")\n"
+    },
+    {
+      "title": "Ulitin",
+      "code": "# Scratch: kapareho ng \"repeat\" block\nfor bilang in range(5):\n    print(str(bilang + 1) + \" beses: Kamusta!\")\n"
+    },
+    {
+      "title": "Countdown",
+      "code": "# Scratch: kapareho ng \"change by\" + \"repeat until\" blocks\nnumero = 10\nwhile numero > 0:\n    print(numero)\n    numero = numero - 1\nprint(\"Lift off! \\U0001f680\")\n"
+    },
+    {
+      "title": "Alin doon?",
+      "code": "# Scratch: kapareho ng \"item of list\" block\nprutas = [\"mansanas\", \"dalandan\", \"ubas\", \"strawberry\", \"mangga\"]\nprint(\"Listahan ng prutas: \" + str(prutas))\nnumero = int(input(\"Alin ang gusto mong makita? (1-5): \"))\nprint(\"Ang numero \" + str(numero) + \" ay \" + prutas[numero - 1] + \"!\")\n"
+    },
+    {
+      "title": "Bilangin ang titik",
+      "code": "# Scratch: kapareho ng \"length of\" block\nsalita = input(\"I-type ang paborito mong salita: \")\nprint(\"\\\"\" + salita + \"\\\" ay may \" + str(len(salita)) + \" titik!\")\nfor titik in salita:\n    print(\"-> \" + titik)\n"
+    },
+    {
+      "title": "Kapalaran",
+      "code": "# Scratch: kapareho ng \"pick random\" block\nimport random\nresulta = random.choice([\"Maswerte ka!\", \"Maganda ang araw mo!\", \"Okey lang\", \"Mag-ingat\", \"Subukan ulit\"])\nprint(\"Ang kapalaran mo ay... \" + resulta + \"!\")\n"
+    },
+    {
+      "title": "Hulaan ang numero",
+      "code": "# Laro na pinagsama ang maraming block!\nimport random\nsagot = random.randint(1, 10)\nprint(\"Hulaan ang numero mula 1 hanggang 10!\")\n\nsubok = 0\nwhile True:\n    hula = int(input(\"Maglagay ng numero: \"))\n    subok = subok + 1\n    if hula == sagot:\n        print(\"Tama! \\U0001f389 Nahulaan mo sa \" + str(subok) + \" subok!\")\n        break\n    elif hula < sagot:\n        print(\"Mas mataas pa!\")\n    else:\n        print(\"Mas mababa pa!\")\n"
+    }
+  ]
+}

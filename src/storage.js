@@ -1,3 +1,5 @@
+import { t } from "./i18n.js";
+
 const STORAGE_KEY = "python-editor-code";
 const DEFAULT_CODE = 'print("Hello, Python!")';
 
@@ -32,11 +34,9 @@ export function saveCode(code) {
   localStorage.setItem(STORAGE_KEY, code);
 }
 
-const SHARE_TEXT = "ブラウザだけでPythonが動く！小学生向けプログラミング練習帳";
-
 export function getShareIntentURLs(url) {
   const encoded = encodeURIComponent(url);
-  const text = encodeURIComponent(SHARE_TEXT);
+  const text = encodeURIComponent(t("app.shareText"));
   return {
     line: `https://social-plugins.line.me/lineit/share?url=${encoded}`,
     x: `https://twitter.com/intent/tweet?url=${encoded}&text=${text}`,

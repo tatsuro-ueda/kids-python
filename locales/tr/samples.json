@@ -1,0 +1,48 @@
+{
+  "list": [
+    {
+      "title": "Merhaba!",
+      "code": "# Scratch: \"Merhaba! de\" bloku ile ayni\nprint(\"Merhaba!\")\n"
+    },
+    {
+      "title": "Adini sor",
+      "code": "# Scratch: \"sor ve bekle\" bloku ile ayni\nisim = input(\"Adin ne? \")\nprint(\"Merhaba, \" + isim + \"!\")\n"
+    },
+    {
+      "title": "Hesap makinesi",
+      "code": "# Scratch: \"+ operatoru\" bloku ile ayni\na = int(input(\"Birinci sayi: \"))\nb = int(input(\"Ikinci sayi: \"))\nprint(\"Toplama: \" + str(a + b))\nprint(\"Cikarma: \" + str(a - b))\nprint(\"Carpma: \" + str(a * b))\n"
+    },
+    {
+      "title": "Eger...ise",
+      "code": "# Scratch: \"eger ise\" bloku ile ayni\nhava = input(\"Hava nasildir? (gunesli/yagmurlu): \")\nif hava == \"gunesli\":\n    print(\"Disarida oynayalim!\")\nelse:\n    print(\"Programlama yapalim!\")\n"
+    },
+    {
+      "title": "Farkli selamlar",
+      "code": "# Scratch: \"eger ise, degilse eger ise\" bloku ile ayni\nsaat = int(input(\"Saat kac? (0-23): \"))\nif saat < 10:\n    print(\"Gunaydin!\")\nelif saat < 17:\n    print(\"Iyi gunler!\")\nelse:\n    print(\"Iyi aksamlar!\")\n"
+    },
+    {
+      "title": "Tekrarla",
+      "code": "# Scratch: \"tekrarla\" bloku ile ayni\nfor sayac in range(5):\n    print(str(sayac + 1) + \". kez: Merhaba!\")\n"
+    },
+    {
+      "title": "Geri sayim",
+      "code": "# Scratch: \"degistir\" + \"olana kadar tekrarla\" bloklari ile ayni\nsayi = 10\nwhile sayi > 0:\n    print(sayi)\n    sayi = sayi - 1\nprint(\"Firlatma! \\U0001f680\")\n"
+    },
+    {
+      "title": "Hangisi?",
+      "code": "# Scratch: \"listenin elemani\" bloku ile ayni\nmeyveler = [\"elma\", \"portakal\", \"uzum\", \"cilek\", \"seftali\"]\nprint(\"Meyve listesi: \" + str(meyveler))\nnumara = int(input(\"Kacinci gormek istiyorsun? (1-5): \"))\nprint(str(numara) + \". meyve \" + meyveler[numara - 1] + \"!\")\n"
+    },
+    {
+      "title": "Harfleri say",
+      "code": "# Scratch: \"uzunlugu\" bloku ile ayni\nkelime = input(\"En sevdigin kelimeyi yaz: \")\nprint(\"\\\"\" + kelime + \"\\\" \" + str(len(kelime)) + \" harften olusuyor!\")\nfor harf in kelime:\n    print(\"-> \" + harf)\n"
+    },
+    {
+      "title": "Fal bak",
+      "code": "# Scratch: \"rastgele sec\" bloku ile ayni\nimport random\nsonuc = random.choice([\"Cok sansli!\", \"Sansli!\", \"Biraz sansli\", \"Normal\", \"Tekrar dene\"])\nprint(\"Bugunki sansin... \" + sonuc + \"!\")\n"
+    },
+    {
+      "title": "Sayi tahmin oyunu",
+      "code": "# Birden fazla bloku birlestiren bir oyun!\nimport random\ncevap = random.randint(1, 10)\nprint(\"1 ile 10 arasinda bir sayi tahmin et!\")\n\ndeneme = 0\nwhile True:\n    tahmin = int(input(\"Bir sayi gir: \"))\n    deneme = deneme + 1\n    if tahmin == cevap:\n        print(\"Dogru! \\U0001f389 \" + str(deneme) + \" denemede bildin!\")\n        break\n    elif tahmin < cevap:\n        print(\"Daha buyuk!\")\n    else:\n        print(\"Daha kucuk!\")\n"
+    }
+  ]
+}

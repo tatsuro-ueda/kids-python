@@ -10,28 +10,32 @@
 <body>
   <div class="container">
     <header>
-      <img src="../assets/snake.png" alt="ヘビ" class="mascot">
-      <h1>Pythonれんしゅうちょう</h1>
+      <img src="../assets/snake.png" alt="ヘビ" class="mascot" data-i18n-alt="app.mascotAlt">
+      <h1 data-i18n="app.title">Pythonれんしゅうちょう</h1>
+      <div id="lang-selector">
+        <button id="lang-btn" aria-label="Language">🌐</button>
+        <ul id="lang-list" hidden></ul>
+      </div>
     </header>
     <div id="status" hidden></div>
-    <div id="editor"></div>
+    <div id="editor" dir="ltr"></div>
     <div class="toolbar">
-      <button id="run-btn" disabled>じっこう</button>
+      <button id="run-btn" disabled data-i18n="app.run">じっこう</button>
       <select id="samples">
-        <option value="">おてほん</option>
+        <option value="" data-i18n="app.samplesLabel">おてほん</option>
       </select>
-      <button id="share-btn">きょうゆう</button>
+      <button id="share-btn" data-i18n="app.share">きょうゆう</button>
     </div>
-    <pre id="output"></pre>
+    <pre id="output" dir="ltr"></pre>
     <div id="bookmark-banner" hidden>
-      <p>ブックマークしておくと、つぎもすぐひらけるよ！</p>
-      <button id="bookmark-close">とじる</button>
+      <p data-i18n="app.bookmarkMsg">ブックマークしておくと、つぎもすぐひらけるよ！</p>
+      <button id="bookmark-close" data-i18n="app.bookmarkClose">とじる</button>
     </div>
   </div>
   <script type="module" src="dist/bundle.js"></script>
   <footer class="site-footer">
-    <p>運営: <a href="https://feel-physics.jp" target="_blank" rel="noopener">Feel Physics</a></p>
-    <p><a href="mailto:tatsuro.ueda@feel-physics.jp">お問い合わせ</a> ｜ <a href="/privacy.html">プライバシーポリシー</a></p>
+    <p><span data-i18n="app.footerOperator">運営:</span> <a href="https://feel-physics.jp" target="_blank" rel="noopener">Feel Physics</a></p>
+    <p><a href="mailto:tatsuro.ueda@feel-physics.jp" data-i18n="app.footerContact">お問い合わせ</a> ｜ <a href="/privacy.html" data-i18n="app.footerPrivacy">プライバシーポリシー</a> ｜ <a href="https://discord.gg/TODO" target="_blank" rel="noopener" data-i18n="app.helpTranslate">翻訳を手伝う / Help translate</a></p>
     <p>&copy; 2026 Feel Physics</p>
   </footer>
 </body>
