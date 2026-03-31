@@ -72,7 +72,19 @@
       "Read(//home/exedev/dotfiles/claude/.claude/hooks/**)",
       "Bash(/home/exedev/.claude/hooks/notification.sh)",
       "Bash(do echo:*)",
-      "Read(//home/exedev/online-python/locales/$lang/**)"
+      "Read(//home/exedev/online-python/locales/$lang/**)",
+      "Bash(npx esbuild:*)",
+      "Bash(git push:*)",
+      "Bash(git -c credential.helper= -c \"credential.https://github.com.helper=!/bin/gh auth git-credential\" push origin main)",
+      "Read(//var/log/nginx/**)",
+      "Read(//var/log/**)",
+      "Bash(journalctl --no-pager -n 50)",
+      "Bash(journalctl -u nginx --no-pager -n 30)",
+      "Read(//etc/nginx/**)",
+      "Skill(design-architecture)",
+      "Bash(grep -v \"^/home/exedev/online-python/docs/steering$\")",
+      "Bash(for b:*)",
+      "Bash(git log:*)"
     ]
   }
 }
