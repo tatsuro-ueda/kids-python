@@ -400,6 +400,28 @@ h3 {
   margin-top: 8px;
 }
 
+/* Testimonial (Tweet Embed) */
+.testimonial {
+  background: #fff;
+  border-radius: 12px;
+  border: 2px solid #b8d8e8;
+}
+
+.testimonial-embed {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.testimonial-profile {
+  color: #888;
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+
+.testimonial + .safety {
+  margin-top: 40px;
+}
+
 /* Share Section */
 .share-section {
   margin-top: 24px;
