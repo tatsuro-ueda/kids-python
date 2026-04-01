@@ -1,6 +1,6 @@
 import { basicSetup } from "codemirror";
 import { EditorView } from "@codemirror/view";
-import { EditorState, StateEffect, StateField } from "@codemirror/state";
+import { EditorState, StateEffect, StateField, EditorSelection } from "@codemirror/state";
 import { Decoration } from "@codemirror/view";
 import { python } from "@codemirror/lang-python";
 import { loadCode, saveCode } from "./storage.js";
@@ -11,10 +11,36 @@ const clearErrorLine = StateEffect.define();
 const errorLineDeco = Decoration.line({ class: "cm-error-line" });
 
 const selectionTheme = EditorView.theme({
-  "&.cm-focused .cm-selectionBackground, .cm-selectionBackground": {
-    backgroundColor: "#a88cd8 !important"
+  "&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground": {
+    background: "#d7d4f0 !important"
+  },
+  ".cm-selectionBackground": {
+    background: "#d7d4f080 !important"
   }
 });
+
+let isPasting = false;
+
+const pasteSelectExtension = [
+  EditorView.domEventHandlers({
+    paste() { isPasting = true; }
+  }),
+  EditorView.updateListener.of((update) => {
+    if (isPasting && update.docChanged) {
+      isPasting = false;
+      let from, to;
+      update.changes.iterChanges((_fromA, _toA, fromB, toB) => {
+        from = fromB;
+        to = toB;
+      });
+      if (from !== undefined && from !== to) {
+        update.view.dispatch({
+          selection: EditorSelection.range(from, to)
+        });
+      }
+    }
+  })
+];
 
 const errorLineField = StateField.define({
   create() { return Decoration.none; },
@@ -42,6 +68,7 @@ export function createEditor(parent) {
       basicSetup,
       python(),
       selectionTheme,
+      pasteSelectExtension,
       errorLineField,
       EditorView.updateListener.of((update) => {
         if (update.docChanged) {

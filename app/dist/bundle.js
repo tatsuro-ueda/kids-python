@@ -29055,10 +29055,36 @@ var setErrorLine = StateEffect.define();
 var clearErrorLine = StateEffect.define();
 var errorLineDeco = Decoration.line({ class: "cm-error-line" });
 var selectionTheme = EditorView.theme({
-  "&.cm-focused .cm-selectionBackground, .cm-selectionBackground": {
-    backgroundColor: "#a88cd8 !important"
+  "&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground": {
+    background: "#d7d4f0 !important"
+  },
+  ".cm-selectionBackground": {
+    background: "#d7d4f080 !important"
   }
 });
+var isPasting = false;
+var pasteSelectExtension = [
+  EditorView.domEventHandlers({
+    paste() {
+      isPasting = true;
+    }
+  }),
+  EditorView.updateListener.of((update) => {
+    if (isPasting && update.docChanged) {
+      isPasting = false;
+      let from, to;
+      update.changes.iterChanges((_fromA, _toA, fromB, toB) => {
+        from = fromB;
+        to = toB;
+      });
+      if (from !== void 0 && from !== to) {
+        update.view.dispatch({
+          selection: EditorSelection.range(from, to)
+        });
+      }
+    }
+  })
+];
 var errorLineField = StateField.define({
   create() {
     return Decoration.none;
@@ -29086,6 +29112,7 @@ function createEditor(parent) {
       basicSetup,
       python(),
       selectionTheme,
+      pasteSelectExtension,
       errorLineField,
       EditorView.updateListener.of((update) => {
         if (update.docChanged) {
