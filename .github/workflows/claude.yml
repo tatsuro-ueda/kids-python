@@ -40,10 +40,6 @@ jobs:
           show_full_output: true
           additional_permissions: |
             actions: read
-            contents: write
-            pull-requests: write
-            issues: write
-          claude_args: "--allowedTools 'Bash(git:*)' 'Bash(gh:*)' 'Bash(npm:*)' 'Bash(node:*)' 'Read' 'Write' 'Edit' 'Glob' 'Grep'"
           prompt: |
             このIssueの内容に基づいて実装し、Draft PRを作成してください。
 
