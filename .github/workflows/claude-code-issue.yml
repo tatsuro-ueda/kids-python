@@ -1,0 +1,46 @@
+name: Claude Code - Issue to PR
+
+on:
+  issues:
+    types: [opened, labeled]
+
+jobs:
+  claude-code:
+    if: |
+      github.event.action == 'opened' ||
+      (github.event.action == 'labeled' && github.event.label.name == 'claude')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Claude Code
+        uses: anthropics/claude-code-action@v1
+        with:
+          use_claude_code_github_app: true
+          direct_prompt: |
+            以下のGitHub Issueの内容を読んで、実装してPRを作成してください。
+
+            Issue #${{ github.event.issue.number }}: ${{ github.event.issue.title }}
+
+            ${{ github.event.issue.body }}
+
+            手順:
+            1. issueの内容を理解する
+            2. 新しいブランチを作成する (issue-${{ github.event.issue.number }})
+            3. 必要な変更を実装する
+            4. 変更をコミットしてプッシュする
+            5. PRを作成する（issueへのリンクを含める）
+          allowed_tools: |
+            Bash
+            Read
+            Write
+            Edit
+            Glob
+            Grep
