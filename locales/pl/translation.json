@@ -22,7 +22,13 @@
     "footerContact": "Kontakt",
     "footerPrivacy": "Polityka prywatnosci",
     "helpTranslate": "Pomoz z tlumaczeniem",
-    "privacyUrl": "/pl/privacy.html"
+    "privacyUrl": "/pl/privacy.html",
+    "helpBtn": "Nie rozumiem!",
+    "helpPlaceholder": "Czego nie rozumiesz?",
+    "helpSend": "Wyślij",
+    "helpCancel": "Anuluj",
+    "helpSent": "Wysłano do nauczyciela! ✅",
+    "helpFailed": "Nie udało się wysłać. Spróbuj ponownie."
   },
   "error": {
     "parenOpen": "Nawias `(` nie zostal zamkniety. Dodaj `)`",

@@ -22,7 +22,13 @@
     "footerContact": "સંપર્ક",
     "footerPrivacy": "ગોપનીયતા નીતિ",
     "helpTranslate": "ભાષાંતરમાં મદદ કરો / Help translate",
-    "privacyUrl": "/gu/privacy.html"
+    "privacyUrl": "/gu/privacy.html",
+    "helpBtn": "સમજાતું નથી!",
+    "helpPlaceholder": "શું સમજાતું નથી?",
+    "helpSend": "મોકલો",
+    "helpCancel": "રદ કરો",
+    "helpSent": "શિક્ષકને મોકલ્યું! ✅",
+    "helpFailed": "મોકલી શકાયું નહીં. ફરી પ્રયાસ કરો"
   },
   "error": {
     "parenOpen": "કૌંસ `(` બંધ નથી થયું. `)` ઉમેરો",

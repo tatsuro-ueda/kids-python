@@ -22,7 +22,13 @@
     "footerContact": "ያግኙን",
     "footerPrivacy": "የግላዊነት ፖሊሲ",
     "helpTranslate": "ለመተርጎም እርዱ / Help translate",
-    "privacyUrl": "/am/privacy.html"
+    "privacyUrl": "/am/privacy.html",
+    "helpBtn": "አልገባኝም!",
+    "helpPlaceholder": "ምን አልገባህም?",
+    "helpSend": "ላክ",
+    "helpCancel": "ሰርዝ",
+    "helpSent": "ለመምህር ተልኳል! ✅",
+    "helpFailed": "መላክ አልተቻለም። እንደገና ሞክር"
   },
   "error": {
     "parenOpen": "ቅንፍ `(` አልተዘጋም። `)` ጨምር",

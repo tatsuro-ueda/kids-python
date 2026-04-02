@@ -22,7 +22,13 @@
     "footerContact": "Hubungi kami",
     "footerPrivacy": "Kebijakan privasi",
     "helpTranslate": "Bantu menerjemahkan / Help translate",
-    "privacyUrl": "/id/privacy.html"
+    "privacyUrl": "/id/privacy.html",
+    "helpBtn": "Tidak mengerti!",
+    "helpPlaceholder": "Apa yang tidak kamu mengerti?",
+    "helpSend": "Kirim",
+    "helpCancel": "Batal",
+    "helpSent": "Sudah dikirim ke guru! ✅",
+    "helpFailed": "Gagal mengirim. Coba lagi."
   },
   "error": {
     "parenOpen": "Tanda kurung `(` belum ditutup. Tambahkan `)` untuk menutupnya",

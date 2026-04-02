@@ -22,7 +22,13 @@
     "footerContact": "సంప్రదించండి",
     "footerPrivacy": "గోప్యతా విధానం",
     "helpTranslate": "అనువాదంలో సహాయం చేయండి / Help translate",
-    "privacyUrl": "/te/privacy.html"
+    "privacyUrl": "/te/privacy.html",
+    "helpBtn": "అర్థం కాలేదు!",
+    "helpPlaceholder": "ఏమి అర్థం కాలేదు?",
+    "helpSend": "పంపు",
+    "helpCancel": "రద్దు",
+    "helpSent": "టీచర్‌కి పంపాం! ✅",
+    "helpFailed": "పంపలేకపోయాం. మళ్ళీ ట్రై చేయి"
   },
   "error": {
     "parenOpen": "బ్రాకెట్ `(` మూసివేయలేదు. `)` జోడించు",

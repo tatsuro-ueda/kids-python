@@ -22,7 +22,13 @@
     "footerContact": "Wasiliana Nasi",
     "footerPrivacy": "Sera ya Faragha",
     "helpTranslate": "Saidia kutafsiri / Help translate",
-    "privacyUrl": "/sw/privacy.html"
+    "privacyUrl": "/sw/privacy.html",
+    "helpBtn": "Sielewi!",
+    "helpPlaceholder": "Huelewi nini?",
+    "helpSend": "Tuma",
+    "helpCancel": "Ghairi",
+    "helpSent": "Imetumwa kwa mwalimu! ✅",
+    "helpFailed": "Haikutumwa. Jaribu tena."
   },
   "error": {
     "parenOpen": "Mabano `(` hayajafungwa. Ongeza `)` tafadhali",

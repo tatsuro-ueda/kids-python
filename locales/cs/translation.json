@@ -22,7 +22,13 @@
     "footerContact": "Kontakt",
     "footerPrivacy": "Zasady ochrany soukromi",
     "helpTranslate": "Pomoz s prekladem",
-    "privacyUrl": "/cs/privacy.html"
+    "privacyUrl": "/cs/privacy.html",
+    "helpBtn": "Nerozumím!",
+    "helpPlaceholder": "Čemu nerozumíš?",
+    "helpSend": "Odeslat",
+    "helpCancel": "Zrušit",
+    "helpSent": "Odesláno učiteli! ✅",
+    "helpFailed": "Nepodařilo se odeslat. Zkus to znovu."
   },
   "error": {
     "parenOpen": "Zavorka `(` nebyla nikdy zavrena. Pridej `)`",

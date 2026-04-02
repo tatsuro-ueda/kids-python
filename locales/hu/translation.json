@@ -22,7 +22,13 @@
     "footerContact": "Kapcsolat",
     "footerPrivacy": "Adatvedelmi szabalyzat",
     "helpTranslate": "Segits a forditasban",
-    "privacyUrl": "/hu/privacy.html"
+    "privacyUrl": "/hu/privacy.html",
+    "helpBtn": "Nem értem!",
+    "helpPlaceholder": "Mit nem értesz?",
+    "helpSend": "Küldés",
+    "helpCancel": "Mégse",
+    "helpSent": "Elküldve a tanárnak! ✅",
+    "helpFailed": "Nem sikerült elküldeni. Próbáld újra."
   },
   "error": {
     "parenOpen": "A zarojel `(` soha nem lett bezarva. Tedd hozza a `)`-t",

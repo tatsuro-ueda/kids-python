@@ -22,7 +22,13 @@
     "footerContact": "Contact",
     "footerPrivacy": "Privacybeleid",
     "helpTranslate": "Help met vertalen",
-    "privacyUrl": "/nl/privacy.html"
+    "privacyUrl": "/nl/privacy.html",
+    "helpBtn": "Ik snap het niet!",
+    "helpPlaceholder": "Wat snap je niet?",
+    "helpSend": "Verstuur",
+    "helpCancel": "Annuleren",
+    "helpSent": "Naar de leraar gestuurd! ✅",
+    "helpFailed": "Kon niet versturen. Probeer opnieuw."
   },
   "error": {
     "parenOpen": "Het haakje `(` is nooit gesloten. Voeg `)` toe",

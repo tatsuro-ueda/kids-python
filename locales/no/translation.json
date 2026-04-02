@@ -22,7 +22,13 @@
     "footerContact": "Kontakt",
     "footerPrivacy": "Personvern",
     "helpTranslate": "Hjelp til a oversette",
-    "privacyUrl": "/no/privacy.html"
+    "privacyUrl": "/no/privacy.html",
+    "helpBtn": "Jeg skjønner ikke!",
+    "helpPlaceholder": "Hva skjønner du ikke?",
+    "helpSend": "Send",
+    "helpCancel": "Avbryt",
+    "helpSent": "Sendt til læreren! ✅",
+    "helpFailed": "Kunne ikke sende. Prøv igjen."
   },
   "error": {
     "parenOpen": "Parentesen `(` ble aldri lukket. Legg til `)` for a lukke den",

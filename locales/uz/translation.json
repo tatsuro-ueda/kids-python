@@ -22,7 +22,13 @@
     "footerContact": "Aloqa",
     "footerPrivacy": "Maxfiylik siyosati",
     "helpTranslate": "Tarjimaga yordam bering",
-    "privacyUrl": "/uz/privacy.html"
+    "privacyUrl": "/uz/privacy.html",
+    "helpBtn": "Tushunmadim!",
+    "helpPlaceholder": "Nimani tushunmading?",
+    "helpSend": "Yuborish",
+    "helpCancel": "Bekor",
+    "helpSent": "O'qituvchiga yuborildi! ✅",
+    "helpFailed": "Yuborib bo'lmadi. Qayta urinib ko'ring"
   },
   "error": {
     "parenOpen": "Qavs `(` yopilmagan. `)` qoʻshib yop",

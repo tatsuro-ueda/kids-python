@@ -22,7 +22,13 @@
     "footerContact": "رابطہ کریں",
     "footerPrivacy": "رازداری کی پالیسی",
     "helpTranslate": "ترجمے میں مدد کریں / Help translate",
-    "privacyUrl": "/ur/privacy.html"
+    "privacyUrl": "/ur/privacy.html",
+    "helpBtn": "سمجھ نہیں آیا!",
+    "helpPlaceholder": "کیا سمجھ نہیں آیا?",
+    "helpSend": "بھیجو",
+    "helpCancel": "منسوخ",
+    "helpSent": "ٹیچر کو بھیج دیا! ✅",
+    "helpFailed": "بھیج نہیں پائے۔ دوبارہ کوشش کرو"
   },
   "error": {
     "parenOpen": "قوسین `(` بند نہیں ہوا۔ `)` لگاؤ",

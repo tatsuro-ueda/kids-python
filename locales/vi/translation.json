@@ -22,7 +22,13 @@
     "footerContact": "Lien he",
     "footerPrivacy": "Chinh sach bao mat",
     "helpTranslate": "Giup dich / Help translate",
-    "privacyUrl": "/vi/privacy.html"
+    "privacyUrl": "/vi/privacy.html",
+    "helpBtn": "Không hiểu!",
+    "helpPlaceholder": "Bạn không hiểu gì?",
+    "helpSend": "Gửi",
+    "helpCancel": "Hủy",
+    "helpSent": "Đã gửi cho thầy cô! ✅",
+    "helpFailed": "Không gửi được. Thử lại nhé."
   },
   "error": {
     "parenOpen": "Dau ngoac `(` chua duoc dong. Them `)` de dong lai nhe",

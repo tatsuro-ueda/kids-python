@@ -22,7 +22,13 @@
     "footerContact": "კონტაქტი",
     "footerPrivacy": "კონფიდენციალურობის პოლიტიკა",
     "helpTranslate": "დაეხმარე თარგმანს",
-    "privacyUrl": "/ka/privacy.html"
+    "privacyUrl": "/ka/privacy.html",
+    "helpBtn": "ვერ ვხვდები!",
+    "helpPlaceholder": "რა ვერ გაიგე?",
+    "helpSend": "გაგზავნა",
+    "helpCancel": "გაუქმება",
+    "helpSent": "მასწავლებელს გაეგზავნა! ✅",
+    "helpFailed": "ვერ გაიგზავნა. კიდევ სცადე"
   },
   "error": {
     "parenOpen": "ფრჩხილი `(` არ დაიხურა. დაამატე `)`",

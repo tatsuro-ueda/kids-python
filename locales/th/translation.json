@@ -22,7 +22,13 @@
     "footerContact": "ติดต่อเรา",
     "footerPrivacy": "นโยบายความเป็นส่วนตัว",
     "helpTranslate": "ช่วยแปล / Help translate",
-    "privacyUrl": "/th/privacy.html"
+    "privacyUrl": "/th/privacy.html",
+    "helpBtn": "ไม่เข้าใจ!",
+    "helpPlaceholder": "ไม่เข้าใจตรงไหน?",
+    "helpSend": "ส่ง",
+    "helpCancel": "ยกเลิก",
+    "helpSent": "ส่งให้คุณครูแล้ว! ✅",
+    "helpFailed": "ส่งไม่ได้ ลองใหม่นะ"
   },
   "error": {
     "parenOpen": "วงเล็บ `(` ยังไม่ได้ปิดนะ ใส่ `)` ด้วย",

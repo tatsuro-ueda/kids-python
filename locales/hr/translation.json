@@ -22,7 +22,13 @@
     "footerContact": "Kontakt",
     "footerPrivacy": "Pravila privatnosti",
     "helpTranslate": "Pomozi s prijevodom",
-    "privacyUrl": "/hr/privacy.html"
+    "privacyUrl": "/hr/privacy.html",
+    "helpBtn": "Ne razumijem!",
+    "helpPlaceholder": "Što ne razumiješ?",
+    "helpSend": "Pošalji",
+    "helpCancel": "Odustani",
+    "helpSent": "Poslano učitelju! ✅",
+    "helpFailed": "Nije uspjelo. Pokušaj ponovo."
   },
   "error": {
     "parenOpen": "Zagrada `(` nije zatvorena. Dodaj `)` da je zatvoriš",

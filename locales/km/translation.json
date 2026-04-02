@@ -22,7 +22,13 @@
     "footerContact": "ទំនាក់ទំនង",
     "footerPrivacy": "គោលការណ៍ឯកជន",
     "helpTranslate": "ជួយបកប្រែ",
-    "privacyUrl": "/km/privacy.html"
+    "privacyUrl": "/km/privacy.html",
+    "helpBtn": "មិនយល់!",
+    "helpPlaceholder": "មិនយល់ត្រង់ណា?",
+    "helpSend": "ផ្ញើ",
+    "helpCancel": "បោះបង់",
+    "helpSent": "បានផ្ញើទៅគ្រូហើយ! ✅",
+    "helpFailed": "ផ្ញើមិនបាន។ សាកម្ដងទៀត"
   },
   "error": {
     "parenOpen": "វង់ក្រចក `(` មិនទាន់បិទ។ បន្ថែម `)` ដើម្បីបិទវា",

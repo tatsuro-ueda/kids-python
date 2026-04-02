@@ -22,7 +22,13 @@
     "footerContact": "Kontakt",
     "footerPrivacy": "Datenschutz",
     "helpTranslate": "Beim Uebersetzen helfen",
-    "privacyUrl": "/de/privacy.html"
+    "privacyUrl": "/de/privacy.html",
+    "helpBtn": "Ich verstehe nicht!",
+    "helpPlaceholder": "Was verstehst du nicht?",
+    "helpSend": "Senden",
+    "helpCancel": "Abbrechen",
+    "helpSent": "An den Lehrer gesendet! ✅",
+    "helpFailed": "Konnte nicht gesendet werden. Versuch es nochmal."
   },
   "error": {
     "parenOpen": "Die Klammer `(` wurde nie geschlossen. Fuege `)` hinzu",

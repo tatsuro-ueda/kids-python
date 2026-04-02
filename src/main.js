@@ -207,6 +207,53 @@ async function main() {
       }
     });
   }
+  // わからない！ボタン
+  const helpBtn = document.getElementById("help-btn");
+  const helpForm = document.getElementById("help-form");
+  const helpMsg = document.getElementById("help-msg");
+  const helpSend = document.getElementById("help-send");
+  const helpCancel = document.getElementById("help-cancel");
+
+  if (helpBtn && helpForm) {
+    helpBtn.addEventListener("click", () => {
+      helpForm.hidden = !helpForm.hidden;
+      if (!helpForm.hidden) helpMsg.focus();
+    });
+
+    helpCancel.addEventListener("click", () => {
+      helpForm.hidden = true;
+      helpMsg.value = "";
+    });
+
+    helpSend.addEventListener("click", async () => {
+      helpSend.disabled = true;
+      try {
+        const res = await fetch("/api/help", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            code: editor.state.doc.toString(),
+            output: outputEl.textContent,
+            lang: getLocale(),
+            message: helpMsg.value,
+          }),
+        });
+        if (res.ok) {
+          helpForm.hidden = true;
+          helpMsg.value = "";
+          outputEl.textContent = "";
+          appendOutput(t("app.helpSent"));
+        } else {
+          appendOutput(t("app.helpFailed"));
+        }
+      } catch {
+        appendOutput(t("app.helpFailed"));
+      } finally {
+        helpSend.disabled = false;
+      }
+    });
+  }
+
   // Send Issue ボタン
   const issueBtn = document.getElementById("issue-btn");
   if (issueBtn) {

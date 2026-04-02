@@ -22,7 +22,13 @@
     "footerContact": "Контакт",
     "footerPrivacy": "Политика приватности",
     "helpTranslate": "Помози у преводу",
-    "privacyUrl": "/sr/privacy.html"
+    "privacyUrl": "/sr/privacy.html",
+    "helpBtn": "Не разумем!",
+    "helpPlaceholder": "Шта не разумеш?",
+    "helpSend": "Пошаљи",
+    "helpCancel": "Откажи",
+    "helpSent": "Послато учитељу! ✅",
+    "helpFailed": "Није послато. Покушај поново."
   },
   "error": {
     "parenOpen": "Заграда `(` није затворена. Додај `)` да је затвориш",

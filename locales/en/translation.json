@@ -22,7 +22,13 @@
     "footerContact": "Contact",
     "footerPrivacy": "Privacy Policy",
     "helpTranslate": "Help translate",
-    "privacyUrl": "/en/privacy.html"
+    "privacyUrl": "/en/privacy.html",
+    "helpBtn": "I don't get it!",
+    "helpPlaceholder": "What don't you understand?",
+    "helpSend": "Send",
+    "helpCancel": "Cancel",
+    "helpSent": "Sent to teacher! ✅",
+    "helpFailed": "Couldn't send. Try again."
   },
   "error": {
     "parenOpen": "The parenthesis `(` was never closed. Add `)` to close it",

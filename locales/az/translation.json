@@ -22,7 +22,13 @@
     "footerContact": "Əlaqə",
     "footerPrivacy": "Məxfilik siyasəti",
     "helpTranslate": "Tərcüməyə kömək et",
-    "privacyUrl": "/az/privacy.html"
+    "privacyUrl": "/az/privacy.html",
+    "helpBtn": "Başa düşmürəm!",
+    "helpPlaceholder": "Nəyi başa düşmürsən?",
+    "helpSend": "Göndər",
+    "helpCancel": "Ləğv et",
+    "helpSent": "Müəllimə göndərildi! ✅",
+    "helpFailed": "Göndərilmədi. Yenidən cəhd et"
   },
   "error": {
     "parenOpen": "Mötərizə `(` bağlanmayıb. `)` əlavə edib bağla",

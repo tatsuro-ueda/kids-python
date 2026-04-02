@@ -22,7 +22,13 @@
     "footerContact": "צור קשר",
     "footerPrivacy": "מדיניות פרטיות",
     "helpTranslate": "עזור בתרגום",
-    "privacyUrl": "/he/privacy.html"
+    "privacyUrl": "/he/privacy.html",
+    "helpBtn": "לא מבין!",
+    "helpPlaceholder": "מה לא הבנת?",
+    "helpSend": "שלח",
+    "helpCancel": "ביטול",
+    "helpSent": "נשלח למורה! ✅",
+    "helpFailed": "לא הצלחנו לשלוח. נסה שוב"
   },
   "error": {
     "parenOpen": "הסוגריים `(` לא נסגרו. הוסף `)` כדי לסגור",

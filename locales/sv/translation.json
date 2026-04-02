@@ -22,7 +22,13 @@
     "footerContact": "Kontakt",
     "footerPrivacy": "Integritetspolicy",
     "helpTranslate": "Hjalp till att oversatta",
-    "privacyUrl": "/sv/privacy.html"
+    "privacyUrl": "/sv/privacy.html",
+    "helpBtn": "Jag förstår inte!",
+    "helpPlaceholder": "Vad förstår du inte?",
+    "helpSend": "Skicka",
+    "helpCancel": "Avbryt",
+    "helpSent": "Skickat till läraren! ✅",
+    "helpFailed": "Kunde inte skicka. Försök igen."
   },
   "error": {
     "parenOpen": "Parentesen `(` stangdes aldrig. Lagg till `)`",

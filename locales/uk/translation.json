@@ -22,7 +22,13 @@
     "footerContact": "Контакти",
     "footerPrivacy": "Політика конфіденційності",
     "helpTranslate": "Допоможи з перекладом",
-    "privacyUrl": "/uk/privacy.html"
+    "privacyUrl": "/uk/privacy.html",
+    "helpBtn": "Не розумію!",
+    "helpPlaceholder": "Що незрозуміло?",
+    "helpSend": "Надіслати",
+    "helpCancel": "Скасувати",
+    "helpSent": "Надіслано вчителю! ✅",
+    "helpFailed": "Не вдалося надіслати. Спробуй ще раз."
   },
   "error": {
     "parenOpen": "Дужка `(` не була закрита. Додай `)`",

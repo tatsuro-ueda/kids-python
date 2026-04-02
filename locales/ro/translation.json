@@ -22,7 +22,13 @@
     "footerContact": "Contact",
     "footerPrivacy": "Politica de confidentialitate",
     "helpTranslate": "Ajuta la traducere",
-    "privacyUrl": "/ro/privacy.html"
+    "privacyUrl": "/ro/privacy.html",
+    "helpBtn": "Nu înțeleg!",
+    "helpPlaceholder": "Ce nu înțelegi?",
+    "helpSend": "Trimite",
+    "helpCancel": "Anulează",
+    "helpSent": "Trimis profesorului! ✅",
+    "helpFailed": "Nu s-a putut trimite. Încearcă din nou."
   },
   "error": {
     "parenOpen": "Paranteza `(` nu a fost inchisa. Adauga `)`",

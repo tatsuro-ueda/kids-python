@@ -22,7 +22,13 @@
     "footerContact": "தொடர்பு கொள்ளுங்கள்",
     "footerPrivacy": "தனியுரிமைக் கொள்கை",
     "helpTranslate": "மொழிபெயர்க்க உதவுங்கள் / Help translate",
-    "privacyUrl": "/ta/privacy.html"
+    "privacyUrl": "/ta/privacy.html",
+    "helpBtn": "புரியல!",
+    "helpPlaceholder": "என்ன புரியல?",
+    "helpSend": "அனுப்பு",
+    "helpCancel": "ரத்து",
+    "helpSent": "டீச்சருக்கு அனுப்பிட்டோம்! ✅",
+    "helpFailed": "அனுப்ப முடியல. மறுபடி முயற்சி செய்"
   },
   "error": {
     "parenOpen": "அடைப்புக்குறி `(` மூடப்படவில்லை. `)` சேர்",

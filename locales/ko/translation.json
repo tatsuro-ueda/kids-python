@@ -22,7 +22,13 @@
     "footerContact": "문의하기",
     "footerPrivacy": "개인정보처리방침",
     "helpTranslate": "번역을 도와주세요 / Help translate",
-    "privacyUrl": "/ko/privacy.html"
+    "privacyUrl": "/ko/privacy.html",
+    "helpBtn": "모르겠어!",
+    "helpPlaceholder": "어디가 모르겠어?",
+    "helpSend": "보내기",
+    "helpCancel": "취소",
+    "helpSent": "선생님에게 보냈어! ✅",
+    "helpFailed": "보내지 못했어. 다시 해 봐."
   },
   "error": {
     "parenOpen": "괄호 `(` 가 닫히지 않았어. `)` 를 넣어줘",

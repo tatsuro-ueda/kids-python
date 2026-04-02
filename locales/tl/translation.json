@@ -22,7 +22,13 @@
     "footerContact": "Makipag-ugnayan",
     "footerPrivacy": "Patakaran sa Privacy",
     "helpTranslate": "Tumulong sa pagsasalin / Help translate",
-    "privacyUrl": "/tl/privacy.html"
+    "privacyUrl": "/tl/privacy.html",
+    "helpBtn": "Hindi ko maintindihan!",
+    "helpPlaceholder": "Ano ang hindi mo maintindihan?",
+    "helpSend": "Ipadala",
+    "helpCancel": "Kanselahin",
+    "helpSent": "Naipadala na sa guro! ✅",
+    "helpFailed": "Hindi naipadala. Subukan ulit."
   },
   "error": {
     "parenOpen": "Hindi pa nasara ang panaklong na `(`. Lagyan ng `)` ha",

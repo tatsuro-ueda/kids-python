@@ -22,7 +22,13 @@
     "footerContact": "聯絡我們",
     "footerPrivacy": "隱私權政策",
     "helpTranslate": "幫忙翻譯 / Help translate",
-    "privacyUrl": "/zh-TW/privacy.html"
+    "privacyUrl": "/zh-TW/privacy.html",
+    "helpBtn": "看不懂！",
+    "helpPlaceholder": "哪裡看不懂？",
+    "helpSend": "送出",
+    "helpCancel": "取消",
+    "helpSent": "已經傳給老師了！✅",
+    "helpFailed": "傳送失敗，再試一次吧"
   },
   "error": {
     "parenOpen": "括號 `(` 還沒關起來喔，加上 `)` 吧",

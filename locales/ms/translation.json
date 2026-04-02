@@ -22,7 +22,13 @@
     "footerContact": "Hubungi Kami",
     "footerPrivacy": "Dasar Privasi",
     "helpTranslate": "Bantu terjemah / Help translate",
-    "privacyUrl": "/ms/privacy.html"
+    "privacyUrl": "/ms/privacy.html",
+    "helpBtn": "Tak faham!",
+    "helpPlaceholder": "Apa yang tak faham?",
+    "helpSend": "Hantar",
+    "helpCancel": "Batal",
+    "helpSent": "Dah hantar ke cikgu! ✅",
+    "helpFailed": "Tak dapat hantar. Cuba lagi."
   },
   "error": {
     "parenOpen": "Kurungan `(` belum ditutup. Tambah `)` ya",

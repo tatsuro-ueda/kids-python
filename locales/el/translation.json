@@ -22,7 +22,13 @@
     "footerContact": "Επικοινωνία",
     "footerPrivacy": "Πολιτική απορρήτου",
     "helpTranslate": "Βοήθησε στη μετάφραση",
-    "privacyUrl": "/el/privacy.html"
+    "privacyUrl": "/el/privacy.html",
+    "helpBtn": "Δεν καταλαβαίνω!",
+    "helpPlaceholder": "Τι δεν καταλαβαίνεις;",
+    "helpSend": "Αποστολή",
+    "helpCancel": "Ακύρωση",
+    "helpSent": "Στάλθηκε στον δάσκαλο! ✅",
+    "helpFailed": "Δεν στάλθηκε. Δοκίμασε ξανά."
   },
   "error": {
     "parenOpen": "Η παρένθεση `(` δεν έκλεισε ποτέ. Πρόσθεσε `)`",

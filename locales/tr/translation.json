@@ -22,7 +22,13 @@
     "footerContact": "Iletisim",
     "footerPrivacy": "Gizlilik politikasi",
     "helpTranslate": "Ceviri yapmaya yardim et / Help translate",
-    "privacyUrl": "/tr/privacy.html"
+    "privacyUrl": "/tr/privacy.html",
+    "helpBtn": "Anlamadım!",
+    "helpPlaceholder": "Neyi anlamadın?",
+    "helpSend": "Gönder",
+    "helpCancel": "İptal",
+    "helpSent": "Öğretmene gönderildi! ✅",
+    "helpFailed": "Gönderilemedi. Tekrar dene."
   },
   "error": {
     "parenOpen": "Parantez `(` kapatilmamis. `)` ekleyerek kapat",

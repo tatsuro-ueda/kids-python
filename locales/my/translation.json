@@ -22,7 +22,13 @@
     "footerContact": "ဆက်သွယ်ရန်",
     "footerPrivacy": "ကိုယ်ရေးကိုယ်တာမူဝါဒ",
     "helpTranslate": "ဘာသာပြန်ကူညီပါ",
-    "privacyUrl": "/my/privacy.html"
+    "privacyUrl": "/my/privacy.html",
+    "helpBtn": "နားမလည်ဘူး!",
+    "helpPlaceholder": "ဘာနားမလည်တာလဲ?",
+    "helpSend": "ပို့မယ်",
+    "helpCancel": "မလုပ်တော့ဘူး",
+    "helpSent": "ဆရာဆီပို့ပြီးပြီ! ✅",
+    "helpFailed": "ပို့လို့မရဘူး။ ထပ်ကြိုးစားပါ"
   },
   "error": {
     "parenOpen": "ကွင်းစ `(` ကို မပိတ်ရသေးဘူး။ `)` ထည့်ပေးပါ",

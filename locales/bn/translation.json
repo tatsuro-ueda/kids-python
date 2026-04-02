@@ -22,7 +22,13 @@
     "footerContact": "যোগাযোগ",
     "footerPrivacy": "গোপনীয়তা নীতি",
     "helpTranslate": "অনুবাদে সাহায্য করো / Help translate",
-    "privacyUrl": "/bn/privacy.html"
+    "privacyUrl": "/bn/privacy.html",
+    "helpBtn": "বুঝতে পারছি না!",
+    "helpPlaceholder": "কী বুঝতে পারছ না?",
+    "helpSend": "পাঠাও",
+    "helpCancel": "বাতিল",
+    "helpSent": "টিচারকে পাঠানো হয়েছে! ✅",
+    "helpFailed": "পাঠানো যায়নি। আবার চেষ্টা করো"
   },
   "error": {
     "parenOpen": "বন্ধনী `(` বন্ধ হয়নি। `)` দিয়ে বন্ধ করো",

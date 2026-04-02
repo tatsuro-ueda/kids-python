@@ -22,7 +22,13 @@
     "footerContact": "お問い合わせ",
     "footerPrivacy": "プライバシーポリシー",
     "helpTranslate": "翻訳を手伝う / Help translate",
-    "privacyUrl": "/privacy.html"
+    "privacyUrl": "/privacy.html",
+    "helpBtn": "わからない！",
+    "helpPlaceholder": "どこがわからない？",
+    "helpSend": "おくる",
+    "helpCancel": "やめる",
+    "helpSent": "せんせいにおくったよ！✅",
+    "helpFailed": "おくれなかったよ。もういちどためしてね"
   },
   "lp": {
     "title": "Pythonれんしゅうちょう — 小学生向けブラウザPython学習環境",

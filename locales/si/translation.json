@@ -22,7 +22,13 @@
     "footerContact": "අමතන්න",
     "footerPrivacy": "පෞද්ගලිකත්ව ප්‍රතිපත්තිය",
     "helpTranslate": "පරිවර්තනයට උදව් කරන්න / Help translate",
-    "privacyUrl": "/si/privacy.html"
+    "privacyUrl": "/si/privacy.html",
+    "helpBtn": "තේරෙන්නේ නෑ!",
+    "helpPlaceholder": "මොකද තේරෙන්නේ නැත්තේ?",
+    "helpSend": "යවන්න",
+    "helpCancel": "අවලංගු",
+    "helpSent": "ටීචර්ට යැව්වා! ✅",
+    "helpFailed": "යවන්න බැරි උනා. නැවත උත්සාහ කරන්න"
   },
   "error": {
     "parenOpen": "වරහන `(` වැසී නැහැ. `)` එකතු කරන්න",

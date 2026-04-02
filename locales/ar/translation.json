@@ -22,7 +22,13 @@
     "footerContact": "اتصل بنا",
     "footerPrivacy": "سياسة الخصوصية",
     "helpTranslate": "ساعد في الترجمة / Help translate",
-    "privacyUrl": "/ar/privacy.html"
+    "privacyUrl": "/ar/privacy.html",
+    "helpBtn": "ما فهمت!",
+    "helpPlaceholder": "ماذا لم تفهم؟",
+    "helpSend": "أرسل",
+    "helpCancel": "إلغاء",
+    "helpSent": "تم الإرسال للمعلم! ✅",
+    "helpFailed": "لم يتم الإرسال. حاول مرة أخرى"
   },
   "error": {
     "parenOpen": "القوس `(` لم يُغلق. أضف `)` لإغلاقه",

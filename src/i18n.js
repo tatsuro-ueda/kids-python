@@ -102,6 +102,9 @@ function applyDOM() {
   document.querySelectorAll("[data-i18n-href]").forEach(el => {
     el.href = i18next.t(el.dataset.i18nHref);
   });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+    el.placeholder = i18next.t(el.dataset.i18nPlaceholder);
+  });
 }
 
 export const t = (...args) => i18next.t(...args);

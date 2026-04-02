@@ -22,7 +22,13 @@
     "footerContact": "Связаться",
     "footerPrivacy": "Политика конфиденциальности",
     "helpTranslate": "Помоги с переводом / Help translate",
-    "privacyUrl": "/ru/privacy.html"
+    "privacyUrl": "/ru/privacy.html",
+    "helpBtn": "Не понимаю!",
+    "helpPlaceholder": "Что непонятно?",
+    "helpSend": "Отправить",
+    "helpCancel": "Отмена",
+    "helpSent": "Отправлено учителю! ✅",
+    "helpFailed": "Не удалось отправить. Попробуй ещё раз."
   },
   "error": {
     "parenOpen": "Скобка `(` не закрыта. Добавь `)`",

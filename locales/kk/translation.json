@@ -22,7 +22,13 @@
     "footerContact": "Байланыс",
     "footerPrivacy": "Құпиялылық саясаты",
     "helpTranslate": "Аудармаға көмектесу",
-    "privacyUrl": "/kk/privacy.html"
+    "privacyUrl": "/kk/privacy.html",
+    "helpBtn": "Түсінбедім!",
+    "helpPlaceholder": "Нені түсінбедің?",
+    "helpSend": "Жіберу",
+    "helpCancel": "Болдырмау",
+    "helpSent": "Мұғалімге жіберілді! ✅",
+    "helpFailed": "Жіберілмеді. Қайта көріңіз"
   },
   "error": {
     "parenOpen": "Жақша `(` жабылмаған. `)` қосып жап",

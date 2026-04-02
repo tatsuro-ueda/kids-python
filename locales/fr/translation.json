@@ -22,7 +22,13 @@
     "footerContact": "Contact",
     "footerPrivacy": "Politique de confidentialité",
     "helpTranslate": "Aider à traduire / Help translate",
-    "privacyUrl": "/fr/privacy.html"
+    "privacyUrl": "/fr/privacy.html",
+    "helpBtn": "Je ne comprends pas !",
+    "helpPlaceholder": "Qu'est-ce que tu ne comprends pas ?",
+    "helpSend": "Envoyer",
+    "helpCancel": "Annuler",
+    "helpSent": "Envoyé au professeur ! ✅",
+    "helpFailed": "L'envoi a échoué. Réessaie."
   },
   "error": {
     "parenOpen": "La parenthèse `(` n'est pas fermée. Ajoute `)` pour la fermer",

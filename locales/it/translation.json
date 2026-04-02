@@ -22,7 +22,13 @@
     "footerContact": "Contatti",
     "footerPrivacy": "Privacy",
     "helpTranslate": "Aiuta a tradurre",
-    "privacyUrl": "/it/privacy.html"
+    "privacyUrl": "/it/privacy.html",
+    "helpBtn": "Non capisco!",
+    "helpPlaceholder": "Cosa non capisci?",
+    "helpSend": "Invia",
+    "helpCancel": "Annulla",
+    "helpSent": "Inviato al maestro! ✅",
+    "helpFailed": "Non si è potuto inviare. Riprova."
   },
   "error": {
     "parenOpen": "La parentesi `(` non e mai stata chiusa. Aggiungi `)`",

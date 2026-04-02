@@ -22,7 +22,13 @@
     "footerContact": "संपर्क करें",
     "footerPrivacy": "गोपनीयता नीति",
     "helpTranslate": "अनुवाद में मदद करें / Help translate",
-    "privacyUrl": "/hi/privacy.html"
+    "privacyUrl": "/hi/privacy.html",
+    "helpBtn": "समझ नहीं आया!",
+    "helpPlaceholder": "क्या समझ नहीं आया?",
+    "helpSend": "भेजो",
+    "helpCancel": "रद्द करो",
+    "helpSent": "टीचर को भेज दिया! ✅",
+    "helpFailed": "भेज नहीं पाए। फिर से कोशिश करो"
   },
   "error": {
     "parenOpen": "कोष्ठक `(` बंद नहीं हुआ। `)` लगाओ",

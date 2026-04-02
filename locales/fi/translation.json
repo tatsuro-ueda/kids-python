@@ -22,7 +22,13 @@
     "footerContact": "Ota yhteytta",
     "footerPrivacy": "Tietosuojakaytanto",
     "helpTranslate": "Auta kaantamisessa",
-    "privacyUrl": "/fi/privacy.html"
+    "privacyUrl": "/fi/privacy.html",
+    "helpBtn": "En ymmärrä!",
+    "helpPlaceholder": "Mitä et ymmärrä?",
+    "helpSend": "Lähetä",
+    "helpCancel": "Peruuta",
+    "helpSent": "Lähetetty opettajalle! ✅",
+    "helpFailed": "Ei voitu lähettää. Yritä uudelleen."
   },
   "error": {
     "parenOpen": "Sulku `(` jaatiin sulkematta. Lisaa `)` loppuun",
