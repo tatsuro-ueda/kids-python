@@ -6,7 +6,7 @@ on:
   pull_request_review_comment:
     types: [created]
   issues:
-    types: [opened, assigned]
+    types: [opened, assigned, labeled]
   pull_request_review:
     types: [submitted]
 
@@ -16,35 +16,44 @@ jobs:
       (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude')) ||
       (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude')) ||
       (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude')) ||
-      (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')))
+      (github.event_name == 'issues' && github.event.action == 'opened') ||
+      (github.event_name == 'issues' && github.event.action == 'labeled' && github.event.label.name == 'claude') ||
+      (github.event_name == 'issues' && github.event.action == 'assigned')
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      pull-requests: read
-      issues: read
+      contents: write
+      pull-requests: write
+      issues: write
       id-token: write
-      actions: read # Required for Claude to read CI results on PRs
+      actions: read
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
 
       - name: Run Claude Code
         id: claude
         uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-
-          # This is an optional setting that allows Claude to read CI results on PRs
           additional_permissions: |
             actions: read
+          prompt: |
+            このIssueの内容に基づいて実装し、Draft PRを作成してください。
 
-          # Optional: Give a custom prompt to Claude. If this is not specified, Claude will perform the instructions specified in the comment that tagged it.
-          # prompt: 'Update the pull request description to include a summary of changes.'
+            手順:
+            1. まず docs/ ディレクトリ内のドキュメントをすべて読み、プロジェクトの設計・課題を理解する
+            2. git log --oneline -20 で過去のコミットスタイルを確認する
+            3. issueの内容を理解し、実装方針を決める
+            4. ブランチを作成してチェックアウトする
+            5. 必要な変更を実装する
+            6. 変更をコミットする（過去のコミットメッセージのスタイルに合わせる）
+            7. ブランチをプッシュする
+            8. gh pr create --draft でDraft PRを作成する（本文にCloses #[issue番号]を含める）
 
-          # Optional: Add claude_args to customize behavior and configuration
-          # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
-          # or https://code.claude.com/docs/en/cli-reference for available options
-          # claude_args: '--allowed-tools Bash(gh pr:*)'
-
+            重要:
+            - 必ずDraft PRを作成して完了すること
+            - docs/のドキュメントを必ず参照してから実装すること
+            - 過去のコミット履歴を参考にコーディングスタイルを合わせること
+            - 多言語対応が必要な変更の場合は locales/ も考慮すること
