@@ -14,3 +14,9 @@ export async function getSamples() {
     return [];
   }
 }
+
+export async function getDefaultCode() {
+  const samples = await getSamples();
+  if (samples.length > 0) return samples[0].code;
+  return 'print("Hello, Python!")\n';
+}

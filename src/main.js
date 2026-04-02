@@ -3,7 +3,7 @@ import { createEditor, highlightErrorLine, clearErrorHighlight } from "./editor.
 import { loadPyodide, runCode } from "./runner.js";
 import { translateError } from "./errors.js";
 import { detectSharedCode, setSharedCode, encodeShareURL, getShareIntentURLs, resetCode } from "./storage.js";
-import { getSamples } from "./samples.js";
+import { getSamples, getDefaultCode } from "./samples.js";
 
 async function main() {
   // 1. i18n初期化（言語検出 → JSONロード → DOM翻訳）
@@ -186,7 +186,8 @@ async function main() {
       li.dataset.code = lang.code;
       li.addEventListener("click", async () => {
         await setLocale(lang.code);
-        const defaultCode = resetCode();
+        const defaultCode = await getDefaultCode();
+        resetCode();
         editor.dispatch({
           changes: { from: 0, to: editor.state.doc.length, insert: defaultCode },
         });
