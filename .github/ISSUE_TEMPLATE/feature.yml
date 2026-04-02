@@ -1,0 +1,35 @@
+name: 機能リクエスト
+description: 新機能や改善の提案
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: 何をしたいか
+      description: 実現したいことを具体的に書いてください
+      placeholder: "例: トップページに利用者数カウンターを表示したい"
+    validations:
+      required: true
+  - type: textarea
+    id: where
+    attributes:
+      label: どこに（対象ファイル・画面）
+      description: 変更対象がわかれば記載してください
+      placeholder: "例: index.html のヘッダー部分"
+    validations:
+      required: false
+  - type: textarea
+    id: why
+    attributes:
+      label: なぜ（背景・目的）
+      description: この変更が必要な理由やコンテキスト
+      placeholder: "例: 利用者が増えていることを訪問者に見せたい"
+    validations:
+      required: false
+  - type: textarea
+    id: details
+    attributes:
+      label: 補足情報
+      description: 参考URL、スクリーンショット、デザイン案など
+    validations:
+      required: false

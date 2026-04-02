@@ -25,20 +25,33 @@ jobs:
         with:
           use_claude_code_github_app: true
           direct_prompt: |
-            以下のGitHub Issueの内容を読んで、実装してPRを作成してください。
+            以下のGitHub Issueに基づいて実装し、Draft PRを作成してください。
 
             Issue #${{ github.event.issue.number }}: ${{ github.event.issue.title }}
 
             ${{ github.event.issue.body }}
 
             手順:
-            1. issueの内容を理解する
-            2. 新しいブランチを作成する (issue-${{ github.event.issue.number }})
-            3. 必要な変更を実装する
-            4. 変更をコミットしてプッシュする
-            5. PRを作成する（issueへのリンクを含める）
+            1. まず docs/ ディレクトリ内のドキュメントをすべて読み、プロジェクトの設計・課題を理解する
+            2. git log --oneline -20 で過去のコミットスタイルを確認する
+            3. issueの内容を理解し、実装方針を決める
+            4. ブランチを作成する: git checkout -b issue-${{ github.event.issue.number }}
+            5. 必要な変更を実装する
+            6. 変更をコミットする（過去のコミットメッセージのスタイルに合わせる）
+            7. ブランチをプッシュする: git push -u origin issue-${{ github.event.issue.number }}
+            8. Draft PRを作成する:
+               gh pr create --draft --title "Issue #${{ github.event.issue.number }}: 簡潔なタイトル" --body "Closes #${{ github.event.issue.number }}\n\n## 変更内容\n- 変更点の説明" --base main
+
+            重要:
+            - 必ずDraft PRを作成して完了すること
+            - docs/のドキュメントを必ず参照してから実装すること
+            - 過去のコミット履歴を参考にコーディングスタイルを合わせること
+            - 多言語対応が必要な変更の場合は locales/ も考慮すること
           allowed_tools: |
-            Bash
+            Bash(git:*)
+            Bash(gh pr create:*)
+            Bash(npm:*)
+            Bash(node:*)
             Read
             Write
             Edit
