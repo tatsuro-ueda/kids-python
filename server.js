@@ -48,7 +48,7 @@ function logAccess(req, status) {
   });
 }
 
-const DISCORD_WEBHOOK = "https://discord.com/api/webhooks/1489343188379369512/0lFf23HKphq4ZgPXcKIMJU4nTcxMJvk0GqDELaxF8LJcX8AAoTyUW2ApqeE0X_P3zq5d";
+const DISCORD_WEBHOOK = "https://discord.com/api/webhooks/1489402695407374397/ci71hjpxTQo8-6li1NEG1aph0KpdCTabb31j_qbkRZ7-otKj7oI0Y4PkYVnu4WOARUz3";
 
 // Rate limit: 1 request per IP per 60 seconds
 const helpRateLimit = new Map();
@@ -103,7 +103,9 @@ const server = http.createServer(async (req, res) => {
     const ip = getClientIp(req);
     const now = Date.now();
     const last = helpRateLimit.get(ip) || 0;
+    console.log(`[HELP] ip=${ip} now=${now} last=${last} diff=${now - last}ms`);
     if (now - last < 60000) {
+      console.log(`[HELP] RATE LIMITED ip=${ip}`);
       setSecurityHeaders(res);
       res.writeHead(429, { "Content-Type": "application/json" });
       res.end(JSON.stringify({ error: "rate_limit" }));
@@ -115,6 +117,7 @@ const server = http.createServer(async (req, res) => {
       const output = String(body.output || "").slice(0, 2000);
       const lang = String(body.lang || "?").slice(0, 10);
       const message = String(body.message || "").slice(0, 1000);
+      console.log(`[HELP] parsed ok lang=${lang} code=${code.length}ch output=${output.length}ch msg=${message.length}ch`);
       const content = [
         "📩 **わからない！**",
         "",
@@ -126,13 +129,18 @@ const server = http.createServer(async (req, res) => {
         "",
         `⚠️ **出力**\n\`\`\`\n${output || "(なし)"}\n\`\`\``,
       ].join("\n");
-      const status = await sendDiscord({ content: content.slice(0, 2000) });
+      console.log(`[HELP] discord payload ${content.length}ch -> sliced to ${Math.min(content.length, 2000)}ch`);
+      const status = await sendDiscord({
+        content: content.slice(0, 2000),
+        thread_name: `${lang} - ${message.slice(0, 40) || "help"}`,
+      });
+      console.log(`[HELP] discord responded status=${status}`);
       helpRateLimit.set(ip, now);
       setSecurityHeaders(res);
       res.writeHead(status < 300 ? 200 : 502, { "Content-Type": "application/json" });
       res.end(JSON.stringify({ ok: status < 300 }));
     } catch (e) {
-      console.error("Help API error:", e);
+      console.error("[HELP] ERROR:", e);
       setSecurityHeaders(res);
       res.writeHead(500, { "Content-Type": "application/json" });
       res.end(JSON.stringify({ error: "server_error" }));
