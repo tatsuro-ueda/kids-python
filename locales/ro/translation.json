@@ -45,8 +45,8 @@
     "expectedIndent": "Nu sunt destule spatii. Adauga 4 spatii dupa `if` sau `for`",
     "indexOutOfRange": "Numarul din lista este prea mare. Verifica lungimea cu `len()`",
     "divisionByZero": "Nu poti imparti la zero. Verifica numarul la care imparti",
-    "invalidInt": "Ce este in `int()` nu este un numar. Pune doar numere",
-    "invalidFloat": "Ce este in `float()` nu este un numar. Pune doar numere",
+    "invalidInt": "Ce este in `int()` ({{value}}) nu este un numar. Pune doar numere",
+    "invalidFloat": "Ce este in `float()` ({{value}}) nu este un numar. Pune doar numere",
     "noAttribute": "`{{type}}` nu are o functie numita `{{attr}}`. Verifica numele",
     "keyError": "Acel nume nu este in dictionar. Foloseste `print()` ca sa verifici continutul"
   },

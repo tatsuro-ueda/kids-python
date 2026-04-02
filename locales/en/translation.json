@@ -45,8 +45,8 @@
     "expectedIndent": "Not enough spaces. Add 4 spaces after `if` or `for`",
     "indexOutOfRange": "The list number is too big. Check the length with `len()`",
     "divisionByZero": "You can't divide by zero. Check the number you're dividing by",
-    "invalidInt": "What's inside `int()` isn't a number. Only put numbers in it",
-    "invalidFloat": "What's inside `float()` isn't a number. Only put numbers in it",
+    "invalidInt": "What's inside `int()` ({{value}}) isn't a number. Only put numbers in it",
+    "invalidFloat": "What's inside `float()` ({{value}}) isn't a number. Only put numbers in it",
     "noAttribute": "`{{type}}` doesn't have a feature called `{{attr}}`. Check the name",
     "keyError": "That name isn't in the dictionary. Use `print()` to check what's inside"
   },

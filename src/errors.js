@@ -34,8 +34,8 @@ const ERROR_MESSAGES = [
   { type: "ZeroDivisionError", pattern: /division by zero/, key: "error.divisionByZero" },
 
   // ValueError
-  { type: "ValueError", pattern: /invalid literal for int/, key: "error.invalidInt" },
-  { type: "ValueError", pattern: /could not convert string to float/, key: "error.invalidFloat" },
+  { type: "ValueError", pattern: /invalid literal for int\(\) with base \d+: '(.+)'/, key: "error.invalidInt", captures: ["value"] },
+  { type: "ValueError", pattern: /could not convert string to float: '(.+)'/, key: "error.invalidFloat", captures: ["value"] },
 
   // AttributeError
   { type: "AttributeError", pattern: /'(.+)' .* has no attribute '(.+)'/, key: "error.noAttribute", captures: ["type", "attr"] },

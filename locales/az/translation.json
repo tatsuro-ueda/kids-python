@@ -45,8 +45,8 @@
     "expectedIndent": "Boşluqlar kifayət deyil. `if` və ya `for` dan sonra 4 boşluq qoy",
     "indexOutOfRange": "Siyahı nömrəsi çox böyükdür. `len()` ilə uzunluğunu yoxla",
     "divisionByZero": "Sıfıra bölmək olmaz. Böldüyün rəqəmi yoxla",
-    "invalidInt": "`int()` içindəki rəqəm deyil. Yalnız rəqəm yaz",
-    "invalidFloat": "`float()` içindəki rəqəm deyil. Yalnız rəqəm yaz",
+    "invalidInt": "`int()` ({{value}}) içindəki rəqəm deyil. Yalnız rəqəm yaz",
+    "invalidFloat": "`float()` ({{value}}) içindəki rəqəm deyil. Yalnız rəqəm yaz",
     "noAttribute": "`{{type}}` da `{{attr}}` adlı xüsusiyyət yoxdur. Adı yoxla",
     "keyError": "Bu ad lüğətdə yoxdur. `print()` ilə içini yoxla"
   },

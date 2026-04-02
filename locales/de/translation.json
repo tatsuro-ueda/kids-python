@@ -45,8 +45,8 @@
     "expectedIndent": "Nicht genug Leerzeichen. Fuege 4 Leerzeichen nach `if` oder `for` ein",
     "indexOutOfRange": "Die Listennummer ist zu gross. Pruefe die Laenge mit `len()`",
     "divisionByZero": "Du kannst nicht durch Null teilen. Pruefe die Zahl, durch die du teilst",
-    "invalidInt": "Was in `int()` steht, ist keine Zahl. Gib nur Zahlen ein",
-    "invalidFloat": "Was in `float()` steht, ist keine Zahl. Gib nur Zahlen ein",
+    "invalidInt": "Was in `int()` ({{value}}) steht, ist keine Zahl. Gib nur Zahlen ein",
+    "invalidFloat": "Was in `float()` ({{value}}) steht, ist keine Zahl. Gib nur Zahlen ein",
     "noAttribute": "`{{type}}` hat keine Funktion namens `{{attr}}`. Pruefe den Namen",
     "keyError": "Dieser Name ist nicht im Woerterbuch. Benutze `print()`, um den Inhalt zu pruefen"
   },

@@ -45,8 +45,8 @@
     "expectedIndent": "Spasi kurang. Tambahkan 4 spasi setelah `if` atau `for`",
     "indexOutOfRange": "Nomor daftar terlalu besar. Periksa panjangnya dengan `len()`",
     "divisionByZero": "Tidak bisa dibagi nol. Periksa angka pembaginya",
-    "invalidInt": "Isi `int()` bukan angka. Masukkan angka saja",
-    "invalidFloat": "Isi `float()` bukan angka. Masukkan angka saja",
+    "invalidInt": "Isi `int()` ({{value}}) bukan angka. Masukkan angka saja",
+    "invalidFloat": "Isi `float()` ({{value}}) bukan angka. Masukkan angka saja",
     "noAttribute": "`{{type}}` tidak punya fitur bernama `{{attr}}`. Periksa namanya",
     "keyError": "Nama itu tidak ada di kamus. Pakai `print()` untuk melihat isinya"
   },

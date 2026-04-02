@@ -45,8 +45,8 @@
     "expectedIndent": "Bosluk eksik. `if` veya `for` sonrasina 4 bosluk ekle",
     "indexOutOfRange": "Liste numarasi cok buyuk. `len()` ile uzunlugu kontrol et",
     "divisionByZero": "Sifira bolemezsin. Boldugun sayiyi kontrol et",
-    "invalidInt": "`int()` icindeki bir sayi degil. Sadece sayi koy",
-    "invalidFloat": "`float()` icindeki bir sayi degil. Sadece sayi koy",
+    "invalidInt": "`int()` ({{value}}) icindeki bir sayi degil. Sadece sayi koy",
+    "invalidFloat": "`float()` ({{value}}) icindeki bir sayi degil. Sadece sayi koy",
     "noAttribute": "`{{type}}` icinde `{{attr}}` adinda bir ozellik yok. Ismi kontrol et",
     "keyError": "Bu isim sozlukte yok. `print()` ile icine bak"
   },

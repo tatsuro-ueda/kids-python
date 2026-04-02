@@ -45,8 +45,8 @@
     "expectedIndent": "Nem eleg szokoz. Adj hozza 4 szokozt az `if` vagy `for` utan",
     "indexOutOfRange": "A listaszam tul nagy. Ellenorizd a hosszat a `len()`-nel",
     "divisionByZero": "Nem oszthatsz nullaval. Ellenorizd a szamot, amivel osztasz",
-    "invalidInt": "Ami az `int()`-ben van, az nem szam. Csak szamokat irj bele",
-    "invalidFloat": "Ami a `float()`-ban van, az nem szam. Csak szamokat irj bele",
+    "invalidInt": "Ami az `int()` ({{value}})-ben van, az nem szam. Csak szamokat irj bele",
+    "invalidFloat": "Ami a `float()` ({{value}})-ban van, az nem szam. Csak szamokat irj bele",
     "noAttribute": "A `{{type}}`-nak nincs `{{attr}}` nevu funkcioja. Ellenorizd a nevet",
     "keyError": "Ez a nev nincs a szotarban. Hasznald a `print()`-et, hogy megnezd a tartalmat"
   },

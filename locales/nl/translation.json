@@ -45,8 +45,8 @@
     "expectedIndent": "Niet genoeg spaties. Voeg 4 spaties toe na `if` of `for`",
     "indexOutOfRange": "Het lijstnummer is te groot. Controleer de lengte met `len()`",
     "divisionByZero": "Je kunt niet delen door nul. Controleer het getal waardoor je deelt",
-    "invalidInt": "Wat in `int()` staat is geen getal. Zet er alleen getallen in",
-    "invalidFloat": "Wat in `float()` staat is geen getal. Zet er alleen getallen in",
+    "invalidInt": "Wat in `int()` ({{value}}) staat is geen getal. Zet er alleen getallen in",
+    "invalidFloat": "Wat in `float()` ({{value}}) staat is geen getal. Zet er alleen getallen in",
     "noAttribute": "`{{type}}` heeft geen functie genaamd `{{attr}}`. Controleer de naam",
     "keyError": "Die naam staat niet in het woordenboek. Gebruik `print()` om de inhoud te controleren"
   },

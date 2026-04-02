@@ -45,8 +45,8 @@
     "expectedIndent": "空格不够哦，`if` 或 `for` 下一行要加4个空格",
     "indexOutOfRange": "列表的编号太大了，用 `len()` 查一下长度吧",
     "divisionByZero": "不能除以零哦，检查一下除数吧",
-    "invalidInt": "`int()` 里面不是数字哦，只能放数字进去",
-    "invalidFloat": "`float()` 里面不是数字哦，只能放数字进去",
+    "invalidInt": "`int()` ({{value}}) 里面不是数字哦，只能放数字进去",
+    "invalidFloat": "`float()` ({{value}}) 里面不是数字哦，只能放数字进去",
     "noAttribute": "`{{type}}` 没有叫 `{{attr}}` 的功能哦，检查一下名字吧",
     "keyError": "字典里没有这个名字哦，用 `print()` 看看里面有什么吧"
   },

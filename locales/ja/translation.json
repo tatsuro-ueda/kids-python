@@ -141,8 +141,8 @@
     "expectedIndent": "スペースがたりないよ。`if` や `for` のつぎのぎょうは スペース4つ いれてね",
     "indexOutOfRange": "リストのばんごうがおおきすぎるよ。`len()` でながさをたしかめてね",
     "divisionByZero": "0でわることはできないよ。わるすうじをたしかめてね",
-    "invalidInt": "`int()` のなかみがすうじじゃないよ。すうじだけいれてね",
-    "invalidFloat": "`float()` のなかみがすうじじゃないよ。すうじだけいれてね",
+    "invalidInt": "`int()` のなかみ（{{value}}）がすうじじゃないよ。すうじだけいれてね",
+    "invalidFloat": "`float()` のなかみ（{{value}}）がすうじじゃないよ。すうじだけいれてね",
     "noAttribute": "`{{type}}` に `{{attr}}` っていうきのうはないよ。なまえをたしかめてね",
     "keyError": "じしょにそのなまえはないよ。`print()` でなかみをたしかめてね"
   }

@@ -45,8 +45,8 @@
     "expectedIndent": "Faltan espacios. Agrega 4 espacios despues de `if` o `for`",
     "indexOutOfRange": "El numero de la lista es muy grande. Revisa el largo con `len()`",
     "divisionByZero": "No puedes dividir entre cero. Revisa el numero por el que divides",
-    "invalidInt": "Lo que hay dentro de `int()` no es un numero. Solo pon numeros",
-    "invalidFloat": "Lo que hay dentro de `float()` no es un numero. Solo pon numeros",
+    "invalidInt": "Lo que hay dentro de `int()` ({{value}}) no es un numero. Solo pon numeros",
+    "invalidFloat": "Lo que hay dentro de `float()` ({{value}}) no es un numero. Solo pon numeros",
     "noAttribute": "`{{type}}` no tiene una funcion llamada `{{attr}}`. Revisa el nombre",
     "keyError": "Ese nombre no esta en el diccionario. Usa `print()` para ver que hay dentro"
   },

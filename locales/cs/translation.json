@@ -45,8 +45,8 @@
     "expectedIndent": "Neni dost mezer. Pridej 4 mezery za `if` nebo `for`",
     "indexOutOfRange": "Cislo v seznamu je prilis velke. Zkontroluj delku pomoci `len()`",
     "divisionByZero": "Neda se delit nulou. Zkontroluj cislo, kterym delis",
-    "invalidInt": "To, co je v `int()`, neni cislo. Dej tam jen cisla",
-    "invalidFloat": "To, co je v `float()`, neni cislo. Dej tam jen cisla",
+    "invalidInt": "To, co je v `int()` ({{value}}), neni cislo. Dej tam jen cisla",
+    "invalidFloat": "To, co je v `float()` ({{value}}), neni cislo. Dej tam jen cisla",
     "noAttribute": "`{{type}}` nema funkci s nazvem `{{attr}}`. Zkontroluj nazev",
     "keyError": "Tento nazev neni ve slovniku. Pouzij `print()` pro kontrolu obsahu"
   },
