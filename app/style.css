@@ -284,10 +284,14 @@ header h1 {
   white-space: nowrap;
 }
 
-/* Edit with Shelley */
-.edit-with-shelley {
+/* Dev buttons */
+.dev-buttons {
   text-align: center;
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .shelley-btn {
@@ -303,6 +307,24 @@ header h1 {
 }
 
 .shelley-btn:hover {
+  opacity: 0.85;
+}
+
+.issue-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  background: #24292e;
+  border: none;
+  border-radius: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.issue-btn:hover {
   opacity: 0.85;
 }
 

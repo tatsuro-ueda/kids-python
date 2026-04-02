@@ -1,4 +1,4 @@
-import { initI18n, t, setLocale, LANGUAGES } from "./i18n.js";
+import { initI18n, t, setLocale, getLocale, LANGUAGES } from "./i18n.js";
 import { createEditor, highlightErrorLine, clearErrorHighlight } from "./editor.js";
 import { loadPyodide, runCode } from "./runner.js";
 import { translateError } from "./errors.js";
@@ -205,6 +205,31 @@ async function main() {
       if (!langBtn.contains(e.target) && !langList.contains(e.target)) {
         langList.hidden = true;
       }
+    });
+  }
+  // Send Issue ボタン
+  const issueBtn = document.getElementById("issue-btn");
+  if (issueBtn) {
+    issueBtn.addEventListener("click", () => {
+      const code = editor.state.doc.toString();
+      const output = outputEl.textContent;
+      const lang = getLocale();
+      const body = [
+        "## Language",
+        lang,
+        "",
+        "## Code",
+        "```python",
+        code,
+        "```",
+        "",
+        "## Output",
+        "```",
+        output,
+        "```",
+      ].join("\n");
+      const url = `https://github.com/tatsuro-ueda/kids-python/issues/new?body=${encodeURIComponent(body)}`;
+      window.open(url, "_blank", "noopener");
     });
   }
 }
