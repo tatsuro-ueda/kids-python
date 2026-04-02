@@ -11,7 +11,7 @@
     "screenshots": "node scripts/screenshots.js",
     "build:lp": "node scripts/build-lp.js",
     "validate:i18n": "node scripts/validate-i18n.js",
-    "test": "node --test test/"
+    "test": "node --test test/*.test.js"
   },
   "keywords": [],
   "author": "",
