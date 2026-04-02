@@ -2,7 +2,7 @@ import { initI18n, t, setLocale, LANGUAGES } from "./i18n.js";
 import { createEditor, highlightErrorLine, clearErrorHighlight } from "./editor.js";
 import { loadPyodide, runCode } from "./runner.js";
 import { translateError } from "./errors.js";
-import { detectSharedCode, setSharedCode, encodeShareURL, getShareIntentURLs } from "./storage.js";
+import { detectSharedCode, setSharedCode, encodeShareURL, getShareIntentURLs, resetCode } from "./storage.js";
 import { getSamples } from "./samples.js";
 
 async function main() {
@@ -186,6 +186,11 @@ async function main() {
       li.dataset.code = lang.code;
       li.addEventListener("click", async () => {
         await setLocale(lang.code);
+        const defaultCode = resetCode();
+        editor.dispatch({
+          changes: { from: 0, to: editor.state.doc.length, insert: defaultCode },
+        });
+        outputEl.textContent = "";
         langList.hidden = true;
       });
       langList.appendChild(li);

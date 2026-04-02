@@ -34,6 +34,11 @@ export function saveCode(code) {
   localStorage.setItem(STORAGE_KEY, code);
 }
 
+export function resetCode() {
+  localStorage.removeItem(STORAGE_KEY);
+  return DEFAULT_CODE;
+}
+
 export function getShareIntentURLs(url) {
   const encoded = encodeURIComponent(url);
   const text = encodeURIComponent(t("app.shareText"));

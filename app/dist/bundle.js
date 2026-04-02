@@ -29040,6 +29040,10 @@ function loadCode() {
 function saveCode(code) {
   localStorage.setItem(STORAGE_KEY, code);
 }
+function resetCode() {
+  localStorage.removeItem(STORAGE_KEY);
+  return DEFAULT_CODE;
+}
 function getShareIntentURLs(url) {
   const encoded = encodeURIComponent(url);
   const text = encodeURIComponent(t2("app.shareText"));
@@ -29406,6 +29410,11 @@ async function main() {
       li.dataset.code = lang.code;
       li.addEventListener("click", async () => {
         await setLocale(lang.code);
+        const defaultCode = resetCode();
+        editor.dispatch({
+          changes: { from: 0, to: editor.state.doc.length, insert: defaultCode }
+        });
+        outputEl.textContent = "";
         langList.hidden = true;
       });
       langList.appendChild(li);

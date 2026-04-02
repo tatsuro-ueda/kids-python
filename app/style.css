@@ -284,6 +284,28 @@ header h1 {
   white-space: nowrap;
 }
 
+/* Edit with Shelley */
+.edit-with-shelley {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.shelley-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  border-radius: 20px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.shelley-btn:hover {
+  opacity: 0.85;
+}
+
 /* Footer */
 .site-footer {
   text-align: center;
