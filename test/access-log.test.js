@@ -1,25 +1,11 @@
 const { describe, it, before, after, beforeEach } = require("node:test");
 const assert = require("node:assert/strict");
-const http = require("node:http");
 const fs = require("node:fs");
 const path = require("node:path");
+const { request, startServer, stopServer } = require("./helpers");
 
 const LOG_DIR = path.join(__dirname, "..", "logs");
 const LOG_FILE = path.join(LOG_DIR, "access.jsonl");
-
-function request(port, urlPath, headers = {}) {
-  return new Promise((resolve, reject) => {
-    const req = http.get(
-      { hostname: "127.0.0.1", port, path: urlPath, headers },
-      (res) => {
-        let body = "";
-        res.on("data", (chunk) => (body += chunk));
-        res.on("end", () => resolve({ status: res.statusCode, body }));
-      }
-    );
-    req.on("error", reject);
-  });
-}
 
 function waitForLog(expectedLines = 1, timeoutMs = 3000) {
   return new Promise((resolve, reject) => {
@@ -45,33 +31,16 @@ describe("Access Log", () => {
   let server;
   let port;
 
-  before(() => {
-    // Clean up logs before starting
+  before(async () => {
     if (fs.existsSync(LOG_FILE)) fs.unlinkSync(LOG_FILE);
-
-    // We need to start the server on a random port for testing.
-    // Require the server module — we'll refactor server.js to export a createServer fn.
-    delete require.cache[require.resolve("../server.js")];
-
-    return new Promise((resolve) => {
-      // Override PORT via env
-      process.env.PORT = "0";
-      server = require("../server.js");
-      server.on("listening", () => {
-        port = server.address().port;
-        resolve();
-      });
-    });
+    const started = await startServer();
+    server = started.server;
+    port = started.port;
   });
 
-  after(() => {
-    return new Promise((resolve) => {
-      server.close(resolve);
-    });
-  });
+  after(() => stopServer(server));
 
   beforeEach(() => {
-    // Clear log file between tests
     if (fs.existsSync(LOG_FILE)) fs.unlinkSync(LOG_FILE);
   });
 
@@ -112,11 +81,9 @@ describe("Access Log", () => {
   });
 
   it("should block direct access to logs/access.jsonl", async () => {
-    // First make a request to generate a log entry
     await request(port, "/app/index.html");
     await waitForLog(1);
 
-    // Now try to access the log file directly
     const res = await request(port, "/logs/access.jsonl");
     assert.equal(res.status, 403);
   });

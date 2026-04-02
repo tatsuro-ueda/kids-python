@@ -48,6 +48,13 @@ function logAccess(req, status) {
   });
 }
 
+function setSecurityHeaders(res) {
+  res.setHeader("X-Content-Type-Options", "nosniff");
+  res.setHeader("X-Frame-Options", "DENY");
+  res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+  res.setHeader("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
+}
+
 const server = http.createServer((req, res) => {
   let url = req.url.split("?")[0];
 
@@ -61,6 +68,7 @@ const server = http.createServer((req, res) => {
   // Block access to logs directory
   if (url.startsWith("/logs/") || url === "/logs") {
     logAccess(req, 403);
+    setSecurityHeaders(res);
     res.writeHead(403);
     res.end("Forbidden");
     return;
@@ -73,11 +81,13 @@ const server = http.createServer((req, res) => {
   fs.readFile(filePath, (err, data) => {
     if (err) {
       logAccess(req, 404);
+      setSecurityHeaders(res);
       res.writeHead(404);
       res.end("Not found");
       return;
     }
     logAccess(req, 200);
+    setSecurityHeaders(res);
     res.writeHead(200, { "Content-Type": mime });
     res.end(data);
   });
