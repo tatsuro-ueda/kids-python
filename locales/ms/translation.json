@@ -45,7 +45,7 @@
     "expectedIndent": "Ruang tak cukup. Tambah 4 ruang selepas `if` atau `for`",
     "indexOutOfRange": "Nombor senarai terlalu besar. Semak panjang dengan `len()`",
     "divisionByZero": "Tak boleh bahagi dengan sifar. Semak nombor pembahagi",
-    "invalidInt": "Isi dalam `int()` ({{value}}) bukan nombor. Letak nombor sahaja",
+    "invalidInt": "Isi dalam `int()` ({{value}}) bukan nombor bulat (tiada perpuluhan). Letak nombor bulat sahaja",
     "invalidFloat": "Isi dalam `float()` ({{value}}) bukan nombor. Letak nombor sahaja",
     "noAttribute": "`{{type}}` tak ada ciri bernama `{{attr}}`. Semak namanya",
     "keyError": "Nama itu tiada dalam kamus. Guna `print()` untuk semak isinya"

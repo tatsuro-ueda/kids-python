@@ -45,7 +45,7 @@
     "expectedIndent": "Ikke nok mellemrum. Tilfoej 4 mellemrum efter `if` eller `for`",
     "indexOutOfRange": "Listenummeret er for stort. Tjek laengden med `len()`",
     "divisionByZero": "Du kan ikke dividere med nul. Tjek tallet du dividerer med",
-    "invalidInt": "Det der er i `int()` ({{value}}) er ikke et tal. Skriv kun tal",
+    "invalidInt": "Det der er i `int()` ({{value}}) er ikke et heltal (ingen decimaler). Skriv kun heltal",
     "invalidFloat": "Det der er i `float()` ({{value}}) er ikke et tal. Skriv kun tal",
     "noAttribute": "`{{type}}` har ingen funktion der hedder `{{attr}}`. Tjek navnet",
     "keyError": "Det navn er ikke i ordbogen. Brug `print()` for at tjekke indholdet"

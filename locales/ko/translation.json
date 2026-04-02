@@ -45,7 +45,7 @@
     "expectedIndent": "빈칸이 부족해. `if` 나 `for` 다음 줄에 빈칸 4개를 넣어줘",
     "indexOutOfRange": "리스트 번호가 너무 커. `len()` 으로 길이를 확인해 봐",
     "divisionByZero": "0으로 나눌 수 없어. 나누는 숫자를 확인해 봐",
-    "invalidInt": "`int()` ({{value}}) 안에 있는 것이 숫자가 아니야. 숫자만 넣어줘",
+    "invalidInt": "`int()` ({{value}}) 안에 있는 것이 정수(소수 안 됨)가 아니야. 정수만 넣어줘",
     "invalidFloat": "`float()` ({{value}}) 안에 있는 것이 숫자가 아니야. 숫자만 넣어줘",
     "noAttribute": "`{{type}}` 에는 `{{attr}}` 라는 기능이 없어. 이름을 확인해 봐",
     "keyError": "사전에 그 이름이 없어. `print()` 로 안에 뭐가 있는지 확인해 봐"

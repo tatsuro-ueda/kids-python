@@ -45,7 +45,7 @@
     "expectedIndent": "Nafasi haitoshi. Ongeza nafasi 4 baada ya `if` au `for`",
     "indexOutOfRange": "Nambari ya orodha ni kubwa mno. Angalia urefu kwa `len()`",
     "divisionByZero": "Huwezi kugawanya kwa sifuri. Angalia nambari ya kugawanya",
-    "invalidInt": "Kilicho ndani ya `int()` ({{value}}) si nambari. Weka nambari tu",
+    "invalidInt": "Kilicho ndani ya `int()` ({{value}}) si nambari kamili (bila desimali). Weka nambari kamili tu",
     "invalidFloat": "Kilicho ndani ya `float()` ({{value}}) si nambari. Weka nambari tu",
     "noAttribute": "`{{type}}` haina kipengele kinachoitwa `{{attr}}`. Angalia jina",
     "keyError": "Jina hilo halipo kwenye kamusi. Tumia `print()` kuangalia yaliyomo"

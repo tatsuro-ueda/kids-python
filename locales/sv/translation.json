@@ -45,7 +45,7 @@
     "expectedIndent": "Inte tillrackligt med mellanslag. Lagg till 4 mellanslag efter `if` eller `for`",
     "indexOutOfRange": "Listnumret ar for stort. Kontrollera langden med `len()`",
     "divisionByZero": "Du kan inte dividera med noll. Kontrollera talet du dividerar med",
-    "invalidInt": "Det som ar i `int()` ({{value}}) ar inget tal. Satt bara siffror dar",
+    "invalidInt": "Det som är i `int()` ({{value}}) är inte ett heltal (inga decimaler). Sätt bara heltal där",
     "invalidFloat": "Det som ar i `float()` ({{value}}) ar inget tal. Satt bara siffror dar",
     "noAttribute": "`{{type}}` har ingen funktion som heter `{{attr}}`. Kontrollera namnet",
     "keyError": "Det namnet finns inte i ordlistan. Anvand `print()` for att kontrollera innehallet"

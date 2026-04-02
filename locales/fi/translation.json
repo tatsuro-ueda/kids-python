@@ -45,7 +45,7 @@
     "expectedIndent": "Valylyonteja ei ole tarpeeksi. Lisaa 4 valylyontia `if` tai `for` jalkeen",
     "indexOutOfRange": "Listan numero on liian suuri. Tarkista pituus kayttamalla `len()`",
     "divisionByZero": "Nollalla ei voi jakaa. Tarkista jakaja",
-    "invalidInt": "Sisalto `int()` ({{value}}):ssa ei ole luku. Laita sinne vain lukuja",
+    "invalidInt": "Sisältö `int()` ({{value}}):ssa ei ole kokonaisluku (ei desimaaleja). Laita sinne vain kokonaislukuja",
     "invalidFloat": "Sisalto `float()` ({{value}}):ssa ei ole luku. Laita sinne vain lukuja",
     "noAttribute": "`{{type}}`:lla ei ole ominaisuutta nimelta `{{attr}}`. Tarkista nimi",
     "keyError": "Tuota nimea ei ole sanakirjassa. Kayta `print()` tarkistaaksesi sisallon"

@@ -45,7 +45,7 @@
     "expectedIndent": "Thieu khoang trang. Them 4 khoang trang sau `if` hoac `for` nhe",
     "indexOutOfRange": "So trong danh sach qua lon. Kiem tra do dai bang `len()` nhe",
     "divisionByZero": "Khong the chia cho so khong. Kiem tra so chia nhe",
-    "invalidInt": "Ben trong `int()` ({{value}}) khong phai so. Chi dien so thoi nhe",
+    "invalidInt": "Bên trong `int()` ({{value}}) không phải số nguyên (không có số thập phân). Chỉ điền số nguyên thôi nhé",
     "invalidFloat": "Ben trong `float()` ({{value}}) khong phai so. Chi dien so thoi nhe",
     "noAttribute": "`{{type}}` khong co tinh nang ten `{{attr}}`. Kiem tra ten nhe",
     "keyError": "Ten do khong co trong tu dien. Dung `print()` de xem ben trong nhe"

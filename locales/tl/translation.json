@@ -45,7 +45,7 @@
     "expectedIndent": "Kulang ang spaces. Maglagay ng 4 na spaces pagkatapos ng `if` o `for`",
     "indexOutOfRange": "Masyadong malaki ang numero sa listahan. Gamitin ang `len()` para malaman ang haba",
     "divisionByZero": "Hindi pwedeng hatiin sa zero. Tingnan ang numero na pinaghahati",
-    "invalidInt": "Ang nasa loob ng `int()` ({{value}}) ay hindi numero. Numero lang ang ilagay",
+    "invalidInt": "Ang nasa loob ng `int()` ({{value}}) ay hindi buong numero (walang decimal). Buong numero lang ang ilagay",
     "invalidFloat": "Ang nasa loob ng `float()` ({{value}}) ay hindi numero. Numero lang ang ilagay",
     "noAttribute": "Walang feature na `{{attr}}` ang `{{type}}`. Tingnan ang pangalan",
     "keyError": "Wala sa diksyunaryo ang pangalan na iyan. Gamitin ang `print()` para makita ang laman"

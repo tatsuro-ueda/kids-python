@@ -45,7 +45,7 @@
     "expectedIndent": "For fa mellomrom. Legg til 4 mellomrom etter `if` eller `for`",
     "indexOutOfRange": "Listenummeret er for stort. Sjekk lengden med `len()`",
     "divisionByZero": "Du kan ikke dele pa null. Sjekk tallet du deler med",
-    "invalidInt": "Det som er inne i `int()` ({{value}}) er ikke et tall. Bare legg inn tall",
+    "invalidInt": "Det som er inne i `int()` ({{value}}) er ikke et heltall (ingen desimaler). Bare legg inn heltall",
     "invalidFloat": "Det som er inne i `float()` ({{value}}) er ikke et tall. Bare legg inn tall",
     "noAttribute": "`{{type}}` har ikke en funksjon som heter `{{attr}}`. Sjekk navnet",
     "keyError": "Det navnet finnes ikke i ordboken. Bruk `print()` for a sjekke innholdet"

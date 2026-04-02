@@ -45,7 +45,7 @@
     "expectedIndent": "空格不夠喔，`if` 或 `for` 的下一行要空 4 格",
     "indexOutOfRange": "清單的編號太大了，用 `len()` 確認長度吧",
     "divisionByZero": "不能除以零喔，確認一下除數吧",
-    "invalidInt": "`int()` ({{value}}) 裡面不是數字喔，只能放數字",
+    "invalidInt": "`int()` ({{value}}) 裡面不是整數（不能有小數）喔，只能放整數",
     "invalidFloat": "`float()` ({{value}}) 裡面不是數字喔，只能放數字",
     "noAttribute": "`{{type}}` 沒有叫做 `{{attr}}` 的功能喔，確認一下名字吧",
     "keyError": "字典裡沒有那個名字喔，用 `print()` 看看裡面有什麼吧"

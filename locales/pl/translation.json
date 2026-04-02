@@ -45,7 +45,7 @@
     "expectedIndent": "Za malo spacji. Dodaj 4 spacje po `if` lub `for`",
     "indexOutOfRange": "Numer na liscie jest za duzy. Sprawdz dlugosc za pomoca `len()`",
     "divisionByZero": "Nie mozna dzielic przez zero. Sprawdz liczbe, przez ktora dzielisz",
-    "invalidInt": "To, co jest w `int()` ({{value}}), nie jest liczba. Wpisz tylko liczby",
+    "invalidInt": "To, co jest w `int()` ({{value}}), nie jest liczbą całkowitą (bez ułamków). Wpisz tylko liczby całkowite",
     "invalidFloat": "To, co jest w `float()` ({{value}}), nie jest liczba. Wpisz tylko liczby",
     "noAttribute": "`{{type}}` nie ma funkcji o nazwie `{{attr}}`. Sprawdz nazwe",
     "keyError": "Tej nazwy nie ma w slowniku. Uzyj `print()`, zeby sprawdzic zawartosc"

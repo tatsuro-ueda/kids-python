@@ -45,7 +45,7 @@
     "expectedIndent": "Faltam espacos. Coloque 4 espacos depois de `if` ou `for`",
     "indexOutOfRange": "O numero da lista e grande demais. Confira o tamanho com `len()`",
     "divisionByZero": "Nao da para dividir por zero. Confira o numero pelo qual voce divide",
-    "invalidInt": "O que esta dentro de `int()` ({{value}}) nao e um numero. So coloque numeros",
+    "invalidInt": "O que está dentro de `int()` ({{value}}) não é um número inteiro (sem decimais). Só coloque números inteiros",
     "invalidFloat": "O que esta dentro de `float()` ({{value}}) nao e um numero. So coloque numeros",
     "noAttribute": "`{{type}}` nao tem uma funcao chamada `{{attr}}`. Confira o nome",
     "keyError": "Esse nome nao esta no dicionario. Use `print()` para ver o que tem dentro"

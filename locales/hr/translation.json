@@ -45,7 +45,7 @@
     "expectedIndent": "Premalo razmaka. Dodaj 4 razmaka nakon `if` ili `for`",
     "indexOutOfRange": "Broj popisa je prevelik. Provjeri duljinu s `len()`",
     "divisionByZero": "Ne možeš dijeliti nulom. Provjeri broj kojim dijeliš",
-    "invalidInt": "Ono unutar `int()` ({{value}}) nije broj. Stavi samo brojeve",
+    "invalidInt": "Ono unutar `int()` ({{value}}) nije cijeli broj (bez decimala). Stavi samo cijele brojeve",
     "invalidFloat": "Ono unutar `float()` ({{value}}) nije broj. Stavi samo brojeve",
     "noAttribute": "`{{type}}` nema značajku zvanu `{{attr}}`. Provjeri ime",
     "keyError": "To ime ne postoji u rječniku. Koristi `print()` da provjeriš sadržaj"

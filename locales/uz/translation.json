@@ -45,7 +45,7 @@
     "expectedIndent": "Boʻshliqlar yetarli emas. `if` yoki `for` dan keyin 4 ta boʻshliq qoʻy",
     "indexOutOfRange": "Roʻyxat raqami juda katta. `len()` bilan uzunligini tekshir",
     "divisionByZero": "Nolga boʻlish mumkin emas. Boʻluvchi sonni tekshir",
-    "invalidInt": "`int()` ({{value}}) ichidagi son emas. Faqat son yoz",
+    "invalidInt": "`int()` ({{value}}) ichidagi butun son (kasrli emas) emas. Faqat butun son yoz",
     "invalidFloat": "`float()` ({{value}}) ichidagi son emas. Faqat son yoz",
     "noAttribute": "`{{type}}` da `{{attr}}` degan xususiyat yoʻq. Nomini tekshir",
     "keyError": "Bu nom lugʻatda yoʻq. `print()` bilan ichini tekshir"
