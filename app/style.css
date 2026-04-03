@@ -81,6 +81,25 @@ header h1 {
   100% { opacity: 0; }
 }
 
+.retry-btn {
+  display: inline-block;
+  margin-left: 0.5em;
+  padding: 0.3em 1em;
+  border: none;
+  border-radius: 1em;
+  background: #4a90c4;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.retry-btn:hover {
+  background: #357ab8;
+}
+.retry-btn:active {
+  transform: scale(0.95);
+}
+
 @media (prefers-reduced-motion: reduce) {
   #status.loading span,
   #status.fade-out {

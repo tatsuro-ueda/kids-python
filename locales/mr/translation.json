@@ -28,6 +28,9 @@
     "helpSend": "पाठवा",
     "helpCancel": "रद्द",
     "helpSent": "शिक्षकांना पाठवले! ✅",
+    "loadFailed": "Python लोड झाले नाही 😢",
+    "loadRetry": "पुन्हा प्रयत्न करा",
+    "loadSlow": "थोडा वेळ लागतोय... थांबा!",
     "helpFailed": "पाठवता आले नाही. पुन्हा प्रयत्न कर"
   },
   "error": {

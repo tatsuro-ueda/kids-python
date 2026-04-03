@@ -28,6 +28,9 @@
     "helpSend": "Send",
     "helpCancel": "Avbryt",
     "helpSent": "Sendt til læreren! ✅",
+    "loadFailed": "Python kunne ikke lastes 😢",
+    "loadRetry": "Prøv igjen",
+    "loadSlow": "Det tar litt lenger tid... vent litt!",
     "helpFailed": "Kunne ikke sende. Prøv igjen."
   },
   "error": {

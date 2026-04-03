@@ -28,6 +28,9 @@
     "helpSend": "ส่ง",
     "helpCancel": "ยกเลิก",
     "helpSent": "ส่งให้คุณครูแล้ว! ✅",
+    "loadFailed": "โหลด Python ไม่ได้ 😢",
+    "loadRetry": "ลองใหม่",
+    "loadSlow": "ใช้เวลานานกว่าปกตินิดหน่อย... รอแป๊บนะ!",
     "helpFailed": "ส่งไม่ได้ ลองใหม่นะ"
   },
   "error": {

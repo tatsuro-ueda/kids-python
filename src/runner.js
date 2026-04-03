@@ -15,14 +15,19 @@ def _custom_input(p=""):
 builtins.input = _custom_input
 `;
 
-export async function loadPyodide(onStatus) {
+export async function loadPyodide(onStatus, onError) {
   onStatus(t("app.loading"));
-  const mod = await import("/vendor/pyodide/pyodide.mjs");
-  pyodide = await mod.loadPyodide({
-    indexURL: "/vendor/pyodide/",
-  });
-  await pyodide.runPythonAsync(INPUT_PATCH);
-  onStatus(null);
+  try {
+    const mod = await import("/vendor/pyodide/pyodide.mjs");
+    pyodide = await mod.loadPyodide({
+      indexURL: "/vendor/pyodide/",
+    });
+    await pyodide.runPythonAsync(INPUT_PATCH);
+    onStatus(null);
+  } catch (e) {
+    console.error("Pyodide load failed:", e);
+    onError(e);
+  }
 }
 
 export async function runCode(code, onStdout, onStderr) {

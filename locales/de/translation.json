@@ -28,6 +28,9 @@
     "helpSend": "Senden",
     "helpCancel": "Abbrechen",
     "helpSent": "An den Lehrer gesendet! ✅",
+    "loadFailed": "Python konnte nicht geladen werden 😢",
+    "loadRetry": "Nochmal versuchen",
+    "loadSlow": "Das dauert etwas länger... bitte warten!",
     "helpFailed": "Konnte nicht gesendet werden. Versuch es nochmal."
   },
   "error": {

@@ -28,6 +28,9 @@
     "helpSend": "পাঠাও",
     "helpCancel": "বাতিল",
     "helpSent": "টিচারকে পাঠানো হয়েছে! ✅",
+    "loadFailed": "Python লোড হয়নি 😢",
+    "loadRetry": "আবার চেষ্টা করো",
+    "loadSlow": "একটু সময় লাগছে... অপেক্ষা করো!",
     "helpFailed": "পাঠানো যায়নি। আবার চেষ্টা করো"
   },
   "error": {

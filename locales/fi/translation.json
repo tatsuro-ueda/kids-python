@@ -28,6 +28,9 @@
     "helpSend": "Lähetä",
     "helpCancel": "Peruuta",
     "helpSent": "Lähetetty opettajalle! ✅",
+    "loadFailed": "Pythonia ei voitu ladata 😢",
+    "loadRetry": "Yritä uudelleen",
+    "loadSlow": "Kestää vähän kauemmin... odota hetki!",
     "helpFailed": "Ei voitu lähettää. Yritä uudelleen."
   },
   "error": {

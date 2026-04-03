@@ -28,6 +28,9 @@
     "helpSend": "Ipadala",
     "helpCancel": "Kanselahin",
     "helpSent": "Naipadala na sa guro! ✅",
+    "loadFailed": "Hindi na-load ang Python 😢",
+    "loadRetry": "Subukan muli",
+    "loadSlow": "Medyo matagal... sandali lang!",
     "helpFailed": "Hindi naipadala. Subukan ulit."
   },
   "error": {

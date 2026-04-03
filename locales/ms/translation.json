@@ -28,6 +28,9 @@
     "helpSend": "Hantar",
     "helpCancel": "Batal",
     "helpSent": "Dah hantar ke cikgu! ✅",
+    "loadFailed": "Python gagal dimuatkan 😢",
+    "loadRetry": "Cuba lagi",
+    "loadSlow": "Mengambil masa sedikit lagi... tunggu ya!",
     "helpFailed": "Tak dapat hantar. Cuba lagi."
   },
   "error": {

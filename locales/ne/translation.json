@@ -28,6 +28,9 @@
     "helpSend": "पठाउ",
     "helpCancel": "रद्द",
     "helpSent": "शिक्षकलाई पठाइयो! ✅",
+    "loadFailed": "Python लोड भएन 😢",
+    "loadRetry": "फेरि प्रयास गर",
+    "loadSlow": "अलिक बढी समय लागिरहेको छ... पर्ख!",
     "helpFailed": "पठाउन सकिएन। फेरि प्रयास गर"
   },
   "error": {

@@ -28,6 +28,9 @@
     "helpSend": "送出",
     "helpCancel": "取消",
     "helpSent": "已經傳給老師了！✅",
+    "loadFailed": "Python 載入失敗了 😢",
+    "loadRetry": "重試",
+    "loadSlow": "載入時間比較長...再等一下！",
     "helpFailed": "傳送失敗，再試一次吧"
   },
   "error": {

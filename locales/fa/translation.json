@@ -28,6 +28,9 @@
     "helpSend": "بفرست",
     "helpCancel": "لغو",
     "helpSent": "به معلم فرستاده شد! ✅",
+    "loadFailed": "Python بارگذاری نشد 😢",
+    "loadRetry": "دوباره تلاش کن",
+    "loadSlow": "یکم بیشتر طول کشیده... صبر کن!",
     "helpFailed": "نشد بفرستی. دوباره امتحان کن"
   },
   "error": {

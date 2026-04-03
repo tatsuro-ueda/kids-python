@@ -87,7 +87,43 @@ async function main() {
     }
   }
 
-  loadPyodide(setStatus);
+  // Pyodide読み込み（エラー時リトライ対応）
+  let slowTimer = null;
+
+  function startLoadPyodide() {
+    slowTimer = setTimeout(() => {
+      statusEl.innerHTML = t("app.loadSlow").split("").map((ch, i) =>
+        `<span style="--i:${i}">${ch}</span>`
+      ).join("");
+      statusEl.classList.add("loading");
+    }, 10000);
+
+    loadPyodide(
+      (msg) => {
+        if (!msg) clearTimeout(slowTimer);
+        setStatus(msg);
+      },
+      () => {
+        clearTimeout(slowTimer);
+        statusEl.classList.remove("loading", "fade-out");
+        statusEl.hidden = false;
+        statusEl.innerHTML = "";
+        runBtn.disabled = true;
+
+        const msg = document.createElement("span");
+        msg.textContent = t("app.loadFailed") + " ";
+        statusEl.appendChild(msg);
+
+        const retryBtn = document.createElement("button");
+        retryBtn.textContent = t("app.loadRetry");
+        retryBtn.className = "retry-btn";
+        retryBtn.addEventListener("click", () => startLoadPyodide());
+        statusEl.appendChild(retryBtn);
+      }
+    );
+  }
+
+  startLoadPyodide();
 
   // ブックマーク促進バナー（初回のみ表示）
   const BOOKMARK_KEY = "bookmark-banner-dismissed";

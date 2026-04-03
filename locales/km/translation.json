@@ -28,6 +28,9 @@
     "helpSend": "ផ្ញើ",
     "helpCancel": "បោះបង់",
     "helpSent": "បានផ្ញើទៅគ្រូហើយ! ✅",
+    "loadFailed": "Python មិនអាចផ្ទុកបានទេ 😢",
+    "loadRetry": "ព្យាយាមម្តងទៀត",
+    "loadSlow": "ចំណាយពេលបន្តិច... រង់ចាំ!",
     "helpFailed": "ផ្ញើមិនបាន។ សាកម្ដងទៀត"
   },
   "error": {

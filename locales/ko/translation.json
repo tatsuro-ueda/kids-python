@@ -28,6 +28,9 @@
     "helpSend": "보내기",
     "helpCancel": "취소",
     "helpSent": "선생님에게 보냈어! ✅",
+    "loadFailed": "Python을 불러오지 못했어 😢",
+    "loadRetry": "다시 시도",
+    "loadSlow": "시간이 좀 걸리고 있어... 조금만 기다려!",
     "helpFailed": "보내지 못했어. 다시 해 봐."
   },
   "error": {

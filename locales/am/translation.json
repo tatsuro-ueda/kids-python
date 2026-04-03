@@ -28,6 +28,9 @@
     "helpSend": "ላክ",
     "helpCancel": "ሰርዝ",
     "helpSent": "ለመምህር ተልኳል! ✅",
+    "loadFailed": "Python መጫን አልተቻለም 😢",
+    "loadRetry": "እንደገና ሞክር",
+    "loadSlow": "ትንሽ ጊዜ እየፈጀ ነው... ታገሡ!",
     "helpFailed": "መላክ አልተቻለም። እንደገና ሞክር"
   },
   "error": {

@@ -28,6 +28,9 @@
     "helpSend": "שלח",
     "helpCancel": "ביטול",
     "helpSent": "נשלח למורה! ✅",
+    "loadFailed": "Python לא נטען 😢",
+    "loadRetry": "נסה שוב",
+    "loadSlow": "זה לוקח קצת יותר זמן... חכה רגע!",
     "helpFailed": "לא הצלחנו לשלוח. נסה שוב"
   },
   "error": {

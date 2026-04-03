@@ -28,6 +28,9 @@
     "helpSend": "Küldés",
     "helpCancel": "Mégse",
     "helpSent": "Elküldve a tanárnak! ✅",
+    "loadFailed": "A Python nem töltődött be 😢",
+    "loadRetry": "Újra próbálom",
+    "loadSlow": "Kicsit tovább tart... várj egy kicsit!",
     "helpFailed": "Nem sikerült elküldeni. Próbáld újra."
   },
   "error": {

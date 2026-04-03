@@ -28,6 +28,9 @@
     "helpSend": "Trimite",
     "helpCancel": "Anulează",
     "helpSent": "Trimis profesorului! ✅",
+    "loadFailed": "Python nu s-a putut încărca 😢",
+    "loadRetry": "Încearcă din nou",
+    "loadSlow": "Durează puțin mai mult... ai răbdare!",
     "helpFailed": "Nu s-a putut trimite. Încearcă din nou."
   },
   "error": {

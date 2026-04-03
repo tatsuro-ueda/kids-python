@@ -28,6 +28,9 @@
     "helpSend": "Yuborish",
     "helpCancel": "Bekor",
     "helpSent": "O'qituvchiga yuborildi! ✅",
+    "loadFailed": "Python yuklanmadi 😢",
+    "loadRetry": "Qayta urinish",
+    "loadSlow": "Biroz koʻproq vaqt ketyapti... kuting!",
     "helpFailed": "Yuborib bo'lmadi. Qayta urinib ko'ring"
   },
   "error": {

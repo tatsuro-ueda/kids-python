@@ -28,6 +28,9 @@
     "helpSend": "పంపు",
     "helpCancel": "రద్దు",
     "helpSent": "టీచర్‌కి పంపాం! ✅",
+    "loadFailed": "Python లోడ్ కాలేదు 😢",
+    "loadRetry": "మళ్ళీ ప్రయత్నించు",
+    "loadSlow": "కొంచెం ఎక్కువ సమయం పడుతోంది... ఆగు!",
     "helpFailed": "పంపలేకపోయాం. మళ్ళీ ట్రై చేయి"
   },
   "error": {

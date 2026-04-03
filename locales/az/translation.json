@@ -28,6 +28,9 @@
     "helpSend": "Göndər",
     "helpCancel": "Ləğv et",
     "helpSent": "Müəllimə göndərildi! ✅",
+    "loadFailed": "Python yüklənmədi 😢",
+    "loadRetry": "Yenidən cəhd et",
+    "loadSlow": "Bir az uzun çəkir... gözlə!",
     "helpFailed": "Göndərilmədi. Yenidən cəhd et"
   },
   "error": {

@@ -28,6 +28,9 @@
     "helpSend": "Invia",
     "helpCancel": "Annulla",
     "helpSent": "Inviato al maestro! ✅",
+    "loadFailed": "Python non è stato caricato 😢",
+    "loadRetry": "Riprova",
+    "loadSlow": "Ci vuole un po' più tempo... aspetta!",
     "helpFailed": "Non si è potuto inviare. Riprova."
   },
   "error": {

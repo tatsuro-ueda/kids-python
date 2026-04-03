@@ -28,6 +28,9 @@
     "helpSend": "Пошаљи",
     "helpCancel": "Откажи",
     "helpSent": "Послато учитељу! ✅",
+    "loadFailed": "Python није учитан 😢",
+    "loadRetry": "Покушај поново",
+    "loadSlow": "Траје мало дуже... сачекај!",
     "helpFailed": "Није послато. Покушај поново."
   },
   "error": {

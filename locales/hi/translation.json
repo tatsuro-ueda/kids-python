@@ -28,6 +28,9 @@
     "helpSend": "भेजो",
     "helpCancel": "रद्द करो",
     "helpSent": "टीचर को भेज दिया! ✅",
+    "loadFailed": "Python लोड नहीं हुआ 😢",
+    "loadRetry": "फिर से कोशिश करो",
+    "loadSlow": "थोड़ा ज़्यादा समय लग रहा है... रुको!",
     "helpFailed": "भेज नहीं पाए। फिर से कोशिश करो"
   },
   "error": {

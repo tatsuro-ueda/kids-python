@@ -28,6 +28,9 @@
     "helpSend": "Send",
     "helpCancel": "Annuller",
     "helpSent": "Sendt til læreren! ✅",
+    "loadFailed": "Python kunne ikke indlæses 😢",
+    "loadRetry": "Prøv igen",
+    "loadSlow": "Det tager lidt længere tid... vent lidt!",
     "helpFailed": "Kunne ikke sende. Prøv igen."
   },
   "error": {

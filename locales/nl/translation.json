@@ -28,6 +28,9 @@
     "helpSend": "Verstuur",
     "helpCancel": "Annuleren",
     "helpSent": "Naar de leraar gestuurd! ✅",
+    "loadFailed": "Python kon niet worden geladen 😢",
+    "loadRetry": "Opnieuw proberen",
+    "loadSlow": "Het duurt iets langer... even geduld!",
     "helpFailed": "Kon niet versturen. Probeer opnieuw."
   },
   "error": {

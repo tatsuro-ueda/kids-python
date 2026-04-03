@@ -28,6 +28,9 @@
     "helpSend": "发送",
     "helpCancel": "取消",
     "helpSent": "已经发给老师了！✅",
+    "loadFailed": "Python 加载失败了 😢",
+    "loadRetry": "重试",
+    "loadSlow": "加载时间比较长...再等一下！",
     "helpFailed": "发送失败，再试一次吧"
   },
   "error": {

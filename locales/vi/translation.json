@@ -28,6 +28,9 @@
     "helpSend": "Gửi",
     "helpCancel": "Hủy",
     "helpSent": "Đã gửi cho thầy cô! ✅",
+    "loadFailed": "Không thể tải Python 😢",
+    "loadRetry": "Thử lại",
+    "loadSlow": "Đang mất nhiều thời gian hơn... đợi chút nhé!",
     "helpFailed": "Không gửi được. Thử lại nhé."
   },
   "error": {

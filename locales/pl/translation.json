@@ -28,6 +28,9 @@
     "helpSend": "Wyślij",
     "helpCancel": "Anuluj",
     "helpSent": "Wysłano do nauczyciela! ✅",
+    "loadFailed": "Nie udało się załadować Pythona 😢",
+    "loadRetry": "Spróbuj ponownie",
+    "loadSlow": "Trwa to trochę dłużej... poczekaj!",
     "helpFailed": "Nie udało się wysłać. Spróbuj ponownie."
   },
   "error": {

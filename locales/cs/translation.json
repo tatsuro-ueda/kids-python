@@ -28,6 +28,9 @@
     "helpSend": "Odeslat",
     "helpCancel": "Zrušit",
     "helpSent": "Odesláno učiteli! ✅",
+    "loadFailed": "Python se nepodařilo načíst 😢",
+    "loadRetry": "Zkusit znovu",
+    "loadSlow": "Trvá to trochu déle... vydrž!",
     "helpFailed": "Nepodařilo se odeslat. Zkus to znovu."
   },
   "error": {

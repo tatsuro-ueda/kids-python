@@ -28,6 +28,9 @@
     "helpSend": "Kirim",
     "helpCancel": "Batal",
     "helpSent": "Sudah dikirim ke guru! ✅",
+    "loadFailed": "Python gagal dimuat 😢",
+    "loadRetry": "Coba lagi",
+    "loadSlow": "Agak lama nih... tunggu ya!",
     "helpFailed": "Gagal mengirim. Coba lagi."
   },
   "error": {

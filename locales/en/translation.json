@@ -28,6 +28,9 @@
     "helpSend": "Send",
     "helpCancel": "Cancel",
     "helpSent": "Sent to teacher! ✅",
+    "loadFailed": "Failed to load Python \ud83d\ude22",
+    "loadRetry": "Retry",
+    "loadSlow": "Taking a little longer than usual... hang tight!",
     "helpFailed": "Couldn't send. Try again."
   },
   "error": {

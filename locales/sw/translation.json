@@ -28,6 +28,9 @@
     "helpSend": "Tuma",
     "helpCancel": "Ghairi",
     "helpSent": "Imetumwa kwa mwalimu! ✅",
+    "loadFailed": "Python haikuweza kupakia 😢",
+    "loadRetry": "Jaribu tena",
+    "loadSlow": "Inachukua muda kidogo... subiri!",
     "helpFailed": "Haikutumwa. Jaribu tena."
   },
   "error": {
