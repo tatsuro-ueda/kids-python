@@ -330,10 +330,13 @@ header h1 {
   border-radius: 12px;
   padding: 12px 16px;
   margin-top: 12px;
-  display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+}
+
+#bookmark-banner:not([hidden]) {
+  display: flex;
 }
 
 #bookmark-banner p {
