@@ -31,7 +31,21 @@
     "loadFailed": "よみこめなかったよ😢",
     "loadRetry": "もういちど",
     "loadSlow": "すこしじかんがかかっているよ…がんばってよみこみちゅう！",
-    "helpFailed": "おくれなかったよ。もういちどためしてね"
+    "helpFailed": "おくれなかったよ。もういちどためしてね",
+    "save": "ほぞん",
+    "saved": "✓ ほぞんしたよ！",
+    "defaultPageName": "ページ{{n}}",
+    "deletePage": "このページをけす？",
+    "deletePageLast": "さいごの1ページはけせないよ",
+    "sampleNewPage": "あたらしいページにする",
+    "sampleCurrentPage": "いまのページにいれる",
+    "sharedPageName": "きょうゆうされたコード",
+    "maxPages": "ページはここまでだよ（さいだい{{max}}ページ）",
+    "undoDelete": "もとにもどす",
+    "exportHint": "だいじなコードは「きょうゆう」でURLをのこしておくと、べつのたんまつでもひらけるよ",
+    "expand": "ひろげる",
+    "outputLabel": "けっか",
+    "fullscreenRun": "じっこう"
   },
   "lp": {
     "title": "Pythonれんしゅうちょう — 小学生向けブラウザPython学習環境",

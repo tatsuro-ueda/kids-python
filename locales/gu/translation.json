@@ -31,7 +31,21 @@
     "loadFailed": "Python લોડ થયું નહીં 😢",
     "loadRetry": "ફરી પ્રયાસ કરો",
     "loadSlow": "થોડો સમય લાગી રહ્યો છે... રાહ જુઓ!",
-    "helpFailed": "મોકલી શકાયું નહીં. ફરી પ્રયાસ કરો"
+    "helpFailed": "મોકલી શકાયું નહીં. ફરી પ્રયાસ કરો",
+    "save": "Save",
+    "saved": "✓ Saved!",
+    "defaultPageName": "Page {{n}}",
+    "deletePage": "Delete this page?",
+    "deletePageLast": "Can't delete the last page",
+    "sampleNewPage": "Open in new page",
+    "sampleCurrentPage": "Replace current page",
+    "sharedPageName": "Shared code",
+    "maxPages": "Maximum {{max}} pages reached",
+    "undoDelete": "Undo",
+    "exportHint": "Save important code with \"Share\" to open on other devices",
+    "expand": "Expand",
+    "outputLabel": "Output",
+    "fullscreenRun": "Run"
   },
   "error": {
     "parenOpen": "કૌંસ `(` બંધ નથી થયું. `)` ઉમેરો",

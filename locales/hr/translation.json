@@ -31,7 +31,21 @@
     "loadFailed": "Python se nije učitao 😢",
     "loadRetry": "Pokušaj ponovo",
     "loadSlow": "Traje malo duže... strpi se!",
-    "helpFailed": "Nije uspjelo. Pokušaj ponovo."
+    "helpFailed": "Nije uspjelo. Pokušaj ponovo.",
+    "save": "Save",
+    "saved": "✓ Saved!",
+    "defaultPageName": "Page {{n}}",
+    "deletePage": "Delete this page?",
+    "deletePageLast": "Can't delete the last page",
+    "sampleNewPage": "Open in new page",
+    "sampleCurrentPage": "Replace current page",
+    "sharedPageName": "Shared code",
+    "maxPages": "Maximum {{max}} pages reached",
+    "undoDelete": "Undo",
+    "exportHint": "Save important code with \"Share\" to open on other devices",
+    "expand": "Expand",
+    "outputLabel": "Output",
+    "fullscreenRun": "Run"
   },
   "error": {
     "parenOpen": "Zagrada `(` nije zatvorena. Dodaj `)` da je zatvoriš",
