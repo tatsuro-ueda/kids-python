@@ -117,9 +117,130 @@ header h1 {
   }
 }
 
+/* Page tabs */
+.page-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  padding: 4px 4px 0;
+  margin-bottom: 0;
+}
+
+.page-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border: 2px solid #b8d8e8;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  background: #e8f4fc;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #4a90c4;
+  white-space: nowrap;
+  min-width: 0;
+  max-width: 160px;
+  transition: background 0.15s;
+}
+
+.page-tab:hover {
+  background: #d4ecf8;
+}
+
+.page-tab.active {
+  background: #f0f8ff;
+  border-color: #b8d8e8;
+  color: #333;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -2px;
+  padding-bottom: 8px;
+}
+
+.tab-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tab-close {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 2px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.tab-close:hover {
+  background: #f5c6d0;
+  color: #ff4d4f;
+}
+
+.page-tab-add {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border: 2px dashed #b8d8e8;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #4a90c4;
+  transition: background 0.15s;
+}
+
+.page-tab-add:hover {
+  background: #e8f4fc;
+}
+
+/* Tab compact modes */
+.tabs-compact .page-tab {
+  max-width: 100px;
+  padding: 6px 8px;
+  font-size: 0.75rem;
+}
+
+.tabs-icon .page-tab {
+  max-width: 40px;
+  padding: 6px 6px;
+  font-size: 0.7rem;
+  justify-content: center;
+}
+
+.tabs-icon .tab-name {
+  display: none;
+}
+
+.tabs-icon .tab-num {
+  display: inline;
+}
+
+.tab-num {
+  display: none;
+}
+
+/* Tab inline rename */
+.tab-rename-input {
+  border: 1px solid #4a90c4;
+  border-radius: 4px;
+  padding: 1px 4px;
+  font-size: inherit;
+  font-family: inherit;
+  width: 80px;
+  outline: none;
+}
+
 #editor {
   border: 2px solid #b8d8e8;
-  border-radius: 12px;
+  border-radius: 0 0 12px 12px;
   overflow: hidden;
   background: #f0f8ff;
 }
@@ -168,6 +289,27 @@ header h1 {
 
 #run-btn {
   background: #7ec8e3;
+}
+
+#save-btn {
+  background: #a8d8a8;
+}
+
+#save-btn.saved {
+  background: #7ec87e;
+  animation: savePulse 0.3s ease;
+}
+
+@keyframes savePulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #save-btn.saved {
+    animation: none;
+  }
 }
 
 #share-btn {
@@ -343,6 +485,51 @@ header h1 {
   appearance: auto;
 }
 
+/* Undo bar */
+.undo-bar {
+  padding: 8px;
+  text-align: center;
+}
+
+.undo-link {
+  color: #4a90c4;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Export hint banner */
+.export-hint-banner {
+  background: #e8f8e8;
+  border: 2px solid #a8d8a8;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.export-hint-banner p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #2d6a2d;
+  font-weight: bold;
+}
+
+.export-hint-close {
+  background: none;
+  border: 1px solid #a8d8a8;
+  border-radius: 12px;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  color: #2d6a2d;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
 #bookmark-banner {
   background: #fffbe6;
   border: 2px solid #ffe58f;
@@ -488,5 +675,160 @@ header h1 {
 
 #lang-list li:hover {
   background: #e8f4fc;
+}
+
+/* Expand button */
+#expand-btn {
+  background: #c4b5fd;
+}
+
+/* ===== Fullscreen mode ===== */
+
+body.fullscreen-mode header,
+body.fullscreen-mode #status,
+body.fullscreen-mode #page-tabs,
+body.fullscreen-mode .toolbar,
+body.fullscreen-mode #output,
+body.fullscreen-mode #help-form,
+body.fullscreen-mode #bookmark-banner,
+body.fullscreen-mode .export-hint-banner,
+body.fullscreen-mode .dev-buttons,
+body.fullscreen-mode .site-footer {
+  display: none !important;
+}
+
+body.fullscreen-mode {
+  padding: 0;
+  background: #f0f8ff;
+  background-image: none;
+}
+
+body.fullscreen-mode .container {
+  max-width: none;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.fullscreen-mode #editor {
+  flex: 1;
+  border: none;
+  border-radius: 0;
+}
+
+body.fullscreen-mode #editor .cm-editor {
+  height: 100%;
+  font-size: 18px;
+}
+
+/* Fullscreen close button */
+.fullscreen-close {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #b8d8e8;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullscreen-close:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+body.fullscreen-mode .fullscreen-close {
+  display: flex;
+}
+
+/* Fullscreen run button */
+.fullscreen-run {
+  position: fixed;
+  top: 12px;
+  right: 60px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #7ec8e3;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 200;
+  display: none;
+}
+
+.fullscreen-run:hover {
+  opacity: 0.85;
+}
+
+.fullscreen-run:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+body.fullscreen-mode .fullscreen-run {
+  display: block;
+}
+
+/* Fullscreen output panel */
+#fullscreen-output {
+  border-top: 2px solid #b8d8e8;
+  background: #f0f8ff;
+  flex-direction: column;
+  flex: 0 0 40%;
+  max-height: 40vh;
+}
+
+#fullscreen-output:not([hidden]) {
+  display: flex;
+}
+
+.fullscreen-output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 12px;
+  background: #e8f4fc;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #4a90c4;
+  flex-shrink: 0;
+}
+
+.fullscreen-output-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #999;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.fullscreen-output-close:hover {
+  background: #f5c6d0;
+  color: #ff4d4f;
+}
+
+.fullscreen-output-content {
+  flex: 1;
+  overflow: auto;
+  padding: 12px;
+  font-family: monospace;
+  font-size: 14px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  margin: 0;
+}
+
+.fullscreen-output-content .error {
+  color: #ff4d4f;
 }
 

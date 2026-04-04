@@ -31,7 +31,21 @@
     "loadFailed": "Python לא נטען 😢",
     "loadRetry": "נסה שוב",
     "loadSlow": "זה לוקח קצת יותר זמן... חכה רגע!",
-    "helpFailed": "לא הצלחנו לשלוח. נסה שוב"
+    "helpFailed": "לא הצלחנו לשלוח. נסה שוב",
+    "save": "Save",
+    "saved": "✓ Saved!",
+    "defaultPageName": "Page {{n}}",
+    "deletePage": "Delete this page?",
+    "deletePageLast": "Can't delete the last page",
+    "sampleNewPage": "Open in new page",
+    "sampleCurrentPage": "Replace current page",
+    "sharedPageName": "Shared code",
+    "maxPages": "Maximum {{max}} pages reached",
+    "undoDelete": "Undo",
+    "exportHint": "Save important code with \"Share\" to open on other devices",
+    "expand": "Expand",
+    "outputLabel": "Output",
+    "fullscreenRun": "Run"
   },
   "error": {
     "parenOpen": "הסוגריים `(` לא נסגרו. הוסף `)` כדי לסגור",

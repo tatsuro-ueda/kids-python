@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <button id="fullscreen-close" class="fullscreen-close">×</button>
+  <button id="fullscreen-run" class="fullscreen-run" data-i18n="app.fullscreenRun">じっこう</button>
   <div class="container">
     <header>
       <img src="../assets/snake.png" alt="ヘビ" class="mascot" data-i18n-alt="app.mascotAlt">
@@ -18,14 +20,24 @@
       </div>
     </header>
     <div id="status" hidden></div>
+    <div id="page-tabs" class="page-tabs"></div>
     <div id="editor" dir="ltr"></div>
+    <div id="fullscreen-output" hidden>
+      <div class="fullscreen-output-header">
+        <span data-i18n="app.outputLabel">けっか</span>
+        <button id="fullscreen-output-close" class="fullscreen-output-close">×</button>
+      </div>
+      <pre id="fullscreen-output-content" class="fullscreen-output-content"></pre>
+    </div>
     <div class="toolbar">
       <button id="run-btn" disabled data-i18n="app.run">じっこう</button>
+      <button id="save-btn" data-i18n="app.save">ほぞん</button>
       <select id="samples">
         <option value="" data-i18n="app.samplesLabel">おてほん</option>
       </select>
       <button id="share-btn" data-i18n="app.share">きょうゆう</button>
       <button id="help-btn" data-i18n="app.helpBtn">わからない！</button>
+      <button id="expand-btn" data-i18n="app.expand">ひろげる</button>
     </div>
     <div id="help-form" hidden>
       <textarea id="help-msg" rows="3" data-i18n-placeholder="app.helpPlaceholder" placeholder="どこがわからない？"></textarea>

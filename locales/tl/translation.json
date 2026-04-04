@@ -31,7 +31,21 @@
     "loadFailed": "Hindi na-load ang Python 😢",
     "loadRetry": "Subukan muli",
     "loadSlow": "Medyo matagal... sandali lang!",
-    "helpFailed": "Hindi naipadala. Subukan ulit."
+    "helpFailed": "Hindi naipadala. Subukan ulit.",
+    "save": "Save",
+    "saved": "✓ Saved!",
+    "defaultPageName": "Page {{n}}",
+    "deletePage": "Delete this page?",
+    "deletePageLast": "Can't delete the last page",
+    "sampleNewPage": "Open in new page",
+    "sampleCurrentPage": "Replace current page",
+    "sharedPageName": "Shared code",
+    "maxPages": "Maximum {{max}} pages reached",
+    "undoDelete": "Undo",
+    "exportHint": "Save important code with \"Share\" to open on other devices",
+    "expand": "Expand",
+    "outputLabel": "Output",
+    "fullscreenRun": "Run"
   },
   "error": {
     "parenOpen": "Hindi pa nasara ang panaklong na `(`. Lagyan ng `)` ha",

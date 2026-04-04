@@ -3749,6 +3749,9 @@ function applyDOM() {
   document.querySelectorAll("[data-i18n-href]").forEach((el) => {
     el.href = instance.t(el.dataset.i18nHref);
   });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    el.placeholder = instance.t(el.dataset.i18nPlaceholder);
+  });
 }
 var t2 = (...args) => instance.t(...args);
 var getLocale = () => instance.language;
@@ -22104,7 +22107,7 @@ var historyField_ = /* @__PURE__ */ StateField.define({
     return new HistoryState(json.done.map(HistEvent.fromJSON), json.undone.map(HistEvent.fromJSON));
   }
 });
-function history(config2 = {}) {
+function history2(config2 = {}) {
   return [
     historyField_,
     historyConfig.of(config2),
@@ -26472,7 +26475,7 @@ var basicSetup = /* @__PURE__ */ (() => [
   lineNumbers(),
   highlightActiveLineGutter(),
   highlightSpecialChars(),
-  history(),
+  history2(),
   foldGutter(),
   drawSelection(),
   dropCursor(),
@@ -29013,8 +29016,83 @@ function python() {
 }
 
 // src/storage.js
-var STORAGE_KEY = "python-editor-code";
+var LEGACY_CODE_KEY = "python-editor-code";
+var PAGES_KEY = "python-editor-pages";
+var PAGE_PREFIX = "python-editor-page-";
+var OUTPUT_PREFIX = "python-editor-output-";
+var ACTIVE_KEY = "python-editor-active";
+var MAX_PAGES = 32;
 var DEFAULT_CODE = 'print("Hello, Python!")';
+function generateId() {
+  return "p" + Date.now() + Math.random().toString(36).slice(2, 6);
+}
+function getPages() {
+  try {
+    return JSON.parse(localStorage.getItem(PAGES_KEY)) || [];
+  } catch {
+    return [];
+  }
+}
+function savePages(pages) {
+  localStorage.setItem(PAGES_KEY, JSON.stringify(pages));
+}
+function getActivePage() {
+  return localStorage.getItem(ACTIVE_KEY);
+}
+function setActivePage(id2) {
+  localStorage.setItem(ACTIVE_KEY, id2);
+}
+function createPage(name2, code) {
+  const pages = getPages();
+  if (pages.length >= MAX_PAGES) return null;
+  const id2 = generateId();
+  pages.push({ id: id2, name: name2, createdAt: Date.now() });
+  savePages(pages);
+  localStorage.setItem(PAGE_PREFIX + id2, code || DEFAULT_CODE);
+  return id2;
+}
+function deletePage(id2) {
+  const pages = getPages().filter((p) => p.id !== id2);
+  savePages(pages);
+  localStorage.removeItem(PAGE_PREFIX + id2);
+  localStorage.removeItem(OUTPUT_PREFIX + id2);
+}
+function renamePage(id2, name2) {
+  const pages = getPages();
+  const page = pages.find((p) => p.id === id2);
+  if (page) {
+    page.name = name2.slice(0, 20);
+    savePages(pages);
+  }
+}
+function loadPageCode(id2) {
+  return localStorage.getItem(PAGE_PREFIX + id2) || DEFAULT_CODE;
+}
+function savePageCode(id2, code) {
+  localStorage.setItem(PAGE_PREFIX + id2, code);
+}
+function loadPageOutput(id2) {
+  return localStorage.getItem(OUTPUT_PREFIX + id2) || "";
+}
+function savePageOutput(id2, output) {
+  localStorage.setItem(OUTPUT_PREFIX + id2, output);
+}
+function getMaxPages() {
+  return MAX_PAGES;
+}
+function migrateIfNeeded() {
+  if (localStorage.getItem(PAGES_KEY)) return;
+  const legacyCode = localStorage.getItem(LEGACY_CODE_KEY);
+  const code = legacyCode || DEFAULT_CODE;
+  const id2 = generateId();
+  const name2 = t2("app.defaultPageName", { n: 1 }) || "\u30DA\u30FC\u30B81";
+  savePages([{ id: id2, name: name2, createdAt: Date.now() }]);
+  localStorage.setItem(PAGE_PREFIX + id2, code);
+  setActivePage(id2);
+  if (legacyCode !== null) {
+    localStorage.removeItem(LEGACY_CODE_KEY);
+  }
+}
 var sharedCode = null;
 function encodeShareURL(code) {
   const encoded = btoa(encodeURIComponent(code));
@@ -29030,18 +29108,23 @@ function detectSharedCode() {
     return null;
   }
 }
-function setSharedCode(code) {
-  sharedCode = code;
-}
 function loadCode() {
   if (sharedCode !== null) return sharedCode;
-  return localStorage.getItem(STORAGE_KEY) || DEFAULT_CODE;
+  const activeId = getActivePage();
+  if (activeId) return loadPageCode(activeId);
+  return DEFAULT_CODE;
 }
 function saveCode(code) {
-  localStorage.setItem(STORAGE_KEY, code);
+  const activeId = getActivePage();
+  if (activeId) {
+    savePageCode(activeId, code);
+  }
 }
 function resetCode() {
-  localStorage.removeItem(STORAGE_KEY);
+  const activeId = getActivePage();
+  if (activeId) {
+    localStorage.setItem(PAGE_PREFIX + activeId, DEFAULT_CODE);
+  }
   return DEFAULT_CODE;
 }
 function getShareIntentURLs(url) {
@@ -29148,14 +29231,19 @@ def _custom_input(p=""):
 
 builtins.input = _custom_input
 `;
-async function loadPyodide(onStatus) {
+async function loadPyodide(onStatus, onError) {
   onStatus(t2("app.loading"));
-  const mod = await import("/vendor/pyodide/pyodide.mjs");
-  pyodide = await mod.loadPyodide({
-    indexURL: "/vendor/pyodide/"
-  });
-  await pyodide.runPythonAsync(INPUT_PATCH);
-  onStatus(null);
+  try {
+    const mod = await import("/vendor/pyodide/pyodide.mjs");
+    pyodide = await mod.loadPyodide({
+      indexURL: "/vendor/pyodide/"
+    });
+    await pyodide.runPythonAsync(INPUT_PATCH);
+    onStatus(null);
+  } catch (e) {
+    console.error("Pyodide load failed:", e);
+    onError(e);
+  }
 }
 async function runCode(code, onStdout, onStderr) {
   if (!pyodide) throw new Error("Pyodide is not loaded");
@@ -29193,8 +29281,8 @@ var ERROR_MESSAGES = [
   // ZeroDivisionError
   { type: "ZeroDivisionError", pattern: /division by zero/, key: "error.divisionByZero" },
   // ValueError
-  { type: "ValueError", pattern: /invalid literal for int/, key: "error.invalidInt" },
-  { type: "ValueError", pattern: /could not convert string to float/, key: "error.invalidFloat" },
+  { type: "ValueError", pattern: /invalid literal for int\(\) with base \d+: '(.+)'/, key: "error.invalidInt", captures: ["value"] },
+  { type: "ValueError", pattern: /could not convert string to float: '(.+)'/, key: "error.invalidFloat", captures: ["value"] },
   // AttributeError
   { type: "AttributeError", pattern: /'(.+)' .* has no attribute '(.+)'/, key: "error.noAttribute", captures: ["type", "attr"] },
   // KeyError
@@ -29255,23 +29343,235 @@ async function getSamples() {
     return [];
   }
 }
+async function getDefaultCode() {
+  const samples = await getSamples();
+  if (samples.length > 0) return samples[0].code;
+  return 'print("Hello, Python!")\n';
+}
 
 // src/main.js
 async function main() {
   await initI18n();
+  migrateIfNeeded();
   const shared = detectSharedCode();
   if (shared !== null) {
     if (confirm(t2("app.confirmShared"))) {
-      setSharedCode(shared);
+      const pages = getPages();
+      if (pages.length < getMaxPages()) {
+        const name2 = t2("app.sharedPageName") || "\u304D\u3087\u3046\u3086\u3046\u3055\u308C\u305F\u30B3\u30FC\u30C9";
+        const id2 = createPage(name2, shared);
+        setActivePage(id2);
+      } else {
+        if (confirm(t2("app.sampleCurrentPage"))) {
+          savePageCode(getActivePage(), shared);
+        }
+      }
     }
+    history.replaceState(null, "", location.pathname);
   }
   const editorContainer = document.getElementById("editor");
   const outputEl = document.getElementById("output");
   const runBtn = document.getElementById("run-btn");
   const shareBtn = document.getElementById("share-btn");
+  const saveBtn = document.getElementById("save-btn");
   const statusEl = document.getElementById("status");
+  const tabsContainer = document.getElementById("page-tabs");
   const editor = createEditor(editorContainer);
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let undoData = null;
+  let undoTimer = null;
+  function clearUndo() {
+    undoData = null;
+    if (undoTimer) {
+      clearTimeout(undoTimer);
+      undoTimer = null;
+    }
+  }
+  function renderTabs() {
+    tabsContainer.innerHTML = "";
+    const pages = getPages();
+    const activeId = getActivePage();
+    tabsContainer.classList.remove("tabs-compact", "tabs-icon");
+    if (pages.length >= 13) {
+      tabsContainer.classList.add("tabs-icon");
+    } else if (pages.length >= 6) {
+      tabsContainer.classList.add("tabs-compact");
+    }
+    pages.forEach((page, index) => {
+      const tab2 = document.createElement("div");
+      tab2.className = "page-tab" + (page.id === activeId ? " active" : "");
+      tab2.dataset.id = page.id;
+      const nameSpan = document.createElement("span");
+      nameSpan.className = "tab-name";
+      nameSpan.textContent = page.name;
+      tab2.appendChild(nameSpan);
+      const numSpan = document.createElement("span");
+      numSpan.className = "tab-num";
+      numSpan.textContent = index + 1;
+      tab2.appendChild(numSpan);
+      if (pages.length >= 13) {
+        tab2.title = page.name;
+      }
+      const closeBtn = document.createElement("button");
+      closeBtn.className = "tab-close";
+      closeBtn.textContent = "\xD7";
+      closeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        handleDeletePage(page.id);
+      });
+      tab2.appendChild(closeBtn);
+      tab2.addEventListener("click", () => switchToPage(page.id));
+      tab2.addEventListener("dblclick", (e) => {
+        e.preventDefault();
+        startRename(tab2, page.id, nameSpan);
+      });
+      tabsContainer.appendChild(tab2);
+    });
+    const addBtn = document.createElement("button");
+    addBtn.className = "page-tab-add";
+    addBtn.textContent = "\uFF0B";
+    addBtn.addEventListener("click", handleAddPage);
+    tabsContainer.appendChild(addBtn);
+  }
+  function switchToPage(id2) {
+    const currentId = getActivePage();
+    if (id2 === currentId) return;
+    savePageCode(currentId, editor.state.doc.toString());
+    savePageOutput(currentId, outputEl.innerHTML);
+    setActivePage(id2);
+    const code = loadPageCode(id2);
+    editor.dispatch({
+      changes: { from: 0, to: editor.state.doc.length, insert: code }
+    });
+    outputEl.innerHTML = loadPageOutput(id2);
+    clearErrorHighlight(editor);
+    clearUndo();
+    renderTabs();
+  }
+  function handleAddPage() {
+    const pages = getPages();
+    if (pages.length >= getMaxPages()) {
+      alert(t2("app.maxPages", { max: getMaxPages() }));
+      return;
+    }
+    const currentId = getActivePage();
+    savePageCode(currentId, editor.state.doc.toString());
+    savePageOutput(currentId, outputEl.innerHTML);
+    const n = pages.length + 1;
+    const name2 = t2("app.defaultPageName", { n }) || `\u30DA\u30FC\u30B8${n}`;
+    const defaultCode = 'print("Hello, Python!")';
+    const id2 = createPage(name2, defaultCode);
+    setActivePage(id2);
+    editor.dispatch({
+      changes: { from: 0, to: editor.state.doc.length, insert: defaultCode }
+    });
+    outputEl.innerHTML = "";
+    clearUndo();
+    renderTabs();
+    checkExportHint();
+  }
+  function handleDeletePage(id2) {
+    const pages = getPages();
+    if (pages.length <= 1) {
+      alert(t2("app.deletePageLast") || "\u3055\u3044\u3054\u306E1\u30DA\u30FC\u30B8\u306F\u3051\u305B\u306A\u3044\u3088");
+      return;
+    }
+    if (!confirm(t2("app.deletePage") || "\u3053\u306E\u30DA\u30FC\u30B8\u3092\u3051\u3059\uFF1F")) return;
+    const pageIndex = pages.findIndex((p) => p.id === id2);
+    const pageMeta = pages[pageIndex];
+    undoData = {
+      meta: pageMeta,
+      code: loadPageCode(id2),
+      output: loadPageOutput(id2),
+      index: pageIndex
+    };
+    deletePage(id2);
+    if (getActivePage() === id2) {
+      const remaining = getPages();
+      const newActive = remaining[Math.min(pageIndex, remaining.length - 1)];
+      setActivePage(newActive.id);
+      editor.dispatch({
+        changes: { from: 0, to: editor.state.doc.length, insert: loadPageCode(newActive.id) }
+      });
+      outputEl.innerHTML = loadPageOutput(newActive.id);
+      clearErrorHighlight(editor);
+    }
+    renderTabs();
+    showUndoLink();
+  }
+  function showUndoLink() {
+    const undoDiv = document.createElement("div");
+    undoDiv.className = "undo-bar";
+    undoDiv.innerHTML = `<a href="#" class="undo-link">${t2("app.undoDelete") || "\u3082\u3068\u306B\u3082\u3069\u3059"}</a>`;
+    outputEl.prepend(undoDiv);
+    undoDiv.querySelector(".undo-link").addEventListener("click", (e) => {
+      e.preventDefault();
+      if (!undoData) return;
+      const pages = getPages();
+      const idx = Math.min(undoData.index, pages.length);
+      pages.splice(idx, 0, undoData.meta);
+      localStorage.setItem("python-editor-pages", JSON.stringify(pages));
+      savePageCode(undoData.meta.id, undoData.code);
+      savePageOutput(undoData.meta.id, undoData.output);
+      switchToPage(undoData.meta.id);
+      clearUndo();
+    });
+    if (undoTimer) clearTimeout(undoTimer);
+    undoTimer = setTimeout(() => {
+      if (undoDiv.parentNode) undoDiv.remove();
+      undoData = null;
+    }, 5e3);
+  }
+  function startRename(tabEl, id2, nameSpan) {
+    const currentName = nameSpan.textContent;
+    const input = document.createElement("input");
+    input.type = "text";
+    input.className = "tab-rename-input";
+    input.value = currentName;
+    input.maxLength = 20;
+    nameSpan.replaceWith(input);
+    input.focus();
+    input.select();
+    function finish() {
+      const newName = input.value.trim() || currentName;
+      renamePage(id2, newName);
+      renderTabs();
+    }
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        finish();
+      }
+      if (e.key === "Escape") {
+        e.preventDefault();
+        renderTabs();
+      }
+    });
+    input.addEventListener("blur", finish);
+  }
+  const EXPORT_HINT_KEY = "export-hint-dismissed";
+  function checkExportHint() {
+    if (localStorage.getItem(EXPORT_HINT_KEY)) return;
+    const pages = getPages();
+    if (pages.length >= 3) {
+      showExportHint();
+    }
+  }
+  function showExportHint() {
+    if (document.getElementById("export-hint-banner")) return;
+    const banner = document.createElement("div");
+    banner.id = "export-hint-banner";
+    banner.className = "export-hint-banner";
+    banner.innerHTML = `
+      <p>${t2("app.exportHint") || "\u3060\u3044\u3058\u306A\u30B3\u30FC\u30C9\u306F\u300C\u304D\u3087\u3046\u3086\u3046\u300D\u3067URL\u3092\u306E\u3053\u3057\u3066\u304A\u304F\u3068\u3001\u3079\u3064\u306E\u305F\u3093\u307E\u3064\u3067\u3082\u3072\u3089\u3051\u308B\u3088"}</p>
+      <button class="export-hint-close">${t2("app.bookmarkClose") || "\u3068\u3058\u308B"}</button>
+    `;
+    outputEl.parentNode.insertBefore(banner, outputEl.nextSibling);
+    banner.querySelector(".export-hint-close").addEventListener("click", () => {
+      banner.remove();
+      localStorage.setItem(EXPORT_HINT_KEY, "1");
+    });
+  }
   function setStatus(msg) {
     if (msg) {
       statusEl.innerHTML = msg.split("").map(
@@ -29296,12 +29596,86 @@ async function main() {
     }
   }
   function appendOutput(text, type = "stdout") {
+    appendToTarget(outputEl, text, type);
+  }
+  function appendError(errorText) {
+    appendErrorToTarget(outputEl, errorText);
+  }
+  let slowTimer = null;
+  function startLoadPyodide() {
+    slowTimer = setTimeout(() => {
+      statusEl.innerHTML = t2("app.loadSlow").split("").map(
+        (ch, i) => `<span style="--i:${i}">${ch}</span>`
+      ).join("");
+      statusEl.classList.add("loading");
+    }, 1e4);
+    loadPyodide(
+      (msg) => {
+        if (!msg) clearTimeout(slowTimer);
+        setStatus(msg);
+      },
+      () => {
+        clearTimeout(slowTimer);
+        statusEl.classList.remove("loading", "fade-out");
+        statusEl.hidden = false;
+        statusEl.innerHTML = "";
+        runBtn.disabled = true;
+        const msg = document.createElement("span");
+        msg.textContent = t2("app.loadFailed") + " ";
+        statusEl.appendChild(msg);
+        const retryBtn = document.createElement("button");
+        retryBtn.textContent = t2("app.loadRetry");
+        retryBtn.className = "retry-btn";
+        retryBtn.addEventListener("click", () => startLoadPyodide());
+        statusEl.appendChild(retryBtn);
+      }
+    );
+  }
+  startLoadPyodide();
+  const BOOKMARK_KEY = "bookmark-banner-dismissed";
+  if (!localStorage.getItem(BOOKMARK_KEY)) {
+    const banner = document.getElementById("bookmark-banner");
+    banner.hidden = false;
+    document.getElementById("bookmark-close").addEventListener("click", () => {
+      banner.hidden = true;
+      localStorage.setItem(BOOKMARK_KEY, "1");
+    });
+  }
+  renderTabs();
+  const initialOutput = loadPageOutput(getActivePage());
+  if (initialOutput) outputEl.innerHTML = initialOutput;
+  const expandBtn = document.getElementById("expand-btn");
+  const fullscreenCloseBtn = document.getElementById("fullscreen-close");
+  const fullscreenRunBtn = document.getElementById("fullscreen-run");
+  const fullscreenOutputEl = document.getElementById("fullscreen-output");
+  const fullscreenOutputContent = document.getElementById("fullscreen-output-content");
+  const fullscreenOutputCloseBtn = document.getElementById("fullscreen-output-close");
+  let isFullscreen = false;
+  function enterFullscreen() {
+    isFullscreen = true;
+    document.body.classList.add("fullscreen-mode");
+    editor.requestMeasure();
+  }
+  function exitFullscreen() {
+    isFullscreen = false;
+    document.body.classList.remove("fullscreen-mode");
+    fullscreenOutputEl.hidden = true;
+    editor.requestMeasure();
+  }
+  expandBtn.addEventListener("click", enterFullscreen);
+  fullscreenCloseBtn.addEventListener("click", exitFullscreen);
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isFullscreen) {
+      exitFullscreen();
+    }
+  });
+  function appendToTarget(targetEl, text, type = "stdout") {
     const span = document.createElement("span");
     span.textContent = text + "\n";
     if (type === "stderr") span.className = "error";
-    outputEl.appendChild(span);
+    targetEl.appendChild(span);
   }
-  function appendError(errorText) {
+  function appendErrorToTarget(targetEl, errorText) {
     const { japanese, original, lineNumber } = translateError(errorText);
     const wrapper = document.createElement("div");
     wrapper.className = "error-block";
@@ -29319,44 +29693,90 @@ async function main() {
     pre.textContent = original;
     details.appendChild(pre);
     wrapper.appendChild(details);
-    outputEl.appendChild(wrapper);
+    targetEl.appendChild(wrapper);
     if (lineNumber) {
       highlightErrorLine(editor, lineNumber);
     }
   }
-  loadPyodide(setStatus);
-  const BOOKMARK_KEY = "bookmark-banner-dismissed";
-  if (!localStorage.getItem(BOOKMARK_KEY)) {
-    const banner = document.getElementById("bookmark-banner");
-    banner.hidden = false;
-    document.getElementById("bookmark-close").addEventListener("click", () => {
-      banner.hidden = true;
-      localStorage.setItem(BOOKMARK_KEY, "1");
-    });
-  }
-  runBtn.addEventListener("click", async () => {
-    outputEl.textContent = "";
+  async function executeCode(targetEl, runBtnEl) {
+    targetEl.textContent = "";
     clearErrorHighlight(editor);
+    clearUndo();
     const code = editor.state.doc.toString();
-    runBtn.disabled = true;
-    runBtn.textContent = t2("app.running");
+    if (runBtnEl) {
+      runBtnEl.disabled = true;
+      runBtnEl.textContent = t2("app.running");
+    }
     try {
-      await runCode(code, (text) => appendOutput(text), (text) => appendOutput(text, "stderr"));
+      await runCode(
+        code,
+        (text) => appendToTarget(targetEl, text),
+        (text) => appendToTarget(targetEl, text, "stderr")
+      );
     } catch (e) {
       console.log("--- raw error ---");
       console.log("e.message:", JSON.stringify(e.message));
       console.log("e.type:", e.type);
       console.log("e:", e);
-      appendError(e.message);
+      appendErrorToTarget(targetEl, e.message);
     } finally {
-      runBtn.disabled = false;
-      runBtn.textContent = t2("app.run");
+      if (runBtnEl) {
+        runBtnEl.disabled = false;
+        runBtnEl.textContent = t2("app.run");
+      }
+      savePageOutput(getActivePage(), outputEl.innerHTML);
     }
+  }
+  runBtn.addEventListener("click", () => executeCode(outputEl, runBtn));
+  async function fullscreenExecute() {
+    fullscreenOutputEl.hidden = false;
+    fullscreenOutputContent.textContent = "";
+    clearErrorHighlight(editor);
+    const code = editor.state.doc.toString();
+    fullscreenRunBtn.disabled = true;
+    fullscreenRunBtn.textContent = t2("app.running");
+    try {
+      await runCode(
+        code,
+        (text) => appendToTarget(fullscreenOutputContent, text),
+        (text) => appendToTarget(fullscreenOutputContent, text, "stderr")
+      );
+    } catch (e) {
+      appendErrorToTarget(fullscreenOutputContent, e.message);
+    } finally {
+      fullscreenRunBtn.disabled = false;
+      fullscreenRunBtn.textContent = t2("app.fullscreenRun") || t2("app.run");
+      outputEl.textContent = fullscreenOutputContent.textContent;
+      savePageOutput(getActivePage(), outputEl.innerHTML);
+    }
+    editor.requestMeasure();
+  }
+  fullscreenRunBtn.addEventListener("click", fullscreenExecute);
+  document.addEventListener("keydown", (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === "Enter" && isFullscreen) {
+      e.preventDefault();
+      fullscreenExecute();
+    }
+  });
+  fullscreenOutputCloseBtn.addEventListener("click", () => {
+    fullscreenOutputEl.hidden = true;
+    editor.requestMeasure();
+  });
+  saveBtn.addEventListener("click", () => {
+    const code = editor.state.doc.toString();
+    savePageCode(getActivePage(), code);
+    saveBtn.textContent = t2("app.saved") || "\u2713 \u307B\u305E\u3093\u3057\u305F\u3088\uFF01";
+    saveBtn.classList.add("saved");
+    setTimeout(() => {
+      saveBtn.textContent = t2("app.save") || "\u307B\u305E\u3093";
+      saveBtn.classList.remove("saved");
+    }, 1500);
   });
   shareBtn.addEventListener("click", async () => {
     const code = editor.state.doc.toString();
     const url = encodeShareURL(code);
     outputEl.textContent = "";
+    clearUndo();
     try {
       await navigator.clipboard.writeText(url);
       appendOutput(t2("app.shareCopied"));
@@ -29376,6 +29796,7 @@ async function main() {
       </div>
     `;
     outputEl.appendChild(div);
+    savePageOutput(getActivePage(), outputEl.innerHTML);
   });
   const samplesSelect = document.getElementById("samples");
   let currentSamples = [];
@@ -29394,10 +29815,35 @@ async function main() {
     const idx = samplesSelect.value;
     if (idx === "") return;
     const sample = currentSamples[idx];
-    if (sample && confirm(t2("app.confirmReplace"))) {
-      editor.dispatch({
-        changes: { from: 0, to: editor.state.doc.length, insert: sample.code }
-      });
+    if (!sample) return;
+    const pages = getPages();
+    const canAddPage = pages.length < getMaxPages();
+    if (canAddPage) {
+      const useNewPage = confirm(
+        (t2("app.sampleNewPage") || "\u3042\u305F\u3089\u3057\u3044\u30DA\u30FC\u30B8\u306B\u3059\u308B") + "?\n\nOK = " + (t2("app.sampleNewPage") || "\u3042\u305F\u3089\u3057\u3044\u30DA\u30FC\u30B8\u306B\u3059\u308B") + "\n" + (t2("app.sampleCurrentPage") || "\u3044\u307E\u306E\u30DA\u30FC\u30B8\u306B\u3044\u308C\u308B") + " \u2192 \u30AD\u30E3\u30F3\u30BB\u30EB"
+      );
+      if (useNewPage) {
+        savePageCode(getActivePage(), editor.state.doc.toString());
+        savePageOutput(getActivePage(), outputEl.innerHTML);
+        const id2 = createPage(sample.title, sample.code);
+        setActivePage(id2);
+        editor.dispatch({
+          changes: { from: 0, to: editor.state.doc.length, insert: sample.code }
+        });
+        outputEl.innerHTML = "";
+        renderTabs();
+        checkExportHint();
+      } else {
+        editor.dispatch({
+          changes: { from: 0, to: editor.state.doc.length, insert: sample.code }
+        });
+      }
+    } else {
+      if (confirm(t2("app.confirmReplace"))) {
+        editor.dispatch({
+          changes: { from: 0, to: editor.state.doc.length, insert: sample.code }
+        });
+      }
     }
     samplesSelect.value = "";
   });
@@ -29410,7 +29856,8 @@ async function main() {
       li.dataset.code = lang.code;
       li.addEventListener("click", async () => {
         await setLocale(lang.code);
-        const defaultCode = resetCode();
+        const defaultCode = await getDefaultCode();
+        resetCode();
         editor.dispatch({
           changes: { from: 0, to: editor.state.doc.length, insert: defaultCode }
         });
@@ -29426,6 +29873,72 @@ async function main() {
       if (!langBtn.contains(e.target) && !langList.contains(e.target)) {
         langList.hidden = true;
       }
+    });
+  }
+  const helpBtn = document.getElementById("help-btn");
+  const helpForm = document.getElementById("help-form");
+  const helpMsg = document.getElementById("help-msg");
+  const helpSend = document.getElementById("help-send");
+  const helpCancel = document.getElementById("help-cancel");
+  if (helpBtn && helpForm) {
+    helpBtn.addEventListener("click", () => {
+      helpForm.hidden = !helpForm.hidden;
+      if (!helpForm.hidden) helpMsg.focus();
+    });
+    helpCancel.addEventListener("click", () => {
+      helpForm.hidden = true;
+      helpMsg.value = "";
+    });
+    helpSend.addEventListener("click", async () => {
+      helpSend.disabled = true;
+      try {
+        const res = await fetch("/api/help", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            code: editor.state.doc.toString(),
+            output: outputEl.textContent,
+            lang: getLocale(),
+            message: helpMsg.value
+          })
+        });
+        if (res.ok) {
+          helpForm.hidden = true;
+          helpMsg.value = "";
+          outputEl.textContent = "";
+          appendOutput(t2("app.helpSent"));
+        } else {
+          appendOutput(t2("app.helpFailed"));
+        }
+      } catch {
+        appendOutput(t2("app.helpFailed"));
+      } finally {
+        helpSend.disabled = false;
+      }
+    });
+  }
+  const issueBtn = document.getElementById("issue-btn");
+  if (issueBtn) {
+    issueBtn.addEventListener("click", () => {
+      const code = editor.state.doc.toString();
+      const output = outputEl.textContent;
+      const lang = getLocale();
+      const body = [
+        "## Language",
+        lang,
+        "",
+        "## Code",
+        "```python",
+        code,
+        "```",
+        "",
+        "## Output",
+        "```",
+        output,
+        "```"
+      ].join("\n");
+      const url = `https://github.com/tatsuro-ueda/kids-python/issues/new?body=${encodeURIComponent(body)}`;
+      window.open(url, "_blank", "noopener");
     });
   }
 }

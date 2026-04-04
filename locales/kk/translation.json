@@ -31,7 +31,21 @@
     "loadFailed": "Python жүктелмеді 😢",
     "loadRetry": "Қайта байқау",
     "loadSlow": "Біраз ұзағырақ уақыт алуда... күте тұр!",
-    "helpFailed": "Жіберілмеді. Қайта көріңіз"
+    "helpFailed": "Жіберілмеді. Қайта көріңіз",
+    "save": "Save",
+    "saved": "✓ Saved!",
+    "defaultPageName": "Page {{n}}",
+    "deletePage": "Delete this page?",
+    "deletePageLast": "Can't delete the last page",
+    "sampleNewPage": "Open in new page",
+    "sampleCurrentPage": "Replace current page",
+    "sharedPageName": "Shared code",
+    "maxPages": "Maximum {{max}} pages reached",
+    "undoDelete": "Undo",
+    "exportHint": "Save important code with \"Share\" to open on other devices",
+    "expand": "Expand",
+    "outputLabel": "Output",
+    "fullscreenRun": "Run"
   },
   "error": {
     "parenOpen": "Жақша `(` жабылмаған. `)` қосып жап",
