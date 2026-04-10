@@ -84,42 +84,9 @@
     }
 }
   </script>
-  <script>
-  (function() {
-    if (location.search.indexOf("lang=") !== -1) return;
-    var browserLang = (navigator.language || "").replace("_", "-");
-    if (!browserLang) return;
-    var pathMatch = location.pathname.match(/^\/([a-z]{2}(?:-[A-Z]{2})?)\//);
-    var currentLang = pathMatch ? pathMatch[1] : "ja";
-    var supported = {};
-    document.querySelectorAll('link[hreflang]').forEach(function(el) {
-      var hl = el.getAttribute("hreflang");
-      if (hl && hl !== "x-default") {
-        var href = el.getAttribute("href");
-        var p = href.replace(/https?:\/\/[^/]+/, "");
-        supported[hl] = p;
-      }
-    });
-    function findMatch(lang) {
-      if (supported[lang]) return supported[lang];
-      var base = lang.split("-")[0];
-      if (base === "zh") base = "zh-CN";
-      if (supported[base]) return supported[base];
-      return supported["en"] || "/en/";
-    }
-    var target = findMatch(browserLang);
-    var targetLang = target.replace(/^\/|\/$/g, "") || "ja";
-    if (targetLang !== currentLang) {
-      location.replace(target);
-    }
-  })();
-  </script>
+  <!-- GA_TAG -->
 </head>
 <body>
-        <div id="lp-lang-selector">
-    <button id="lp-lang-btn" aria-label="Language">🌐</button>
-    <ul id="lp-lang-list" hidden></ul>
-  </div>
   <section class="hero">
     <h1>Daftari la Python</h1>
     <p class="hero-catch">Python inafanya kazi kwenye kivinjari!<br>Daftari la programu kwa watoto</p>
@@ -258,19 +225,6 @@ Ruka!</div>
     </div>
   </section>
 
-
-  <section class="testimonial fade-in">
-    <h2>Inatumika katika elimu</h2>
-    <div class="testimonial-embed">
-      <blockquote class="twitter-tweet" data-lang="ja">
-        <p lang="ja" dir="ltr">普段はScratch、Python に挑戦したいという小学生の参加者が、英語のエラーメッセージで手こずっていて、日本語で表示されるといいのにねえ、と言っていたら、CoderDojo 調布の時間中にできてしまいました。</p>
-        &mdash; 石原淳也(Junya Ishihara) (@jishiha)
-        <a href="https://x.com/jishiha/status/2038450310004556197">March 30, 2026</a>
-      </blockquote>
-      <p class="testimonial-profile">Junya Ishihara — Bingwa Mwenza wa CoderDojo Chofu</p>
-    </div>
-  </section>
-
   <section class="safety fade-in">
     <h2>Kwa Wazazi — Amani ya Moyo</h2>
     <dl class="safety-list">
@@ -344,40 +298,5 @@ Ruka!</div>
     <p><a href="mailto:tatsuro.ueda@feel-physics.jp">Wasiliana Nasi</a> ｜ <a href="/sw/privacy.html">Sera ya Faragha</a> ｜ <a href="https://discord.gg/sZCdKvT5Df" target="_blank" rel="noopener">Jamii (Discord)</a></p>
     <p>&copy; 2026 Feel Physics</p>
   </footer>
-  <script>
-    (function() {
-      var LANG_NAMES = {
-        ja:"にほんご",en:"English",hi:"हिन्दी",es:"Español",ar:"العربية",
-        pt:"Português",id:"Bahasa Indonesia",vi:"Tiếng Việt",tr:"Türkçe",
-        bn:"বাংলা",ko:"한국어","zh-TW":"繁體中文",fa:"فارسی",th:"ภาษาไทย",
-        fr:"Français",ur:"اردو",ru:"Русский",de:"Deutsch",it:"Italiano",
-        nl:"Nederlands",pl:"Polski",uk:"Українська",ro:"Română",el:"Ελληνικά",
-        hu:"Magyar",cs:"Čeština",sv:"Svenska",da:"Dansk",fi:"Suomi",no:"Norsk",
-        "zh-CN":"简体中文",ms:"Bahasa Melayu",tl:"Filipino",sw:"Kiswahili",
-        am:"አማርኛ",ta:"தமிழ்",te:"తెలుగు",mr:"मराठी",gu:"ગુજરાતી",
-        ne:"नेपाली",si:"සිංහල",km:"ភាសាខ្មែរ",my:"မြန်မာ",ka:"ქართული",
-        he:"עברית",uz:"Oʻzbek",kk:"Қазақ",az:"Azərbaycan",sr:"Srpski",hr:"Hrvatski"
-      };
-      var btn = document.getElementById("lp-lang-btn");
-      var list = document.getElementById("lp-lang-list");
-      if (!btn || !list) return;
-      document.querySelectorAll('link[hreflang]').forEach(function(el) {
-        var code = el.getAttribute("hreflang");
-        if (!code || code === "x-default") return;
-        var href = el.getAttribute("href").replace(/https?:\/\/[^/]+/, "");
-        if (code === "ja") href = "/";
-        var li = document.createElement("li");
-        li.textContent = LANG_NAMES[code] || code;
-        li.onclick = function() { location.href = href + "?lang=1"; };
-        list.appendChild(li);
-      });
-      btn.onclick = function(e) {
-        e.stopPropagation();
-        list.hidden = !list.hidden;
-      };
-      document.addEventListener("click", function() { list.hidden = true; });
-    })();
-  </script>
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
