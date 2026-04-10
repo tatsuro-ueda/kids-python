@@ -16,6 +16,7 @@
   <script type="application/ld+json">
   {{jsonLd}}
   </script>
+  <!-- GA_TAG -->
 </head>
 <body>
   <section class="hero">

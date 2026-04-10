@@ -4,6 +4,31 @@ const path = require("path");
 const geoip = require("geoip-lite");
 
 const PORT = process.env.PORT || 3000;
+const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || "";
+
+// EEA (European Economic Area) + UK country codes for GDPR compliance
+const EU_COUNTRIES = new Set([
+  "AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR",
+  "DE","GR","HU","IE","IT","LV","LT","LU","MT","NL",
+  "PL","PT","RO","SK","SI","ES","SE",
+  "IS","LI","NO", // EEA
+  "GB",            // UK (UK GDPR)
+]);
+
+function buildGaSnippet(measurementId) {
+  return `<script async src="https://www.googletagmanager.com/gtag/js?id=${measurementId}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'granted'
+    });
+    gtag('js', new Date());
+    gtag('config', '${measurementId}');
+  </script>`
+}
 const ROOT = __dirname;
 const LOG_DIR = path.join(ROOT, "logs");
 const LOG_FILE = path.join(LOG_DIR, "access.jsonl");
@@ -178,8 +203,25 @@ const server = http.createServer(async (req, res) => {
     }
     logAccess(req, 200);
     setSecurityHeaders(res);
-    res.writeHead(200, { "Content-Type": mime });
-    res.end(data);
+
+    if (ext === ".html") {
+      let html = data.toString("utf-8");
+      if (GA_MEASUREMENT_ID) {
+        const ip = getClientIp(req);
+        const geo = geoip.lookup(ip);
+        const country = geo ? geo.country : null;
+        const isEU = country && EU_COUNTRIES.has(country);
+        const replacement = isEU ? "" : buildGaSnippet(GA_MEASUREMENT_ID);
+        html = html.replace("<!-- GA_TAG -->", replacement);
+      } else {
+        html = html.replace("  <!-- GA_TAG -->\n", "");
+      }
+      res.writeHead(200, { "Content-Type": mime });
+      res.end(html);
+    } else {
+      res.writeHead(200, { "Content-Type": mime });
+      res.end(data);
+    }
   });
 });
 
