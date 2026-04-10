@@ -84,7 +84,25 @@
       "Skill(design-architecture)",
       "Bash(grep -v \"^/home/exedev/online-python/docs/steering$\")",
       "Bash(for b:*)",
-      "Bash(git log:*)"
+      "Bash(git log:*)",
+      "Bash(pkill -f \"node server.js\")",
+      "WebFetch(domain:x.com)",
+      "Bash(grep -l '教育の現場で使われています' /home/exedev/online-python/*/index.html)",
+      "Bash(grep:*)",
+      "Bash(gh run:*)",
+      "Bash(gh issue:*)",
+      "Bash(PORT=3999 node server.js)",
+      "Bash(PORT=3998 node server.js)",
+      "Bash(kill %1)",
+      "Bash(PORT=3997 node server.js)",
+      "Bash(claude auth:*)",
+      "WebFetch(domain:developers.google.com)",
+      "WebFetch(domain:xania.org)",
+      "WebFetch(domain:web.dev)",
+      "Read(//home/exedev/dotfiles/**)",
+      "Read(//home/exedev/**)",
+      "Bash(echo 'export GA_MEASUREMENT_ID=G-ND7RDEHXPK')",
+      "Bash(export GA_MEASUREMENT_ID=G-ND7RDEHXPK)"
     ]
   }
 }
