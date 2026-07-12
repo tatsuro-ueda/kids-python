@@ -1,0 +1,9 @@
+# close済tasknoteの送信箱設定（2026-07-13 全VM衛星化）。
+# tn-close時は shared helper（~/.local/share/chezmoi/shared/llm-wiki-core/python/
+# llm_wiki_tasknote_ship_helper.py）がこの設定を読んで送信箱へ出す。
+# business-docs側のfetchが回収し、bd commit確認後に送信箱から消える。
+tasknote_ship:
+  enabled: true
+  outbox_root: todos/files-to-fetch
+  category: 5-製品開発/online-python
+  wont_root: todos/wont
