@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="{{cssPath}}">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#4a90c4">
+  <link rel="icon" type="image/png" href="/icons/icon-192.png">
   <link rel="apple-touch-icon" href="/icons/icon-192.png">
   <script type="application/ld+json">
   {{jsonLd}}
