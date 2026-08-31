@@ -1,0 +1,33 @@
+{
+  "name": "Python Notebook",
+  "short_name": "Python",
+  "description": "A browser-based Python learning environment for kids. No installation needed.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "/app/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f0e8fc",
+  "theme_color": "#4a90c4",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

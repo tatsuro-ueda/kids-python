@@ -63,6 +63,9 @@
   <link rel="alternate" hreflang="zh-CN" href="https://online-python.exe.xyz/zh-CN/">
   <link rel="alternate" hreflang="zh-TW" href="https://online-python.exe.xyz/zh-TW/">
   <link rel="stylesheet" href="../lp.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#4a90c4">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -298,5 +301,12 @@ Decolare!</div>
     <p><a href="mailto:tatsuro.ueda@feel-physics.jp">Contact</a> ｜ <a href="/ro/privacy.html">Politica de confidentialitate</a> ｜ <a href="https://discord.gg/sZCdKvT5Df" target="_blank" rel="noopener">Comunitate (Discord)</a></p>
     <p>&copy; 2026 Feel Physics</p>
   </footer>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("/sw.js");
+      });
+    }
+  </script>
 </body>
 </html>
