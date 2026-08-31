@@ -6,6 +6,9 @@
   <title>Pythonれんしゅうちょう</title>
   <meta name="robots" content="noindex">
   <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#4a90c4">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
   <!-- GA_TAG -->
 </head>
 <body>
@@ -63,5 +66,12 @@
     <p><a href="mailto:tatsuro.ueda@feel-physics.jp" data-i18n="app.footerContact">お問い合わせ</a> ｜ <a href="/privacy.html" data-i18n="app.footerPrivacy" data-i18n-href="app.privacyUrl">プライバシーポリシー</a> ｜ <a href="https://discord.gg/sZCdKvT5Df" target="_blank" rel="noopener" data-i18n="app.helpTranslate">翻訳を手伝う / Help translate</a></p>
     <p>&copy; 2026 Feel Physics</p>
   </footer>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("/sw.js");
+      });
+    }
+  </script>
 </body>
 </html>

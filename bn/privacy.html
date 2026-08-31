@@ -6,6 +6,9 @@
   <title>গোপনীয়তা নীতি — Python অভ্যাস খাতা</title>
   <meta name="robots" content="noindex">
   <link rel="stylesheet" href="../lp.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#4a90c4">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
 </head>
 <body>
   <section class="hero" style="padding: 30px 20px;">
@@ -46,5 +49,12 @@
     <p><a href="mailto:tatsuro.ueda@feel-physics.jp">যোগাযোগ</a> ｜ <a href="/bn/privacy.html">গোপনীয়তা নীতি</a></p>
     <p>&copy; 2026 Feel Physics</p>
   </footer>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("/sw.js");
+      });
+    }
+  </script>
 </body>
 </html>

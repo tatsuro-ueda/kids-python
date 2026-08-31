@@ -13,6 +13,9 @@
   <meta name="twitter:card" content="summary_large_image">
   {{hreflangLinks}}
   <link rel="stylesheet" href="{{cssPath}}">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#4a90c4">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
   <script type="application/ld+json">
   {{jsonLd}}
   </script>
@@ -217,5 +220,12 @@
     <p><a href="mailto:tatsuro.ueda@feel-physics.jp">{{lp.footerContact}}</a> ｜ <a href="{{privacyUrl}}">{{lp.footerPrivacy}}</a> ｜ <a href="https://discord.gg/sZCdKvT5Df" target="_blank" rel="noopener">{{lp.footerDiscord}}</a></p>
     <p>&copy; 2026 Feel Physics</p>
   </footer>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("/sw.js");
+      });
+    }
+  </script>
 </body>
 </html>
