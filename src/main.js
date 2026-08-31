@@ -1,5 +1,5 @@
 import { initI18n, t, setLocale, getLocale, LANGUAGES } from "./i18n.js";
-import { createEditor, highlightErrorLine, clearErrorHighlight } from "./editor.js";
+import { createEditor, highlightErrorLine, clearErrorHighlight, onDocChange } from "./editor.js";
 import { loadPyodide, runCode } from "./runner.js";
 import { translateError } from "./errors.js";
 import {
@@ -9,6 +9,99 @@ import {
   getMaxPages, detectSharedCode, encodeShareURL, getShareIntentURLs, resetCode,
 } from "./storage.js";
 import { getSamples, getDefaultCode } from "./samples.js";
+import {
+  isValidRoomId, detectLiveRoomId, buildLiveUrl,
+  checkRoomExists, createLearnerBroadcaster, createLiveSubscriber,
+} from "./liveShare.js";
+import { createChatPanel } from "./liveChat.js";
+
+function startTeacherViewerMode(roomId) {
+  document.body.classList.add("viewer-mode");
+  const editorContainer = document.getElementById("editor");
+  const statusEl = document.getElementById("status");
+  const outputEl = document.getElementById("output");
+  const runBtn = document.getElementById("run-btn");
+  if (runBtn) runBtn.disabled = true;
+
+  if (statusEl) {
+    statusEl.hidden = false;
+    statusEl.textContent = t("app.liveViewing", { id: roomId }) || `ライブ配信を見ているよ（${roomId}）`;
+  }
+
+  const editor = createEditor(editorContainer, { readOnly: true });
+  editor.dispatch({
+    changes: { from: 0, to: editor.state.doc.length, insert: "" },
+  });
+
+  // Ask the teacher for a display name. Cache in sessionStorage so a reload keeps it.
+  const NAME_KEY = "live-teacher-name";
+  let displayName = sessionStorage.getItem(NAME_KEY) || "";
+  if (!displayName) {
+    displayName = (prompt(
+      t("app.chatNamePrompt") || "なんてよぶ？（20字まで・例：おかあさん、せんせい）"
+    ) || "").trim().slice(0, 20);
+    if (displayName) sessionStorage.setItem(NAME_KEY, displayName);
+  }
+
+  const chat = createChatPanel({
+    roomId,
+    role: "teacher",
+    displayName,
+    t,
+  });
+
+  let lastCode = null;
+  let lastOutputJson = null;
+
+  function renderOutput(output) {
+    if (!outputEl) return;
+    outputEl.textContent = "";
+    if (!output) return;
+    if (output.stdout) {
+      const span = document.createElement("span");
+      span.textContent = output.stdout;
+      if (!output.stdout.endsWith("\n")) span.textContent += "\n";
+      outputEl.appendChild(span);
+    }
+    if (output.stderr) {
+      const span = document.createElement("span");
+      span.className = "error";
+      span.textContent = output.stderr;
+      if (!output.stderr.endsWith("\n")) span.textContent += "\n";
+      outputEl.appendChild(span);
+    }
+  }
+
+  const subscriber = createLiveSubscriber(roomId, {
+    onState: (state) => {
+      if (typeof state.code === "string" && state.code !== lastCode) {
+        editor.dispatch({
+          changes: { from: 0, to: editor.state.doc.length, insert: state.code },
+        });
+        lastCode = state.code;
+        clearErrorHighlight(editor);
+      }
+      const outputJson = JSON.stringify(state.output || null);
+      if (outputJson !== lastOutputJson) {
+        renderOutput(state.output);
+        if (state.output && Number.isInteger(state.output.errorLine) && state.output.errorLine > 0) {
+          highlightErrorLine(editor, state.output.errorLine);
+        } else {
+          clearErrorHighlight(editor);
+        }
+        lastOutputJson = outputJson;
+      }
+    },
+    onChatHistory: chat.onChatHistory,
+    onChat: chat.onChat,
+    onError: () => {
+      if (statusEl) {
+        statusEl.textContent = t("app.liveError") || "ライブに接続できなかったよ";
+      }
+    },
+  });
+  window.addEventListener("beforeunload", () => subscriber.close());
+}
 
 async function main() {
   // 1. i18n初期化（言語検出 → JSONロード → DOM翻訳）
@@ -17,7 +110,14 @@ async function main() {
   // 2. データ移行（旧形式 → ページ形式）
   migrateIfNeeded();
 
-  // 3. 共有URL検出（t()を使うため initI18n() の後）
+  // 3a. ライブ共有URL検出（教える人モード）
+  const liveRoomId = detectLiveRoomId();
+  if (liveRoomId) {
+    startTeacherViewerMode(liveRoomId);
+    return;
+  }
+
+  // 3b. 共有URL検出（t()を使うため initI18n() の後）
   const shared = detectSharedCode();
   if (shared !== null) {
     if (confirm(t("app.confirmShared"))) {
@@ -323,6 +423,8 @@ async function main() {
   let slowTimer = null;
 
   function startLoadPyodide() {
+    editorContainer.classList.add("loading");
+
     slowTimer = setTimeout(() => {
       statusEl.innerHTML = t("app.loadSlow").split("").map((ch, i) =>
         `<span style="--i:${i}">${ch}</span>`
@@ -332,7 +434,10 @@ async function main() {
 
     loadPyodide(
       (msg) => {
-        if (!msg) clearTimeout(slowTimer);
+        if (!msg) {
+          clearTimeout(slowTimer);
+          editorContainer.classList.remove("loading");
+        }
         setStatus(msg);
       },
       () => {
@@ -450,11 +555,18 @@ async function main() {
     }
   }
 
+  // Live share broadcaster state (used by executeCode & shareBtn handler)
+  let liveBroadcaster = null;
+  let liveChat = null;
+  let liveSubscriber = null;
+
   async function executeCode(targetEl, runBtnEl) {
     targetEl.textContent = "";
     clearErrorHighlight(editor);
     clearUndo();
     const code = editor.state.doc.toString();
+    // Capture output for live share (see liveBroadcaster.pushOutput below)
+    const capture = { stdout: "", stderr: "", errorLine: null };
     if (runBtnEl) {
       runBtnEl.disabled = true;
       runBtnEl.textContent = t("app.running");
@@ -462,8 +574,14 @@ async function main() {
     try {
       await runCode(
         code,
-        (text) => appendToTarget(targetEl, text),
-        (text) => appendToTarget(targetEl, text, "stderr")
+        (text) => {
+          appendToTarget(targetEl, text);
+          capture.stdout += text + "\n";
+        },
+        (text) => {
+          appendToTarget(targetEl, text, "stderr");
+          capture.stderr += text + "\n";
+        }
       );
     } catch (e) {
       console.log("--- raw error ---");
@@ -471,6 +589,9 @@ async function main() {
       console.log("e.type:", e.type);
       console.log("e:", e);
       appendErrorToTarget(targetEl, e.message);
+      capture.stderr += e.message;
+      const translated = translateError(e.message);
+      if (translated.lineNumber) capture.errorLine = translated.lineNumber;
     } finally {
       if (runBtnEl) {
         runBtnEl.disabled = false;
@@ -478,6 +599,10 @@ async function main() {
       }
       // Save output for this page (from normal output)
       savePageOutput(getActivePage(), outputEl.innerHTML);
+      // Broadcast execution result to live subscribers (if any)
+      if (liveBroadcaster) {
+        liveBroadcaster.pushOutput(code, capture);
+      }
     }
   }
 
@@ -492,22 +617,35 @@ async function main() {
     fullscreenOutputContent.textContent = "";
     clearErrorHighlight(editor);
     const code = editor.state.doc.toString();
+    const capture = { stdout: "", stderr: "", errorLine: null };
     fullscreenRunBtn.disabled = true;
     fullscreenRunBtn.textContent = t("app.running");
     try {
       await runCode(
         code,
-        (text) => appendToTarget(fullscreenOutputContent, text),
-        (text) => appendToTarget(fullscreenOutputContent, text, "stderr")
+        (text) => {
+          appendToTarget(fullscreenOutputContent, text);
+          capture.stdout += text + "\n";
+        },
+        (text) => {
+          appendToTarget(fullscreenOutputContent, text, "stderr");
+          capture.stderr += text + "\n";
+        }
       );
     } catch (e) {
       appendErrorToTarget(fullscreenOutputContent, e.message);
+      capture.stderr += e.message;
+      const translated = translateError(e.message);
+      if (translated.lineNumber) capture.errorLine = translated.lineNumber;
     } finally {
       fullscreenRunBtn.disabled = false;
       fullscreenRunBtn.textContent = t("app.fullscreenRun") || t("app.run");
       // Also update normal output for persistence
       outputEl.textContent = fullscreenOutputContent.textContent;
       savePageOutput(getActivePage(), outputEl.innerHTML);
+      if (liveBroadcaster) {
+        liveBroadcaster.pushOutput(code, capture);
+      }
     }
     // Recalculate editor height after panel appears
     editor.requestMeasure();
@@ -568,7 +706,70 @@ async function main() {
       </div>
     `;
     outputEl.appendChild(div);
+
+    // --- Live share entry ---
+    const liveDiv = document.createElement("div");
+    liveDiv.className = "live-share-block";
+    const liveBtn = document.createElement("button");
+    liveBtn.type = "button";
+    liveBtn.className = "live-start-btn";
+    liveBtn.textContent = t("app.liveStart") || "🔴 ライブでみせる";
+    liveDiv.appendChild(liveBtn);
+    outputEl.appendChild(liveDiv);
+
+    liveBtn.addEventListener("click", async () => {
+      if (liveBroadcaster) {
+        // Already broadcasting — offer stop
+        liveBroadcaster.stop();
+        liveBroadcaster = null;
+        if (liveSubscriber) { liveSubscriber.close(); liveSubscriber = null; }
+        if (liveChat) { liveChat.destroy(); liveChat = null; }
+        liveBtn.textContent = t("app.liveStart") || "🔴 ライブでみせる";
+        appendOutput(t("app.liveStopped") || "ライブ共有をとめたよ");
+        return;
+      }
+      const roomId = prompt(
+        t("app.livePrompt") || "あいことばを入れてね（英数字と-_、1〜32文字）"
+      );
+      if (!roomId) return;
+      if (!isValidRoomId(roomId)) {
+        alert(t("app.liveInvalid") || "あいことばは英数字と -_ の1〜32文字にしてね");
+        return;
+      }
+      const exists = await checkRoomExists(roomId);
+      if (exists) {
+        alert(
+          t("app.liveConflict") ||
+          "このあいことばはすでに使われているよ。べつのにしてね"
+        );
+        return;
+      }
+      liveBroadcaster = createLearnerBroadcaster(roomId);
+      // Push current code immediately so the room is created.
+      await liveBroadcaster.pushNow(editor.state.doc.toString());
+      // Open chat panel for the learner and subscribe to chat events.
+      liveChat = createChatPanel({ roomId, role: "learner", displayName: "", t });
+      liveSubscriber = createLiveSubscriber(roomId, {
+        onChatHistory: liveChat.onChatHistory,
+        onChat: liveChat.onChat,
+      });
+      const liveUrl = buildLiveUrl(roomId);
+      try {
+        await navigator.clipboard.writeText(liveUrl);
+        appendOutput(t("app.liveCopied") || "ライブURLをコピーしたよ！");
+      } catch {
+        appendOutput(t("app.liveFallback") || "このライブURLを送ってね:");
+        appendOutput(liveUrl);
+      }
+      liveBtn.textContent = t("app.liveStop") || "⏹ ライブをとめる";
+    });
+
     savePageOutput(getActivePage(), outputEl.innerHTML);
+  });
+
+  // --- Live broadcast on edit ---
+  onDocChange((code) => {
+    if (liveBroadcaster) liveBroadcaster.push(code);
   });
 
   // --- Samples ---

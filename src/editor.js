@@ -61,21 +61,39 @@ const errorLineField = StateField.define({
   provide: f => EditorView.decorations.from(f),
 });
 
-export function createEditor(parent) {
+// Registry for external doc-change listeners (e.g. live share broadcast).
+const docChangeListeners = new Set();
+
+export function onDocChange(listener) {
+  docChangeListeners.add(listener);
+  return () => docChangeListeners.delete(listener);
+}
+
+export function createEditor(parent, { readOnly = false } = {}) {
+  const extensions = [
+    basicSetup,
+    python(),
+    selectionTheme,
+    pasteSelectExtension,
+    errorLineField,
+    EditorView.updateListener.of((update) => {
+      if (update.docChanged) {
+        const code = update.state.doc.toString();
+        if (!readOnly) saveCode(code);
+        for (const listener of docChangeListeners) {
+          try { listener(code); } catch {}
+        }
+      }
+    }),
+  ];
+  if (readOnly) {
+    extensions.push(EditorState.readOnly.of(true));
+    extensions.push(EditorView.editable.of(false));
+  }
+
   const state = EditorState.create({
     doc: loadCode(),
-    extensions: [
-      basicSetup,
-      python(),
-      selectionTheme,
-      pasteSelectExtension,
-      errorLineField,
-      EditorView.updateListener.of((update) => {
-        if (update.docChanged) {
-          saveCode(update.state.doc.toString());
-        }
-      }),
-    ],
+    extensions,
   });
 
   return new EditorView({ state, parent });

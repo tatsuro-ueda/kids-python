@@ -78,6 +78,106 @@ const DISCORD_WEBHOOK = "https://discord.com/api/webhooks/1489402695407374397/ci
 // Rate limit: 1 request per IP per 60 seconds
 const helpRateLimit = new Map();
 
+// --- Live share (SSE) ---
+// roomId → { code, output, messages[], updatedAt, subscribers }
+const liveRooms = new Map();
+const LIVE_ROOM_TTL_MS = 24 * 60 * 60 * 1000; // 24 hours
+const LIVE_MAX_CODE_LENGTH = 100_000;
+const LIVE_MAX_OUTPUT_FIELD_LENGTH = 5000;
+const LIVE_ROOM_ID_REGEX = /^[A-Za-z0-9_-]{1,32}$/;
+
+// Chat settings
+const LIVE_MAX_MESSAGES = 100;          // ring buffer size
+const LIVE_MAX_MESSAGE_TEXT = 100;       // chars per message
+const LIVE_MAX_NAME_LENGTH = 20;
+const LIVE_MAX_NONCE_LENGTH = 64;
+
+function validateRoomId(id) {
+  return typeof id === "string" && LIVE_ROOM_ID_REGEX.test(id);
+}
+
+function normalizeOutput(raw) {
+  if (!raw || typeof raw !== "object") return null;
+  const stdout = typeof raw.stdout === "string"
+    ? raw.stdout.slice(0, LIVE_MAX_OUTPUT_FIELD_LENGTH)
+    : "";
+  const stderr = typeof raw.stderr === "string"
+    ? raw.stderr.slice(0, LIVE_MAX_OUTPUT_FIELD_LENGTH)
+    : "";
+  let errorLine = null;
+  if (typeof raw.errorLine === "number" && Number.isInteger(raw.errorLine) && raw.errorLine > 0) {
+    errorLine = raw.errorLine;
+  }
+  return { stdout, stderr, errorLine };
+}
+
+function normalizeMessage(raw) {
+  if (!raw || typeof raw !== "object") return null;
+  const sender = raw.sender === "learner" || raw.sender === "teacher"
+    ? raw.sender
+    : null;
+  if (!sender) return null;
+  const rawText = typeof raw.text === "string" ? raw.text.trim() : "";
+  if (!rawText) return null;
+  if (rawText.length > LIVE_MAX_MESSAGE_TEXT) return null;
+  const name = typeof raw.name === "string"
+    ? raw.name.trim().slice(0, LIVE_MAX_NAME_LENGTH)
+    : "";
+  const nonce = typeof raw.nonce === "string"
+    ? raw.nonce.slice(0, LIVE_MAX_NONCE_LENGTH)
+    : "";
+  return {
+    id: Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 8),
+    sender,
+    name,
+    text: rawText,
+    ts: Date.now(),
+    nonce,
+  };
+}
+
+function writeEvent(res, eventName, dataObj) {
+  try {
+    res.write(`event: ${eventName}\ndata: ${JSON.stringify(dataObj)}\n\n`);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function broadcastState(room) {
+  const payload = `event: state\ndata: ${JSON.stringify({ code: room.code, output: room.output })}\n\n`;
+  for (const sub of room.subscribers) {
+    try { sub.write(payload); } catch {
+      room.subscribers.delete(sub);
+    }
+  }
+}
+
+function broadcastChat(room, msg) {
+  const payload = `event: chat\ndata: ${JSON.stringify(msg)}\n\n`;
+  for (const sub of room.subscribers) {
+    try { sub.write(payload); } catch {
+      room.subscribers.delete(sub);
+    }
+  }
+}
+
+function purgeExpiredRooms() {
+  const now = Date.now();
+  for (const [id, room] of liveRooms) {
+    if (now - room.updatedAt > LIVE_ROOM_TTL_MS) {
+      for (const sub of room.subscribers) {
+        try { sub.end(); } catch {}
+      }
+      liveRooms.delete(id);
+    }
+  }
+}
+
+// Run cleanup every hour. unref() keeps this from holding the event loop open in tests.
+setInterval(purgeExpiredRooms, 60 * 60 * 1000).unref();
+
 function setSecurityHeaders(res) {
   res.setHeader("X-Content-Type-Options", "nosniff");
   res.setHeader("X-Frame-Options", "DENY");
@@ -122,6 +222,154 @@ function readBody(req) {
 
 const server = http.createServer(async (req, res) => {
   let url = req.url.split("?")[0];
+
+  // API: live share endpoints
+  // GET /api/live/:id/exists   → { exists: boolean }
+  // POST /api/live/:id          → update code/output & broadcast state
+  // POST /api/live/:id/message  → send chat message & broadcast chat
+  // GET /api/live/:id/stream    → SSE subscription (typed events)
+  const liveMatch = url.match(/^\/api\/live\/([^/]+)(\/exists|\/stream|\/message)?$/);
+  if (liveMatch) {
+    const roomId = liveMatch[1];
+    const subpath = liveMatch[2] || "";
+
+    if (!validateRoomId(roomId)) {
+      setSecurityHeaders(res);
+      res.writeHead(400, { "Content-Type": "application/json" });
+      res.end(JSON.stringify({ error: "invalid_room_id" }));
+      return;
+    }
+
+    // Lazy purge: drop the room if it has expired
+    const existing = liveRooms.get(roomId);
+    if (existing && Date.now() - existing.updatedAt > LIVE_ROOM_TTL_MS) {
+      for (const sub of existing.subscribers) {
+        try { sub.end(); } catch {}
+      }
+      liveRooms.delete(roomId);
+    }
+
+    // GET /api/live/:id/exists
+    if (subpath === "/exists" && req.method === "GET") {
+      setSecurityHeaders(res);
+      res.writeHead(200, { "Content-Type": "application/json" });
+      res.end(JSON.stringify({ exists: liveRooms.has(roomId) }));
+      return;
+    }
+
+    // POST /api/live/:id  (learner pushes code and/or output)
+    if (subpath === "" && req.method === "POST") {
+      try {
+        const body = await readBody(req);
+        const code = typeof body.code === "string" ? body.code : "";
+        if (code.length > LIVE_MAX_CODE_LENGTH) {
+          setSecurityHeaders(res);
+          res.writeHead(400, { "Content-Type": "application/json" });
+          res.end(JSON.stringify({ error: "code_too_long" }));
+          return;
+        }
+        // body.output is optional — when absent, preserve previous output.
+        const hasOutput = Object.prototype.hasOwnProperty.call(body, "output");
+        const outputNormalized = hasOutput ? normalizeOutput(body.output) : undefined;
+
+        let room = liveRooms.get(roomId);
+        if (!room) {
+          room = {
+            code,
+            output: hasOutput ? outputNormalized : null,
+            messages: [],
+            updatedAt: Date.now(),
+            subscribers: new Set(),
+          };
+          liveRooms.set(roomId, room);
+        } else {
+          room.code = code;
+          if (hasOutput) room.output = outputNormalized;
+          room.updatedAt = Date.now();
+        }
+        broadcastState(room);
+        setSecurityHeaders(res);
+        res.writeHead(204);
+        res.end();
+      } catch (e) {
+        setSecurityHeaders(res);
+        res.writeHead(400, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ error: "invalid_json" }));
+      }
+      return;
+    }
+
+    // POST /api/live/:id/message  (chat — learner or teacher)
+    if (subpath === "/message" && req.method === "POST") {
+      try {
+        const body = await readBody(req);
+        const msg = normalizeMessage(body);
+        if (!msg) {
+          setSecurityHeaders(res);
+          res.writeHead(400, { "Content-Type": "application/json" });
+          res.end(JSON.stringify({ error: "invalid_message" }));
+          return;
+        }
+        const room = liveRooms.get(roomId);
+        if (!room) {
+          setSecurityHeaders(res);
+          res.writeHead(404, { "Content-Type": "application/json" });
+          res.end(JSON.stringify({ error: "room_not_found" }));
+          return;
+        }
+        room.messages.push(msg);
+        while (room.messages.length > LIVE_MAX_MESSAGES) {
+          room.messages.shift();
+        }
+        room.updatedAt = Date.now();
+        broadcastChat(room, msg);
+        setSecurityHeaders(res);
+        res.writeHead(204);
+        res.end();
+      } catch (e) {
+        setSecurityHeaders(res);
+        res.writeHead(400, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ error: "invalid_json" }));
+      }
+      return;
+    }
+
+    // GET /api/live/:id/stream  (SSE — multiple subscribers, typed events)
+    if (subpath === "/stream" && req.method === "GET") {
+      const room = liveRooms.get(roomId);
+      if (!room) {
+        setSecurityHeaders(res);
+        res.writeHead(404, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ error: "room_not_found" }));
+        return;
+      }
+      setSecurityHeaders(res);
+      res.writeHead(200, {
+        "Content-Type": "text/event-stream",
+        "Cache-Control": "no-cache, no-transform",
+        "Connection": "keep-alive",
+        "X-Accel-Buffering": "no",
+      });
+      // Send current state and full chat history to the new subscriber.
+      writeEvent(res, "state", { code: room.code, output: room.output });
+      writeEvent(res, "chat-history", { messages: room.messages });
+      room.subscribers.add(res);
+      // Heartbeat every 25s to keep proxies from closing the connection
+      const heartbeat = setInterval(() => {
+        try { res.write(": heartbeat\n\n"); } catch {}
+      }, 25000);
+      req.on("close", () => {
+        clearInterval(heartbeat);
+        room.subscribers.delete(res);
+      });
+      return;
+    }
+
+    setSecurityHeaders(res);
+    res.writeHead(405);
+    res.end("Method Not Allowed");
+    return;
+  }
 
   // API: help endpoint
   if (url === "/api/help" && req.method === "POST") {
