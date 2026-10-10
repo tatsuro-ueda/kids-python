@@ -1,5 +1,7 @@
 # Kids Python - Online Python Editor
 
+@AGENTS.md
+
 ## プロジェクト概要
 子ども向けオンラインPythonエディタ。50言語以上の多言語対応。
 
